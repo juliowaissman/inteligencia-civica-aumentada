@@ -1,0 +1,43 @@
+---
+// Tabla de indicadores de un nivel: dimensión, fuente con cita, año y valores de las unidades pedidas.
+import Cita from "./Cita.astro";
+import { DIM_COLOR, DIM_CORTO, CAPA, valor, num, unidadMedida } from "../lib/formato";
+interface Columna { titulo: string; valores: Record<string, number | null>; norm?: Record<string, number | null> }
+interface Props { indicadores: any[]; columnas: Columna[]; caption: string }
+const { indicadores, columnas, caption } = Astro.props;
+const orden = [...indicadores].sort((a, b) => a.dimension - b.dimension);
+---
+<div class="tabla">
+  <table>
+    <caption class="nota" style="text-align:left;caption-side:bottom;padding-top:.4rem">{caption}</caption>
+    <thead>
+      <tr>
+        <th scope="col">Dimensión</th>
+        <th scope="col">Indicador</th>
+        <th scope="col">Fuente</th>
+        <th scope="col">Año</th>
+        {columnas.map((c) => <th scope="col">{c.titulo}<br /><span class="nota">valor (0–100)</span></th>)}
+      </tr>
+    </thead>
+    <tbody>
+      {orden.map((i) => (
+        <tr>
+          <td><span class="chip" style={`background:${DIM_COLOR[String(i.dimension)]}`}>{i.dimension}</span> {DIM_CORTO[String(i.dimension)]}</td>
+          <td>
+            {i.nombre}
+            <div class="nota">{unidadMedida(i)}{i.sentido === -1 ? " · menos es mejor" : ""} · {CAPA[i.capa]}{i.winsorizados ? ` · ${i.winsorizados} valor(es) atípico(s) acotado(s)` : ""}</div>
+          </td>
+          <td>{i.editor} <Cita clave={i.cita} /></td>
+          <td>{i.anio ?? "—"}</td>
+          {columnas.map((c) => (
+            <td>
+              {c.valores[i.id] === null || c.valores[i.id] === undefined
+                ? <span class="sin-dato">sin información</span>
+                : <>{valor(c.valores[i.id])}{c.norm ? <span class="nota"> ({num(c.norm[i.id] ?? null, 0)})</span> : null}</>}
+            </td>
+          ))}
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>

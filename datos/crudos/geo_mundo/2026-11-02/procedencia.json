@@ -1,0 +1,17 @@
+{
+  "fuente": "geo_mundo",
+  "nombre": "Natural Earth 1:110m Admin 0 – Countries (vía world-atlas 2.0.2) y GeoNames countryInfo",
+  "url": {
+    "countries-110m.json": "https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-110m.json",
+    "geonames_countryInfo.txt": "https://download.geonames.org/export/dump/countryInfo.txt"
+  },
+  "licencia": {
+    "countries-110m.json": "Dominio público (Natural Earth, https://www.naturalearthdata.com/about/terms-of-use/); empaquetado world-atlas bajo ISC",
+    "geonames_countryInfo.txt": "CC BY 4.0 (GeoNames)"
+  },
+  "fecha_acceso": "2026-11-02",
+  "sha256": {
+    "countries-110m.json": "2516c915867c7baf18ddec727aec46c315541a07cfb3d79a6559b05d5e94eee8",
+    "geonames_countryInfo.txt": "79f8f59ea01cbb40438bf1856dd6c2ff201f03f8fc72d0530b2646aaf603ef04"
+  }
+}

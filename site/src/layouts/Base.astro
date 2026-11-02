@@ -42,7 +42,7 @@ const actual = Astro.url.pathname;
       <nav aria-label="Principal">
         <ul>
           {menu.map(([href, txt]) => (
-            <li><a href={`${base}${href}`} aria-current={actual.endsWith(href) ? "page" : undefined}>{txt}</a></li>
+            <li><a href={`${base}${href}`} aria-current={actual === `${base}${href}` ? "page" : undefined}>{txt}</a></li>
           ))}
         </ul>
       </nav>
@@ -87,7 +87,7 @@ const actual = Astro.url.pathname;
     nav ul { list-style: none; display: flex; flex-wrap: wrap; gap: 0.2rem 1rem; margin: 0; padding: 0; }
     nav a { color: var(--texto); text-decoration: none; font-weight: 600; font-size: 0.95rem; padding: 0.2em 0; border-bottom: 2px solid transparent; }
     nav a[aria-current="page"], nav a:hover { border-bottom-color: var(--acento); color: var(--primario); }
-    @media (min-width: 980px) { nav { width: auto; order: 1; } .tema { order: 3; } }
+    @media (min-width: 980px) { .fila { flex-wrap: nowrap; } nav { width: auto; order: 1; } .tema { order: 3; flex: none; } nav ul { gap: 0.2rem 0.9rem; } }
     main { padding-top: 1.5rem; padding-bottom: 3rem; }
     .pie { border-top: 1px solid var(--borde); background: var(--fondo-suave); padding: 1.5rem 0; font-size: 0.95rem; }
   </style>

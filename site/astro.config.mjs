@@ -6,5 +6,6 @@ export default defineConfig({
   site: "https://juliowaissman.github.io",
   base: "/inteligencia-civica-aumentada",
   trailingSlash: "always",
+  compressHTML: false, // conserva los espacios entre texto y componentes en línea
   integrations: [mdx()],
 });

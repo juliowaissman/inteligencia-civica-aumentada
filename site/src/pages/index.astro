@@ -1,8 +1,92 @@
 ---
 import Base from "../layouts/Base.astro";
 import Cita from "../components/Cita.astro";
+import intl from "../data/internacional.json";
+import est from "../data/estatal.json";
+import { num, DIM_COLOR, DIM_CORTO } from "../lib/formato";
+const base = import.meta.env.BASE_URL;
+const mx = intl.unidades.find((u: any) => u.id === "MEX")!;
+const nPaises = intl.unidades.filter((u: any) => u.indice !== null).length;
+const chh = est.unidades.find((u: any) => u.id === "08")!;
+const son = est.unidades.find((u: any) => u.id === "26")!;
 ---
 <Base titulo="Inicio">
-  <h1>Inteligencia Cívica Aumentada</h1>
-  <p class="prosa">Página en construcción <Cita clave="zenteno_ica_2026" />.</p>
+  <section class="heroe">
+    <p class="antetitulo">Democracia e inteligencia artificial</p>
+    <h1>Inteligencia Cívica Aumentada</h1>
+    <p class="lema">
+      ¿Qué capacidades tiene una comunidad política para comprender, deliberar, decidir, cocrear, actuar y aprender
+      cuando la inteligencia artificial entra en juego, sin perder la agencia humana?
+    </p>
+    <p class="prosa">
+      Este sitio explica la propuesta de <strong>Inteligencia Cívica Aumentada (ICA)</strong> de Ricardo Zenteno Fernández
+      <Cita clave="zenteno_ica_2026" /> y presenta una primera aproximación a su índice, el <strong>IICA</strong>, construida
+      con datos abiertos en tres niveles: internacional, nacional y estatal.
+    </p>
+    <p><a class="boton" href={`${base}propuesta/`}>Conocer la propuesta</a> &nbsp; <a href={`${base}estatal/`}>Ver resultados por entidad →</a></p>
+  </section>
+
+  <section aria-labelledby="cifras">
+    <h2 id="cifras">Primeros resultados</h2>
+    <div class="rejilla">
+      <a class="tarjeta cifra" href={`${base}internacional/`}>
+        <span class="grande">{mx.rango}<small> de {nPaises}</small></span>
+        <span>Lugar de México entre los países de América Latina y la OCDE. Con otros pesos y fórmulas de agregación, el lugar va del {mx.rango_p5} al {mx.rango_p95}.</span>
+      </a>
+      <a class="tarjeta cifra" href={`${base}estatal/`}>
+        <span class="grande">{son.rango}<small> de 32</small></span>
+        <span>Lugar de Sonora entre las entidades federativas (IICA estatal {num(son.indice)}; intervalo {son.rango_p5}–{son.rango_p95}).</span>
+      </a>
+      <a class="tarjeta cifra" href={`${base}estatal/`}>
+        <span class="grande">{chh.rango}<small> de 32</small></span>
+        <span>Lugar de Chihuahua entre las entidades federativas (IICA estatal {num(chh.indice)}; intervalo {chh.rango_p5}–{chh.rango_p95}).</span>
+      </a>
+    </div>
+    <p class="aviso">
+      Son <strong>índices parciales de contexto</strong>: los datos abiertos miden sobre todo la <em>capacidad instalada</em>
+      de un ecosistema, no los resultados que emergen de procesos concretos de cocreación. Los intervalos muestran qué tanto
+      cambia el lugar con otras decisiones metodológicas. <a href={`${base}metodologia/`}>Ver la metodología</a>.
+    </p>
+  </section>
+
+  <section aria-labelledby="dims">
+    <h2 id="dims">Seis dimensiones</h2>
+    <p class="prosa">La propuesta original define seis dimensiones preliminares para el índice <Cita clave="zenteno_ica_2026" />:</p>
+    <ul class="dimensiones">
+      {Object.entries(DIM_CORTO).map(([d, n]) => (
+        <li style={`--c:${DIM_COLOR[d]}`}><span class="num">{d}</span>{n}</li>
+      ))}
+    </ul>
+  </section>
+
+  <section aria-labelledby="explorar">
+    <h2 id="explorar">Explorar</h2>
+    <div class="rejilla">
+      <a class="tarjeta enlace" href={`${base}propuesta/`}><h3>La propuesta</h3><p>Concepto, modelo MICA, el Hackathón de Ciberdemocracia y la ponencia completa en PDF.</p></a>
+      <a class="tarjeta enlace" href={`${base}internacional/`}><h3>Internacional</h3><p>México frente a {nPaises - 1} países de América Latina y la OCDE.</p></a>
+      <a class="tarjeta enlace" href={`${base}nacional/`}><h3>Nacional</h3><p>Cómo han cambiado las dimensiones en México desde 2012.</p></a>
+      <a class="tarjeta enlace" href={`${base}estatal/`}><h3>Estatal</h3><p>Las 32 entidades, con énfasis en Chihuahua y Sonora.</p></a>
+      <a class="tarjeta enlace" href={`${base}datos/`}><h3>Datos y código</h3><p>Fuentes, licencias, descargas y cómo reproducir todo.</p></a>
+    </div>
+  </section>
 </Base>
+
+<style>
+  .heroe { padding: 2.5rem 0 1rem; }
+  .antetitulo { text-transform: uppercase; letter-spacing: 0.12em; font-weight: 700; font-size: 0.82rem; color: var(--acento); margin: 0; }
+  .heroe h1 { font-size: clamp(2.2rem, 6vw, 3.6rem); background: linear-gradient(90deg, var(--primario), var(--acento));
+    -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .lema { font-size: 1.25rem; max-width: 760px; color: var(--texto); }
+  .cifra { display: flex; flex-direction: column; gap: 0.4rem; text-decoration: none; color: var(--texto); }
+  .cifra:hover { border-color: var(--acento); }
+  .grande { font-size: 2.8rem; font-weight: 800; color: var(--primario); line-height: 1; }
+  .grande small { font-size: 1rem; font-weight: 600; color: var(--texto-suave); }
+  .enlace { text-decoration: none; color: var(--texto); }
+  .enlace h3 { margin-top: 0; }
+  .enlace:hover { border-color: var(--acento); }
+  .dimensiones { list-style: none; padding: 0; display: grid; gap: 0.6rem; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
+  .dimensiones li { display: flex; align-items: center; gap: 0.7rem; padding: 0.7rem 0.9rem; border-radius: var(--radio);
+    background: var(--fondo-suave); border-left: 6px solid var(--c); font-weight: 600; }
+  .num { display: grid; place-items: center; width: 1.9rem; height: 1.9rem; border-radius: 50%; background: var(--c); color: #fff; font-weight: 800; flex: none; }
+  .aviso { margin-top: 1.2rem; }
+</style>

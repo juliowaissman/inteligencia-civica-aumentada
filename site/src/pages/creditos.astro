@@ -1,0 +1,32 @@
+---
+import Base from "../layouts/Base.astro";
+import Cita from "../components/Cita.astro";
+---
+<Base titulo="Créditos">
+  <h1>Créditos</h1>
+  <div class="rejilla">
+    <div class="tarjeta">
+      <h2>Propuesta conceptual</h2>
+      <p><strong>Ricardo Zenteno Fernández</strong><br />Consejero Electoral, Instituto Estatal Electoral de Chihuahua.<br />
+        Autor de la ponencia sobre Inteligencia Cívica Aumentada <Cita clave="zenteno_ica_2026" />.</p>
+    </div>
+    <div class="tarjeta">
+      <h2>Índices parciales, datos y sitio</h2>
+      <p><strong>Julio Waissman Vilanova</strong><br />Coordinador de la Maestría en Ciencia de Datos, Universidad de Sonora.</p>
+    </div>
+  </div>
+  <p class="aviso">
+    Este trabajo se realizó con <strong>la colaboración de la Maestría en Ciencia de Datos de la Universidad de Sonora</strong>.
+  </p>
+  <h2>Aviso</h2>
+  <p class="prosa">
+    Es un sitio académico independiente. No es un sitio oficial del Instituto Estatal Electoral de Chihuahua ni de ninguna otra institución.
+    Su paleta de colores se inspira en la identidad visual del IEE Chihuahua. Los resultados son responsabilidad de sus autores.
+  </p>
+  <h2>Herramientas</h2>
+  <p class="prosa">
+    Python (pandas, matplotlib), Astro, Observable Plot y mapshaper. Mapas base del Marco Geoestadístico 2025 del INEGI <Cita clave="inegi_mg2025" />
+    y de Natural Earth <Cita clave="naturalearth_admin0_110m" />. El código se escribió con apoyo de Claude, un asistente de IA de Anthropic,
+    bajo la revisión de los autores.
+  </p>
+</Base>

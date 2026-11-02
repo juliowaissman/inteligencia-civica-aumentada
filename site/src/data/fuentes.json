@@ -1,0 +1,1126 @@
+[
+ {
+  "id": "anthropic_economic_index",
+  "nombre": "Anthropic Economic Index (uso de Claude por país)",
+  "editor": "Anthropic",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex",
+  "licencia": "CC BY (data_documentation.md de la publicación 2026-06-26); la ficha del repositorio en Hugging Face declara MIT",
+  "redistribuible": true,
+  "cita": "anthropic_aei_2026",
+  "niveles": [
+   "internacional"
+  ],
+  "estado": "verificada",
+  "motivo": "Publicación release_2026_06_26 (la más reciente en Hugging Face al 2026-11-02), archivo aei_claude_ai_2026-06-26.csv (~219 MB: no se versiona). Trae meses calendario de abril y mayo de 2026; se usa solo mayo de 2026 (2026-05-01 a 2026-06-01). Solo se publica un país si supera el umbral mínimo de conversaciones muestreadas: unos 120 países con índice per cápita. Mide uso de Claude.ai (planes Free, Pro y Max), no adopción de IA en general, y depende de la cuota de mercado de Anthropic en cada país. Ambas licencias (CC BY y MIT) permiten redistribuir con atribución.",
+  "descarga": "automatica",
+  "indicadores": [
+   {
+    "id": "aei_uso_per_capita",
+    "nombre": "Anthropic AI Usage Index (uso de Claude por persona en edad de trabajar)",
+    "dimension": 3
+   },
+   {
+    "id": "aei_uso_pct",
+    "nombre": "Participación del país en el uso mundial de Claude.ai",
+    "dimension": 3
+   }
+  ]
+ },
+ {
+  "id": "anuies",
+  "nombre": "Anuario Estadístico de la Educación Superior (matrícula por entidad y campo amplio de formación)",
+  "editor": "Asociación Nacional de Universidades e Instituciones de Educación Superior (ANUIES)",
+  "url": "https://anuario.anuies.mx/",
+  "licencia": "© ANUIES, todos los derechos reservados (no declara licencia abierta)",
+  "redistribuible": false,
+  "cita": "anuies_anuario_2025",
+  "niveles": [
+   "nacional",
+   "estatal"
+  ],
+  "estado": "verificada",
+  "motivo": "Los datos de origen son los del cuestionario 911 de la SEP, que también se publica en datos.gob.mx con licencia CC BY 4.0 (sin campo amplio en todos los ciclos); si se requiere redistribuir, usar esa fuente como alternativa.",
+  "descarga": "automatica",
+  "indicadores": [
+   {
+    "id": "anuies_matricula_superior",
+    "nombre": "Matrícula total de educación superior (TSU, licenciatura, normal y posgrado; todas las modalidades)",
+    "dimension": 1
+   },
+   {
+    "id": "anuies_matricula_tic",
+    "nombre": "Matrícula de educación superior en el campo amplio \"Tecnologías de la información y la comunicación\"",
+    "dimension": 6
+   }
+  ]
+ },
+ {
+  "id": "banco_mundial",
+  "nombre": "World Development Indicators y Worldwide Governance Indicators",
+  "editor": "Banco Mundial",
+  "url": "https://data.worldbank.org/",
+  "licencia": "CC BY 4.0",
+  "redistribuible": true,
+  "cita": "bancomundial_wdi",
+  "niveles": [
+   "internacional"
+  ],
+  "estado": "verificada",
+  "motivo": "",
+  "descarga": "automatica",
+  "indicadores": [
+   {
+    "id": "wb_internet",
+    "nombre": "Personas que usan internet (% de la población)",
+    "dimension": 1
+   },
+   {
+    "id": "wb_terciaria",
+    "nombre": "Matrícula en educación terciaria (% bruto)",
+    "dimension": 1
+   },
+   {
+    "id": "wgi_voz",
+    "nombre": "Voz y rendición de cuentas (WGI)",
+    "dimension": 5
+   },
+   {
+    "id": "wgi_efectividad",
+    "nombre": "Efectividad gubernamental (WGI)",
+    "dimension": 4
+   },
+   {
+    "id": "wgi_corrupcion",
+    "nombre": "Control de la corrupción (WGI)",
+    "dimension": 5
+   }
+  ]
+ },
+ {
+  "id": "cnge",
+  "nombre": "Censo Nacional de Gobiernos Estatales (CNGE), módulo 1 Administración Pública de la entidad federativa",
+  "editor": "Instituto Nacional de Estadística y Geografía (INEGI)",
+  "url": "https://www.inegi.org.mx/programas/cnge/2025/",
+  "licencia": "Términos de Libre Uso de la Información del INEGI",
+  "redistribuible": true,
+  "cita": "inegi_cnge_2025",
+  "niveles": [
+   "nacional",
+   "estatal"
+  ],
+  "estado": "verificada",
+  "motivo": "",
+  "descarga": "automatica",
+  "indicadores": [
+   {
+    "id": "cnge_apertura_participacion",
+    "nombre": "La Administración Pública estatal abrió espacios de participación ciudadana (1 = sí, 0 = no)",
+    "dimension": 4
+   },
+   {
+    "id": "cnge_espacios_participacion",
+    "nombre": "Espacios de participación ciudadana abiertos por la Administración Pública estatal (número)",
+    "dimension": 4
+   },
+   {
+    "id": "cnge_espacios_deliberacion_cogestion",
+    "nombre": "Espacios de participación con nivel de incidencia de deliberación o cogestión (número)",
+    "dimension": 4
+   },
+   {
+    "id": "cnge_registros_espacio_tema",
+    "nombre": "Registros de espacios de participación por tema (espacio x tema, número)",
+    "dimension": 4
+   },
+   {
+    "id": "cnge_solicitudes_info_recibidas",
+    "nombre": "Solicitudes de acceso a la información recibidas por la Administración Pública estatal (número)",
+    "dimension": 4
+   },
+   {
+    "id": "cnge_solicitudes_info_respondidas",
+    "nombre": "Solicitudes de acceso a la información respondidas por la Administración Pública estatal (número)",
+    "dimension": 4
+   },
+   {
+    "id": "cnge_tramites_ofrecidos",
+    "nombre": "Tipos de trámite o servicio del catálogo CNGE que ofrece la Administración Pública estatal (de 24)",
+    "dimension": 3
+   },
+   {
+    "id": "cnge_tramites_medios_electronicos",
+    "nombre": "Tipos de trámite o servicio que se pueden presentar por medios electrónicos (de 24)",
+    "dimension": 3
+   },
+   {
+    "id": "cnge_tramites_transaccionales",
+    "nombre": "Tipos de trámite o servicio con servicio web transaccional (de 24)",
+    "dimension": 3
+   },
+   {
+    "id": "cnge_computadoras",
+    "nombre": "Computadoras de las instituciones de la Administración Pública estatal (número)",
+    "dimension": 3
+   }
+  ]
+ },
+ {
+  "id": "conapo_poblacion",
+  "nombre": "Proyecciones de la Población de México y de las Entidades Federativas 2020-2070 (Conciliación Demográfica 1950-2019)",
+  "editor": "Consejo Nacional de Población (CONAPO)",
+  "url": "https://www.datos.gob.mx/dataset/proyecciones-de-poblacion",
+  "licencia": "CC BY 4.0",
+  "redistribuible": true,
+  "cita": "conapo_proyecciones_2023",
+  "niveles": [
+   "nacional",
+   "estatal"
+  ],
+  "estado": "verificada",
+  "motivo": "",
+  "descarga": "automatica",
+  "indicadores": [
+   {
+    "id": "poblacion_total",
+    "nombre": "Población total a mitad de año",
+    "dimension": 1
+   }
+  ]
+ },
+ {
+  "id": "denue",
+  "nombre": "Directorio Estadístico Nacional de Unidades Económicas (DENUE), sectores 51 y 54",
+  "editor": "Instituto Nacional de Estadística y Geografía (INEGI)",
+  "url": "https://www.inegi.org.mx/app/descarga/?ti=6",
+  "licencia": "Términos de Libre Uso de la Información del INEGI",
+  "redistribuible": true,
+  "cita": "inegi_denue_2026",
+  "niveles": [
+   "nacional",
+   "estatal"
+  ],
+  "estado": "verificada",
+  "motivo": "",
+  "descarga": "automatica",
+  "indicadores": [
+   {
+    "id": "denue_5415",
+    "nombre": "Establecimientos en la rama SCIAN 5415 (servicios de diseño de sistemas de cómputo y servicios relacionados)",
+    "dimension": 6
+   },
+   {
+    "id": "denue_5182",
+    "nombre": "Establecimientos en la rama SCIAN 5182 (procesamiento electrónico de información, hospedaje y otros servicios relacionados)",
+    "dimension": 6
+   }
+  ]
+ },
+ {
+  "id": "dsp",
+  "nombre": "Digital Society Project Dataset v8",
+  "editor": "Digital Society Project (V-Dem Institute y colaboradores)",
+  "url": "https://digitalsocietyproject.org/data/",
+  "licencia": "All rights reserved (Copyright © 2026 Digital Society Project); descarga gratuita con cita",
+  "redistribuible": false,
+  "cita": "dsp_v8",
+  "niveles": [
+   "internacional"
+  ],
+  "estado": "verificada",
+  "motivo": "CSV país-año 2000–2025 de 179 países (DSP_CY_v8.csv dentro del zip). Se usan las estimaciones puntuales del modelo de medición bayesiano (escala latente, sin sufijo _osp/_ord). En todas las variables elegidas un valor mayor corresponde a la respuesta más favorable según el libro de códigos v8. Se excluyen PSG (Gaza), SML (Somalilandia) y ZZB (Zanzíbar), códigos propios de V-Dem sin equivalente ISO3. La licencia no permite redistribuir: los crudos no deben publicarse en el sitio.",
+  "descarga": "automatica",
+  "indicadores": [
+   {
+    "id": "dsp_ciberseguridad_gob",
+    "nombre": "Capacidad de ciberseguridad del gobierno (v2smgovcapsec)",
+    "dimension": 3
+   },
+   {
+    "id": "dsp_capacidad_regulacion",
+    "nombre": "Capacidad del gobierno para regular contenido en línea (v2smregcap)",
+    "dimension": 3
+   },
+   {
+    "id": "dsp_privacidad_ley",
+    "nombre": "Contenido de la protección legal de la privacidad (v2smprivcon)",
+    "dimension": 3
+   },
+   {
+    "id": "dsp_medios_perspectivas",
+    "nombre": "Pluralidad de perspectivas en medios en línea (v2smonper)",
+    "dimension": 1
+   },
+   {
+    "id": "dsp_polarizacion",
+    "nombre": "Baja polarización de la sociedad (v2smpolsoc)",
+    "dimension": 1
+   }
+  ]
+ },
+ {
+  "id": "encig",
+  "nombre": "Encuesta Nacional de Calidad e Impacto Gubernamental (ENCIG)",
+  "editor": "Instituto Nacional de Estadística y Geografía (INEGI)",
+  "url": "https://www.inegi.org.mx/programas/encig/2025/",
+  "licencia": "Términos de Libre Uso de la Información del INEGI",
+  "redistribuible": true,
+  "cita": "inegi_encig_2025",
+  "niveles": [
+   "nacional",
+   "estatal"
+  ],
+  "estado": "verificada",
+  "motivo": "",
+  "descarga": "automatica",
+  "indicadores": [
+   {
+    "id": "encig_prevalencia_corrupcion",
+    "nombre": "Tasa de prevalencia de corrupción en trámites (víctimas por cada 100 000 habitantes)",
+    "dimension": 5
+   },
+   {
+    "id": "encig_confianza_gob_estatal",
+    "nombre": "Población que confía mucho o algo en el gobierno estatal (%)",
+    "dimension": 5
+   },
+   {
+    "id": "encig_satisfaccion_servicios",
+    "nombre": "Satisfacción con servicios públicos básicos y bajo demanda (% de opiniones satisfechas)",
+    "dimension": 5
+   }
+  ]
+ },
+ {
+  "id": "encuci",
+  "nombre": "Encuesta Nacional de Cultura Cívica (ENCUCI) 2020",
+  "editor": "Instituto Nacional de Estadística y Geografía (INEGI) e Instituto Nacional Electoral (INE)",
+  "url": "https://www.inegi.org.mx/programas/encuci/2020/",
+  "licencia": "Términos de Libre Uso de la Información del INEGI",
+  "redistribuible": true,
+  "cita": "inegi_encuci_2020",
+  "niveles": [
+   "nacional"
+  ],
+  "estado": "descartada",
+  "motivo": "Descartada para el índice estatal: la ENCUCI 2020 solo es representativa a nivel nacional, para 6 regiones y por dominio urbano/rural, no por entidad federativa. Chihuahua y Sonora quedan dentro de la región 01 \"Aridoamérica Occidental\", junto con otras entidades, así que no hay un valor propio de cada una. Las cifras nacionales sí sirven como contexto de cultura cívica (dimensión 1) y se procesan con `uv run iica cobertura --fuente encuci` (las fuentes descartadas no entran en las corridas por defecto). Edición 2025: al 2 de noviembre de 2026 el sitio del INEGI no tiene página de la ENCUCI 2025 (programas/encuci/2025/ responde \"Página no encontrada\"). Un documento del INE (Comisión de Capacitación Electoral y Educación Cívica, noviembre de 2024) describe su diseño conjunto con el INEGI, pero no se encontraron resultados publicados.",
+  "descarga": "automatica",
+  "indicadores": [
+   {
+    "id": "encuci_interes_mucho",
+    "nombre": "Población de 15 años y más con mucha preocupación o interés por los asuntos del país (%)",
+    "dimension": 1
+   },
+   {
+    "id": "encuci_asociacion_12m",
+    "nombre": "Población de 15 años y más que participó en algún grupo o asociación en los últimos 12 meses (%)",
+    "dimension": 1
+   },
+   {
+    "id": "encuci_voluntariado_12m",
+    "nombre": "Población de 15 años y más que realizó algún trabajo voluntario en los últimos 12 meses (%)",
+    "dimension": 1
+   },
+   {
+    "id": "encuci_accion_publica_12m",
+    "nombre": "Población de 18 años y más que realizó alguna actividad relacionada con asuntos públicos en los últimos 12 meses (%)",
+    "dimension": 1
+   }
+  ]
+ },
+ {
+  "id": "endutih",
+  "nombre": "Encuesta Nacional sobre Disponibilidad y Uso de Tecnologías de la Información en los Hogares (ENDUTIH)",
+  "editor": "Instituto Nacional de Estadística y Geografía (INEGI)",
+  "url": "https://www.inegi.org.mx/programas/endutih/2025/",
+  "licencia": "Términos de Libre Uso de la Información del INEGI",
+  "redistribuible": true,
+  "cita": "inegi_endutih_2025",
+  "niveles": [
+   "nacional",
+   "estatal"
+  ],
+  "estado": "verificada",
+  "motivo": "",
+  "descarga": "automatica",
+  "indicadores": [
+   {
+    "id": "endutih_internet",
+    "nombre": "Personas usuarias de internet (% de la población de 6 años y más)",
+    "dimension": 1
+   },
+   {
+    "id": "endutih_hogares_computadora",
+    "nombre": "Hogares que disponen de computadora (%)",
+    "dimension": 1
+   },
+   {
+    "id": "endutih_hogares_internet",
+    "nombre": "Hogares que disponen de internet (%)",
+    "dimension": 1
+   },
+   {
+    "id": "endutih_internet_gobierno",
+    "nombre": "Personas usuarias de internet que lo usan para interactuar con el gobierno (%)",
+    "dimension": 3
+   }
+  ]
+ },
+ {
+  "id": "envipe",
+  "nombre": "Encuesta Nacional de Victimización y Percepción sobre Seguridad Pública (ENVIPE)",
+  "editor": "Instituto Nacional de Estadística y Geografía (INEGI)",
+  "url": "https://www.inegi.org.mx/programas/envipe/2025/",
+  "licencia": "Términos de Libre Uso de la Información del INEGI",
+  "redistribuible": true,
+  "cita": "inegi_envipe_2025",
+  "niveles": [
+   "nacional",
+   "estatal"
+  ],
+  "estado": "verificada",
+  "motivo": "",
+  "descarga": "automatica",
+  "indicadores": [
+   {
+    "id": "envipe_confianza_policia_estatal",
+    "nombre": "Confianza en la policía estatal (% con mucha o algo de confianza)",
+    "dimension": 5
+   },
+   {
+    "id": "envipe_confianza_mp_fiscalia_estatal",
+    "nombre": "Confianza en el Ministerio Público y fiscalías estatales (% con mucha o algo de confianza)",
+    "dimension": 5
+   },
+   {
+    "id": "envipe_confianza_jueces",
+    "nombre": "Confianza en jueces (% con mucha o algo de confianza)",
+    "dimension": 5
+   }
+  ]
+ },
+ {
+  "id": "gdb",
+  "nombre": "Global Data Barometer, 2.ª edición",
+  "editor": "Global Data Barometer (D4D.net e ILDA)",
+  "url": "https://globaldatabarometer.org/open-data/",
+  "licencia": "CC BY 4.0",
+  "redistribuible": true,
+  "cita": "gdb2025",
+  "niveles": [
+   "internacional"
+  ],
+  "estado": "verificada",
+  "motivo": "Archivo completo gdb-2024-full-data.csv (17.6 MB). La 2.ª edición cubre solo 43 países de África y de América Latina y el Caribe (no hay OCDE fuera de LAC). La evidencia primaria va del 31-ago-2022 al 1-sep-2024, por eso se registra como 2024 (informe publicado en 2025). En esta edición ya NO se calculan puntajes por pilar (gobernanza, capacidad, disponibilidad): el informe (anexo de ponderaciones) dice que el puntaje nacional se calcula directo de los indicadores, y el CSV solo trae puntajes nacionales, por clúster y por área de acción. Por eso se usan el puntaje nacional y los tres clústeres fundacionales en lugar de los pilares.",
+  "descarga": "automatica",
+  "indicadores": [
+   {
+    "id": "gdb_total",
+    "nombre": "Puntaje nacional del Global Data Barometer",
+    "dimension": 4
+   },
+   {
+    "id": "gdb_gobernanza",
+    "nombre": "GDB – clúster Governance Foundation (protección, gestión e intercambio de datos)",
+    "dimension": 4
+   },
+   {
+    "id": "gdb_competencias",
+    "nombre": "GDB – clúster Critical Competencies (alfabetización y reutilización de datos)",
+    "dimension": 3
+   },
+   {
+    "id": "gdb_acceso_equitativo",
+    "nombre": "GDB – clúster Equitable Access (idioma y accesibilidad de los datos)",
+    "dimension": 4
+   }
+  ]
+ },
+ {
+  "id": "gii",
+  "nombre": "Global Innovation Index 2026",
+  "editor": "Organización Mundial de la Propiedad Intelectual (OMPI/WIPO)",
+  "url": "https://www.wipo.int/web-publications/global-innovation-index-2026/en/gii-2026-results.html",
+  "licencia": "CC BY 4.0 (declarada para la publicación GII; no hay una licencia aparte para los archivos de datos)",
+  "redistribuible": true,
+  "cita": "wipo_gii2026",
+  "niveles": [
+   "internacional"
+  ],
+  "estado": "verificada",
+  "motivo": "El GII Data Explorer permite bajar datos de forma interactiva, pero no tiene un enlace directo automatizable, y el repositorio TIND de la OMPI (xlsx de ediciones anteriores) bloquea clientes automáticos. Se usan los CSV de las gráficas Datawrapper incrustadas en el capítulo de resultados del informe oficial 2026 (fuente que declaran: Global Innovation Index Database, WIPO, 2026): 7LeG9 (GII frente a PIB per cápita: ISO3 y GII score) y kb0qX (insumos frente a productos: ISO3, INPUT y OUTPUT). Son 139 economías. Se baja siempre la última versión publicada de cada gráfica. El texto del informe ubica a México en el lugar 65, lo que coincide con la gráfica de rangos (pue05). Solo se carga la edición 2026; la serie histórica sigue pendiente (requiere el Data Explorer o el xlsx de TIND, ambos manuales).",
+  "descarga": "automatica",
+  "indicadores": [
+   {
+    "id": "gii_total",
+    "nombre": "Global Innovation Index (puntaje)",
+    "dimension": 6
+   },
+   {
+    "id": "gii_insumos",
+    "nombre": "GII – subíndice de insumos de innovación",
+    "dimension": 6
+   },
+   {
+    "id": "gii_productos",
+    "nombre": "GII – subíndice de productos de innovación",
+    "dimension": 6
+   }
+  ]
+ },
+ {
+  "id": "girai",
+  "nombre": "Global Index on Responsible AI (GIRAI), 2.ª edición 2026",
+  "editor": "Global Center on AI Governance",
+  "url": "https://www.global-index.ai/",
+  "licencia": "CC BY 4.0",
+  "redistribuible": true,
+  "cita": "girai2026",
+  "niveles": [
+   "internacional"
+  ],
+  "estado": "verificada",
+  "motivo": "135 países y jurisdicciones. La descarga del conjunto completo (\"Download Data\") exige llenar un formulario (POST /api/data-download), por lo que no se automatiza. Los puntajes por país (global, cinco dimensiones, tres pilares e indicadores) vienen incrustados como JSON en la página pública del índice; se descarga esa página y se leen tal cual. Si el sitio cambia de formato, procesar() falla en lugar de inventar valores. Opcional: obtener el archivo oficial por el formulario y cotejar. La licencia CC BY 4.0 es la que el sitio declara junto al formulario de descarga.",
+  "descarga": "automatica",
+  "indicadores": [
+   {
+    "id": "girai_total",
+    "nombre": "Puntaje GIRAI (global)",
+    "dimension": 3
+   },
+   {
+    "id": "girai_inclusion",
+    "nombre": "GIRAI – Inclusión y diversidad",
+    "dimension": 3
+   },
+   {
+    "id": "girai_etica",
+    "nombre": "GIRAI – Ética y sostenibilidad",
+    "dimension": 3
+   },
+   {
+    "id": "girai_trabajo",
+    "nombre": "GIRAI – Trabajo y habilidades",
+    "dimension": 3
+   },
+   {
+    "id": "girai_confianza",
+    "nombre": "GIRAI – Confianza y seguridad",
+    "dimension": 3
+   },
+   {
+    "id": "girai_sector_publico",
+    "nombre": "GIRAI – Uso de IA en servicios públicos",
+    "dimension": 3
+   }
+  ]
+ },
+ {
+  "id": "github_innovation",
+  "nombre": "GitHub Innovation Graph",
+  "editor": "GitHub",
+  "url": "https://github.com/github/innovationgraph",
+  "licencia": "CC0 1.0",
+  "redistribuible": true,
+  "cita": "github_innovationgraph",
+  "niveles": [
+   "internacional"
+  ],
+  "estado": "verificada",
+  "motivo": "CSV trimestrales por economía desde 2020 (data/developers.csv y data/economy_collaborators.csv). Solo se usan años completos (cuatro trimestres publicados); en la descarga del 2026-11-02 el último año completo es 2025 (2026 llega al 2.º trimestre y se descarta). Los códigos ISO2 se convierten a ISO3 con GeoNames countryInfo (CC BY 4.0); Kosovo queda como XKX. Se excluye el agregado \"EU\". GitHub solo publica una economía si hay 100 o más desarrolladores activos.",
+  "descarga": "automatica",
+  "indicadores": [
+   {
+    "id": "gh_desarrolladores",
+    "nombre": "Cuentas de desarrolladores en GitHub (al cierre del 4.º trimestre)",
+    "dimension": 6
+   },
+   {
+    "id": "gh_colaboracion_externa",
+    "nombre": "Colaboración con otras economías en GitHub (suma anual)",
+    "dimension": 2
+   }
+  ]
+ },
+ {
+  "id": "idd_mex",
+  "nombre": "Índice de Desarrollo Democrático de México (IDD-Mex), ediciones 2010-2024",
+  "editor": "Fundación Konrad Adenauer, Polilat, Confederación USEM, COPARMEX, El Colegio de México e INE",
+  "url": "https://idd-mex.org/",
+  "licencia": "Sin licencia abierta: prohíbe la reproducción total o parcial sin citar la fuente o sin autorización de los titulares",
+  "redistribuible": false,
+  "cita": "iddmex_2024",
+  "niveles": [
+   "nacional",
+   "estatal"
+  ],
+  "estado": "verificada",
+  "motivo": "idd-mex.org no responde (noviembre de 2026); se usan copias de web.archive.org. La edición 2024 (feb. 2025) es la más reciente y no tiene hoja de cálculo; sus valores estatales se leen de los datos de la gráfica publicada en la página \"Rankings 2024\" (comprobados contra el PDF del informe: Sonora 5.238, Chihuahua 3.173). No existe edición 2016.",
+  "descarga": "automatica",
+  "indicadores": [
+   {
+    "id": "idd_mex",
+    "nombre": "Índice de Desarrollo Democrático de México (puntaje general)",
+    "dimension": 5
+   }
+  ]
+ },
+ {
+  "id": "idea_gsod",
+  "nombre": "Global State of Democracy Indices v10 (categoría Participación), 1975–2025",
+  "editor": "International Institute for Democracy and Electoral Assistance (International IDEA)",
+  "url": "https://www.idea.int/democracytracker/gsod-indices",
+  "licencia": "CC BY-NC-SA 4.0",
+  "redistribuible": false,
+  "cita": "idea_gsod_v10",
+  "niveles": [
+   "internacional"
+  ],
+  "estado": "verificada",
+  "motivo": "CSV oficial v10 (2026) descargado directamente. La licencia CC BY-NC-SA 4.0 se declara en el codebook v10; la página de datos no declara otra. Permite redistribuir con fines no comerciales, atribución y misma licencia; se marca redistribuible=false por criterio conservador (la regla del proyecto solo acepta CC0/CC BY/CC BY-SA), decidir al publicar. Ojo: Compromiso cívico se construye con indicadores de V-Dem (y BTI), por lo que se traslapa con vdem_cspart.",
+  "descarga": "automatica",
+  "indicadores": [
+   {
+    "id": "gsod_participacion",
+    "nombre": "Participación (atributo 4 del GSoD)",
+    "dimension": 5
+   },
+   {
+    "id": "gsod_sociedad_civil",
+    "nombre": "Sociedad civil (subatributo 4.1)",
+    "dimension": 2
+   },
+   {
+    "id": "gsod_compromiso_civico",
+    "nombre": "Compromiso cívico (subatributo 4.2, civic engagement)",
+    "dimension": 2
+   },
+   {
+    "id": "gsod_particip_electoral",
+    "nombre": "Participación electoral (subatributo 4.3, población en edad de votar que votó en la última elección nacional)",
+    "dimension": 5
+   }
+  ]
+ },
+ {
+  "id": "imco_ice",
+  "nombre": "Índice de Competitividad Estatal (ICE), base de datos edición 2022 (serie 2003-2022)",
+  "editor": "Instituto Mexicano para la Competitividad (IMCO)",
+  "url": "https://indices.imco.org.mx/competitividad-estatal",
+  "licencia": "© IMCO A.C., derechos reservados (no declara licencia abierta)",
+  "redistribuible": false,
+  "cita": "imco_ice_2022",
+  "niveles": [
+   "estatal"
+  ],
+  "estado": "verificada",
+  "motivo": "Se pidió la edición 2025, pero IMCO no publica base de datos para 2023-2026: solo PDF (libro, anexo metodológico y boletas) con posiciones e indicadores, sin puntajes de subíndice en texto (la gráfica del libro solo rotula los extremos). No se leen valores de gráficas. Para 2025 hay que pedir la base a IMCO (ver instrucciones). Las ediciones 2022 y 2025 no son comparables: 2025 usa 6 subíndices con pesos por componentes principales; 2022 usa 10 subíndices (Político y Gobierno, Economía e Innovación por separado). La base 2022 no trae valor nacional.",
+  "descarga": "automatica",
+  "indicadores": [
+   {
+    "id": "imco_politico",
+    "nombre": "Subíndice Sistema político estable y funcional (ICE 2022)",
+    "dimension": 5
+   },
+   {
+    "id": "imco_gobierno",
+    "nombre": "Subíndice Gobiernos eficientes y eficaces (ICE 2022)",
+    "dimension": 5
+   },
+   {
+    "id": "imco_economia",
+    "nombre": "Subíndice Economía estable (ICE 2022)",
+    "dimension": 6
+   },
+   {
+    "id": "imco_innovacion",
+    "nombre": "Subíndice Innovación y sofisticación en los sectores económicos (ICE 2022)",
+    "dimension": 6
+   },
+   {
+    "id": "imco_general",
+    "nombre": "Índice de Competitividad Estatal, puntaje general (ICE 2022)",
+    "dimension": 6
+   }
+  ]
+ },
+ {
+  "id": "impi",
+  "nombre": "IMPI en cifras, solicitudes de invenciones de mexicanos por entidad federativa (1993-2025)",
+  "editor": "Instituto Mexicano de la Propiedad Industrial (IMPI)",
+  "url": "https://www.gob.mx/impi/documentos/instituto-mexicano-de-la-propiedad-industrial-en-cifras-impi-en-cifras",
+  "licencia": "Sin licencia declarada (publicado en gob.mx; aplican los términos generales de gob.mx)",
+  "redistribuible": false,
+  "cita": "impi_cifras_2026",
+  "niveles": [
+   "nacional",
+   "estatal"
+  ],
+  "estado": "verificada",
+  "motivo": "El archivo es una hoja de Google enlazada desde la página de IMPI en cifras; si el enlace cambia, buscar en esa página el capítulo \"Invenciones\" y actualizar el id en impi.py. Sin licencia explícita en el archivo; se marca como no redistribuible por precaución (los datos de la APF suelen publicarse bajo los Términos de Libre Uso, conviene confirmarlo).",
+  "descarga": "automatica",
+  "indicadores": [
+   {
+    "id": "impi_solicitudes_patente",
+    "nombre": "Solicitudes de patente de mexicanos por entidad federativa del solicitante",
+    "dimension": 6
+   },
+   {
+    "id": "impi_solicitudes_invenciones",
+    "nombre": "Solicitudes de invenciones de mexicanos (patentes, diseños industriales, modelos de utilidad y trazados de CI)",
+    "dimension": 6
+   }
+  ]
+ },
+ {
+  "id": "ine_participacion",
+  "nombre": "Participación ciudadana en elecciones federales 2018, 2021 y 2024 (Cómputos Distritales)",
+  "editor": "Instituto Nacional Electoral (INE)",
+  "url": "https://computos2024.ine.mx/",
+  "licencia": "Sin licencia declarada",
+  "redistribuible": false,
+  "cita": "ine_computos_2024",
+  "niveles": [
+   "nacional",
+   "estatal"
+  ],
+  "estado": "verificada",
+  "motivo": "Los sitios de cómputos del INE no declaran una licencia explícita para las bases de datos (el INE publica datos abiertos en general, pero sin términos de uso en estos archivos). Se marca como no redistribuible por precaución; los resultados agregados se pueden citar.",
+  "descarga": "automatica",
+  "indicadores": [
+   {
+    "id": "participacion_presidencia",
+    "nombre": "Participación ciudadana, elección de Presidencia (votos totales / lista nominal)",
+    "dimension": 5
+   },
+   {
+    "id": "participacion_diputaciones",
+    "nombre": "Participación ciudadana, elección de Diputaciones federales (votos totales / lista nominal)",
+    "dimension": 5
+   }
+  ]
+ },
+ {
+  "id": "itu",
+  "nombre": "Personas con habilidades TIC por tipo de habilidad (ODS 4.4.1)",
+  "editor": "Unión Internacional de Telecomunicaciones (UIT), vía la Base de Datos Global de Indicadores ODS (UN DESA)",
+  "url": "https://datahub.itu.int/",
+  "licencia": "ITU DataHub, Disclaimer and Terms of Use: copia, redistribución y adaptación solo con fines no comerciales y con cita; la base ODS de UN DESA no declara una licencia propia",
+  "redistribuible": false,
+  "cita": "itu_ictskills",
+  "niveles": [
+   "internacional"
+  ],
+  "estado": "verificada",
+  "motivo": "datahub.itu.int y su API responden 403 a clientes automáticos, por eso se usa la serie SE_ADT_ACTS de la API ODS de la ONU (unstats.un.org/sdgapi), que publica los datos de la UIT como custodia del 4.4.1, filtrada a ambos sexos, todas las edades y tres tipos de habilidad (básica, estándar, avanzada). Los datos de cada país vienen de su encuesta nacional (México: INEGI, ENDUTIH) y el rango de edad \"ALLAGE\" no es igual en todos los países (p. ej. 16–74 en Europa; en México la ENDUTIH cubre a la población de 6 años y más, según la nota de la serie), así que la comparación internacional es aproximada. Se descartan los desgloses urbano/rural (Location distinta de ALLAREA). Cobertura dispersa: unos 100 países en total y menos con datos recientes; México tiene 2019–2024. Las notas de la serie dicen que para México la habilidad \"fórmulas en hoja de cálculo\" se aproxima con \"crear hojas de cálculo\" y \"programar\" con \"crear o usar bases de datos y programar en lenguaje especializado\": no son idénticas a las de otros países. Los códigos M49 se pasan a ISO3 con GeoNames.",
+  "descarga": "automatica",
+  "indicadores": [
+   {
+    "id": "itu_copiar_pegar",
+    "nombre": "Personas que usaron copiar y pegar en un documento (habilidad TIC básica)",
+    "dimension": 1
+   },
+   {
+    "id": "itu_formula_hoja",
+    "nombre": "Personas que usaron fórmulas aritméticas en una hoja de cálculo (habilidad TIC estándar)",
+    "dimension": 1
+   },
+   {
+    "id": "itu_programar",
+    "nombre": "Personas que escribieron un programa en un lenguaje especializado (habilidad TIC avanzada)",
+    "dimension": 1
+   }
+  ]
+ },
+ {
+  "id": "lapop",
+  "nombre": "AmericasBarometer (LAPOP Lab / Center for Global Democracy, Vanderbilt)",
+  "editor": "LAPOP Lab, Center for Global Democracy (CGD), Universidad Vanderbilt",
+  "url": "https://www.vanderbilt.edu/lapop/free-access.php",
+  "licencia": "Acuerdo de uso de CGD/LAPOP: archivos gratuitos, pero prohibido compartir los archivos de datos (incluso con revistas)",
+  "redistribuible": false,
+  "cita": "lapop_americasbarometer",
+  "niveles": [
+   "internacional"
+  ],
+  "estado": "candidata",
+  "motivo": "Solo se revisó el acceso. Los microdatos son gratuitos pero se descargan por país y ronda desde datasets.americasbarometer.org bajo un acuerdo de uso que prohíbe redistribuir los archivos; el Data Playground (https://www.vanderbilt.edu/cgd/data-playground/) exporta agregados de forma interactiva. No hay ruta automatizada y compatible con la licencia, así que no se escribió módulo. Los agregados calculados por nosotros sí podrían publicarse citando la fuente, pero no los archivos crudos.",
+  "descarga": "manual",
+  "indicadores": [
+   {
+    "id": "lapop_ing4",
+    "nombre": "Apoyo a la democracia (ING4, % de acuerdo 5–7)",
+    "dimension": 5
+   },
+   {
+    "id": "lapop_b47a",
+    "nombre": "Confianza en las elecciones (B47A, % 5–7)",
+    "dimension": 5
+   },
+   {
+    "id": "lapop_cp8",
+    "nombre": "Participación en reuniones de mejora comunitaria (CP8, % al menos una vez al año)",
+    "dimension": 2
+   }
+  ]
+ },
+ {
+  "id": "latinno",
+  "nombre": "LATINNO Dataset on Democratic Innovations in Latin America (v1.0.0, 1990–2020)",
+  "editor": "Thamy Pogrebinschi, Wissenschaftszentrum Berlin für Sozialforschung (WZB); archivado en GESIS",
+  "url": "https://doi.org/10.7802/2278",
+  "licencia": "Sin licencia confirmada (metadatos de terceros indican CC BY 4.0; el registro de DataCite no declara licencia)",
+  "redistribuible": false,
+  "cita": "pogrebinschi_latinno2021",
+  "niveles": [
+   "internacional"
+  ],
+  "estado": "candidata",
+  "motivo": "No se pudo descargar: el DOI resuelve a search.gesis.org, que bloquea el acceso automatizado (Cloudflare 403), y el repositorio GESIS SowiDataNet|datorium es una aplicación Vaadin sin enlaces directos. latinno.net no respondió. Cubre ~3,700 innovaciones en 18 países de América Latina (México incluido). No hay módulo de procesamiento hasta conocer la estructura real del archivo.",
+  "descarga": "manual",
+  "indicadores": [
+   {
+    "id": "latinno_innovaciones",
+    "nombre": "Número de innovaciones democráticas registradas por país",
+    "dimension": 4
+   }
+  ]
+ },
+ {
+  "id": "latinobarometro",
+  "nombre": "Latinobarómetro (opinión pública, 18 países de América Latina, 1995–2026)",
+  "editor": "Corporación Latinobarómetro",
+  "url": "https://www.latinobarometro.org/",
+  "licencia": "Sin licencia declarada (uso sujeto a las condiciones del sitio)",
+  "redistribuible": false,
+  "cita": "latinobarometro2026",
+  "niveles": [
+   "internacional"
+  ],
+  "estado": "candidata",
+  "motivo": "Solo se revisó el acceso. El sitio es una aplicación web sin enlaces directos a los microdatos (la página carga su contenido con JavaScript); históricamente la descarga de bases pide registro en \"Documentación y Datos\" (no se pudo confirmar por script) y no se encontró licencia de redistribución. No hay ruta automatizada y compatible con la licencia, así que no se escribió módulo.",
+  "descarga": "manual",
+  "indicadores": [
+   {
+    "id": "lb_apoyo_democracia",
+    "nombre": "Apoyo a la democracia (% que prefiere la democracia)",
+    "dimension": 5
+   },
+   {
+    "id": "lb_confianza_electoral",
+    "nombre": "Confianza en el organismo electoral (% mucha o algo)",
+    "dimension": 5
+   },
+   {
+    "id": "lb_participacion",
+    "nombre": "Participación política no electoral (% que firmó peticiones o asistió a manifestaciones)",
+    "dimension": 2
+   }
+  ]
+ },
+ {
+  "id": "mga",
+  "nombre": "Métrica de Gobierno Abierto (ediciones 2017, 2019 y 2021), resultados por entidad federativa",
+  "editor": "Instituto Nacional de Transparencia, Acceso a la Información y Protección de Datos Personales (INAI) y Centro de Investigación y Docencia Económicas (CIDE)",
+  "url": "https://lnppmicrositio.shinyapps.io/metrica_gobierno_abierto_2021/",
+  "licencia": "CC BY-NC-SA 4.0 (declarada en el micrositio 2021; las ediciones 2017 y 2019 no declaran licencia)",
+  "redistribuible": false,
+  "cita": "inai_cide_mga_2021",
+  "niveles": [
+   "nacional",
+   "estatal"
+  ],
+  "estado": "verificada",
+  "motivo": "CC BY-NC-SA no se considera redistribuible según las reglas del proyecto (cláusula no comercial). El INAI se extinguió en 2025; los archivos 2017 y 2019 se toman de copias de web.archive.org (capturas del 13 de febrero de 2021) del micrositio del INAI, y el CSV 2021 del micrositio del Laboratorio Nacional de Políticas Públicas (CIDE) en shinyapps.io, que no enlaza el archivo directamente (está en la carpeta bases/ del sitio). Si shinyapps desaparece, conservar la copia cruda y su sha256 (procedencia.json).",
+  "descarga": "automatica",
+  "indicadores": [
+   {
+    "id": "mga_indice",
+    "nombre": "Índice de Gobierno Abierto (MGA)",
+    "dimension": 4
+   },
+   {
+    "id": "mga_transparencia",
+    "nombre": "Subíndice de Transparencia (MGA)",
+    "dimension": 4
+   },
+   {
+    "id": "mga_participacion",
+    "nombre": "Subíndice de Participación (MGA)",
+    "dimension": 4
+   }
+  ]
+ },
+ {
+  "id": "microsoft_ai_diffusion",
+  "nombre": "Global AI Diffusion (Q2 2026)",
+  "editor": "Microsoft AI Economy Institute (AI for Good Lab)",
+  "url": "https://github.com/microsoft/ai-diffusion-report",
+  "licencia": "MIT (repositorio microsoft/ai-diffusion-report)",
+  "redistribuible": true,
+  "cita": "microsoft_aidiffusion2026",
+  "niveles": [
+   "internacional"
+  ],
+  "estado": "verificada",
+  "motivo": "CSV data/AI_Diffusion_Q22026_Update.csv con 147 economías y cuatro periodos (H1 2025, H2 2025, Q1 2026 y Q2 2026). Los periodos son semestres o trimestres, no años, así que solo se usa el más reciente (Q2 2026). Los periodos anteriores no se cargan porque se revisan en cada publicación y no corresponden a años calendario. Es una estimación basada en telemetría agregada de Microsoft, ajustada por cuota de mercado de dispositivos, penetración de internet y población. Los nombres de país se pasan a ISO3 con GeoNames y siete alias explícitos. Microsoft pide citar a Misra et al. (2025), arXiv:2511.02781, y enlazar el conjunto de datos.",
+  "descarga": "automatica",
+  "indicadores": [
+   {
+    "id": "ms_difusion_ia",
+    "nombre": "Difusión de la IA (personas de 15–64 años que usaron IA generativa en el periodo)",
+    "dimension": 3
+   }
+  ]
+ },
+ {
+  "id": "ogp",
+  "nombre": "Open Government Partnership, bases de compromisos y de proceso de los miembros nacionales",
+  "editor": "Open Government Partnership (OGP), Independent Reporting Mechanism (IRM)",
+  "url": "https://www.opengovpartnership.org/data-dashboard/",
+  "licencia": "Sin licencia confirmada",
+  "redistribuible": false,
+  "cita": "ogp_datos",
+  "niveles": [
+   "internacional"
+  ],
+  "estado": "candidata",
+  "motivo": "opengovpartnership.org responde 403 (Cloudflare) a toda petición automatizada y data.opengovpartnership.org no resuelve. Según el sitio, OGP publica una National Commitment Database (compromisos nacionales desde 2011), una base de proceso y una Open Government database como Google Sheets/Excel/CSV, pero no se pudieron leer los enlaces. Además solo cubre países miembros (~75), así que el número de planes y compromisos no es comparable con no miembros: usarlo solo como indicador de activación entre miembros.",
+  "descarga": "manual",
+  "indicadores": [
+   {
+    "id": "ogp_compromisos",
+    "nombre": "Número de compromisos de gobierno abierto en planes de acción nacionales",
+    "dimension": 4
+   },
+   {
+    "id": "ogp_planes",
+    "nombre": "Número de planes de acción nacionales presentados",
+    "dimension": 4
+   }
+  ]
+ },
+ {
+  "id": "onu_egov",
+  "nombre": "United Nations E-Government Survey (EGDI y subíndices), 2003–2024",
+  "editor": "Naciones Unidas, Departamento de Asuntos Económicos y Sociales (UN DESA)",
+  "url": "https://publicadministration.un.org/egovkb/en-us/data-center",
+  "licencia": "Términos de uso del sitio de la ONU (https://www.un.org/en/about-us/terms-of-use): descarga y copia para uso personal y no comercial, sin derecho a revender ni redistribuir",
+  "redistribuible": false,
+  "cita": "undesa_egov2024",
+  "niveles": [
+   "internacional"
+  ],
+  "estado": "verificada",
+  "motivo": "Descarga por postback ASP.NET del botón \"Download Data\" del Data Center (un CSV por edición con los 193 Estados miembros). Control: México 2024 EGDI = 0.78499 (publicado 0.7850), lugar 65. Los nombres de país se convierten a ISO3 con un diccionario explícito en el módulo; las ediciones no son estrictamente comparables entre sí por cambios de metodología.",
+  "descarga": "automatica",
+  "indicadores": [
+   {
+    "id": "egov_egdi",
+    "nombre": "Índice de Desarrollo del Gobierno Electrónico (EGDI)",
+    "dimension": 3
+   },
+   {
+    "id": "egov_epi",
+    "nombre": "Índice de E-Participación (EPI)",
+    "dimension": 4
+   },
+   {
+    "id": "egov_osi",
+    "nombre": "Índice de Servicios en Línea (OSI)",
+    "dimension": 3
+   },
+   {
+    "id": "egov_hci",
+    "nombre": "Índice de Capital Humano (HCI, componente del EGDI)",
+    "dimension": 1
+   },
+   {
+    "id": "egov_tii",
+    "nombre": "Índice de Infraestructura de Telecomunicaciones (TII)",
+    "dimension": 3
+   }
+  ]
+ },
+ {
+  "id": "osc",
+  "nombre": "Registro Federal de las Organizaciones de la Sociedad Civil (CLUNI), listado de OSC con estatus",
+  "editor": "Secretaría de Bienestar, Comisión de Fomento de las Actividades de las Organizaciones de la Sociedad Civil (antes Indesol)",
+  "url": "http://corresponsabilidad.gob.mx/index.php/consulta/guia-para-consultar-el-listado-de-osc-inscritas-con-objeto-social",
+  "licencia": "Sin licencia declarada",
+  "redistribuible": false,
+  "cita": "bienestar_rfosc_2025",
+  "niveles": [
+   "nacional",
+   "estatal"
+  ],
+  "estado": "verificada",
+  "motivo": "Los sitios corresponsabilidad.gob.mx y sii.bienestar.gob.mx no respondieron desde nuestra red (noviembre de 2026); los enlaces a las hojas de Google se obtuvieron de la copia de web.archive.org de la guía (captura del 13 de mayo de 2026) y se descargan directamente. Si dejan de funcionar, consultar el \"Buscador de OSC\" en https://sii.bienestar.gob.mx/portal/ filtrando por \"Estatus de la OSC\" y exportar el listado. El archivo incluye correos de contacto de las organizaciones.",
+  "descarga": "automatica",
+  "indicadores": [
+   {
+    "id": "osc_activas",
+    "nombre": "OSC con CLUNI en estatus ACTIVA",
+    "dimension": 2
+   },
+   {
+    "id": "osc_activas_y_condicionadas",
+    "nombre": "OSC con CLUNI en estatus ACTIVA o ACTIVA CONDICIONADA",
+    "dimension": 2
+   }
+  ]
+ },
+ {
+  "id": "oxford_ai_readiness",
+  "nombre": "Government AI Readiness Index 2025",
+  "editor": "Oxford Insights",
+  "url": "https://oxfordinsights.com/ai-readiness/government-ai-readiness-index-2025/",
+  "licencia": "Sin licencia declarada para los datos (pie de página: © 2026 Oxford Insights. All rights reserved)",
+  "redistribuible": false,
+  "cita": "oxford_insights2025",
+  "niveles": [
+   "internacional"
+  ],
+  "estado": "verificada",
+  "motivo": "195 gobiernos. Los PDF del informe y de \"Index Data\" se entregan tras un formulario de registro, pero los puntajes por país (total, 6 pilares y 14 dimensiones) están incrustados como JSON en la página pública del índice, de donde se leen tal cual; por eso no hace falta descarga manual. Las ediciones 2019–2024 usan otra estructura (3 pilares) y no se mezclan con la de 2025. Códigos ISO2 convertidos a ISO3 con GeoNames (CC BY 4.0).",
+  "descarga": "automatica",
+  "indicadores": [
+   {
+    "id": "oxf_total",
+    "nombre": "Government AI Readiness Index (total)",
+    "dimension": 3
+   },
+   {
+    "id": "oxf_capacidad_politica",
+    "nombre": "Oxford AI Readiness – Policy Capacity",
+    "dimension": 3
+   },
+   {
+    "id": "oxf_infraestructura",
+    "nombre": "Oxford AI Readiness – AI Infrastructure",
+    "dimension": 3
+   },
+   {
+    "id": "oxf_gobernanza",
+    "nombre": "Oxford AI Readiness – Governance",
+    "dimension": 3
+   },
+   {
+    "id": "oxf_adopcion_sector_publico",
+    "nombre": "Oxford AI Readiness – Public Sector Adoption",
+    "dimension": 3
+   },
+   {
+    "id": "oxf_desarrollo_difusion",
+    "nombre": "Oxford AI Readiness – Development & Diffusion",
+    "dimension": 6
+   },
+   {
+    "id": "oxf_resiliencia",
+    "nombre": "Oxford AI Readiness – Resilience",
+    "dimension": 3
+   }
+  ]
+ },
+ {
+  "id": "sni",
+  "nombre": "Sistema Nacional de Investigadoras e Investigadores (SNII), padrón vigente S191, 2.º semestre de 2025",
+  "editor": "Secretaría de Ciencia, Humanidades, Tecnología e Innovación (SECIHTI)",
+  "url": "https://www.datos.gob.mx/dataset/sistema_nacional_investigadoras_investigadores_snii_s191",
+  "licencia": "CC BY 4.0",
+  "redistribuible": true,
+  "cita": "secihti_snii_2025",
+  "niveles": [
+   "nacional",
+   "estatal"
+  ],
+  "estado": "verificada",
+  "motivo": "",
+  "descarga": "automatica",
+  "indicadores": [
+   {
+    "id": "sni_investigadores",
+    "nombre": "Personas investigadoras con reconocimiento vigente en el SNII",
+    "dimension": 6
+   }
+  ]
+ },
+ {
+  "id": "vdem",
+  "nombre": "V-Dem Country-Year Dataset v16 (componentes participativo, deliberativo, sociedad civil e igualitario)",
+  "editor": "Varieties of Democracy (V-Dem) Institute, Universidad de Gotemburgo",
+  "url": "https://www.v-dem.net/data/the-v-dem-dataset/",
+  "licencia": "CC BY-SA 4.0",
+  "redistribuible": true,
+  "cita": "vdem_v16",
+  "niveles": [
+   "internacional"
+  ],
+  "estado": "verificada",
+  "motivo": "El CSV del sitio de V-Dem se entrega tras un formulario (correo, aceptación de la política de privacidad y campo anti-bots). La descarga automática usa vdem.RData del paquete oficial de R vdemdata v16.0, publicado por el V-Dem Institute en GitHub (commit f4dd269, \"v16 release\"), que contiene el Country-Year completo v16. Leerlo requiere pyreadr (no está entre las dependencias; ejecutar con `uv run --with pyreadr`). Alternativa manual: ver instrucciones.",
+  "descarga": "automatica",
+  "indicadores": [
+   {
+    "id": "vdem_partip",
+    "nombre": "Índice del componente participativo (v2x_partip)",
+    "dimension": 4
+   },
+   {
+    "id": "vdem_delib",
+    "nombre": "Índice del componente deliberativo (v2xdl_delib)",
+    "dimension": 1
+   },
+   {
+    "id": "vdem_cspart",
+    "nombre": "Índice de participación de la sociedad civil (v2x_cspart)",
+    "dimension": 2
+   },
+   {
+    "id": "vdem_egal",
+    "nombre": "Índice del componente igualitario (v2x_egal)",
+    "dimension": 5
+   }
+  ]
+ },
+ {
+  "id": "wjp",
+  "nombre": "WJP Rule of Law Index, Factor 3 (Gobierno abierto) y subfactores, 2012–2026",
+  "editor": "World Justice Project",
+  "url": "https://worldjusticeproject.org/rule-of-law-index/",
+  "licencia": "Sin licencia declarada",
+  "redistribuible": false,
+  "cita": "wjp_rolindex2026",
+  "niveles": [
+   "internacional"
+  ],
+  "estado": "verificada",
+  "motivo": "Archivo oficial \"2026_wjp_rule_of_law_index_HISTORICAL_DATA_FILE.xlsx\" (hoja Historical Data), descargado del sitio de WJP. WJP no publica una licencia de datos: su política de copyright y términos de servicio no mencionan los datos del índice y los reportes dicen \"All rights reserved\". Se marca no redistribuible hasta confirmar con WJP. WJP advierte cautela al comparar puntajes entre ediciones; los subfactores de 2012-2013 tenían otra numeración (el archivo histórico ya los armoniza). Ediciones 2012-2013 y 2017-2018 asignadas a 2013 y 2018.",
+  "descarga": "automatica",
+  "indicadores": [
+   {
+    "id": "wjp_gob_abierto",
+    "nombre": "Factor 3: Gobierno abierto",
+    "dimension": 4
+   },
+   {
+    "id": "wjp_leyes_datos",
+    "nombre": "3.1 Leyes y datos de gobierno publicitados",
+    "dimension": 4
+   },
+   {
+    "id": "wjp_derecho_info",
+    "nombre": "3.2 Derecho a la información",
+    "dimension": 4
+   },
+   {
+    "id": "wjp_participacion",
+    "nombre": "3.3 Participación cívica",
+    "dimension": 4
+   },
+   {
+    "id": "wjp_quejas",
+    "nombre": "3.4 Mecanismos de queja",
+    "dimension": 6
+   }
+  ]
+ }
+]

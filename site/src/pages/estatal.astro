@@ -1,0 +1,157 @@
+---
+import Base from "../layouts/Base.astro";
+import Cita from "../components/Cita.astro";
+import TablaIndicadores from "../components/TablaIndicadores.astro";
+import datos from "../data/estatal.json";
+import { num, valor, DIM_COLOR, DIM_CORTO } from "../lib/formato";
+const u = (datos.unidades as any[]).slice().sort((a, b) => a.rango - b.rango);
+const chh = u.find((x) => x.id === "08");
+const son = u.find((x) => x.id === "26");
+const ctx = datos.contexto as Record<string, any>;
+const debiles = datos.dimensiones_debiles as number[];
+---
+<Base titulo="IICA estatal" descripcion="Las 32 entidades federativas en el IICA parcial, con énfasis en Chihuahua y Sonora.">
+  <h1>IICA estatal</h1>
+  <p class="prosa">
+    Las <strong>32 entidades federativas</strong> se comparan con {datos.indicadores.length} indicadores del INEGI, el INE, la Métrica de Gobierno Abierto
+    y fuentes de ciencia e innovación. Los conteos se expresan por 100 mil habitantes con la población de CONAPO
+    <Cita clave="conapo_proyecciones_2023" />. Ponemos énfasis en <strong>Chihuahua</strong> y <strong>Sonora</strong>.
+  </p>
+
+  <div class="rejilla resumen">
+    <div class="tarjeta"><span class="etq">Chihuahua</span><span class="grande">{chh.rango}<small> de 32</small></span><span>IICA-E {num(chh.indice)} · intervalo {chh.rango_p5}–{chh.rango_p95}</span></div>
+    <div class="tarjeta"><span class="etq">Sonora</span><span class="grande">{son.rango}<small> de 32</small></span><span>IICA-E {num(son.indice)} · intervalo {son.rango_p5}–{son.rango_p95}</span></div>
+  </div>
+
+  <h2>Mapa</h2>
+  <label class="selector">Mostrar:
+    <select id="campo">
+      <option value="indice">IICA estatal (agregado)</option>
+      {Object.entries(DIM_CORTO).map(([d, n]) => <option value={d}>Dimensión {d}: {n}</option>)}
+    </select>
+  </label>
+  <figure class="grafico">
+    <div id="mapa" role="img" aria-label="Mapa de México por entidad federativa coloreado según el IICA estatal">Cargando mapa…</div>
+    <figcaption>Chihuahua y Sonora con borde magenta. Mapa base: Marco Geoestadístico del INEGI <Cita clave="inegi_mg2025" />.</figcaption>
+  </figure>
+
+  <h2>Chihuahua y Sonora frente a la mediana nacional</h2>
+  <figure class="grafico">
+    <div id="perfil" role="img" aria-label="Barras por dimensión de Chihuahua, Sonora y la mediana de las 32 entidades"></div>
+    <figcaption>Puntaje por dimensión (0–100).</figcaption>
+  </figure>
+  <div class="tabla">
+    <table>
+      <thead><tr><th>Dimensión</th><th>Chihuahua</th><th>Sonora</th><th>Mediana de las 32</th></tr></thead>
+      <tbody>
+        {Object.entries(DIM_CORTO).map(([d, n]) => {
+          const vals = u.map((x) => x.dims[d]).filter((v) => v !== null).sort((a, b) => a - b);
+          const med = (vals[15] + vals[16]) / 2;
+          return (<tr><td><span class="chip" style={`background:${DIM_COLOR[d]}`}>{d}</span> {n}{debiles.includes(Number(d)) ? " *" : ""}</td>
+            <td>{num(chh.dims[d])}</td><td>{num(son.dims[d])}</td><td>{num(med)}</td></tr>);
+        })}
+      </tbody>
+    </table>
+  </div>
+  {debiles.length > 0 && <p class="nota">* Dimensión con un solo indicador: su puntaje es menos robusto.</p>}
+
+  <h3>Lectura para Chihuahua y Sonora</h3>
+  <ul class="prosa">
+    <li>Las dos entidades superan la mediana nacional en <strong>capacidades</strong> (dimensión 1) y en <strong>inteligencia colectiva</strong> (dimensión 2).
+      En este nivel, la dimensión 2 se mide solo con las OSC registradas por cada 100 mil habitantes <Cita clave="bienestar_rfosc_2025" />.</li>
+    <li>En <strong>valor público democrático</strong> (dimensión 5), las dos quedan por debajo de la mediana: su participación en la elección presidencial de 2024
+      fue menor que la nacional <Cita clave="ine_computos_2024" /> y su prevalencia de corrupción en trámites es de las más altas del país <Cita clave="inegi_encig_2025" />.</li>
+    <li>Sonora muestra una dimensión de <strong>instituciones habilitadoras</strong> más alta. Chihuahua registra más espacios de participación en el CNGE,
+      pero menos por habitante con nivel de deliberación o cogestión <Cita clave="inegi_cnge_2025" />.</li>
+  </ul>
+
+  <h2>Clasificación de las 32 entidades</h2>
+  <figure class="grafico">
+    <div id="ranking" role="img" aria-label="Barras con el IICA estatal de cada entidad"></div>
+    <figcaption>Entre corchetes, el intervalo del lugar (percentiles 5 y 95) con pesos aleatorios y dos tipos de agregación.</figcaption>
+  </figure>
+
+  <details>
+    <summary>Tabla completa por entidad</summary>
+    <div class="tabla">
+      <table>
+        <thead><tr><th>Lugar</th><th>Entidad</th><th>IICA-E</th><th>Intervalo</th>{Object.keys(DIM_CORTO).map((d) => <th>D{d}</th>)}</tr></thead>
+        <tbody>
+          {u.map((x) => (
+            <tr class={["08", "26"].includes(x.id) ? "resalta" : ""}><td>{x.rango}</td><td>{x.nombre}</td><td>{num(x.indice)}</td><td>{x.rango_p5}–{x.rango_p95}</td>
+              {Object.keys(DIM_CORTO).map((d) => <td>{num(x.dims[d], 0)}</td>)}</tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </details>
+
+  <h2>Indicadores</h2>
+  <TablaIndicadores indicadores={datos.indicadores}
+    columnas={[
+      { titulo: "Chihuahua", valores: chh.valores, norm: chh.norm },
+      { titulo: "Sonora", valores: son.valores, norm: son.norm },
+      { titulo: "Nacional", valores: datos.nacional_valores },
+    ]}
+    caption="Valor original y, entre paréntesis, valor normalizado (0–100) frente a las 32 entidades. «Nacional» es el valor publicado por la fuente, cuando existe." />
+
+  <h2>Contexto</h2>
+  <div class="tabla">
+    <table>
+      <thead><tr><th>Indicador</th><th>Fuente</th><th>Año</th><th>Chihuahua</th><th>Sonora</th></tr></thead>
+      <tbody>
+        {Object.entries(ctx).map(([id, c]) => (
+          <tr><td>{c.nombre}</td><td>{c.editor} <Cita clave={c.cita} /></td><td>{c.anio}</td><td>{valor(c.valores["08"] ?? null)}</td><td>{valor(c.valores["26"] ?? null)}</td></tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Advertencias</h2>
+  <ul class="prosa">
+    <li>La ENCIG solo es representativa en áreas urbanas de 100 mil habitantes o más <Cita clave="inegi_encig_2025" />.</li>
+    <li>La Métrica de Gobierno Abierto 2021 es la última edición disponible <Cita clave="inai_cide_mga_2021" />.</li>
+    <li>El número de espacios de participación que reportan los gobiernos estatales al CNGE varía mucho entre ediciones <Cita clave="inegi_cnge_2025" />.</li>
+    <li>La Encuesta Nacional de Cultura Cívica (ENCUCI 2020) no es representativa por entidad, por eso no se usa aquí <Cita clave="inegi_encuci_2020" />.</li>
+    <li>La Ciudad de México concentra registros federales (OSC, SNI, empresas de tecnología). Sus valores extremos se acotaron con la regla de atípicos del JRC <Cita clave="jrc_coin_2019" />.</li>
+  </ul>
+</Base>
+
+<script>
+  import datos from "../data/estatal.json";
+  import { perfil, ranking, mapaEstados } from "../scripts/graficos";
+  import { DIM_CORTO } from "../lib/formato";
+  const u = datos.unidades as any[];
+  const el = (id: string) => document.getElementById(id)!;
+  const med = Object.fromEntries(Object.keys(DIM_CORTO).map((d) => {
+    const s = u.map((x) => x.dims[d]).filter((v: any) => v !== null).sort((a: number, b: number) => a - b);
+    return [d, (s[15] + s[16]) / 2];
+  }));
+  function dibujarMapa() {
+    const c = (document.getElementById("campo") as HTMLSelectElement).value;
+    const f = c === "indice" ? (x: any) => x?.indice ?? null : (x: any) => x?.dims[c] ?? null;
+    mapaEstados(el("mapa"), u, f, c === "indice" ? "IICA estatal" : `Dimensión ${c}`);
+  }
+  function todo() {
+    dibujarMapa();
+    perfil(el("perfil"), [
+      { nombre: "Chihuahua", color: "#b8007c", dims: u.find((x) => x.id === "08").dims },
+      { nombre: "Sonora", color: "#0099d9", dims: u.find((x) => x.id === "26").dims },
+      { nombre: "Mediana de las 32", color: "#8f9bc4", dims: med },
+    ]);
+    ranking(el("ranking"), u, { "08": "#b8007c", "26": "#0099d9" });
+  }
+  document.getElementById("campo")!.addEventListener("change", dibujarMapa);
+  todo();
+  let t: number; addEventListener("resize", () => { clearTimeout(t); t = setTimeout(todo, 250) as unknown as number; });
+</script>
+
+<style>
+  .resumen { margin: 1.2rem 0; }
+  .resumen .tarjeta { display: flex; flex-direction: column; gap: 0.3rem; }
+  .etq { font-weight: 700; color: var(--acento); }
+  .grande { font-size: 2.4rem; font-weight: 800; color: var(--primario); line-height: 1; }
+  .grande small { font-size: 1rem; color: var(--texto-suave); }
+  .resalta td { font-weight: 700; background: var(--fondo-suave); }
+  details summary { cursor: pointer; font-weight: 700; color: var(--primario); margin: 0.6rem 0; }
+</style>

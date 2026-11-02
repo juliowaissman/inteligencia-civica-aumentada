@@ -1,0 +1,96 @@
+---
+import Base from "../layouts/Base.astro";
+import Cita from "../components/Cita.astro";
+import intl from "../data/internacional.json";
+import est from "../data/estatal.json";
+import { num, DIM_COLOR, DIM_CORTO, CAPA } from "../lib/formato";
+const niveles = [["Internacional", intl], ["Estatal", est]] as const;
+const capas = Object.keys(CAPA);
+const matriz = (d: any) => Object.fromEntries(Object.keys(DIM_CORTO).map((dim) => [dim,
+  Object.fromEntries(capas.map((c) => [c, d.indicadores.filter((i: any) => String(i.dimension) === dim && i.capa === c).length]))]));
+---
+<Base titulo="Metodología" descripcion="Cómo se construyen los IICA parciales: selección de fuentes, normalización, agregación, sensibilidad y coherencia.">
+  <article>
+    <h1>Metodología</h1>
+    <p class="prosa">
+      Los IICA parciales siguen el <em>Handbook on Constructing Composite Indicators</em> de la OCDE y el JRC <Cita clave="ocde_jrc_2008" />
+      y la guía práctica del JRC-COIN <Cita clave="jrc_coin_2019" />. Todo el cálculo es reproducible con el código del
+      <a href="https://github.com/juliowaissman/inteligencia-civica-aumentada">repositorio</a>.
+    </p>
+
+    <h2>1. Qué se puede medir con datos abiertos</h2>
+    <p class="prosa">
+      El modelo MICA distingue la capacidad instalada de un ecosistema, su activación y los resultados que emergen <Cita clave="zenteno_ica_2026" />.
+      Los datos abiertos casi siempre miden <strong>capacidad instalada</strong>, algunas veces <strong>activación</strong> y nunca resultados emergentes.
+      Por eso hablamos de <strong>índices parciales de contexto</strong>. La tabla muestra cuántos indicadores cubren cada dimensión y capa.
+    </p>
+    {niveles.map(([nombre, d]) => {
+      const m = matriz(d);
+      return (
+        <div class="tabla">
+          <table>
+            <caption>Cobertura del nivel {nombre.toLowerCase()} (número de indicadores)</caption>
+            <thead><tr><th>Dimensión</th>{capas.map((c) => <th>{CAPA[c]}</th>)}</tr></thead>
+            <tbody>
+              {Object.entries(DIM_CORTO).map(([dim, n]) => (
+                <tr><td><span class="chip" style={`background:${DIM_COLOR[dim]}`}>{dim}</span> {n}</td>
+                  {capas.map((c) => <td>{m[dim][c] ? m[dim][c] : <span class="sin-dato">sin información</span>}</td>)}</tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      );
+    })}
+
+    <h2>2. Selección de fuentes e indicadores</h2>
+    <ul class="prosa">
+      <li>Una fuente se usa solo si se descargó del origen y se leyó el dato de México o de las 32 entidades. Las que no se pudieron obtener quedan como pendientes, nunca se estiman.</li>
+      <li>Se eligen de 2 a 3 indicadores por dimensión. Se usa el total de una fuente o sus componentes, nunca ambos, y se evitan indicadores construidos con los mismos datos.</li>
+      <li>Para cada indicador se toma el año más reciente que cubra al menos el 70 % de los países de comparación, o las 32 entidades.</li>
+      <li>Los conteos (OSC, investigadores, empresas, patentes, desarrolladores) se dividen entre la población: Banco Mundial para países <Cita clave="bancomundial_wdi" /> y CONAPO para entidades <Cita clave="conapo_proyecciones_2023" />.</li>
+    </ul>
+
+    <h2>3. Cálculo</h2>
+    <ol class="prosa">
+      <li><strong>Valores atípicos.</strong> Si un indicador tiene asimetría mayor que 2 y curtosis mayor que 3,5, se acotan sus valores extremos, hasta 5, al siguiente valor <Cita clave="jrc_coin_2019" />.</li>
+      <li><strong>Normalización min-max</strong> a una escala de 0 a 100. Cuando más es peor, como en la corrupción, la escala se invierte.</li>
+      <li><strong>Dimensión:</strong> promedio simple de sus indicadores normalizados.</li>
+      <li><strong>Índice:</strong> media geométrica de las seis dimensiones con pesos iguales. A diferencia del promedio, una dimensión muy débil no se compensa con otra fuerte <Cita clave="ocde_jrc_2008" />.
+        Para que un cero no anule el producto, dentro de la media se reescala cada dimensión de [0, 100] a [1, 100].</li>
+      <li><strong>Sensibilidad:</strong> 1000 juegos de pesos aleatorios (Dirichlet), cada uno con agregación geométrica y aritmética. El intervalo del lugar va del percentil 5 al 95.</li>
+      <li><strong>Serie nacional:</strong> límites de normalización fijos (todos los países de comparación en todo el periodo), dimensiones calculadas solo con todos sus indicadores, y los índices bienales de la ONU repetidos un año.</li>
+    </ol>
+
+    <h2>4. Coherencia estadística</h2>
+    <p class="prosa">
+      Siguiendo al JRC-COIN <Cita clave="jrc_coin_2019" />, revisamos la correlación de cada indicador con su dimensión y con el índice.
+      Hay alerta cuando un indicador domina el índice (r &gt; 0,95) o casi no se relaciona con él (|r| &lt; 0,3).
+    </p>
+    {niveles.map(([nombre, d]) => (
+      <div class="tabla">
+        <table>
+          <caption>Coherencia, nivel {nombre.toLowerCase()}</caption>
+          <thead><tr><th>Indicador</th><th>Dim.</th><th>r con su dimensión</th><th>r con el índice</th><th>Alerta</th></tr></thead>
+          <tbody>
+            {(d.coherencia as any[]).map((c) => {
+              const ind = (d.indicadores as any[]).find((i) => i.id === c.indicador);
+              return <tr><td>{ind?.nombre}</td><td>{c.dimension}</td><td>{num(c.r_dimension, 2)}</td><td>{num(c.r_indice, 2)}</td><td>{c.alerta ?? ""}</td></tr>;
+            })}
+          </tbody>
+        </table>
+      </div>
+    ))}
+    <p class="prosa">
+      En el nivel estatal, los indicadores de valor público democrático (participación electoral, corrupción y confianza) casi no se correlacionan
+      con el índice. Esa dimensión capta algo distinto del resto, lo cual es esperable. Por eso se reportan aparte en el perfil de cada entidad.
+    </p>
+
+    <h2>5. Limitaciones</h2>
+    <ul class="prosa">
+      <li>No se miden resultados emergentes ni procesos concretos de cocreación como el Hackathón; eso requiere el IICA completo propuesto en la ponencia <Cita clave="zenteno_ica_2026" />.</li>
+      <li>Varias fuentes vienen de encuestas o de lo que reportan los propios gobiernos, con su propio margen de error.</li>
+      <li>La dimensión de inteligencia colectiva es débil a nivel estatal: solo tiene un indicador.</li>
+      <li>Quedan pendientes fuentes que requieren registro: LAPOP, Latinobarómetro, LATINNO y la Open Government Partnership.</li>
+    </ul>
+  </article>
+</Base>

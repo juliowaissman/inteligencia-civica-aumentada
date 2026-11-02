@@ -1,0 +1,276 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-noshorthands,es-tabla]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{csquotes}
+\usepackage[style=authoryear,backend=biber,maxcitenames=2,maxbibnames=10,uniquelist=false,uniquename=false]{biblatex}
+\input{tablas/bibrecursos.tex}
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+
+\DeclareFieldFormat{titlecase}{#1}
+\setlength{\parskip}{0.35em}
+\setlength{\emergencystretch}{2em}
+\setcounter{biburlnumpenalty}{100}
+\setcounter{biburllcpenalty}{100}
+\setcounter{biburlucpenalty}{100}
+\setlength{\parindent}{1.2em}
+\setlist{itemsep=1pt,topsep=3pt}
+
+\input{cifras.tex}
+\input{tablas/cifras_extra.tex}
+
+\title{\textbf{Hacia la medición de la Inteligencia Cívica Aumentada:\\
+índices parciales con datos abiertos para México,\\ sus entidades federativas y la comparación internacional}}
+\author{Ricardo Zenteno Fernández\thanks{Consejero Electoral, Instituto Estatal Electoral de Chihuahua. \texttt{rzentenof@ieechihuahua.org.mx}}
+\and Julio Waissman Vilanova\thanks{Coordinador de la Maestría en Ciencia de Datos, Universidad de Sonora. \texttt{julio.waissman@unison.mx}}}
+\date{Noviembre de 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\noindent
+El concepto de Inteligencia Cívica Aumentada (ICA) describe la capacidad emergente de un ecosistema democrático para comprender, deliberar, decidir, cocrear, actuar y aprender sobre problemas públicos mediante la interacción entre capacidades humanas, inteligencia colectiva, instituciones habilitadoras e inteligencia artificial, preservando la agencia humana. Su propuesta original deja la medición, el Índice de Inteligencia Cívica Aumentada (IICA), como agenda de investigación. Este artículo da un primer paso: construye tres índices parciales con datos abiertos, siguiendo la metodología de indicadores compuestos de la OCDE y el Centro Común de Investigación de la Comisión Europea. El índice internacional (IICA-I) compara a México en un panel de \NPaises{} países de América Latina y la OCDE; el nacional (IICA-N) sigue a México desde \NACdesde; y el estatal (IICA-E) compara las \NEnt{} entidades federativas, con énfasis en Chihuahua y Sonora. Se verificaron \NFuentesVerificadas{} fuentes descargándolas desde su origen. México obtiene \MXindice{} puntos sobre 100 y ocupa el lugar \MXrango{} (intervalo de sensibilidad \MXrangoBajo--\MXrangoAlto). En el nivel estatal, Sonora ocupa el lugar \SONrango{} y Chihuahua el \CHHrango. Los resultados deben leerse como índices de \emph{contexto}: los datos abiertos capturan sobre todo la capacidad instalada de los ecosistemas y casi nunca los resultados emergentes de los procesos de cocreación, que requieren mediciones propias.
+
+\medskip
+\noindent\textbf{Palabras clave:} inteligencia cívica, inteligencia artificial, indicadores compuestos, datos abiertos, democracia, entidades federativas.
+\end{abstract}
+
+\begin{otherlanguage}{english}
+\begin{abstract}
+\noindent
+Augmented Civic Intelligence (ICA, in Spanish) is the emergent capacity of a democratic ecosystem to understand, deliberate, decide, co-create, act and learn about public problems through the interaction of human capacities, collective intelligence, enabling institutions and artificial intelligence, while preserving human agency. Its original proposal leaves measurement, the Augmented Civic Intelligence Index (IICA), as a research agenda. This article takes a first step by building three partial indices from open data, following the OECD and European Commission Joint Research Centre methodology for composite indicators. The international index compares Mexico within a panel of \NPaises{} Latin American and OECD countries; the national index follows Mexico since \NACdesde; and the state index compares Mexico's \NEnt{} states, with emphasis on Chihuahua and Sonora. \NFuentesVerificadas{} sources were verified by downloading them from their publishers. Mexico scores \MXindice{} out of 100 and ranks \MXrango{} (sensitivity interval \MXrangoBajo--\MXrangoAlto). Sonora ranks \SONrango{} and Chihuahua \CHHrango{} among the states. The results are \emph{context} indices: open data mostly capture the installed capacity of ecosystems and seldom the emergent outcomes of co-creation processes, which require their own measurement.
+
+\medskip
+\noindent\textbf{Keywords:} civic intelligence, artificial intelligence, composite indicators, open data, democracy, Mexican states.
+\end{abstract}
+\end{otherlanguage}
+
+%=====================================================================
+\section{Introducción}
+%=====================================================================
+
+La expansión de la inteligencia artificial (IA) no solo cambia los instrumentos de participación pública: también interviene en las capacidades cognitivas con las que las personas analizan información, generan alternativas y construyen conocimiento. A partir de esa constatación, \textcite{zenteno_ica_2026} propone el concepto de \emph{Inteligencia Cívica Aumentada} (ICA) como una propiedad emergente de un ecosistema democrático institucional y social, formula un modelo explicativo (MICA), lo ilustra con el Hackathón de Ciberdemocracia de Chihuahua y plantea, como agenda futura, un Índice de Inteligencia Cívica Aumentada (IICA).
+
+Una revisión documental previa encontró que ningún índice existente mide a la vez capacidades cívicas, inteligencia colectiva e integración ética de la IA dentro de procesos democráticos, a escala de institución o comunidad, ni distingue entre capacidad instalada, activación y resultados emergentes \parencite{informe_ica_2026}. Esa misma revisión identificó una ruta metodológica: el \emph{Handbook on Constructing Composite Indicators} de la OCDE y el Centro Común de Investigación (JRC) de la Comisión Europea \parencite{ocde_jrc_2008,jrc_coin_2019}.
+
+Este artículo aborda una pregunta acotada: \emph{¿qué parte del IICA puede aproximarse hoy con datos abiertos o existentes, y qué muestra esa aproximación para México, para sus entidades federativas y en la comparación internacional?} La respuesta tiene dos componentes. El primero es un inventario verificado de fuentes y de lo que cada una puede y no puede medir. El segundo son tres índices parciales ---internacional, nacional y estatal--- calculados con un \emph{pipeline} reproducible y publicados junto con su código.
+
+Conviene adelantar la principal limitación. Los datos abiertos describen, sobre todo, la \emph{capacidad instalada} de un ecosistema: conectividad, instituciones, organizaciones, investigación. Rara vez describen la \emph{activación} de esas capacidades en procesos concretos de cocreación, y nunca sus \emph{resultados emergentes}, que son el núcleo del concepto. Por eso llamamos a estos índices \emph{IICA parciales de contexto}: describen las condiciones en las que la ICA puede o no emerger, no la ICA misma.
+
+%=====================================================================
+\section{El IICA y la brecha de medición}
+%=====================================================================
+
+\subsection{Concepto, modelo y dimensiones}
+
+\textcite{zenteno_ica_2026} define la ICA como la propiedad emergente de un ecosistema democrático institucional y social que amplía la capacidad de una comunidad política para comprender problemas públicos, integrar conocimientos, deliberar, construir alternativas, decidir, coordinar acciones y aprender colectivamente, mediante la interacción ética y deliberada entre capacidades humanas, inteligencia colectiva, instituciones habilitadoras e IA, preservando la agencia humana, la pluralidad, la inclusión, la transparencia y la responsabilidad democrática.
+
+La propuesta retoma dos tradiciones. De \textcite{engelbart_1962} toma la idea de \emph{aumentación}: incrementar la capacidad de las personas para abordar situaciones problemáticas complejas, sin sustituirlas. De \textcite{schuler_2001,schuler_2014} toma la \emph{inteligencia cívica}, entendida como la capacidad de las colectividades para abordar de forma equitativa y eficaz problemas compartidos, orientada al bien común. El Modelo de Inteligencia Cívica Aumentada (MICA) organiza estos elementos como un ecosistema adaptativo en el que las instituciones habilitadoras son un componente interno, distingue entre capacidad instalada y activación, y usa el valor público democrático \parencite{moore_1995} como criterio de validación \parencite{zenteno_ica_2026}.
+
+Para el índice, la propuesta original define seis dimensiones preliminares \parencite{zenteno_ica_2026}:
+\begin{enumerate}
+  \item capacidades cívicas y humanas;
+  \item inteligencia colectiva;
+  \item integración ética de la IA;
+  \item instituciones habilitadoras y cocreación;
+  \item valor público democrático;
+  \item continuidad y retroalimentación;
+\end{enumerate}
+más criterios transversales de agencia humana, pluralidad, inclusión, transparencia y rendición de cuentas. También advierte dos riesgos: reducir una propiedad compleja a una calificación simplificada y confundir capacidad tecnológica con capacidad democrática.
+
+\subsection{Antecedentes cercanos}
+
+La ICA dialoga con una literatura reciente que combina IA, inteligencia colectiva y democracia. \textcite{cui_yasseri_2024} conceptualizan la inteligencia colectiva aumentada por IA como un sistema multicapa en el que humanos e IA aportan capacidades complementarias, sin un objeto específicamente democrático. \textcite{deliddo_2026} proponen la inteligencia colectiva humano-IA para la democracia deliberativa (CI4DD), y el \emph{Handbook} editado por \textcite{pournaras_handbook_2026} dedica su primera parte a la inteligencia colectiva asistida por IA para la democracia. \textcite{schuler_ci4cg_2018} ya habían vinculado la inteligencia cívica con la inteligencia colectiva para el bien común. Con el término \emph{augmented democracy}, \textcite{hidalgo_2018} propuso gemelos digitales que amplíen la participación directa, y \textcite{pournaras_2020} usó la expresión en el contexto de ciudades inteligentes. Desde la práctica, la Habermas Machine mostró que un mediador basado en modelos de lenguaje puede ayudar a grupos a encontrar puntos de acuerdo \parencite{tessler_2024}.
+
+\subsection{La brecha de medición}
+
+En cuanto a la medición, el antecedente más cercano por su vocabulario es el índice de compromiso cívico de \textcite{nechesov_ruponen_2024}, pero mide la calidad de la participación en una plataforma, no las capacidades de un ecosistema. Los índices de democracia, gobierno digital o preparación para la IA miden países, no instituciones ni comunidades, y ninguno integra las seis dimensiones \parencite{informe_ica_2026}. Entre los marcos útiles para el diseño están las directrices de evaluación de procesos deliberativos de la OCDE \parencite{ocde_evaluacion_2021}, el modelo de madurez de la e-participación de \textcite{serdult_2023} y el Índice Global de IA Responsable, que penaliza de forma no compensatoria los usos inaceptables de IA \parencite{girai_metodo_2026}.
+
+Este trabajo no pretende cerrar esa brecha. Su objetivo es más modesto: hacer explícito qué partes del IICA pueden medirse con información pública y cuáles requieren instrumentos nuevos.
+
+%=====================================================================
+\section{Datos y método}
+%=====================================================================
+
+\subsection{Tres niveles de análisis}
+
+\begin{itemize}
+  \item \textbf{IICA-I (internacional).} Compara a México con los países de América Latina y el Caribe y los miembros de la OCDE (\NPaises{} países con dato en todas las dimensiones). Para cada indicador se usa el año más reciente que cubra al menos el 70\,\% de los países.
+  \item \textbf{IICA-N (nacional).} Sigue a México desde \NACdesde{} con los indicadores internacionales que tienen serie histórica.
+  \item \textbf{IICA-E (estatal).} Compara las \NEnt{} entidades federativas con fuentes nacionales que publican datos por entidad. Para cada indicador se usa el año más reciente con las \NEnt{} entidades.
+\end{itemize}
+
+\subsection{Inventario y selección de fuentes}
+
+Se revisaron \NFuentesTotal{} fuentes candidatas. Una fuente solo se aceptó si su archivo pudo descargarse desde el origen y si el valor de México, o de las entidades, pudo leerse y contrastarse con cifras publicadas por el propio editor. Con este criterio se verificaron \NFuentesVerificadas{} fuentes, todas con descarga automática; \NFuentesCandidatas{} quedaron pendientes porque requieren registro o navegador (LAPOP, Latinobarómetro, LATINNO y la Alianza para el Gobierno Abierto) \parencite{lapop_americasbarometer,latinobarometro2026,pogrebinschi_latinno2021,ogp_datos}. La Encuesta Nacional de Cultura Cívica 2020 se descartó para el nivel estatal porque solo es representativa por región \parencite{inegi_encuci_2020}.
+
+La selección de indicadores siguió cinco criterios:
+\begin{enumerate}
+  \item entre dos y tres indicadores por dimensión;
+  \item no combinar el total de una fuente con sus propios componentes, ni indicadores construidos con los mismos datos;
+  \item preferir fuentes con licencia abierta;
+  \item expresar los conteos absolutos como tasas por 100 mil habitantes, con la población del Banco Mundial \parencite{bancomundial_wdi} o de CONAPO \parencite{conapo_proyecciones_2023};
+  \item clasificar cada indicador por dimensión, por capa (capacidad instalada, activación o resultado) y por sentido (si más es mejor o peor).
+\end{enumerate}
+Los cuadros \ref{tab:ind-intl} y \ref{tab:ind-est} listan los \NIndIntl{} indicadores internacionales y los \NIndEst{} estatales, con su fuente, el año utilizado y los valores en su escala original. El IICA-N usa \NIndNac{} de los indicadores internacionales.
+
+\input{tablas/indicadores_internacional.tex}
+\input{tablas/indicadores_estatal.tex}
+
+El cuadro \ref{tab:cobertura} resume la cobertura por dimensión y capa. Ningún nivel tiene indicadores de resultados emergentes, y en el nivel estatal la dimensión de inteligencia colectiva descansa en un solo indicador.
+
+\input{tablas/cobertura.tex}
+
+\subsection{Construcción de los índices}
+
+La metodología sigue el Manual OCDE/JRC \parencite{ocde_jrc_2008} y la guía del JRC-COIN \parencite{jrc_coin_2019}.
+
+\paragraph{Valores atípicos.} En los índices de corte transversal (IICA-I e IICA-E) se aplica la regla del JRC-COIN: si un indicador tiene asimetría mayor que 2 en valor absoluto y curtosis mayor que 3,5, se winsorizan sus valores extremos, uno a la vez y hasta un máximo de cinco, hasta que deja de cumplir la regla. Se winsorizaron \NWinsorEst{} indicadores estatales y \NWinsorIntl{} internacionales; en el nivel estatal, el caso típico es la Ciudad de México, que concentra registros federales como las organizaciones de la sociedad civil y las personas investigadoras.
+
+\paragraph{Normalización.} Cada indicador $x$ se lleva a una escala de 0 a 100 con el método min-max,
+\[
+  z = 100\,\frac{x-\min(x)}{\max(x)-\min(x)},
+\]
+y se invierte ($100-z$) cuando más es peor, como en la prevalencia de corrupción.
+
+\paragraph{Dimensiones.} El puntaje de cada dimensión es el promedio simple de sus indicadores normalizados. Los pesos se asignan por dimensión, no por indicador, para que las dimensiones con más indicadores no pesen más \parencite{ocde_jrc_2008}.
+
+\paragraph{Agregación.} El índice es la media geométrica de las seis dimensiones con pesos iguales. Se eligió la media geométrica porque es menos compensatoria que la aritmética: un puntaje alto en una dimensión no compensa por completo uno bajo en otra, lo que es coherente con la idea de que la capacidad tecnológica no debe sustituir a la democrática \parencite{zenteno_ica_2026,ocde_jrc_2008}. Para evitar que un cero anule el producto, dentro de la media geométrica los puntajes se reescalan de $[0,100]$ a $[1,100]$.
+
+\paragraph{Sensibilidad.} Se recalcula el índice 1\,000 veces con pesos aleatorios (distribución de Dirichlet) y con ambas fórmulas de agregación, aritmética y geométrica. Para cada unidad se reporta el intervalo de su lugar entre los percentiles 5 y 95.
+
+\paragraph{Coherencia.} Se calcula la correlación de cada indicador normalizado con su dimensión y con el índice, y se marcan las alertas del JRC-COIN \parencite{jrc_coin_2019}:
+\begin{itemize}
+  \item correlación con el índice mayor que 0,95: el indicador domina el índice;
+  \item correlación entre $-0{,}3$ y $0{,}3$: el indicador está subrepresentado;
+  \item en el nivel estatal, correlación con la población mayor que 0,6: sesgo de tamaño.
+\end{itemize}
+
+\paragraph{Serie nacional.} Para que el IICA-N sea comparable en el tiempo, los límites de la normalización se fijan con todo el panel de países de comparación en el periodo completo, previo tratamiento de atípicos. Además, una dimensión solo se calcula en los años en que todos sus indicadores tienen dato; así la composición de cada dimensión es constante. Las series bienales de la ONU \parencite{undesa_egov2024} se arrastran un año para cubrir los años sin edición. El índice agregado solo se calcula en los años en que las seis dimensiones tienen dato.
+
+\paragraph{Reproducibilidad.} Todo el proceso ---descarga, procesamiento, cálculo y exportación de cuadros, figuras y cifras de este artículo--- se ejecuta con un \emph{pipeline} en Python. Cada descarga guarda la fecha de acceso y la huella SHA-256 de los archivos. Ninguna cifra del texto se transcribió a mano.
+
+%=====================================================================
+\section{Resultados}
+%=====================================================================
+
+\subsection{México en la comparación internacional}
+
+México obtiene un IICA-I de \MXindice{} puntos sobre 100 y ocupa el lugar \MXrango{} de \NPaises{} países (figura~\ref{fig:ranking-intl}). Con otras ponderaciones y con agregación aritmética (\MXaritmetico{} puntos), su lugar se mueve entre el \MXrangoBajo{} y el \MXrangoAlto. Entre los \NAL{} países de América Latina y el Caribe ocupa el lugar \MXrangoAL, y entre los \NOCDE{} miembros de la OCDE, el \MXrangoOCDE. La mediana del índice es de \ALmedIndice{} en América Latina y de \OCDEmedIndice{} en la OCDE. El primer lugar corresponde a \PrimerPais{} (\PrimerPaisIndice) y, en la región, a \PrimerAL{} (\PrimerALIndice).
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\linewidth]{figuras/ranking_internacional.pdf}
+  \caption{IICA-I por país (media geométrica de las seis dimensiones). Entre corchetes, el intervalo de lugares p5--p95 del análisis de sensibilidad. México, resaltado. Elaboración propia con las fuentes del cuadro~\ref{tab:ind-intl}.}
+  \label{fig:ranking-intl}
+\end{figure}
+
+El perfil por dimensión (figura~\ref{fig:perfil-mx}) es desigual. Las dimensiones relativamente más fuertes de México son instituciones habilitadoras (\MXdimD) e integración ética de la IA y gobierno digital (\MXdimC), ambas por encima de la mediana latinoamericana (\ALmedDimD{} y \ALmedDimC). Las más débiles son continuidad y retroalimentación (\MXdimF), inteligencia colectiva (\MXdimB) y valor público democrático (\MXdimE). En inteligencia colectiva y valor público, México queda por debajo de la mediana de América Latina (\ALmedDimB{} y \ALmedDimE). En capacidades cívicas y humanas obtiene \MXdimA, frente a \ALmedDimA{} en la región y \OCDEmedDimA{} en la OCDE.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\linewidth]{figuras/perfil_mexico.pdf}
+  \caption{Puntajes por dimensión de México frente a las medianas de América Latina y de la OCDE (IICA-I). Elaboración propia.}
+  \label{fig:perfil-mx}
+\end{figure}
+
+\subsection{México en el tiempo}
+
+El IICA-N completo solo puede calcularse desde \NACprimerAnio, porque los indicadores de GitHub, que alimentan las dimensiones de inteligencia colectiva y de continuidad, empiezan ese año \parencite{github_innovationgraph}. Entre \NACprimerAnio{} y \NACultimoAnio{} el índice pasa de \NACprimerIndice{} a \NACultimoIndice{} puntos (figura~\ref{fig:serie}).
+
+Por dimensión, las capacidades cívicas y humanas suben de \NACDoneini{} en \NACDoneiniAnio{} a \NACDonefin{} en \NACDonefinAnio{}, y las instituciones habilitadoras de \NACDfourini{} en \NACDfouriniAnio{} a \NACDfourfin{} en \NACDfourfinAnio. En cambio, el valor público democrático baja de \NACDfiveini{} en \NACDfiveiniAnio{} a \NACDfivefin{} en \NACDfivefinAnio. La continuidad y retroalimentación crece de \NACDsixini{} a \NACDsixfin{} entre \NACDsixiniAnio{} y \NACDsixfinAnio, pero desde niveles muy bajos. Estas variaciones deben leerse con cautela: son puntajes relativos al rango observado en el panel de comparación, de modo que un cambio puede reflejar tanto la evolución de México como la de los límites del panel.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\linewidth]{figuras/serie_nacional.pdf}
+  \caption{IICA-N: puntajes por dimensión de México con límites de normalización fijos. Cada dimensión aparece solo en los años en que todos sus indicadores tienen dato; el índice agregado, solo cuando las seis dimensiones lo tienen. Elaboración propia.}
+  \label{fig:serie}
+\end{figure}
+
+\subsection{Las entidades federativas}
+
+El cuadro~\ref{tab:entidades} y la figura~\ref{fig:ranking-est} presentan el IICA-E. La Ciudad de México ocupa el primer lugar (\CDMXindice{} puntos; intervalo \CDMXrangoBajo--\CDMXrangoAlto), seguida de \SegundaEnt{} (\SegundaEntIndice). El último lugar corresponde a \UltimaEnt{} (\UltimaEntIndice). La mediana de las entidades es de \MedEntIndice{} puntos.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.92\linewidth]{figuras/ranking_estatal.pdf}
+  \caption{IICA-E por entidad federativa, con el intervalo de lugares p5--p95 entre corchetes. Chihuahua (magenta) y Sonora (cian), resaltados. Elaboración propia con las fuentes del cuadro~\ref{tab:ind-est}.}
+  \label{fig:ranking-est}
+\end{figure}
+
+\input{tablas/entidades.tex}
+
+Los intervalos de sensibilidad son amplios en la parte media de la tabla. Muchas entidades no pueden distinguirse con seguridad, y las posiciones deben leerse como grupos más que como un orden estricto.
+
+\paragraph{Sonora.} Sonora ocupa el lugar \SONrango{} con \SONindice{} puntos (intervalo \SONrangoBajo--\SONrangoAlto). Sus fortalezas relativas son la inteligencia colectiva (\SONdimB, frente a una mediana estatal de \EntMedDimB), medida por las organizaciones de la sociedad civil activas por habitante \parencite{bienestar_rfosc_2025}; las capacidades cívicas y humanas (\SONdimA); y las instituciones habilitadoras (\SONdimD, frente a \EntMedDimD). Su debilidad más marcada es el valor público democrático (\SONdimE, frente a una mediana de \EntMedDimE), que combina participación electoral, prevalencia de corrupción en trámites y confianza en el gobierno estatal \parencite{ine_computos_2024,inegi_encig_2025}.
+
+\paragraph{Chihuahua.} Chihuahua ocupa el lugar \CHHrango{} con \CHHindice{} puntos (intervalo \CHHrangoBajo--\CHHrangoAlto). Destacan sus capacidades cívicas y humanas (\CHHdimA), su inteligencia colectiva (\CHHdimB) y su continuidad y retroalimentación (\CHHdimF, frente a una mediana de \EntMedDimF), en la que pesan las solicitudes de patente por habitante \parencite{impi_cifras_2026}. Sus dimensiones más débiles son el valor público democrático (\CHHdimE) y la integración de la IA y el gobierno digital (\CHHdimC, frente a \EntMedDimC): el gobierno estatal reporta pocos trámites con servicio transaccional en línea \parencite{inegi_cnge_2025}.
+
+\paragraph{Lo que comparten.} Ambas entidades se ubican en la mitad superior del índice, pero las dos tienen su punto más débil en el valor público democrático. Las dos tienen una participación electoral por debajo de la nacional y una prevalencia de corrupción en trámites por encima de ella (cuadro~\ref{tab:ind-est}). La figura~\ref{fig:perfil-est} compara sus perfiles con la mediana de las entidades.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\linewidth]{figuras/perfil_chihuahua_sonora.pdf}
+  \caption{Puntajes por dimensión de Chihuahua y Sonora frente a la mediana de las 32 entidades (IICA-E). Elaboración propia.}
+  \label{fig:perfil-est}
+\end{figure}
+
+\paragraph{Relación con otros índices.} Como referencia externa, la correlación de rangos de Spearman entre el IICA-E y el Índice de Desarrollo Democrático de México \parencite{iddmex_2024} de \IDDanio{} es de \RhoIDD. La relación es positiva pero lejos de ser perfecta, lo que sugiere que el IICA-E captura algo relacionado con el desarrollo democrático, pero no idéntico.
+
+%=====================================================================
+\section{Alcances y limitaciones}
+%=====================================================================
+
+\paragraph{Qué se mide.} Los índices miden sobre todo capacidad instalada y, en algunos indicadores, activación (cuadro~\ref{tab:cobertura}). Ningún indicador captura resultados emergentes. Por diseño, la ICA es una propiedad emergente de las interacciones dentro de un ecosistema \parencite{zenteno_ica_2026}; estos índices describen las condiciones de ese ecosistema, no la propiedad.
+
+\paragraph{Coherencia estadística.} En el IICA-I, el factor de Gobierno abierto del WJP \parencite{wjp_rolindex2026} y el indicador de Voz y rendición de cuentas de los WGI \parencite{bancomundial_wdi} tienen correlaciones con el índice de \CohWJP{} y \CohWGIvoz, en el umbral en que un indicador empieza a dominar (cuadro~\ref{tab:coh-intl}). En el IICA-E, \NSubrepEst{} indicadores quedan subrepresentados (cuadro~\ref{tab:coh-est}). Los de valor público son el caso más claro: la participación electoral, la prevalencia de corrupción y la confianza en el gobierno estatal tienen correlaciones con el índice de \CohPartPres, \CohCorrup{} y \CohConfianza. Esa dimensión mide algo distinto del resto, lo que justifica conservarla, pero también advierte que el índice agregado oculta tensiones entre dimensiones. Ningún indicador estatal supera el umbral de sesgo de tamaño: la correlación más alta con la población, en valor absoluto, es de \MaxRpobEst.
+
+\input{tablas/coherencia_internacional.tex}
+\input{tablas/coherencia_estatal.tex}
+
+\paragraph{Limitaciones de las fuentes.}
+\begin{itemize}
+  \item La inteligencia colectiva estatal descansa en un solo indicador, las organizaciones de la sociedad civil con registro federal, que no captura redes informales ni colaboración.
+  \item La Métrica de Gobierno Abierto 2021 \parencite{inai_cide_mga_2021} es la edición más reciente; la reforma constitucional de diciembre de 2024 extinguió al INAI y a los órganos garantes estatales, lo que además rompe las series de transparencia \parencite{inegi_cntaippdpe_2025}.
+  \item La ENCIG solo es representativa en áreas urbanas de 100 mil habitantes o más \parencite{inegi_encig_2025}.
+  \item El número de espacios de participación que reportan los gobiernos estatales en el Censo Nacional de Gobiernos Estatales varía mucho entre ediciones \parencite{inegi_cnge_2025}.
+  \item La ENCUCI 2020, la fuente natural para la cultura cívica, no es representativa por entidad \parencite{inegi_encuci_2020}.
+\end{itemize}
+
+\paragraph{Licencias.} De las \NFuentesVerificadas{} fuentes verificadas, \NAbiertasVerif{} tienen licencias que permiten redistribuir los datos. Las otras \NNoRedistrib{} se usan con cita, pero sus archivos originales no se redistribuyen: el código los descarga desde su origen. Son: \input{tablas/no_redistribuibles.tex}.
+
+\paragraph{Escala.} El IICA-E mide entidades federativas, no instituciones ni programas. La unidad de análisis que propone el IICA original ---un organismo electoral, un municipio, una universidad o una red--- queda fuera del alcance de los datos abiertos.
+
+%=====================================================================
+\section{Agenda}
+%=====================================================================
+
+Estos índices parciales son un punto de partida. La agenda que proponemos tiene cuatro líneas.
+\begin{enumerate}
+  \item \textbf{Medir activación y resultados.} El Hackathón de Ciberdemocracia de Chihuahua \parencite{zenteno_ica_2026} es el piloto natural: sus rúbricas, sus comités de evaluación y la incubación de proyectos permiten medir la activación (diversidad de equipos, intensidad de la mentoría, uso de IA con supervisión humana) y los resultados (proyectos que continúan, alianzas formadas). La literatura sobre hackatones muestra que la continuidad de los proyectos es la excepción, no la regla \parencite{nolte_2020}, lo que hace de la incubación una variable relevante.
+  \item \textbf{Incorporar las fuentes pendientes.} LAPOP y Latinobarómetro aportarían actitudes democráticas y participación comparables entre países \parencite{lapop_americasbarometer,latinobarometro2026}; LATINNO, el registro de innovaciones democráticas en América Latina \parencite{pogrebinschi_latinno2021}; y la Alianza para el Gobierno Abierto, los compromisos de gobierno abierto \parencite{ogp_datos}.
+  \item \textbf{Validar el instrumento.} Un índice institucional requerirá validación de contenido con expertos, pruebas piloto y análisis de confiabilidad, como recomienda el Manual OCDE/JRC \parencite{ocde_jrc_2008}, y criterios de supervisión humana efectiva para la dimensión de IA \parencite{sterz_2024,unesco_etica_ia_2021}.
+  \item \textbf{Mantener la serie.} El \emph{pipeline} permite actualizar los índices cuando las fuentes publiquen nuevas ediciones y documenta cada cambio de metodología.
+\end{enumerate}
+
+\section*{Disponibilidad de datos y código}
+El código, el catálogo de fuentes con sus licencias, los datos que pueden redistribuirse y los resultados están disponibles en \url{https://github.com/juliowaissman/inteligencia-civica-aumentada}. Los resultados también pueden explorarse en el sitio del proyecto.
+
+\section*{Agradecimientos}
+Este trabajo se realizó con la colaboración de la Maestría en Ciencia de Datos de la Universidad de Sonora.
+
+\printbibliography[title={Referencias}]
+
+\end{document}

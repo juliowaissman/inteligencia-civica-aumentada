@@ -1,0 +1,8 @@
+---
+// Envoltura para páginas MDX: usa el título y la descripción del frontmatter.
+import Base from "./Base.astro";
+const { frontmatter } = Astro.props;
+---
+<Base titulo={frontmatter.titulo} descripcion={frontmatter.descripcion}>
+  <article class="prosa"><slot /></article>
+</Base>

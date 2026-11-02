@@ -1,0 +1,17 @@
+---
+import refs from "../data/referencias.json";
+const lista = Object.entries(refs as Record<string, any>).sort((a, b) => a[1].orden.localeCompare(b[1].orden, "es"));
+---
+<ol class="bib">
+  {lista.map(([clave, r]) => (
+    <li id={clave}>
+      {r.completa}{" "}
+      {r.url && <a href={r.url}>{r.url}</a>}
+    </li>
+  ))}
+</ol>
+<style>
+  .bib { padding-left: 1.2rem; }
+  .bib li { margin-bottom: 0.7rem; overflow-wrap: anywhere; }
+  .bib li:target { background: var(--fondo-suave); outline: 2px solid var(--acento); border-radius: 6px; }
+</style>

@@ -1,0 +1,41 @@
+{
+  "fuente": "geo_inegi",
+  "nombre": "Marco Geoestadístico 2025 (INEGI), capa 00ent: áreas geoestadísticas estatales",
+  "producto": "Marco Geoestadístico 2025, UPC 794551163061, archivo 'Marco Geoestadístico Integrado 2025'",
+  "url": "https://www.inegi.org.mx/contenidos/productos/prod_serv/contenidos/espanol/bvinegi/productos/geografia/marcogeo/794551163061/mg_2025_integrado.zip",
+  "url_ficha": "https://www.inegi.org.mx/app/biblioteca/ficha.html?upc=794551163061",
+  "tamano_zip_bytes": 257341599,
+  "miembros_extraidos": [
+    "conjunto_de_datos/00ent.shp",
+    "conjunto_de_datos/00ent.shx",
+    "conjunto_de_datos/00ent.dbf",
+    "conjunto_de_datos/00ent.prj",
+    "conjunto_de_datos/00ent.cpg",
+    "catalogos/áreas_geoestadísticas_estatales.csv",
+    "metadatos/metadato_mgi_2025.txt",
+    "metadatos/mgi_2025.xml"
+  ],
+  "crc32_en_zip": {
+    "00ent.shp": "0ad4e162",
+    "00ent.shx": "9d719560",
+    "00ent.dbf": "13eb52fa",
+    "00ent.prj": "55d6dff0",
+    "00ent.cpg": "1f167eef",
+    "áreas_geoestadísticas_estatales.csv": "f07028b0",
+    "metadato_mgi_2025.txt": "21325bf8",
+    "mgi_2025.xml": "b92848c8"
+  },
+  "nota": "Se extrajeron solo estos miembros del zip remoto con peticiones HTTP Range; sha256 se refiere a los archivos extraídos.",
+  "licencia": "Términos de Libre Uso de la Información del INEGI (https://www.inegi.org.mx/inegi/terminos.html)",
+  "fecha_acceso": "2026-11-02",
+  "sha256": {
+    "00ent.cpg": "43e620375f123fc61beace0affca5e0d4b11f8ceff371c726bece01a1e4cef4b",
+    "00ent.dbf": "0def204ec918cf877593985549d9cb3906abb9928c7e119927f3a2f4173abc63",
+    "00ent.prj": "198631fa0ed03cd26b498b11f4d4a640a524c05b2d2da0ffde71f5280f8826e4",
+    "00ent.shp": "27dfe807d1b5a6b9d4bd9842fe5d8c22ebfbbc08262aa6e0f7b944c2852eedc2",
+    "00ent.shx": "3ee03fd3a5921d3852d7365f01d895dd4814581abbe8821c256ba59bcc03b377",
+    "metadato_mgi_2025.txt": "c697410985cc3f77387e1bf28193e3ba1d1c6930771d619a89d3b046f48c02ed",
+    "mgi_2025.xml": "d8c774ac4134884e9160f5f88f7238e094fc46195303d0df809b152788f5d256",
+    "áreas_geoestadísticas_estatales.csv": "cc840bbc7a8334f72bcc9d4f5a9e5c7bd0f9c335fb2cf711f2ad7dc82d6574fd"
+  }
+}

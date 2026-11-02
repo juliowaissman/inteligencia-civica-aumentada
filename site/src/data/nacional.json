@@ -1,0 +1,900 @@
+{
+ "nivel": "nacional",
+ "desde": 2012,
+ "limites": {
+  "wb_internet": [
+   9.800000191,
+   99.76915157
+  ],
+  "wb_terciaria": [
+   16.8753678874298,
+   166.389556884766
+  ],
+  "vdem_delib": [
+   0.01,
+   0.988
+  ],
+  "vdem_cspart": [
+   0.092,
+   0.987
+  ],
+  "gh_colaboracion_externa": [
+   1.7846803391349804,
+   9654.491552321964
+  ],
+  "dsp_privacidad_ley": [
+   -2.175,
+   2.33
+  ],
+  "egov_osi": [
+   0.0865,
+   1.0
+  ],
+  "vdem_partip": [
+   0.104,
+   0.883
+  ],
+  "wjp_gob_abierto": [
+   0.2616030234294576,
+   0.9345737291915021
+  ],
+  "egov_epi": [
+   0.0,
+   1.0
+  ],
+  "wgi_voz": [
+   -1.761843,
+   1.8701886
+  ],
+  "wgi_corrupcion": [
+   -1.606331,
+   2.3263234
+  ],
+  "vdem_egal": [
+   0.16,
+   0.974
+  ],
+  "gh_desarrolladores": [
+   49.88505714413784,
+   11081.742978752389
+  ]
+ },
+ "dimensiones": {
+  "1": "Capacidades cívicas y humanas",
+  "2": "Inteligencia colectiva",
+  "3": "Integración ética de la IA",
+  "4": "Instituciones habilitadoras y cocreación",
+  "5": "Valor público democrático",
+  "6": "Continuidad y retroalimentación"
+ },
+ "indicadores": [
+  {
+   "id": "wb_internet",
+   "nombre": "Personas que usan internet (% de la población)",
+   "dimension": 1,
+   "capa": "instalada",
+   "sentido": 1,
+   "unidad_medida": "%",
+   "transformacion": "",
+   "nota": "Fuente original UIT, redistribuida por el Banco Mundial (IT.NET.USER.ZS).",
+   "fuente": "banco_mundial",
+   "fuente_nombre": "World Development Indicators y Worldwide Governance Indicators",
+   "editor": "Banco Mundial",
+   "cita": "bancomundial_wdi",
+   "licencia": "CC BY 4.0"
+  },
+  {
+   "id": "wb_terciaria",
+   "nombre": "Matrícula en educación terciaria (% bruto)",
+   "dimension": 1,
+   "capa": "instalada",
+   "sentido": 1,
+   "unidad_medida": "%",
+   "transformacion": "",
+   "nota": "Fuente original UNESCO UIS (SE.TER.ENRR).",
+   "fuente": "banco_mundial",
+   "fuente_nombre": "World Development Indicators y Worldwide Governance Indicators",
+   "editor": "Banco Mundial",
+   "cita": "bancomundial_wdi",
+   "licencia": "CC BY 4.0"
+  },
+  {
+   "id": "vdem_delib",
+   "nombre": "Índice del componente deliberativo (v2xdl_delib)",
+   "dimension": 1,
+   "capa": "activacion",
+   "sentido": 1,
+   "unidad_medida": "índice 0–1",
+   "transformacion": "",
+   "nota": "",
+   "fuente": "vdem",
+   "fuente_nombre": "V-Dem Country-Year Dataset v16 (componentes participativo, deliberativo, sociedad civil e igualitario)",
+   "editor": "Varieties of Democracy (V-Dem) Institute, Universidad de Gotemburgo",
+   "cita": "vdem_v16",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "id": "vdem_cspart",
+   "nombre": "Índice de participación de la sociedad civil (v2x_cspart)",
+   "dimension": 2,
+   "capa": "activacion",
+   "sentido": 1,
+   "unidad_medida": "índice 0–1",
+   "transformacion": "",
+   "nota": "",
+   "fuente": "vdem",
+   "fuente_nombre": "V-Dem Country-Year Dataset v16 (componentes participativo, deliberativo, sociedad civil e igualitario)",
+   "editor": "Varieties of Democracy (V-Dem) Institute, Universidad de Gotemburgo",
+   "cita": "vdem_v16",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "id": "gh_colaboracion_externa",
+   "nombre": "Colaboración con otras economías en GitHub (suma anual)",
+   "dimension": 2,
+   "capa": "activacion",
+   "sentido": 1,
+   "unidad_medida": "pushes + pull requests enviados a repositorios de otras economías (absoluto, suma de 4 trimestres)",
+   "transformacion": "por_100k",
+   "nota": "Suma del campo weight de economy_collaborators.csv con source = país y destination distinto del país y distinto del agregado EU. Solo incluye pares publicados (umbral de 100 desarrolladores); GitHub advierte que es una cota inferior. Valor absoluto: conviene normalizarlo después.",
+   "fuente": "github_innovation",
+   "fuente_nombre": "GitHub Innovation Graph",
+   "editor": "GitHub",
+   "cita": "github_innovationgraph",
+   "licencia": "CC0 1.0"
+  },
+  {
+   "id": "dsp_privacidad_ley",
+   "nombre": "Contenido de la protección legal de la privacidad (v2smprivcon)",
+   "dimension": 3,
+   "capa": "instalada",
+   "sentido": 1,
+   "unidad_medida": "estimación del modelo de medición (escala latente)",
+   "transformacion": "",
+   "nota": "Mayor = el marco legal limita más el acceso del gobierno a datos personales en internet.",
+   "fuente": "dsp",
+   "fuente_nombre": "Digital Society Project Dataset v8",
+   "editor": "Digital Society Project (V-Dem Institute y colaboradores)",
+   "cita": "dsp_v8",
+   "licencia": "All rights reserved (Copyright © 2026 Digital Society Project); descarga gratuita con cita"
+  },
+  {
+   "id": "egov_osi",
+   "nombre": "Índice de Servicios en Línea (OSI)",
+   "dimension": 3,
+   "capa": "instalada",
+   "sentido": 1,
+   "unidad_medida": "índice 0–1",
+   "transformacion": "",
+   "nota": "",
+   "fuente": "onu_egov",
+   "fuente_nombre": "United Nations E-Government Survey (EGDI y subíndices), 2003–2024",
+   "editor": "Naciones Unidas, Departamento de Asuntos Económicos y Sociales (UN DESA)",
+   "cita": "undesa_egov2024",
+   "licencia": "Términos de uso del sitio de la ONU (https://www.un.org/en/about-us/terms-of-use): descarga y copia para uso personal y no comercial, sin derecho a revender ni redistribuir"
+  },
+  {
+   "id": "vdem_partip",
+   "nombre": "Índice del componente participativo (v2x_partip)",
+   "dimension": 4,
+   "capa": "instalada",
+   "sentido": 1,
+   "unidad_medida": "índice 0–1",
+   "transformacion": "",
+   "nota": "Participación activa de la ciudadanía en procesos políticos, electorales y no electorales.",
+   "fuente": "vdem",
+   "fuente_nombre": "V-Dem Country-Year Dataset v16 (componentes participativo, deliberativo, sociedad civil e igualitario)",
+   "editor": "Varieties of Democracy (V-Dem) Institute, Universidad de Gotemburgo",
+   "cita": "vdem_v16",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "id": "wjp_gob_abierto",
+   "nombre": "Factor 3: Gobierno abierto",
+   "dimension": 4,
+   "capa": "instalada",
+   "sentido": 1,
+   "unidad_medida": "puntaje 0–1",
+   "transformacion": "",
+   "nota": "",
+   "fuente": "wjp",
+   "fuente_nombre": "WJP Rule of Law Index, Factor 3 (Gobierno abierto) y subfactores, 2012–2026",
+   "editor": "World Justice Project",
+   "cita": "wjp_rolindex2026",
+   "licencia": "Sin licencia declarada"
+  },
+  {
+   "id": "egov_epi",
+   "nombre": "Índice de E-Participación (EPI)",
+   "dimension": 4,
+   "capa": "activacion",
+   "sentido": 1,
+   "unidad_medida": "índice 0–1",
+   "transformacion": "",
+   "nota": "E-información, e-consulta y e-toma de decisiones en portales nacionales.",
+   "fuente": "onu_egov",
+   "fuente_nombre": "United Nations E-Government Survey (EGDI y subíndices), 2003–2024",
+   "editor": "Naciones Unidas, Departamento de Asuntos Económicos y Sociales (UN DESA)",
+   "cita": "undesa_egov2024",
+   "licencia": "Términos de uso del sitio de la ONU (https://www.un.org/en/about-us/terms-of-use): descarga y copia para uso personal y no comercial, sin derecho a revender ni redistribuir"
+  },
+  {
+   "id": "wgi_voz",
+   "nombre": "Voz y rendición de cuentas (WGI)",
+   "dimension": 5,
+   "capa": "instalada",
+   "sentido": 1,
+   "unidad_medida": "estimación −2.5 a 2.5",
+   "transformacion": "",
+   "nota": "",
+   "fuente": "banco_mundial",
+   "fuente_nombre": "World Development Indicators y Worldwide Governance Indicators",
+   "editor": "Banco Mundial",
+   "cita": "bancomundial_wdi",
+   "licencia": "CC BY 4.0"
+  },
+  {
+   "id": "wgi_corrupcion",
+   "nombre": "Control de la corrupción (WGI)",
+   "dimension": 5,
+   "capa": "instalada",
+   "sentido": 1,
+   "unidad_medida": "estimación −2.5 a 2.5",
+   "transformacion": "",
+   "nota": "",
+   "fuente": "banco_mundial",
+   "fuente_nombre": "World Development Indicators y Worldwide Governance Indicators",
+   "editor": "Banco Mundial",
+   "cita": "bancomundial_wdi",
+   "licencia": "CC BY 4.0"
+  },
+  {
+   "id": "vdem_egal",
+   "nombre": "Índice del componente igualitario (v2x_egal)",
+   "dimension": 5,
+   "capa": "resultado",
+   "sentido": 1,
+   "unidad_medida": "índice 0–1",
+   "transformacion": "",
+   "nota": "Igualdad en protección de derechos y en distribución de recursos (inclusión).",
+   "fuente": "vdem",
+   "fuente_nombre": "V-Dem Country-Year Dataset v16 (componentes participativo, deliberativo, sociedad civil e igualitario)",
+   "editor": "Varieties of Democracy (V-Dem) Institute, Universidad de Gotemburgo",
+   "cita": "vdem_v16",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "id": "gh_desarrolladores",
+   "nombre": "Cuentas de desarrolladores en GitHub (al cierre del 4.º trimestre)",
+   "dimension": 6,
+   "capa": "activacion",
+   "sentido": 1,
+   "unidad_medida": "número de cuentas (absoluto)",
+   "transformacion": "por_100k",
+   "nota": "Conteo absoluto, no por habitante: la tasa se calculará después con una población de fuente citada. Es un acervo acumulado que incluye cuentas inactivas; ubicación por IP (modo diario).",
+   "fuente": "github_innovation",
+   "fuente_nombre": "GitHub Innovation Graph",
+   "editor": "GitHub",
+   "cita": "github_innovationgraph",
+   "licencia": "CC0 1.0"
+  }
+ ],
+ "serie": [
+  {
+   "anio": 2012,
+   "indice": null,
+   "dims": {
+    "1": 41.8257,
+    "2": null,
+    "3": 73.7451,
+    "4": null,
+    "5": 37.7976,
+    "6": null
+   },
+   "valores": {
+    "wb_internet": 39.75,
+    "wb_terciaria": 29.3496,
+    "vdem_delib": 0.83,
+    "vdem_cspart": 0.685,
+    "gh_colaboracion_externa": null,
+    "dsp_privacidad_ley": 1.286,
+    "egov_osi": 0.732,
+    "vdem_partip": 0.558,
+    "wjp_gob_abierto": null,
+    "egov_epi": 0.5789,
+    "wgi_voz": 0.1674,
+    "wgi_corrupcion": -0.4872,
+    "vdem_egal": 0.419,
+    "gh_desarrolladores": null
+   },
+   "norm": {
+    "wb_internet": 33.2892,
+    "wb_terciaria": 8.3432,
+    "vdem_delib": 83.8446,
+    "vdem_cspart": 66.257,
+    "gh_colaboracion_externa": null,
+    "dsp_privacidad_ley": 76.8257,
+    "egov_osi": 70.6645,
+    "vdem_partip": 58.2798,
+    "wjp_gob_abierto": null,
+    "egov_epi": 57.89,
+    "wgi_voz": 53.1172,
+    "wgi_corrupcion": 28.4574,
+    "vdem_egal": 31.8182,
+    "gh_desarrolladores": null
+   }
+  },
+  {
+   "anio": 2013,
+   "indice": null,
+   "dims": {
+    "1": 42.1236,
+    "2": null,
+    "3": 73.7451,
+    "4": 51.0573,
+    "5": 36.7931,
+    "6": null
+   },
+   "valores": {
+    "wb_internet": 43.46,
+    "wb_terciaria": 30.3302,
+    "vdem_delib": 0.792,
+    "vdem_cspart": 0.626,
+    "gh_colaboracion_externa": null,
+    "dsp_privacidad_ley": 1.286,
+    "egov_osi": 0.732,
+    "vdem_partip": 0.533,
+    "wjp_gob_abierto": 0.5322,
+    "egov_epi": 0.5789,
+    "wgi_voz": 0.1502,
+    "wgi_corrupcion": -0.563,
+    "vdem_egal": 0.414,
+    "gh_desarrolladores": null
+   },
+   "norm": {
+    "wb_internet": 37.4128,
+    "wb_terciaria": 8.999,
+    "vdem_delib": 79.9591,
+    "vdem_cspart": 59.6648,
+    "gh_colaboracion_externa": null,
+    "dsp_privacidad_ley": 76.8257,
+    "egov_osi": 70.6645,
+    "vdem_partip": 55.0706,
+    "wjp_gob_abierto": 40.2113,
+    "egov_epi": 57.89,
+    "wgi_voz": 52.6449,
+    "wgi_corrupcion": 26.5306,
+    "vdem_egal": 31.2039,
+    "gh_desarrolladores": null
+   }
+  },
+  {
+   "anio": 2014,
+   "indice": null,
+   "dims": {
+    "1": 42.6276,
+    "2": null,
+    "3": 69.8803,
+    "4": 51.1412,
+    "5": 33.8449,
+    "6": null
+   },
+   "valores": {
+    "wb_internet": 44.3857,
+    "wb_terciaria": 31.2053,
+    "vdem_delib": 0.791,
+    "vdem_cspart": 0.626,
+    "gh_colaboracion_externa": null,
+    "dsp_privacidad_ley": 1.286,
+    "egov_osi": 0.6614,
+    "vdem_partip": 0.528,
+    "wjp_gob_abierto": 0.5188,
+    "egov_epi": 0.6078,
+    "wgi_voz": 0.0572,
+    "wgi_corrupcion": -0.7907,
+    "vdem_egal": 0.41,
+    "gh_desarrolladores": null
+   },
+   "norm": {
+    "wb_internet": 38.4417,
+    "wb_terciaria": 9.5843,
+    "vdem_delib": 79.8569,
+    "vdem_cspart": 59.6648,
+    "gh_colaboracion_externa": null,
+    "dsp_privacidad_ley": 76.8257,
+    "egov_osi": 62.9349,
+    "vdem_partip": 54.4288,
+    "wjp_gob_abierto": 38.2109,
+    "egov_epi": 60.784,
+    "wgi_voz": 50.0831,
+    "wgi_corrupcion": 20.7391,
+    "vdem_egal": 30.7125,
+    "gh_desarrolladores": null
+   }
+  },
+  {
+   "anio": 2015,
+   "indice": null,
+   "dims": {
+    "1": 46.9842,
+    "2": null,
+    "3": 69.8803,
+    "4": 57.4414,
+    "5": 33.0913,
+    "6": null
+   },
+   "valores": {
+    "wb_internet": 57.431,
+    "wb_terciaria": 31.9719,
+    "vdem_delib": 0.772,
+    "vdem_cspart": 0.62,
+    "gh_colaboracion_externa": null,
+    "dsp_privacidad_ley": 1.286,
+    "egov_osi": 0.6614,
+    "vdem_partip": 0.554,
+    "wjp_gob_abierto": 0.6235,
+    "egov_epi": 0.6078,
+    "wgi_voz": -0.0081,
+    "wgi_corrupcion": -0.8427,
+    "vdem_egal": 0.417,
+    "gh_desarrolladores": null
+   },
+   "norm": {
+    "wb_internet": 52.9415,
+    "wb_terciaria": 10.097,
+    "vdem_delib": 77.9141,
+    "vdem_cspart": 58.9944,
+    "gh_colaboracion_externa": null,
+    "dsp_privacidad_ley": 76.8257,
+    "egov_osi": 62.9349,
+    "vdem_partip": 57.7664,
+    "wjp_gob_abierto": 53.7739,
+    "egov_epi": 60.784,
+    "wgi_voz": 48.2841,
+    "wgi_corrupcion": 19.4173,
+    "vdem_egal": 31.5725,
+    "gh_desarrolladores": null
+   }
+  },
+  {
+   "anio": 2016,
+   "indice": null,
+   "dims": {
+    "1": 49.2412,
+    "2": null,
+    "3": 80.0839,
+    "4": 65.9929,
+    "5": 33.1937,
+    "6": null
+   },
+   "valores": {
+    "wb_internet": 59.5404,
+    "wb_terciaria": 38.5898,
+    "vdem_delib": 0.772,
+    "vdem_cspart": 0.628,
+    "gh_colaboracion_externa": null,
+    "dsp_privacidad_ley": 1.286,
+    "egov_osi": 0.8478,
+    "vdem_partip": 0.558,
+    "wjp_gob_abierto": 0.6086,
+    "egov_epi": 0.8814,
+    "wgi_voz": -0.0278,
+    "wgi_corrupcion": -0.8094,
+    "vdem_egal": 0.417,
+    "gh_desarrolladores": null
+   },
+   "norm": {
+    "wb_internet": 55.2861,
+    "wb_terciaria": 14.5233,
+    "vdem_delib": 77.9141,
+    "vdem_cspart": 59.8883,
+    "gh_colaboracion_externa": null,
+    "dsp_privacidad_ley": 76.8257,
+    "egov_osi": 83.3421,
+    "vdem_partip": 58.2798,
+    "wjp_gob_abierto": 51.5629,
+    "egov_epi": 88.136,
+    "wgi_voz": 47.744,
+    "wgi_corrupcion": 20.2645,
+    "vdem_egal": 31.5725,
+    "gh_desarrolladores": null
+   }
+  },
+  {
+   "anio": 2017,
+   "indice": null,
+   "dims": {
+    "1": 46.6403,
+    "2": null,
+    "3": 80.0839,
+    "4": null,
+    "5": 31.7879,
+    "6": null
+   },
+   "valores": {
+    "wb_internet": 53.0318,
+    "wb_terciaria": 40.3391,
+    "vdem_delib": 0.755,
+    "vdem_cspart": 0.671,
+    "gh_colaboracion_externa": null,
+    "dsp_privacidad_ley": 1.286,
+    "egov_osi": 0.8478,
+    "vdem_partip": 0.579,
+    "wjp_gob_abierto": null,
+    "egov_epi": 0.8814,
+    "wgi_voz": -0.0828,
+    "wgi_corrupcion": -0.9495,
+    "vdem_egal": 0.424,
+    "gh_desarrolladores": null
+   },
+   "norm": {
+    "wb_internet": 48.0518,
+    "wb_terciaria": 15.6933,
+    "vdem_delib": 76.1759,
+    "vdem_cspart": 64.6927,
+    "gh_colaboracion_externa": null,
+    "dsp_privacidad_ley": 76.8257,
+    "egov_osi": 83.3421,
+    "vdem_partip": 60.9756,
+    "wjp_gob_abierto": null,
+    "egov_epi": 88.136,
+    "wgi_voz": 46.2287,
+    "wgi_corrupcion": 16.7024,
+    "vdem_egal": 32.4324,
+    "gh_desarrolladores": null
+   }
+  },
+  {
+   "anio": 2018,
+   "indice": null,
+   "dims": {
+    "1": 46.0246,
+    "2": null,
+    "3": 84.2312,
+    "4": 68.825,
+    "5": 34.1304,
+    "6": null
+   },
+   "valores": {
+    "wb_internet": 56.6596,
+    "wb_terciaria": 41.6383,
+    "vdem_delib": 0.689,
+    "vdem_cspart": 0.652,
+    "gh_colaboracion_externa": null,
+    "dsp_privacidad_ley": 1.286,
+    "egov_osi": 0.9236,
+    "vdem_partip": 0.575,
+    "wjp_gob_abierto": 0.6091,
+    "egov_epi": 0.9438,
+    "wgi_voz": 0.0181,
+    "wgi_corrupcion": -0.9611,
+    "vdem_egal": 0.461,
+    "gh_desarrolladores": null
+   },
+   "norm": {
+    "wb_internet": 52.084,
+    "wb_terciaria": 16.5622,
+    "vdem_delib": 69.4274,
+    "vdem_cspart": 62.5698,
+    "gh_colaboracion_externa": null,
+    "dsp_privacidad_ley": 76.8257,
+    "egov_osi": 91.6366,
+    "vdem_partip": 60.4621,
+    "wjp_gob_abierto": 51.6328,
+    "egov_epi": 94.38,
+    "wgi_voz": 49.0072,
+    "wgi_corrupcion": 16.4061,
+    "vdem_egal": 36.9779,
+    "gh_desarrolladores": null
+   }
+  },
+  {
+   "anio": 2019,
+   "indice": null,
+   "dims": {
+    "1": 46.4067,
+    "2": null,
+    "3": 84.2312,
+    "4": 67.4102,
+    "5": 36.1549,
+    "6": null
+   },
+   "valores": {
+    "wb_internet": 69.6321,
+    "wb_terciaria": 43.0441,
+    "vdem_delib": 0.55,
+    "vdem_cspart": 0.561,
+    "gh_colaboracion_externa": null,
+    "dsp_privacidad_ley": 1.286,
+    "egov_osi": 0.9236,
+    "vdem_partip": 0.543,
+    "wjp_gob_abierto": 0.6082,
+    "egov_epi": 0.9438,
+    "wgi_voz": 0.0146,
+    "wgi_corrupcion": -0.8924,
+    "vdem_egal": 0.497,
+    "gh_desarrolladores": null
+   },
+   "norm": {
+    "wb_internet": 66.5029,
+    "wb_terciaria": 17.5025,
+    "vdem_delib": 55.2147,
+    "vdem_cspart": 52.4022,
+    "gh_colaboracion_externa": null,
+    "dsp_privacidad_ley": 76.8257,
+    "egov_osi": 91.6366,
+    "vdem_partip": 56.3543,
+    "wjp_gob_abierto": 51.4964,
+    "egov_epi": 94.38,
+    "wgi_voz": 48.9106,
+    "wgi_corrupcion": 18.1538,
+    "vdem_egal": 41.4005,
+    "gh_desarrolladores": null
+   }
+  },
+  {
+   "anio": 2020,
+   "indice": 33.2005,
+   "dims": {
+    "1": 47.8748,
+    "2": 26.8716,
+    "3": 77.1207,
+    "4": 63.175,
+    "5": 34.7887,
+    "6": 4.8034
+   },
+   "valores": {
+    "wb_internet": 71.4902,
+    "wb_terciaria": 45.1655,
+    "vdem_delib": 0.559,
+    "vdem_cspart": 0.563,
+    "gh_colaboracion_externa": 109.6507,
+    "dsp_privacidad_ley": 1.139,
+    "egov_osi": 0.8235,
+    "vdem_partip": 0.544,
+    "wjp_gob_abierto": 0.6042,
+    "egov_epi": 0.8214,
+    "wgi_voz": -0.0154,
+    "wgi_corrupcion": -0.8569,
+    "vdem_egal": 0.463,
+    "gh_desarrolladores": 579.7867
+   },
+   "norm": {
+    "wb_internet": 68.5681,
+    "wb_terciaria": 18.9213,
+    "vdem_delib": 56.135,
+    "vdem_cspart": 52.6257,
+    "gh_colaboracion_externa": 1.1175,
+    "dsp_privacidad_ley": 73.5627,
+    "egov_osi": 80.6787,
+    "vdem_partip": 56.4827,
+    "wjp_gob_abierto": 50.9022,
+    "egov_epi": 82.14,
+    "wgi_voz": 48.0848,
+    "wgi_corrupcion": 19.0577,
+    "vdem_egal": 37.2236,
+    "gh_desarrolladores": 4.8034
+   }
+  },
+  {
+   "anio": 2021,
+   "indice": 34.4629,
+   "dims": {
+    "1": 49.4473,
+    "2": 24.5339,
+    "3": 77.1207,
+    "4": 64.3668,
+    "5": 32.793,
+    "6": 6.9861
+   },
+   "valores": {
+    "wb_internet": 75.6265,
+    "wb_terciaria": 45.6506,
+    "vdem_delib": 0.557,
+    "vdem_cspart": 0.518,
+    "gh_colaboracion_externa": 143.6872,
+    "dsp_privacidad_ley": 1.139,
+    "egov_osi": 0.8235,
+    "vdem_partip": 0.576,
+    "wjp_gob_abierto": 0.6006,
+    "egov_epi": 0.8214,
+    "wgi_voz": -0.1226,
+    "wgi_corrupcion": -0.8748,
+    "vdem_egal": 0.442,
+    "gh_desarrolladores": 820.5861
+   },
+   "norm": {
+    "wb_internet": 73.1656,
+    "wb_terciaria": 19.2458,
+    "vdem_delib": 55.9305,
+    "vdem_cspart": 47.5978,
+    "gh_colaboracion_externa": 1.4701,
+    "dsp_privacidad_ley": 73.5627,
+    "egov_osi": 80.6787,
+    "vdem_partip": 60.5905,
+    "wjp_gob_abierto": 50.3698,
+    "egov_epi": 82.14,
+    "wgi_voz": 45.133,
+    "wgi_corrupcion": 18.6022,
+    "vdem_egal": 34.6437,
+    "gh_desarrolladores": 6.9861
+   }
+  },
+  {
+   "anio": 2022,
+   "indice": 35.6904,
+   "dims": {
+    "1": 50.2863,
+    "2": 23.217,
+    "3": 78.7182,
+    "4": 63.9034,
+    "5": 33.1301,
+    "6": 8.9875
+   },
+   "valores": {
+    "wb_internet": 78.6322,
+    "wb_terciaria": 46.4061,
+    "vdem_delib": 0.544,
+    "vdem_cspart": 0.49,
+    "gh_colaboracion_externa": 191.4369,
+    "dsp_privacidad_ley": 1.278,
+    "egov_osi": 0.8245,
+    "vdem_partip": 0.652,
+    "wjp_gob_abierto": 0.5889,
+    "egov_epi": 0.7273,
+    "wgi_voz": -0.1404,
+    "wgi_corrupcion": -0.8785,
+    "vdem_egal": 0.455,
+    "gh_desarrolladores": 1041.3782
+   },
+   "norm": {
+    "wb_internet": 76.5064,
+    "wb_terciaria": 19.7511,
+    "vdem_delib": 54.6012,
+    "vdem_cspart": 44.4693,
+    "gh_colaboracion_externa": 1.9648,
+    "dsp_privacidad_ley": 76.6482,
+    "egov_osi": 80.7882,
+    "vdem_partip": 70.3466,
+    "wjp_gob_abierto": 48.6335,
+    "egov_epi": 72.73,
+    "wgi_voz": 44.6424,
+    "wgi_corrupcion": 18.5071,
+    "vdem_egal": 36.2408,
+    "gh_desarrolladores": 8.9875
+   }
+  },
+  {
+   "anio": 2023,
+   "indice": 37.3064,
+   "dims": {
+    "1": 51.1629,
+    "2": 24.8574,
+    "3": 78.7182,
+    "4": 63.8207,
+    "5": 32.519,
+    "6": 11.2325
+   },
+   "valores": {
+    "wb_internet": 81.1832,
+    "wb_terciaria": 47.4747,
+    "vdem_delib": 0.535,
+    "vdem_cspart": 0.518,
+    "gh_colaboracion_externa": 206.1311,
+    "dsp_privacidad_ley": 1.278,
+    "egov_osi": 0.8245,
+    "vdem_partip": 0.66,
+    "wjp_gob_abierto": 0.5803,
+    "egov_epi": 0.7273,
+    "wgi_voz": -0.1633,
+    "wgi_corrupcion": -0.921,
+    "vdem_egal": 0.454,
+    "gh_desarrolladores": 1289.0397
+   },
+   "norm": {
+    "wb_internet": 79.3418,
+    "wb_terciaria": 20.4658,
+    "vdem_delib": 53.681,
+    "vdem_cspart": 47.5978,
+    "gh_colaboracion_externa": 2.117,
+    "dsp_privacidad_ley": 76.6482,
+    "egov_osi": 80.7882,
+    "vdem_partip": 71.3736,
+    "wjp_gob_abierto": 47.3586,
+    "egov_epi": 72.73,
+    "wgi_voz": 44.0132,
+    "wgi_corrupcion": 17.426,
+    "vdem_egal": 36.1179,
+    "gh_desarrolladores": 11.2325
+   }
+  },
+  {
+   "anio": 2024,
+   "indice": 35.996,
+   "dims": {
+    "1": 48.7718,
+    "2": 18.885,
+    "3": 75.3881,
+    "4": 62.2944,
+    "5": 32.3028,
+    "6": 13.4698
+   },
+   "valores": {
+    "wb_internet": 83.1223,
+    "wb_terciaria": 48.2034,
+    "vdem_delib": 0.439,
+    "vdem_cspart": 0.412,
+    "gh_colaboracion_externa": 196.3694,
+    "dsp_privacidad_ley": 1.278,
+    "egov_osi": 0.7637,
+    "vdem_partip": 0.621,
+    "wjp_gob_abierto": 0.5748,
+    "egov_epi": 0.7397,
+    "wgi_voz": -0.2411,
+    "wgi_corrupcion": -0.9251,
+    "vdem_egal": 0.467,
+    "gh_desarrolladores": 1535.8509
+   },
+   "norm": {
+    "wb_internet": 81.4972,
+    "wb_terciaria": 20.9532,
+    "vdem_delib": 43.865,
+    "vdem_cspart": 35.7542,
+    "gh_colaboracion_externa": 2.0159,
+    "dsp_privacidad_ley": 76.6482,
+    "egov_osi": 74.1281,
+    "vdem_partip": 66.3671,
+    "wjp_gob_abierto": 46.5459,
+    "egov_epi": 73.97,
+    "wgi_voz": 41.8716,
+    "wgi_corrupcion": 17.3219,
+    "vdem_egal": 37.715,
+    "gh_desarrolladores": 13.4698
+   }
+  },
+  {
+   "anio": 2025,
+   "indice": null,
+   "dims": {
+    "1": null,
+    "2": 23.2051,
+    "3": 70.1939,
+    "4": 62.6646,
+    "5": 31.9841,
+    "6": 17.6678
+   },
+   "valores": {
+    "wb_internet": null,
+    "wb_terciaria": null,
+    "vdem_delib": 0.427,
+    "vdem_cspart": 0.49,
+    "gh_colaboracion_externa": 189.1276,
+    "dsp_privacidad_ley": 0.81,
+    "egov_osi": 0.7637,
+    "vdem_partip": 0.651,
+    "wjp_gob_abierto": 0.5564,
+    "egov_epi": 0.7397,
+    "wgi_voz": -0.2821,
+    "wgi_corrupcion": -0.9424,
+    "vdem_egal": 0.472,
+    "gh_desarrolladores": 1998.9678
+   },
+   "norm": {
+    "wb_internet": null,
+    "wb_terciaria": null,
+    "vdem_delib": 42.638,
+    "vdem_cspart": 44.4693,
+    "gh_colaboracion_externa": 1.9408,
+    "dsp_privacidad_ley": 66.2597,
+    "egov_osi": 74.1281,
+    "vdem_partip": 70.2182,
+    "wjp_gob_abierto": 43.8056,
+    "egov_epi": 73.97,
+    "wgi_voz": 40.7416,
+    "wgi_corrupcion": 16.8814,
+    "vdem_egal": 38.3292,
+    "gh_desarrolladores": 17.6678
+   }
+  }
+ ]
+}

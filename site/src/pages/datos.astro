@@ -1,0 +1,65 @@
+---
+import Base from "../layouts/Base.astro";
+import Cita from "../components/Cita.astro";
+import fuentes from "../data/fuentes.json";
+const base = import.meta.env.BASE_URL;
+const orden = [...(fuentes as any[])].sort((a, b) => a.estado.localeCompare(b.estado) || a.nombre.localeCompare(b.nombre, "es"));
+const ESTADO: Record<string, string> = { verificada: "Verificada", candidata: "Pendiente (requiere registro)", descartada: "Descartada" };
+const descargas = [
+  ["resultado_internacional.csv", "Resultados internacionales: índice, dimensiones, indicadores normalizados y valores originales"],
+  ["resultado_estatal.csv", "Resultados de las 32 entidades"],
+  ["resultado_nacional.csv", "Serie nacional de México"],
+  ["coherencia_internacional.csv", "Coherencia estadística, nivel internacional"],
+  ["coherencia_estatal.csv", "Coherencia estadística, nivel estatal"],
+];
+---
+<Base titulo="Datos y código" descripcion="Fuentes, licencias, descargas y cómo reproducir los IICA parciales.">
+  <h1>Datos y código</h1>
+  <p class="prosa">
+    Todo el código está en <a href="https://github.com/juliowaissman/inteligencia-civica-aumentada">GitHub</a>.
+    Un programa en Python descarga cada fuente desde su origen, guarda una copia fechada con su huella sha256, la limpia y calcula los índices.
+    Las cifras y los gráficos de este sitio y del artículo salen de esos resultados; ninguna se escribe a mano.
+  </p>
+
+  <h2>Descargas</h2>
+  <ul>
+    {descargas.map(([f, d]) => <li><a href={`${base}datos/${f}`}>{f}</a>: {d}</li>)}
+    <li><a href={`${base}docs/articulo-iica.pdf`}>Artículo</a> (PDF)</li>
+    <li><a href={`${base}docs/ponencia-zenteno-2026.pdf`}>Ponencia original</a> (PDF) <Cita clave="zenteno_ica_2026" /></li>
+    <li><a href={`${base}docs/informe-originalidad-ica.pdf`}>Informe sobre la originalidad del concepto</a> (PDF) <Cita clave="informe_ica_2026" /></li>
+  </ul>
+
+  <h2>Reproducir</h2>
+  <pre><code>git clone https://github.com/juliowaissman/inteligencia-civica-aumentada
+cd inteligencia-civica-aumentada/pipeline
+uv run iica descargar     # baja todas las fuentes verificadas
+uv run iica procesar      # tablas limpias
+uv run iica calcular      # índices, sensibilidad y coherencia
+uv run iica exportar      # datos del sitio y figuras del artículo</code></pre>
+
+  <h2>Fuentes ({orden.length})</h2>
+  <p class="prosa">
+    Usamos fuentes con y sin licencia abierta. De las que no tienen licencia abierta, el repositorio no incluye los archivos originales:
+    el código los descarga del editor. El sitio muestra solo valores derivados, con su cita.
+  </p>
+  <div class="tabla">
+    <table>
+      <thead><tr><th>Fuente</th><th>Niveles</th><th>Licencia</th><th>Estado</th><th>Indicadores</th></tr></thead>
+      <tbody>
+        {orden.map((f) => (
+          <tr>
+            <td><a href={f.url}>{f.nombre}</a><div class="nota">{f.editor} <Cita clave={f.cita} /></div></td>
+            <td>{f.niveles.join(", ")}</td>
+            <td>{f.licencia}</td>
+            <td>{ESTADO[f.estado]}{f.motivo ? <div class="nota">{f.motivo}</div> : null}</td>
+            <td>{f.indicadores.length}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</Base>
+
+<style>
+  pre { background: var(--fondo-suave); border: 1px solid var(--borde); border-radius: var(--radio); padding: 1rem; overflow-x: auto; font-size: 0.9rem; }
+</style>

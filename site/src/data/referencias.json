@@ -12,5 +12,446 @@
     "completa": "Banco Mundial (2026). World Development Indicators y Worldwide Governance Indicators. API v2, https://api.worldbank.org/v2/. Licencia CC BY 4.0.",
     "url": "",
     "orden": "banco mundial2026"
+  },
+  "inegi_mg2025": {
+    "corta": "Instituto Nacional de Estadística y Geografía (INEGI), 2025",
+    "titulo": "Marco Geoestadístico 2025",
+    "completa": "Instituto Nacional de Estadística y Geografía (INEGI) (2025). Marco Geoestadístico 2025. https://www.inegi.org.mx/app/biblioteca/ficha.html?upc=794551163061. UPC 794551163061. Capa 00ent (áreas geoestadísticas estatales) del archivo ``Marco Geoestadístico Integrado 2025'' (mg\\_2025\\_integrado.zip), proyección Lambert cónica conforme ITRF2008. Reproyectada a WGS84 y simplificada con mapshaper 0.7.101. Licencia: Términos de Libre Uso de la Información del INEGI. Consultado el 2026-11-02.",
+    "url": "",
+    "orden": "instituto nacional de estadística y geografía (inegi)2025"
+  },
+  "naturalearth_admin0_110m": {
+    "corta": "Natural Earth, 2026",
+    "titulo": "Admin 0 – Countries, escala 1:110m",
+    "completa": "Natural Earth (2026). Admin 0 – Countries, escala 1:110m. https://www.naturalearthdata.com/downloads/110m-cultural-vectors/. Dominio público. Copia en TopoJSON del paquete world-atlas 2.0.2 de Mike Bostock (https://github.com/topojson/world-atlas; https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-110m.json), con ids ISO 3166-1 numéricos. Consultado el 2026-11-02.",
+    "url": "",
+    "orden": "natural earth2026"
+  },
+  "vdem_v16": {
+    "corta": "Coppedge et al., 2026",
+    "titulo": "V-Dem [Country-Year/Country-Date] Dataset v16",
+    "completa": "Coppedge, Michael and Gerring, John and Knutsen, Carl Henrik and Lindberg, Staffan I. and Teorell, Jan and Altman, David and Angiolillo, Fabio and Bernhard, Michael and Cornell, Agnes and Fish, M. Steven and Fox, Linnea and Gastaldi, Lisa and Gjerl\\ow, Haakon and Glynn, Adam and Good God, Ana and Hicken, Allen and Kinzelbach, Katrin and Krusell, Joshua and Marquardt, Kyle L. and McMann, Kelly and Mechkova, Valeriya and Medzihorsky, Juraj and Neundorf, Anja and Paxton, Pamela and Pemstein, Daniel and Pernes, Josefine and von R\\\"omer, Johannes and Seim, Brigitte and Sigman, Rachel and Skaaning, Svend-Erik and Staton, Jeffrey and Sundstr\\\"om, Aksel and Tannenberg, Marcus and Tzelgov, Eitan and Wang, Yi-ting and Wig, Tore and Wilson, Steven and Ziblatt, Daniel (2026). V-Dem [Country-Year/Country-Date] Dataset v16. Varieties of Democracy (V-Dem) Project. Licencia CC BY-SA 4.0. Copia leída del paquete oficial de R vdemdata v16.0 (https://github.com/vdeminstitute/vdemdata).",
+    "url": "https://www.v-dem.net/data/the-v-dem-dataset/",
+    "orden": "coppedge, michael and gerring, john and knutsen, carl henrik and lindberg, staffan i. and teorell, jan and altman, david and angiolillo, fabio and bernhard, michael and cornell, agnes and fish, m. steven and fox, linnea and gastaldi, lisa and gjerl\\ow, haakon and glynn, adam and good god, ana and hicken, allen and kinzelbach, katrin and krusell, joshua and marquardt, kyle l. and mcmann, kelly and mechkova, valeriya and medzihorsky, juraj and neundorf, anja and paxton, pamela and pemstein, daniel and pernes, josefine and von r\\\"omer, johannes and seim, brigitte and sigman, rachel and skaaning, svend-erik and staton, jeffrey and sundstr\\\"om, aksel and tannenberg, marcus and tzelgov, eitan and wang, yi-ting and wig, tore and wilson, steven and ziblatt, daniel2026"
+  },
+  "undesa_egov2024": {
+    "corta": "United Nations Department of Economic y Social Affairs, 2024",
+    "titulo": "United Nations E-Government Survey: Data Center (EGDI, EPI, OSI, HCI, TII), ediciones 2003–2024",
+    "completa": "United Nations Department of Economic and Social Affairs (2024). United Nations E-Government Survey: Data Center (EGDI, EPI, OSI, HCI, TII), ediciones 2003–2024. https://publicadministration.un.org/egovkb/en-us/data-center. Consultado el 2 de noviembre de 2026. Uso sujeto a los términos de uso del sitio de la ONU.",
+    "url": "",
+    "orden": "united nations department of economic and social affairs2024"
+  },
+  "wjp_rolindex2026": {
+    "corta": "World Justice Project, 2026",
+    "titulo": "WJP Rule of Law Index 2026: Historical Data File (2012–2026)",
+    "completa": "World Justice Project (2026). WJP Rule of Law Index 2026: Historical Data File (2012–2026). https://worldjusticeproject.org/rule-of-law-index/downloads/2026_wjp_rule_of_law_index_HISTORICAL_DATA_FILE.xlsx. Sin licencia de datos declarada.",
+    "url": "",
+    "orden": "world justice project2026"
+  },
+  "idea_gsod_v10": {
+    "corta": "International IDEA, 2026",
+    "titulo": "The Global State of Democracy Indices, 1975–2025, v. 10",
+    "completa": "International IDEA (2026). The Global State of Democracy Indices, 1975–2025, v. 10. https://www.idea.int/democracytracker/gsod-indices. Licencia CC BY-NC-SA 4.0 (declarada en el codebook v10). Consultado el 2 de noviembre de 2026.",
+    "url": "",
+    "orden": "international idea2026"
+  },
+  "pogrebinschi_latinno2021": {
+    "corta": "Pogrebinschi, 2021",
+    "titulo": "LATINNO Dataset on Democratic Innovations in Latin America",
+    "completa": "Pogrebinschi, Thamy (2021). LATINNO Dataset on Democratic Innovations in Latin America. GESIS, Colonia. Versión 1.0.0. Wissenschaftszentrum Berlin f\\\"ur Sozialforschung.",
+    "url": "https://doi.org/10.7802/2278",
+    "orden": "pogrebinschi, thamy2021"
+  },
+  "ogp_datos": {
+    "corta": "Open Government Partnership, 2026",
+    "titulo": "OGP Data Dashboard y bases de compromisos nacionales",
+    "completa": "Open Government Partnership (2026). OGP Data Dashboard y bases de compromisos nacionales. https://www.opengovpartnership.org/data-dashboard/. Fuente candidata; no descargada.",
+    "url": "",
+    "orden": "open government partnership2026"
+  },
+  "latinobarometro2026": {
+    "corta": "Corporación Latinobarómetro, 2026",
+    "titulo": "Latinobarómetro: Opinión Pública Latinoamericana, 1995–2026",
+    "completa": "Corporación Latinobarómetro (2026). Latinobarómetro: Opinión Pública Latinoamericana, 1995–2026. https://www.latinobarometro.org/. Fuente candidata; no descargada.",
+    "url": "",
+    "orden": "corporación latinobarómetro2026"
+  },
+  "lapop_americasbarometer": {
+    "corta": "LAPOP Lab, 2026",
+    "titulo": "AmericasBarometer",
+    "completa": "LAPOP Lab (2026). AmericasBarometer. Center for Global Democracy, Vanderbilt University, Nashville, TN. https://www.vanderbilt.edu/lapop/. Fuente candidata; no descargada. Citar país, años de levantamiento y versión del archivo.",
+    "url": "",
+    "orden": "lapop lab2026"
+  },
+  "github_innovationgraph": {
+    "corta": "GitHub, 2026",
+    "titulo": "GitHub Innovation Graph",
+    "completa": "GitHub (2026). GitHub Innovation Graph. https://github.com/github/innovationgraph. Datos trimestrales por economía, 2020–2026. Licencia CC0 1.0. Consultado el 2026-11-02.",
+    "url": "",
+    "orden": "github2026"
+  },
+  "girai2026": {
+    "corta": "Global Center on AI Governance, 2026",
+    "titulo": "Global Index on Responsible AI 2026 (2.ª edición)",
+    "completa": "Global Center on AI Governance (2026). Global Index on Responsible AI 2026 (2.ª edición). https://www.global-index.ai/. Licencia CC BY 4.0. Consultado el 2026-11-02.",
+    "url": "",
+    "orden": "global center on ai governance2026"
+  },
+  "oxford_insights2025": {
+    "corta": "Oxford Insights, 2025",
+    "titulo": "Government AI Readiness Index 2025",
+    "completa": "Oxford Insights (2025). Government AI Readiness Index 2025. https://oxfordinsights.com/ai-readiness/government-ai-readiness-index-2025/. Edición revisada y republicada en enero de 2026. Consultado el 2026-11-02.",
+    "url": "",
+    "orden": "oxford insights2025"
+  },
+  "dsp_v8": {
+    "corta": "Mechkova et al., 2026",
+    "titulo": "Digital Society Project Dataset v8",
+    "completa": "Mechkova, Valeriya and Pemstein, Daniel and Seim, Brigitte and Wilson, Steven (2026). Digital Society Project Dataset v8. https://digitalsocietyproject.org/data/. Consultado el 2026-11-02.",
+    "url": "",
+    "orden": "mechkova, valeriya and pemstein, daniel and seim, brigitte and wilson, steven2026"
+  },
+  "gdb2025": {
+    "corta": "Global Data Barometer, 2025",
+    "titulo": "Global Data Barometer: 2nd Edition Report and Open Data",
+    "completa": "Global Data Barometer (2025). Global Data Barometer: 2nd Edition Report and Open Data. https://globaldatabarometer.org/open-data/. D4D.net e ILDA. Evidencia del 31-ago-2022 al 1-sep-2024. Licencia CC BY 4.0. Consultado el 2026-11-02.",
+    "url": "",
+    "orden": "global data barometer2025"
+  },
+  "anthropic_aei_2026": {
+    "corta": "Massenkoff et al., 2026",
+    "titulo": "Anthropic Economic Index report: Cadences",
+    "completa": "Massenkoff, Maxim and Lyubich, Eva and Sacher, Szymon and Hitzig, Zoe and Zhang, Shaoyi and Heller, Ryan and McCrory, Peter (2026). Anthropic Economic Index report: Cadences. Datos: https://huggingface.co/datasets/Anthropic/EconomicIndex, release\\_2026\\_06\\_26. Consultado el 2026-11-02.",
+    "url": "https://www.anthropic.com/research/economic-index-june-2026-report",
+    "orden": "massenkoff, maxim and lyubich, eva and sacher, szymon and hitzig, zoe and zhang, shaoyi and heller, ryan and mccrory, peter2026"
+  },
+  "microsoft_aidiffusion2026": {
+    "corta": "Misra et al., 2025",
+    "titulo": "Measuring AI Diffusion: A Population-Normalized Metric for Tracking Global AI Usage",
+    "completa": "Misra, A. and Wang, J. and McCullers, S. and White, K. and Lavista Ferres, J. (2025). Measuring AI Diffusion: A Population-Normalized Metric for Tracking Global AI Usage. arXiv:2511.02781. Datos: https://github.com/microsoft/ai-diffusion-report (AI\\_Diffusion\\_Q22026\\_Update.csv). Microsoft AI Economy Institute. Datos con licencia MIT. Consultado el 2026-11-02.",
+    "url": "https://doi.org/10.48550/arXiv.2511.02781",
+    "orden": "misra, a. and wang, j. and mccullers, s. and white, k. and lavista ferres, j.2025"
+  },
+  "itu_ictskills": {
+    "corta": "Unión Internacional de Telecomunicaciones, 2026",
+    "titulo": "Proportion of youth and adults with information and communications technology (ICT) skills, by type of skill (SDG 4.4.1, SE\\_ADT\\_ACTS)",
+    "completa": "Unión Internacional de Telecomunicaciones (2026). Proportion of youth and adults with information and communications technology (ICT) skills, by type of skill (SDG 4.4.1, SE\\_ADT\\_ACTS). ITU DataHub, https://datahub.itu.int/; obtenido de UN DESA, SDG Indicators Database, https://unstats.un.org/sdgs/dataportal. Consultado el 2026-11-02.",
+    "url": "",
+    "orden": "unión internacional de telecomunicaciones2026"
+  },
+  "wipo_gii2026": {
+    "corta": "World Intellectual Property Organization, 2026",
+    "titulo": "Global Innovation Index 2026",
+    "completa": "World Intellectual Property Organization (2026). Global Innovation Index 2026. WIPO. Licencia CC BY 4.0. Consultado el 2026-11-02.",
+    "url": "https://www.wipo.int/web-publications/global-innovation-index-2026/en/",
+    "orden": "world intellectual property organization2026"
+  },
+  "geonames_countryinfo": {
+    "corta": "GeoNames, 2026",
+    "titulo": "countryInfo.txt: códigos de país ISO 3166",
+    "completa": "GeoNames (2026). countryInfo.txt: códigos de país ISO 3166. https://download.geonames.org/export/dump/countryInfo.txt. Usado para convertir ISO2, M49 y nombres a ISO3. Licencia CC BY 4.0. Consultado el 2026-11-02.",
+    "url": "",
+    "orden": "geonames2026"
+  },
+  "inegi_endutih_2025": {
+    "corta": "Instituto Nacional de Estadística y Geografía, 2025",
+    "titulo": "Encuesta Nacional sobre Disponibilidad y Uso de Tecnologías de la Información en los Hogares (ENDUTIH) 2025. Tabulados básicos",
+    "completa": "Instituto Nacional de Estadística y Geografía (2025). Encuesta Nacional sobre Disponibilidad y Uso de Tecnologías de la Información en los Hogares (ENDUTIH) 2025. Tabulados básicos. https://www.inegi.org.mx/programas/endutih/2025/. Se usan también las ediciones 2020–2024 (tabulados uedo550, h2ed110 y u2ed244). Términos de Libre Uso de la Información del INEGI. Consultado el 2 de noviembre de 2026.",
+    "url": "",
+    "orden": "instituto nacional de estadística y geografía2025"
+  },
+  "inegi_encig_2025": {
+    "corta": "Instituto Nacional de Estadística y Geografía, 2025",
+    "titulo": "Encuesta Nacional de Calidad e Impacto Gubernamental (ENCIG) 2025. Tabulados básicos",
+    "completa": "Instituto Nacional de Estadística y Geografía (2025). Encuesta Nacional de Calidad e Impacto Gubernamental (ENCIG) 2025. Tabulados básicos. https://www.inegi.org.mx/programas/encig/2025/. Se usan también las ediciones 2017, 2019, 2021 y 2023. Términos de Libre Uso de la Información del INEGI. Consultado el 2 de noviembre de 2026.",
+    "url": "",
+    "orden": "instituto nacional de estadística y geografía2025"
+  },
+  "inegi_envipe_2025": {
+    "corta": "Instituto Nacional de Estadística y Geografía, 2025",
+    "titulo": "Encuesta Nacional de Victimización y Percepción sobre Seguridad Pública (ENVIPE) 2025. Tabulados básicos, VI. Desempeño institucional",
+    "completa": "Instituto Nacional de Estadística y Geografía (2025). Encuesta Nacional de Victimización y Percepción sobre Seguridad Pública (ENVIPE) 2025. Tabulados básicos, VI. Desempeño institucional. https://www.inegi.org.mx/programas/envipe/2025/. Se usan también las ediciones 2020–2024. Términos de Libre Uso de la Información del INEGI. Consultado el 2 de noviembre de 2026.",
+    "url": "",
+    "orden": "instituto nacional de estadística y geografía2025"
+  },
+  "inegi_cnge_2025": {
+    "corta": "Instituto Nacional de Estadística y Geografía, 2025",
+    "titulo": "Censo Nacional de Gobiernos Estatales (CNGE) 2025. Datos abiertos y tabulados básicos, módulo 1",
+    "completa": "Instituto Nacional de Estadística y Geografía (2025). Censo Nacional de Gobiernos Estatales (CNGE) 2025. Datos abiertos y tabulados básicos, módulo 1. https://www.inegi.org.mx/programas/cnge/2025/. Se usan también los datos abiertos de las ediciones 2023 y 2024. Términos de Libre Uso de la Información del INEGI. Consultado el 2 de noviembre de 2026.",
+    "url": "",
+    "orden": "instituto nacional de estadística y geografía2025"
+  },
+  "inegi_encuci_2020": {
+    "corta": "Instituto Nacional de Estadística y Geografía y Instituto Nacional Electoral, 2020",
+    "titulo": "Encuesta Nacional de Cultura Cívica (ENCUCI) 2020. Tabulados básicos",
+    "completa": "Instituto Nacional de Estadística y Geografía and Instituto Nacional Electoral (2020). Encuesta Nacional de Cultura Cívica (ENCUCI) 2020. Tabulados básicos. https://www.inegi.org.mx/programas/encuci/2020/. Representativa a nivel nacional y regional, no estatal. Términos de Libre Uso de la Información del INEGI. Consultado el 2 de noviembre de 2026.",
+    "url": "",
+    "orden": "instituto nacional de estadística y geografía and instituto nacional electoral2020"
+  },
+  "conapo_proyecciones_2023": {
+    "corta": "Consejo Nacional de Población, 2023",
+    "titulo": "Proyecciones de la Población de México y de las Entidades Federativas 2020-2070 y Conciliación Demográfica de México 1950-2019",
+    "completa": "Consejo Nacional de Población (2023). Proyecciones de la Población de México y de las Entidades Federativas 2020-2070 y Conciliación Demográfica de México 1950-2019. Datos abiertos, https://www.datos.gob.mx/dataset/proyecciones-de-poblacion (archivo 05\\_indicadores\\_demograficos\\_proyecciones.csv). Licencia CC BY 4.0. Consultado el 2 de noviembre de 2026.",
+    "url": "",
+    "orden": "consejo nacional de población2023"
+  },
+  "ine_computos_2024": {
+    "corta": "Instituto Nacional Electoral, 2024",
+    "titulo": "Cómputos Distritales de las elecciones federales 2018, 2021 y 2024: resultados por entidad federativa",
+    "completa": "Instituto Nacional Electoral (2024). Cómputos Distritales de las elecciones federales 2018, 2021 y 2024: resultados por entidad federativa. https://computos2018.ine.mx/, https://computos2021.ine.mx/, https://computos2024.ine.mx/. Archivos JSON de resultados nacionales y estatales. Consultado el 2 de noviembre de 2026.",
+    "url": "",
+    "orden": "instituto nacional electoral2024"
+  },
+  "secihti_snii_2025": {
+    "corta": "Secretaría de Ciencia, 2026",
+    "titulo": "Sistema Nacional de Investigadoras e Investigadores (SNII) S191: padrón de personas investigadoras vigentes, segundo semestre de 2025",
+    "completa": "Secretaría de Ciencia, Humanidades, Tecnología e Innovación (2026). Sistema Nacional de Investigadoras e Investigadores (SNII) S191: padrón de personas investigadoras vigentes, segundo semestre de 2025. Datos abiertos, https://www.datos.gob.mx/dataset/sistema_nacional_investigadoras_investigadores_snii_s191. Licencia CC BY 4.0. Consultado el 2 de noviembre de 2026.",
+    "url": "",
+    "orden": "secretaría de ciencia, humanidades, tecnología e innovación2026"
+  },
+  "anuies_anuario_2025": {
+    "corta": "Asociación Nacional de Universidades e Instituciones de Educación Superior, 2025",
+    "titulo": "Anuario Estadístico de la Educación Superior, ciclos 2020-2021 a 2025-2026",
+    "completa": "Asociación Nacional de Universidades e Instituciones de Educación Superior (2025). Anuario Estadístico de la Educación Superior, ciclos 2020-2021 a 2025-2026. https://anuario.anuies.mx/. Última actualización: 18 de noviembre de 2025. Consultado el 2 de noviembre de 2026.",
+    "url": "",
+    "orden": "asociación nacional de universidades e instituciones de educación superior2025"
+  },
+  "inegi_denue_2026": {
+    "corta": "Instituto Nacional de Estadística y Geografía, 2026",
+    "titulo": "Directorio Estadístico Nacional de Unidades Económicas (DENUE), cortes 05/2025 y 05/2026, sectores 51 y 54",
+    "completa": "Instituto Nacional de Estadística y Geografía (2026). Directorio Estadístico Nacional de Unidades Económicas (DENUE), cortes 05/2025 y 05/2026, sectores 51 y 54. Descarga masiva, https://www.inegi.org.mx/app/descarga/?ti=6. Términos de Libre Uso de la Información del INEGI. Consultado el 2 de noviembre de 2026.",
+    "url": "",
+    "orden": "instituto nacional de estadística y geografía2026"
+  },
+  "inai_cide_mga_2021": {
+    "corta": "Instituto Nacional de Transparencia y Centro de Investigación y Docencia Económicas, 2022",
+    "titulo": "Métrica de Gobierno Abierto 2021 (y ediciones 2019 y 2017): resultados por entidad federativa",
+    "completa": "Instituto Nacional de Transparencia, Acceso a la Información y Protección de Datos Personales and Centro de Investigación y Docencia Económicas (2022). Métrica de Gobierno Abierto 2021 (y ediciones 2019 y 2017): resultados por entidad federativa. https://lnppmicrositio.shinyapps.io/metrica_gobierno_abierto_2021/; ediciones 2017 y 2019 en copias de https://web.archive.org/ del micrositio https://micrositios.inai.org.mx/gobiernoabierto/. Licencia CC BY-NC-SA 4.0 (micrositio 2021). Consultado el 2 de noviembre de 2026.",
+    "url": "",
+    "orden": "instituto nacional de transparencia, acceso a la información y protección de datos personales and centro de investigación y docencia económicas2022"
+  },
+  "imco_ice_2022": {
+    "corta": "Instituto Mexicano para la Competitividad, 2022",
+    "titulo": "Índice de Competitividad Estatal 2022: base de datos (serie 2003-2022)",
+    "completa": "Instituto Mexicano para la Competitividad (2022). Índice de Competitividad Estatal 2022: base de datos (serie 2003-2022). https://indices.imco.org.mx/competitividad-estatal. Derechos reservados. Consultado el 2 de noviembre de 2026.",
+    "url": "",
+    "orden": "instituto mexicano para la competitividad2022"
+  },
+  "iddmex_2024": {
+    "corta": "Fundación Konrad Adenauer y Polilat, 2025",
+    "titulo": "Índice de Desarrollo Democrático de México, IDD-Mex 2024 (y series 2010-2023)",
+    "completa": "Fundación Konrad Adenauer and Polilat (2025). Índice de Desarrollo Democrático de México, IDD-Mex 2024 (y series 2010-2023). https://idd-mex.org/rankings-2024/, consultado mediante https://web.archive.org/ (captura del 14 de noviembre de 2025). Consultado el 2 de noviembre de 2026.",
+    "url": "",
+    "orden": "fundación konrad adenauer and polilat2025"
+  },
+  "impi_cifras_2026": {
+    "corta": "Instituto Mexicano de la Propiedad Industrial, 2026",
+    "titulo": "IMPI en cifras: solicitudes de invenciones de mexicanos por entidad federativa, 1993 - 3T 2026",
+    "completa": "Instituto Mexicano de la Propiedad Industrial (2026). IMPI en cifras: solicitudes de invenciones de mexicanos por entidad federativa, 1993 - 3T 2026. https://www.gob.mx/impi/documentos/instituto-mexicano-de-la-propiedad-industrial-en-cifras-impi-en-cifras. Hoja ``Inv 3''. Consultado el 2 de noviembre de 2026.",
+    "url": "",
+    "orden": "instituto mexicano de la propiedad industrial2026"
+  },
+  "bienestar_rfosc_2025": {
+    "corta": "Secretaría de Bienestar, 2026",
+    "titulo": "Registro Federal de las Organizaciones de la Sociedad Civil: listado de OSC con estatus, cortes al 31 de diciembre de 2024 y 2025",
+    "completa": "Secretaría de Bienestar (2026). Registro Federal de las Organizaciones de la Sociedad Civil: listado de OSC con estatus, cortes al 31 de diciembre de 2024 y 2025. http://corresponsabilidad.gob.mx/index.php/consulta/guia-para-consultar-el-listado-de-osc-inscritas-con-objeto-social. Consultado el 2 de noviembre de 2026.",
+    "url": "",
+    "orden": "secretaría de bienestar2026"
+  },
+  "engelbart_1962": {
+    "corta": "Engelbart, 1962",
+    "titulo": "Augmenting Human Intellect: A Conceptual Framework",
+    "completa": "Engelbart, Douglas C. (1962). Augmenting Human Intellect: A Conceptual Framework. Stanford Research Institute.",
+    "url": "https://dougengelbart.org/content/view/138",
+    "orden": "engelbart, douglas c.1962"
+  },
+  "schuler_2001": {
+    "corta": "Schuler, 2001",
+    "titulo": "Cultivating Society's Civic Intelligence: Patterns for a New ``World Brain''",
+    "completa": "Schuler, Douglas (2001). Cultivating Society's Civic Intelligence: Patterns for a New ``World Brain''. Information, Communication & Society. Vol. 4(2). 157–181.",
+    "url": "",
+    "orden": "schuler, douglas2001"
+  },
+  "schuler_2014": {
+    "corta": "Schuler, 2014",
+    "titulo": "Pieces of Civic Intelligence: Towards a Capacities Framework",
+    "completa": "Schuler, Douglas (2014). Pieces of Civic Intelligence: Towards a Capacities Framework. E-Learning and Digital Media. Vol. 11(5). 518–529.",
+    "url": "https://doi.org/10.2304/elea.2014.11.5.518",
+    "orden": "schuler, douglas2014"
+  },
+  "cui_yasseri_2024": {
+    "corta": "Cui y Yasseri, 2024",
+    "titulo": "AI-enhanced collective intelligence",
+    "completa": "Cui, Hao and Yasseri, Taha (2024). AI-enhanced collective intelligence. Patterns. Vol. 5(11). 101074.",
+    "url": "https://doi.org/10.1016/j.patter.2024.101074",
+    "orden": "cui, hao and yasseri, taha2024"
+  },
+  "deliddo_2026": {
+    "corta": "De Liddo et al., 2026",
+    "titulo": "Human/AI Collective Intelligence for Deliberative Democracy: A Human-Centred Design Approach",
+    "completa": "De Liddo, Anna and Anastasiou, Lucas and Buckingham Shum, Simon (2026). Human/AI Collective Intelligence for Deliberative Democracy: A Human-Centred Design Approach. arXiv:2603.16260. Capítulo 10 del Handbook of Democracy in the Era of Artificial Intelligence (en prensa).",
+    "url": "https://arxiv.org/abs/2603.16260",
+    "orden": "de liddo, anna and anastasiou, lucas and buckingham shum, simon2026"
+  },
+  "pournaras_2020": {
+    "corta": "Pournaras, 2020",
+    "titulo": "Proof of Witness Presence: Blockchain Consensus for Augmented Democracy in Smart Cities",
+    "completa": "Pournaras, Evangelos (2020). Proof of Witness Presence: Blockchain Consensus for Augmented Democracy in Smart Cities. Journal of Parallel and Distributed Computing. Vol. 145. 160–175.",
+    "url": "https://doi.org/10.1016/j.jpdc.2020.06.015",
+    "orden": "pournaras, evangelos2020"
+  },
+  "nechesov_ruponen_2024": {
+    "corta": "Nechesov y Ruponen, 2024",
+    "titulo": "Empowering Government Efficiency Through Civic Intelligence: Merging Artificial Intelligence and Blockchain for Smart Citizen Proposals",
+    "completa": "Nechesov, Andrey and Ruponen, Janne (2024). Empowering Government Efficiency Through Civic Intelligence: Merging Artificial Intelligence and Blockchain for Smart Citizen Proposals. Technologies. Vol. 12(12). 271.",
+    "url": "https://doi.org/10.3390/technologies12120271",
+    "orden": "nechesov, andrey and ruponen, janne2024"
+  },
+  "moore_1995": {
+    "corta": "Moore, 1995",
+    "titulo": "Creating Public Value: Strategic Management in Government",
+    "completa": "Moore, Mark H. (1995). Creating Public Value: Strategic Management in Government. Harvard University Press.",
+    "url": "",
+    "orden": "moore, mark h.1995"
+  },
+  "smith_2009": {
+    "corta": "Smith, 2009",
+    "titulo": "Democratic Innovations: Designing Institutions for Citizen Participation",
+    "completa": "Smith, Graham (2009). Democratic Innovations: Designing Institutions for Citizen Participation. Cambridge University Press.",
+    "url": "",
+    "orden": "smith, graham2009"
+  },
+  "ocde_jrc_2008": {
+    "corta": "Nardo et al., 2008",
+    "titulo": "Handbook on Constructing Composite Indicators: Methodology and User Guide",
+    "completa": "Nardo, Michela and Saisana, Michaela and Saltelli, Andrea and Tarantola, Stefano and Hoffman, Anders and Giovannini, Enrico (2008). Handbook on Constructing Composite Indicators: Methodology and User Guide. OECD Publishing.",
+    "url": "https://knowledge4policy.ec.europa.eu/sites/default/files/jrc47008_handbook_final.pdf",
+    "orden": "nardo, michela and saisana, michaela and saltelli, andrea and tarantola, stefano and hoffman, anders and giovannini, enrico2008"
+  },
+  "jrc_coin_2019": {
+    "corta": "European Commission, 2019",
+    "titulo": "Your 10-Step Pocket Guide to Composite Indicators & Scoreboards",
+    "completa": "European Commission, Joint Research Centre (COIN) (2019). Your 10-Step Pocket Guide to Composite Indicators & Scoreboards.",
+    "url": "https://knowledge4policy.ec.europa.eu/sites/default/files/10-step-pocket-guide-to-composite-indicators-and-scoreboards.pdf",
+    "orden": "european commission, joint research centre (coin)2019"
+  },
+  "girai_metodo_2026": {
+    "corta": "Global Center on AI Governance, 2026",
+    "titulo": "Global Index on Responsible AI 2026: Methodology",
+    "completa": "Global Center on AI Governance (2026). Global Index on Responsible AI 2026: Methodology. arXiv:2608.18122.",
+    "url": "https://arxiv.org/pdf/2608.18122",
+    "orden": "global center on ai governance2026"
+  },
+  "ocde_evaluacion_2021": {
+    "corta": "OCDE, 2021",
+    "titulo": "Evaluation Guidelines for Representative Deliberative Processes",
+    "completa": "OCDE (2021). Evaluation Guidelines for Representative Deliberative Processes.",
+    "url": "https://doi.org/10.1787/10ccbfcb-en",
+    "orden": "ocde2021"
+  },
+  "serdult_2023": {
+    "corta": "Serdült et al., 2023",
+    "titulo": "E-Participation Maturity Model Development based on the Cases of Germany, Japan and Switzerland",
+    "completa": "Serdült, Uwe and Hofmann, Sara and Kovacs, Dominik and Sugimoto, Takuya and Watanabe, Yoshiki (2023). E-Participation Maturity Model Development based on the Cases of Germany, Japan and Switzerland. EGOV-CeDEM-ePart 2023, CEUR-WS Vol. 3449.",
+    "url": "https://ceur-ws.org/Vol-3449/paper19.pdf",
+    "orden": "serdült, uwe and hofmann, sara and kovacs, dominik and sugimoto, takuya and watanabe, yoshiki2023"
+  },
+  "nolte_2020": {
+    "corta": "Nolte et al., 2020",
+    "titulo": "What Happens to All These Hackathon Projects? Identifying Factors to Promote Hackathon Project Continuation",
+    "completa": "Nolte, Alexander and Chounta, Irene-Angelica and Herbsleb, James D. (2020). What Happens to All These Hackathon Projects? Identifying Factors to Promote Hackathon Project Continuation. Proceedings of the ACM on Human-Computer Interaction. Vol. 4(CSCW2). 145.",
+    "url": "https://doi.org/10.1145/3415216",
+    "orden": "nolte, alexander and chounta, irene-angelica and herbsleb, james d.2020"
+  },
+  "sterz_2024": {
+    "corta": "Sterz y others, 2024",
+    "titulo": "On the Quest for Effectiveness in Human Oversight: Interdisciplinary Perspectives",
+    "completa": "Sterz, Sarah and others (2024). On the Quest for Effectiveness in Human Oversight: Interdisciplinary Perspectives. Proceedings of the ACM Conference on Fairness, Accountability, and Transparency (FAccT).",
+    "url": "https://doi.org/10.1145/3630106.3659051",
+    "orden": "sterz, sarah and others2024"
+  },
+  "unesco_etica_ia_2021": {
+    "corta": "UNESCO, 2021",
+    "titulo": "Recommendation on the Ethics of Artificial Intelligence",
+    "completa": "UNESCO (2021). Recommendation on the Ethics of Artificial Intelligence.",
+    "url": "https://www.unesco.org/en/legal-affairs/recommendation-ethics-artificial-intelligence",
+    "orden": "unesco2021"
+  },
+  "informe_ica_2026": {
+    "corta": "Proyecto Inteligencia Cívica Aumentada, 2026",
+    "titulo": "Inteligencia Cívica Aumentada: originalidad del concepto, verificación de fuentes y estado del arte para el Índice IICA",
+    "completa": "Proyecto Inteligencia Cívica Aumentada (2026). Inteligencia Cívica Aumentada: originalidad del concepto, verificación de fuentes y estado del arte para el Índice IICA. Informe de investigación documental.",
+    "url": "https://github.com/juliowaissman/inteligencia-civica-aumentada/blob/main/docs/informe-ica.pdf",
+    "orden": "proyecto inteligencia cívica aumentada2026"
+  },
+  "hidalgo_2018": {
+    "corta": "Hidalgo, 2018",
+    "titulo": "Augmented Democracy",
+    "completa": "Hidalgo, César A. (2018). Augmented Democracy. Conferencia TED2018 y sitio del proyecto.",
+    "url": "https://peopledemocracy.com",
+    "orden": "hidalgo, césar a.2018"
+  },
+  "schuler_ci4cg_2018": {
+    "corta": "Schuler et al., 2018",
+    "titulo": "Collective intelligence for the common good: cultivating the seeds for an intentional collaborative enterprise",
+    "completa": "Schuler, Douglas and De Liddo, Anna and Smith, John and De Cindio, Fiorella (2018). Collective intelligence for the common good: cultivating the seeds for an intentional collaborative enterprise. AI & Society. Vol. 33(1).",
+    "url": "https://doi.org/10.1007/s00146-017-0776-6",
+    "orden": "schuler, douglas and de liddo, anna and smith, john and de cindio, fiorella2018"
+  },
+  "pournaras_handbook_2026": {
+    "corta": "Pournaras et al., 2026",
+    "titulo": "Handbook of Democracy in the Era of Artificial Intelligence",
+    "completa": "Pournaras, Evangelos and Majumdar, Srijoni and Hausladen, Carina and Helbing, Dirk (2026). Handbook of Democracy in the Era of Artificial Intelligence. En prensa. Introducción: arXiv:2606.13026.",
+    "url": "https://arxiv.org/abs/2606.13026",
+    "orden": "pournaras, evangelos and majumdar, srijoni and hausladen, carina and helbing, dirk2026"
+  },
+  "kehler_2025": {
+    "corta": "Kehler et al., 2025",
+    "titulo": "Amplifying Human Creativity and Problem Solving with AI Through Generative Collective Intelligence",
+    "completa": "Kehler, Thomas P. and Page, Scott E. and Pentland, Alex and Reeves, Martin and Seely Brown, John (2025). Amplifying Human Creativity and Problem Solving with AI Through Generative Collective Intelligence. arXiv:2505.19167.",
+    "url": "https://arxiv.org/abs/2505.19167",
+    "orden": "kehler, thomas p. and page, scott e. and pentland, alex and reeves, martin and seely brown, john2025"
+  },
+  "tessler_2024": {
+    "corta": "Tessler et al., 2024",
+    "titulo": "AI can help humans find common ground in democratic deliberation",
+    "completa": "Tessler, Michael Henry and Bakker, Michiel A. and Jarrett, Daniel and Sheahan, Hannah and Chadwick, Martin J. and Koster, Raphael and Evans, Georgina and Campbell-Gillingham, Lucy and Collins, Tantum and Parkes, David C. and Botvinick, Matthew and Summerfield, Christopher (2024). AI can help humans find common ground in democratic deliberation. Science. Vol. 386(6719). eadq2852.",
+    "url": "",
+    "orden": "tessler, michael henry and bakker, michiel a. and jarrett, daniel and sheahan, hannah and chadwick, martin j. and koster, raphael and evans, georgina and campbell-gillingham, lucy and collins, tantum and parkes, david c. and botvinick, matthew and summerfield, christopher2024"
+  },
+  "woolley_2010": {
+    "corta": "Woolley et al., 2010",
+    "titulo": "Evidence for a Collective Intelligence Factor in the Performance of Human Groups",
+    "completa": "Woolley, Anita Williams and Chabris, Christopher F. and Pentland, Alex and Hashmi, Nada and Malone, Thomas W. (2010). Evidence for a Collective Intelligence Factor in the Performance of Human Groups. Science. Vol. 330(6004). 686–688.",
+    "url": "https://doi.org/10.1126/science.1193147",
+    "orden": "woolley, anita williams and chabris, christopher f. and pentland, alex and hashmi, nada and malone, thomas w.2010"
+  },
+  "undesa_egov_survey_2024": {
+    "corta": "UN DESA, 2024",
+    "titulo": "E-Government Survey 2024: Technical Appendix",
+    "completa": "UN DESA (2024). E-Government Survey 2024: Technical Appendix.",
+    "url": "https://desapublications.un.org/sites/default/files/publications/2024-10/Technical%20Appendix%20%28Web%20version%29%2030102024.pdf",
+    "orden": "un desa2024"
+  },
+  "grootaert_2002": {
+    "corta": "Grootaert y van Bastelaer, 2002",
+    "titulo": "Understanding and Measuring Social Capital: A Multidisciplinary Tool for Practitioners",
+    "completa": "Grootaert, Christiaan and van Bastelaer, Thierry (2002). Understanding and Measuring Social Capital: A Multidisciplinary Tool for Practitioners. Banco Mundial.",
+    "url": "",
+    "orden": "grootaert, christiaan and van bastelaer, thierry2002"
+  },
+  "ocde_buenas_practicas_2020": {
+    "corta": "OCDE, 2020",
+    "titulo": "Good Practice Principles for Deliberative Processes for Public Decision Making",
+    "completa": "OCDE (2020). Good Practice Principles for Deliberative Processes for Public Decision Making. OECD Publishing.",
+    "url": "",
+    "orden": "ocde2020"
+  },
+  "inegi_cntaippdpe_2025": {
+    "corta": "Instituto Nacional de Estadística y Geografía, 2026",
+    "titulo": "Censo Nacional de Transparencia, Acceso a la Información Pública y Protección de Datos Personales Estatal (CNTAIPPDPE) 2025: resultados",
+    "completa": "Instituto Nacional de Estadística y Geografía (2026). Censo Nacional de Transparencia, Acceso a la Información Pública y Protección de Datos Personales Estatal (CNTAIPPDPE) 2025: resultados.",
+    "url": "https://www.inegi.org.mx/contenidos/saladeprensa/boletines/2026/cntaippdpe/CNTAIPPDPE2025_RR.pdf",
+    "orden": "instituto nacional de estadística y geografía2026"
   }
 }

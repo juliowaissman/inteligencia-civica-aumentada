@@ -51,3 +51,8 @@ site/.astro/
 __pycache__/
 .venv/
 .pytest_cache/
+# LaTeX del artículo
+articulo/*.bbl
+articulo/*.bcf
+articulo/*.blg
+articulo/*.run.xml

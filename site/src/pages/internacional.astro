@@ -1,0 +1,140 @@
+---
+import Base from "../layouts/Base.astro";
+import Cita from "../components/Cita.astro";
+import TablaIndicadores from "../components/TablaIndicadores.astro";
+import datos from "../data/internacional.json";
+import { num, valor, DIM_COLOR, DIM_CORTO } from "../lib/formato";
+const u = datos.unidades as any[];
+const mx = u.find((x) => x.id === "MEX");
+const conIndice = u.filter((x) => x.indice !== null);
+const al = conIndice.filter((x) => x.grupos.includes("AL")).sort((a, b) => b.indice - a.indice);
+const rangoAL = al.findIndex((x) => x.id === "MEX") + 1;
+const mediana = (xs: number[]) => { const s = [...xs].sort((a, b) => a - b); const m = Math.floor(s.length / 2); return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2; };
+const medDims = (g: string) => Object.fromEntries(Object.keys(DIM_CORTO).map((d) => [d,
+  mediana(conIndice.filter((x) => x.grupos.includes(g)).map((x) => x.dims[d]).filter((v: any) => v !== null))]));
+const medAL = medDims("AL"), medOCDE = medDims("OCDE");
+const ctx = datos.contexto as Record<string, any>;
+const paises = [...conIndice].sort((a, b) => a.nombre.localeCompare(b.nombre, "es"));
+---
+<Base titulo="IICA internacional" descripcion="México frente a los países de América Latina y la OCDE en el IICA parcial con datos abiertos.">
+  <h1>IICA internacional</h1>
+  <p class="prosa">
+    Comparamos a México con <strong>{conIndice.length - 1} países</strong> de América Latina y la OCDE, usando
+    {datos.indicadores.length} indicadores de fuentes abiertas o públicas, de 2 a 3 por dimensión. Cada indicador se toma en su año más reciente
+    con datos para al menos el 70 % de los países. <a href="../metodologia/">Ver la metodología</a>.
+  </p>
+
+  <div class="rejilla resumen">
+    <div class="tarjeta"><span class="grande">{num(mx.indice)}</span><span>IICA-I de México (0–100)</span></div>
+    <div class="tarjeta"><span class="grande">{mx.rango}<small> de {conIndice.length}</small></span><span>Lugar general; intervalo de sensibilidad {mx.rango_p5}–{mx.rango_p95}</span></div>
+    <div class="tarjeta"><span class="grande">{rangoAL}<small> de {al.length}</small></span><span>Lugar entre los países de América Latina con dato</span></div>
+  </div>
+
+  <h2>Perfil de México por dimensión</h2>
+  <p class="prosa">
+    El índice es la <strong>media geométrica</strong> de las seis dimensiones. Así, una dimensión débil no se compensa por completo con otra fuerte.
+    México se compara aquí con la mediana de América Latina y la de la OCDE.
+  </p>
+  <figure class="grafico">
+    <div id="perfil" role="img" aria-label="Gráfica de barras con los puntajes de México por dimensión frente a las medianas de América Latina y la OCDE"></div>
+    <figcaption>Puntaje por dimensión (0–100). Elige otro país para compararlo con México.</figcaption>
+  </figure>
+  <label class="selector">Comparar con:
+    <select id="pais">
+      <option value="">Medianas (América Latina y OCDE)</option>
+      {paises.filter((p) => p.id !== "MEX").map((p) => <option value={p.id}>{p.nombre}</option>)}
+    </select>
+  </label>
+  <div class="tabla">
+    <table>
+      <thead><tr><th>Dimensión</th><th>México</th><th>Mediana América Latina</th><th>Mediana OCDE</th></tr></thead>
+      <tbody>
+        {Object.entries(DIM_CORTO).map(([d, n]) => (
+          <tr><td><span class="chip" style={`background:${DIM_COLOR[d]}`}>{d}</span> {n}</td>
+            <td><strong>{num(mx.dims[d])}</strong></td><td>{num(medAL[d])}</td><td>{num(medOCDE[d])}</td></tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Mapa</h2>
+  <figure class="grafico">
+    <div id="mapa" role="img" aria-label="Mapa de los países de comparación coloreados según su IICA parcial">Cargando mapa…</div>
+    <figcaption>IICA parcial de los países de comparación; México con borde magenta. Los países en gris no forman parte de la comparación. Mapa base: Natural Earth <Cita clave="naturalearth_admin0_110m" />.</figcaption>
+  </figure>
+
+  <h2>Clasificación</h2>
+  <figure class="grafico">
+    <div id="ranking" role="img" aria-label="Barras con el IICA parcial de cada país, de mayor a menor"></div>
+    <figcaption>Entre corchetes, el intervalo del lugar (percentiles 5 y 95) con 1000 juegos de pesos aleatorios y agregación aritmética o geométrica.</figcaption>
+  </figure>
+
+  <h2>Indicadores</h2>
+  <TablaIndicadores indicadores={datos.indicadores} columnas={[{ titulo: "México", valores: mx.valores, norm: mx.norm }]}
+    caption="Valor original de México y, entre paréntesis, su valor normalizado (0–100) frente a los países de comparación." />
+
+  <h2>Contexto: adopción y preparación para la IA</h2>
+  <p class="prosa">
+    Estos indicadores no entran al índice porque miden el <em>uso</em> de una herramienta o la preparación del gobierno,
+    no la integración ética de la IA en procesos democráticos. Sirven como contexto.
+  </p>
+  <div class="tabla">
+    <table>
+      <thead><tr><th>Indicador</th><th>Fuente</th><th>Año</th><th>México</th><th>Mediana de comparación</th></tr></thead>
+      <tbody>
+        {Object.entries(ctx).map(([id, c]) => {
+          const vals = Object.values(c.valores).filter((v: any) => v !== null) as number[];
+          return (
+            <tr><td>{c.nombre}</td><td>{c.editor} <Cita clave={c.cita} /></td><td>{c.anio}</td>
+              <td>{valor(c.valores.MEX ?? null)}</td><td>{vals.length ? valor(mediana(vals)) : "sin información"}</td></tr>
+          );
+        })}
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Lectura</h2>
+  <p class="prosa">
+    El IICA-I es un índice de <strong>contexto</strong>. Mide qué tanto el ecosistema de cada país ofrece las condiciones de las
+    seis dimensiones; no mide si esas condiciones se activan en procesos concretos de cocreación. Además, en este nivel el
+    indicador de gobierno abierto del WJP y el de voz y rendición de cuentas del Banco Mundial están muy correlacionados con el índice
+    (r &gt; 0,95), así que pesan mucho en el resultado <Cita clave="jrc_coin_2019" />. Ver <a href="../metodologia/">coherencia estadística</a>.
+  </p>
+</Base>
+
+<script>
+  import datos from "../data/internacional.json";
+  import { perfil, ranking, mapaMundo } from "../scripts/graficos";
+  import { DIM_CORTO } from "../lib/formato";
+  const u = datos.unidades as any[];
+  const mx = u.find((x) => x.id === "MEX");
+  const ok = u.filter((x) => x.indice !== null);
+  const med = (g: string) => Object.fromEntries(Object.keys(DIM_CORTO).map((d) => {
+    const s = ok.filter((x) => x.grupos.includes(g)).map((x) => x.dims[d]).filter((v: any) => v !== null).sort((a: number, b: number) => a - b);
+    const m = Math.floor(s.length / 2); return [d, s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2];
+  }));
+  const el = (id: string) => document.getElementById(id)!;
+  function dibujarPerfil() {
+    const otro = (document.getElementById("pais") as HTMLSelectElement).value;
+    const series = [{ nombre: "México", color: "#b8007c", dims: mx.dims }];
+    if (otro) { const p = u.find((x) => x.id === otro); series.push({ nombre: p.nombre, color: "#0099d9", dims: p.dims }); }
+    else series.push({ nombre: "Mediana América Latina", color: "#0099d9", dims: med("AL") },
+                     { nombre: "Mediana OCDE", color: "#2c5cd6", dims: med("OCDE") });
+    perfil(el("perfil"), series);
+  }
+  function todo() {
+    dibujarPerfil();
+    ranking(el("ranking"), u, { MEX: "#b8007c" });
+    mapaMundo(el("mapa"), u, (x) => x.indice, "IICA parcial");
+  }
+  document.getElementById("pais")!.addEventListener("change", dibujarPerfil);
+  todo();
+  let t: number; addEventListener("resize", () => { clearTimeout(t); t = setTimeout(todo, 250) as unknown as number; });
+</script>
+
+<style>
+  .resumen { margin: 1.2rem 0; }
+  .resumen .tarjeta { display: flex; flex-direction: column; gap: 0.3rem; }
+  .grande { font-size: 2.4rem; font-weight: 800; color: var(--primario); line-height: 1; }
+  .grande small { font-size: 1rem; color: var(--texto-suave); }
+</style>

@@ -1,0 +1,94 @@
+---
+import Base from "../layouts/Base.astro";
+import Cita from "../components/Cita.astro";
+import datos from "../data/nacional.json";
+import { num, valor, DIM_COLOR, DIM_CORTO, unidadMedida } from "../lib/formato";
+const serie = datos.serie as any[];
+const conIndice = serie.filter((r) => r.indice !== null);
+const primero = conIndice[0], ultimo = conIndice[conIndice.length - 1];
+const anios = serie.map((r) => r.anio);
+const inds = [...(datos.indicadores as any[])].sort((a, b) => a.dimension - b.dimension);
+const primerAnioDim = (d: string) => serie.find((r) => r.dims[d] !== null)?.anio;
+---
+<Base titulo="IICA nacional" descripcion="Evolución de las dimensiones del IICA parcial para México desde 2012.">
+  <h1>IICA nacional: México en el tiempo</h1>
+  <p class="prosa">
+    Seguimos a México con los indicadores internacionales que tienen serie histórica. Para que los años sean comparables:
+  </p>
+  <ul class="prosa">
+    <li>los límites de normalización (mínimo y máximo) son <strong>fijos</strong>: los de todos los países de comparación entre {datos.desde} y el último año;</li>
+    <li>cada dimensión se calcula solo en los años en que tiene <strong>todos</strong> sus indicadores;</li>
+    <li>los índices de la ONU, que se publican cada dos años, se repiten en el año siguiente.</li>
+  </ul>
+
+  {conIndice.length > 0 && (
+    <div class="rejilla resumen">
+      <div class="tarjeta"><span class="grande">{num(primero.indice)}</span><span>IICA-N en {primero.anio}</span></div>
+      <div class="tarjeta"><span class="grande">{num(ultimo.indice)}</span><span>IICA-N en {ultimo.anio}</span></div>
+    </div>
+  )}
+  <p class="prosa nota">
+    El índice agregado solo existe desde {primero?.anio}, porque los datos de GitHub (dimensiones 2 y 6) empiezan en 2020 <Cita clave="github_innovationgraph" />.
+    Antes de ese año solo se muestran las dimensiones con datos completos.
+  </p>
+
+  <figure class="grafico">
+    <div id="serie" role="img" aria-label="Líneas con la evolución de cada dimensión del IICA para México"></div>
+    <figcaption>Puntaje por dimensión (0–100) con límites fijos. La línea gruesa es el índice agregado.</figcaption>
+  </figure>
+
+  <div class="tabla">
+    <table>
+      <thead><tr><th>Año</th><th>IICA-N</th>{Object.keys(DIM_CORTO).map((d) => <th><span class="chip" style={`background:${DIM_COLOR[d]}`}>{d}</span></th>)}</tr></thead>
+      <tbody>
+        {serie.map((r) => (
+          <tr><td>{r.anio}</td><td>{r.indice === null ? <span class="sin-dato">—</span> : <strong>{num(r.indice)}</strong>}</td>
+            {Object.keys(DIM_CORTO).map((d) => <td>{r.dims[d] === null ? <span class="sin-dato">—</span> : num(r.dims[d])}</td>)}</tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+  <p class="nota">«—» significa que esa dimensión no tiene todos sus indicadores ese año (sin información).</p>
+
+  <h2>Indicadores de la serie</h2>
+  <div class="tabla">
+    <table>
+      <thead><tr><th>Dim.</th><th>Indicador</th><th>Fuente</th><th>{anios[0]}</th><th>{anios[anios.length - 1]}</th></tr></thead>
+      <tbody>
+        {inds.map((i) => {
+          const conDato = serie.filter((r) => r.valores[i.id] !== null);
+          const a = conDato[0], b = conDato[conDato.length - 1];
+          return (<tr>
+            <td><span class="chip" style={`background:${DIM_COLOR[String(i.dimension)]}`}>{i.dimension}</span></td>
+            <td>{i.nombre}<div class="nota">{unidadMedida(i)}</div></td>
+            <td>{i.editor} <Cita clave={i.cita} /></td>
+            <td>{a ? <>{valor(a.valores[i.id])} <span class="nota">({a.anio})</span></> : <span class="sin-dato">sin información</span>}</td>
+            <td>{b ? <>{valor(b.valores[i.id])} <span class="nota">({b.anio})</span></> : <span class="sin-dato">sin información</span>}</td>
+          </tr>);
+        })}
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Contexto nacional de cultura cívica</h2>
+  <p class="prosa">
+    La Encuesta Nacional de Cultura Cívica 2020 (ENCUCI) da información nacional sobre interés en la política y participación,
+    pero no tiene una serie comparable ni representatividad por entidad, así que no entra al índice <Cita clave="inegi_encuci_2020" />.
+    No encontramos publicada una ENCUCI 2025 en el sitio del INEGI.
+  </p>
+</Base>
+
+<script>
+  import datos from "../data/nacional.json";
+  import { serie } from "../scripts/graficos";
+  const el = document.getElementById("serie")!;
+  const dibujar = () => serie(el, datos.serie as any[]);
+  dibujar();
+  let t: number; addEventListener("resize", () => { clearTimeout(t); t = setTimeout(dibujar, 250) as unknown as number; });
+</script>
+
+<style>
+  .resumen { margin: 1rem 0; }
+  .resumen .tarjeta { display: flex; flex-direction: column; gap: 0.3rem; }
+  .grande { font-size: 2.4rem; font-weight: 800; color: var(--primario); line-height: 1; }
+</style>
