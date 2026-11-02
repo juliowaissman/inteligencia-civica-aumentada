@@ -1,0 +1,11 @@
+{
+  "fuente": "osc",
+  "nombre": "Registro Federal de las Organizaciones de la Sociedad Civil (CLUNI), listado de OSC con estatus",
+  "url": "http://corresponsabilidad.gob.mx/index.php/consulta/guia-para-consultar-el-listado-de-osc-inscritas-con-objeto-social",
+  "licencia": "Sin licencia declarada",
+  "fecha_acceso": "2026-11-02",
+  "sha256": {
+    "osc_estatus_2024-12-31.xlsx": "240845f22b59fa40525daa70836e135e1895695da4b2030b9d51618675cd76a5",
+    "osc_estatus_2025-12-31.xlsx": "766908bb97c383fb11fb2b43e0c399ad0616f77e0777637b8ff62a9179e92b71"
+  }
+}

@@ -1,0 +1,140 @@
+ISO3,Economy,GDP per capita,GDP per capita (PPP$ logarithmic scale),POP,GII score,SPLINE,STATUS,LABEL
+AUS,Australia,71430.89,11.17649,26974,49.63059,46.73265,Innovation leader,Innovation leader
+AUT,Austria,74852.29,11.22327,9114,50.23471,47.31186,Innovation leader,Innovation leader
+BEL,Belgium,75882.37,11.23694,11759,48.45521,47.47856,Innovation leader,Innovation leader
+CAN,Canada,65500.25,11.08981,40127,51.12291,45.61765,Innovation leader,Innovation leader
+CHN,China,29191.10,10.28162,1416096,57.00241,31.92863,Innovation leader,Innovation leader
+DNK,Denmark,84762.88,11.34761,6003,57.66476,48.79666,Innovation leader,Innovation leader
+EST,Estonia,49087.45,10.80136,1344,50.41922,41.32653,Innovation leader,Innovation leader
+FIN,Finland,66512.47,11.10514,5623,57.88712,45.81942,Innovation leader,Innovation leader
+FRA,France,66060.53,11.09833,66651,53.98092,45.72997,Innovation leader,Innovation leader
+DEU,Germany,73553.30,11.20577,84075,56.75892,47.09674,Innovation leader,Innovation leader
+HKG,"Hong Kong, China",78918.79,11.27617,7396,53.16548,47.95171,Innovation leader,Innovation leader
+IRL,Ireland,147878.19,11.90414,5308,50.04765,55.23816,Innovation leader,Innovation leader
+ISR,Israel,55766.41,10.92893,9517,52.21508,43.35525,Innovation leader,Innovation leader
+JPN,Japan,54815.32,10.91173,123103,54.14210,43.09516,Innovation leader,Innovation leader
+LUX,Luxembourg,152394.65,11.93423,680,46.55950,55.58608,Innovation leader,Innovation leader
+NLD,Netherlands (Kingdom of the),84035.22,11.33899,18347,58.39520,48.69559,Innovation leader,Innovation leader
+NZL,New Zealand,55781.20,10.92919,5252,46.41670,43.35923,Innovation leader,Innovation leader
+NOR,Norway,106694.12,11.57772,5623,48.48867,51.46311,Innovation leader,Innovation leader
+KOR,Republic of Korea,65080.29,11.08338,51667,61.39710,45.53239,Innovation leader,Innovation leader
+SGP,Singapore,156969.07,11.96380,5871,61.01419,55.92812,Innovation leader,Innovation leader
+SWE,Sweden,73069.51,11.19917,10657,63.22579,47.01517,Innovation leader,Innovation leader
+CHE,Switzerland,97659.28,11.48924,8967,66.64677,50.43982,Innovation leader,Innovation leader
+ARE,United Arab Emirates,84402.77,11.34336,11346,46.36582,48.74677,Innovation leader,Innovation leader
+GBR,United Kingdom,63759.05,11.06287,69551,59.55942,45.25793,Innovation leader,Innovation leader
+USA,United States of America,89598.86,11.40310,347276,62.24616,49.44299,Innovation leader,Innovation leader
+BTN,Bhutan,17721.79,9.78255,797,28.91789,25.90510,Achiever,Performing above expectations for level of development
+BRA,Brazil,23309.63,10.05662,212812,33.47821,28.54994,Achiever,Performing above expectations for level of development
+BDI,Burundi,989.30,6.89700,14390,15.07735,11.44286,Achiever,Performing above expectations for level of development
+IND,India,12100.97,9.40104,1463866,40.14442,23.91914,Achiever,Performing above expectations for level of development
+IDN,Indonesia,17633.89,9.77758,285721,32.65291,25.86978,Achiever,Performing above expectations for level of development
+JOR,Jordan,11510.85,9.35105,11521,31.52267,23.71050,Achiever,Performing above expectations for level of development
+MDG,Madagascar,2039.72,7.62057,32741,20.14997,15.19572,Achiever,Performing above expectations for level of development
+MWI,Malawi,1757.70,7.47176,22216,17.21960,14.42392,Achiever,Performing above expectations for level of development
+MAR,Morocco,11437.15,9.34462,38431,32.79288,23.68357,Achiever,Performing above expectations for level of development
+MOZ,Mozambique,1732.60,7.45738,35632,16.13899,14.34932,Achiever,Performing above expectations for level of development
+PAK,Pakistan,6949.90,8.84648,255220,23.69070,21.43617,Achiever,Performing above expectations for level of development
+PHL,Philippines,12920.04,9.46653,116787,33.77324,24.19570,Achiever,Performing above expectations for level of development
+MDA,Republic of Moldova,19590.73,9.88281,2996,30.26422,26.70229,Achiever,Performing above expectations for level of development
+RWA,Rwanda,4100.68,8.31891,14569,23.28260,18.81025,Achiever,Performing above expectations for level of development
+SEN,Senegal,5354.70,8.58573,18932,24.40180,20.16070,Achiever,Performing above expectations for level of development
+ZAF,South Africa,16049.82,9.68345,64747,30.89017,25.26445,Achiever,Performing above expectations for level of development
+THA,Thailand,26358.58,10.17955,71620,37.61155,30.27604,Achiever,Performing above expectations for level of development
+TUN,Tunisia,14982.77,9.61466,12349,29.33729,24.88654,Achiever,Performing above expectations for level of development
+UKR,Ukraine,20903.94,9.94769,38980,30.36778,27.31566,Achiever,Performing above expectations for level of development
+UZB,Uzbekistan,12558.99,9.43819,37053,28.74390,24.07500,Achiever,Performing above expectations for level of development
+VNM,Viet Nam,17688.25,9.78066,101599,37.73115,25.89160,Achiever,Performing above expectations for level of development
+ALB,Albania,23327.05,10.05737,2772,28.25000,28.55939,At expectations,Performing at expectations for level of development
+ARM,Armenia,23954.24,10.08390,2952,31.61123,28.90355,At expectations,Performing at expectations for level of development
+BGD,Bangladesh,10257.55,9.23577,175687,21.46071,23.21850,At expectations,Performing at expectations for level of development
+BEN,Benin,4719.24,8.45940,14814,19.09554,19.52584,At expectations,Performing at expectations for level of development
+BIH,Bosnia and Herzegovina,22829.68,10.03582,3140,26.09936,28.29266,At expectations,Performing at expectations for level of development
+BWA,Botswana,19053.10,9.85499,2562,27.07074,26.46387,At expectations,Performing at expectations for level of development
+BGR,Bulgaria,42477.29,10.65672,6715,40.31342,38.77259,At expectations,Performing at expectations for level of development
+BFA,Burkina Faso,3019.01,8.01268,24075,16.12653,17.22945,At expectations,Performing at expectations for level of development
+CPV,Cabo Verde,12335.27,9.42022,527,22.36967,23.99936,At expectations,Performing at expectations for level of development
+KHM,Cambodia,8707.07,9.07189,17848,23.83075,22.48911,At expectations,Performing at expectations for level of development
+CMR,Cameroon,5791.09,8.66408,29879,18.86382,20.54939,At expectations,Performing at expectations for level of development
+CHL,Chile,35286.47,10.47126,19860,33.83381,35.32687,At expectations,Performing at expectations for level of development
+COL,Colombia,22396.00,10.01664,53426,28.61988,28.06481,At expectations,Performing at expectations for level of development
+CIV,Côte d'Ivoire,8112.67,9.00118,32712,20.82437,22.16457,At expectations,Performing at expectations for level of development
+CYP,Cyprus,65304.13,11.08681,1371,45.34395,45.57794,At expectations,Performing at expectations for level of development
+CZE,Czech Republic,59853.14,10.99965,10609,42.74888,44.38530,At expectations,Performing at expectations for level of development
+EGY,Egypt,21758.84,9.98778,118366,26.13879,27.73823,At expectations,Performing at expectations for level of development
+SLV,El Salvador,13876.77,9.53797,6366,22.78195,24.51289,At expectations,Performing at expectations for level of development
+GEO,Georgia,31089.68,10.34463,3807,32.23803,33.02201,At expectations,Performing at expectations for level of development
+GHA,Ghana,8410.29,9.03721,35064,22.62960,22.33064,At expectations,Performing at expectations for level of development
+GRC,Greece,44985.38,10.71409,9939,38.22391,39.81019,At expectations,Performing at expectations for level of development
+HUN,Hungary,48156.87,10.78222,9632,40.72571,41.00180,At expectations,Performing at expectations for level of development
+ISL,Iceland,80466.38,11.29560,398,46.30545,48.18328,At expectations,Performing at expectations for level of development
+IRN,Iran (Islamic Republic of),21473.13,9.97456,92418,27.58495,27.59499,At expectations,Performing at expectations for level of development
+ITA,Italy,63125.68,11.05288,59146,46.17647,45.12288,At expectations,Performing at expectations for level of development
+JAM,Jamaica,13924.09,9.54138,2837,24.88109,24.52864,At expectations,Performing at expectations for level of development
+KEN,Kenya,7556.08,8.93011,57532,23.02425,21.83290,At expectations,Performing at expectations for level of development
+KGZ,Kyrgyzstan,8870.37,9.09047,7295,24.14297,22.57346,At expectations,Performing at expectations for level of development
+LAO,Lao People's Democratic Republic,10212.33,9.23135,7873,21.21816,23.19928,At expectations,Performing at expectations for level of development
+LVA,Latvia,44105.52,10.69434,1854,38.25606,39.45587,At expectations,Performing at expectations for level of development
+LBN,Lebanon,11815.59,9.37718,5849,25.62612,23.81963,At expectations,Performing at expectations for level of development
+LSO,Lesotho,3089.29,8.03570,2363,16.47426,17.34877,At expectations,Performing at expectations for level of development
+LTU,Lithuania,57201.43,10.95433,2830,43.21239,43.73236,At expectations,Performing at expectations for level of development
+MYS,Malaysia,43664.71,10.68430,35978,41.83290,39.27445,At expectations,Performing at expectations for level of development
+MLT,Malta,78710.89,11.27354,545,43.81983,47.92014,At expectations,Performing at expectations for level of development
+MUS,Mauritius,33023.74,10.40498,1268,34.13857,34.10691,At expectations,Performing at expectations for level of development
+MEX,Mexico,25770.39,10.15698,131947,30.56769,29.93505,At expectations,Performing at expectations for level of development
+MNG,Mongolia,20378.30,9.92223,3517,29.12610,27.06490,At expectations,Performing at expectations for level of development
+NAM,Namibia,12341.51,9.42072,3093,22.44684,24.00148,At expectations,Performing at expectations for level of development
+NPL,Nepal,6139.80,8.72255,29618,22.29005,20.83659,At expectations,Performing at expectations for level of development
+MKD,North Macedonia,29509.92,10.29248,1814,31.18511,32.11369,At expectations,Performing at expectations for level of development
+PER,Peru,18980.19,9.85115,34577,27.91672,26.43210,At expectations,Performing at expectations for level of development
+POL,Poland,55340.22,10.92126,38141,39.46050,43.23974,At expectations,Performing at expectations for level of development
+PRT,Portugal,49753.19,10.81483,10412,44.48911,41.55208,At expectations,Performing at expectations for level of development
+SRB,Serbia,32741.87,10.39641,6689,32.52180,33.95102,At expectations,Performing at expectations for level of development
+SVN,Slovenia,57716.48,10.96330,2117,41.12694,43.86346,At expectations,Performing at expectations for level of development
+ESP,Spain,56887.93,10.94884,47890,45.41900,43.65147,At expectations,Performing at expectations for level of development
+LKA,Sri Lanka,14994.05,9.61541,23229,23.72535,24.89043,At expectations,Performing at expectations for level of development
+TJK,Tajikistan,6088.85,8.71421,10787,20.31769,20.79582,At expectations,Performing at expectations for level of development
+TGO,Togo,3372.91,8.12353,9722,18.70240,17.80374,At expectations,Performing at expectations for level of development
+TUR,Türkiye,43786.20,10.68707,87685,37.53382,39.32471,At expectations,Performing at expectations for level of development
+UGA,Uganda,3904.25,8.26982,51385,18.38389,18.55838,At expectations,Performing at expectations for level of development
+TZA,United Republic of Tanzania,4371.13,8.38278,70546,19.01506,19.13663,At expectations,Performing at expectations for level of development
+ZMB,Zambia,4503.43,8.41259,21914,19.50851,19.28841,At expectations,Performing at expectations for level of development
+DZA,Algeria,18509.45,9.82604,47435,20.52169,26.23027,Below expectations,Performing below expectations for level of development
+AGO,Angola,10216.56,9.23176,39040,12.99511,23.20108,Below expectations,Performing below expectations for level of development
+ARG,Argentina,31311.01,10.35172,45851,28.78424,33.14785,Below expectations,Performing below expectations for level of development
+AZE,Azerbaijan,26081.08,10.16897,10398,25.75620,30.11489,Below expectations,Performing below expectations for level of development
+BHR,Bahrain,69270.72,11.14578,1643,30.76330,46.34441,Below expectations,Performing below expectations for level of development
+BRB,Barbados,23183.92,10.05121,283,24.17087,28.48204,Below expectations,Performing below expectations for level of development
+BLR,Belarus,34069.08,10.43615,8998,24.50416,34.67773,Below expectations,Performing below expectations for level of development
+BOL,Bolivia (Plurinational State of),11439.02,9.34479,12582,19.73110,23.68426,Below expectations,Performing below expectations for level of development
+BRN,Brunei Darussalam,94472.47,11.45606,466,22.99405,50.05615,Below expectations,Performing below expectations for level of development
+TCD,Chad,3155.03,8.05675,21004,9.48283,17.45792,Below expectations,Performing below expectations for level of development
+CRI,Costa Rica,31485.04,10.35727,5153,29.80632,33.24651,Below expectations,Performing below expectations for level of development
+HRV,Croatia,51453.31,10.84843,3848,36.89992,42.10287,Below expectations,Performing below expectations for level of development
+COD,Democratic Republic of the Congo,1974.51,7.58808,112832,12.55596,15.02720,Below expectations,Performing below expectations for level of development
+DOM,Dominican Republic,30537.61,10.32671,11520,22.91885,32.70648,Below expectations,Performing below expectations for level of development
+ECU,Ecuador,16805.02,9.72943,18290,21.28824,25.54583,Below expectations,Performing below expectations for level of development
+ETH,Ethiopia,4498.55,8.41151,135472,15.70203,19.28290,Below expectations,Performing below expectations for level of development
+GTM,Guatemala,15100.09,9.62246,18688,18.95017,24.92710,Below expectations,Performing below expectations for level of development
+HND,Honduras,7955.75,8.98165,11006,19.17325,22.07395,Below expectations,Performing below expectations for level of development
+KAZ,Kazakhstan,44777.87,10.70947,20844,29.07863,39.72757,Below expectations,Performing below expectations for level of development
+KWT,Kuwait,52866.10,10.87552,5026,30.93676,42.53455,Below expectations,Performing below expectations for level of development
+MLI,Mali,2889.97,7.96900,25199,15.16978,17.00290,Below expectations,Performing below expectations for level of development
+MRT,Mauritania,8774.94,9.07966,5315,16.10942,22.52441,Below expectations,Performing below expectations for level of development
+MNE,Montenegro,34407.85,10.44604,633,28.75073,34.86010,Below expectations,Performing below expectations for level of development
+MMR,Myanmar,4950.86,8.50732,54851,17.39835,19.76771,Below expectations,Performing below expectations for level of development
+NIC,Nicaragua,9081.75,9.11402,7008,18.01381,22.67978,Below expectations,Performing below expectations for level of development
+NER,Niger,2095.24,7.64742,27918,12.13331,15.33501,Below expectations,Performing below expectations for level of development
+NGA,Nigeria,9488.16,9.15780,237528,19.06780,22.87563,Below expectations,Performing below expectations for level of development
+OMN,Oman,42211.20,10.65044,5495,30.03307,38.65751,Below expectations,Performing below expectations for level of development
+PAN,Panama,43651.39,10.68399,4571,24.40582,39.26892,Below expectations,Performing below expectations for level of development
+PRY,Paraguay,19717.19,9.88925,7013,21.13995,26.75945,Below expectations,Performing below expectations for level of development
+QAT,Qatar,122283.22,11.71410,3116,36.58716,53.04025,Below expectations,Performing below expectations for level of development
+ROU,Romania,48847.46,10.79646,18909,35.29258,41.24385,Below expectations,Performing below expectations for level of development
+RUS,Russian Federation,49048.99,10.80058,143997,31.78459,41.31334,Below expectations,Performing below expectations for level of development
+SAU,Saudi Arabia,74668.07,11.22081,34566,37.89345,47.28169,Below expectations,Performing below expectations for level of development
+SVK,Slovakia,47596.54,10.77052,5475,36.44707,40.80088,Below expectations,Performing below expectations for level of development
+TTO,Trinidad and Tobago,35899.58,10.48848,1511,21.23296,35.64704,Below expectations,Performing below expectations for level of development
+URY,Uruguay,37190.13,10.52380,3385,30.44623,36.30557,Below expectations,Performing below expectations for level of development
+VEN,Venezuela (Bolivarian Republic of),8785.45,9.08085,28517,16.66888,22.52984,Below expectations,Performing below expectations for level of development
+ZWE,Zimbabwe,7842.81,8.96735,16951,16.10424,22.00736,Below expectations,Performing below expectations for level of development

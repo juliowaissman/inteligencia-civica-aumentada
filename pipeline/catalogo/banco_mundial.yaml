@@ -1,0 +1,43 @@
+id: banco_mundial
+nombre: World Development Indicators y Worldwide Governance Indicators
+editor: Banco Mundial
+url: https://data.worldbank.org/
+licencia: CC BY 4.0
+redistribuible: true
+cita: bancomundial_wdi
+niveles: [internacional]
+descarga: automatica
+estado: verificada
+indicadores:
+  - id: wb_internet
+    nombre: Personas que usan internet (% de la población)
+    dimension: 1
+    capa: instalada
+    sentido: 1
+    unidad: "%"
+    nota: Fuente original UIT, redistribuida por el Banco Mundial (IT.NET.USER.ZS).
+  - id: wb_terciaria
+    nombre: Matrícula en educación terciaria (% bruto)
+    dimension: 1
+    capa: instalada
+    sentido: 1
+    unidad: "%"
+    nota: Fuente original UNESCO UIS (SE.TER.ENRR).
+  - id: wgi_voz
+    nombre: Voz y rendición de cuentas (WGI)
+    dimension: 5
+    capa: instalada
+    sentido: 1
+    unidad: estimación −2.5 a 2.5
+  - id: wgi_efectividad
+    nombre: Efectividad gubernamental (WGI)
+    dimension: 4
+    capa: instalada
+    sentido: 1
+    unidad: estimación −2.5 a 2.5
+  - id: wgi_corrupcion
+    nombre: Control de la corrupción (WGI)
+    dimension: 5
+    capa: instalada
+    sentido: 1
+    unidad: estimación −2.5 a 2.5

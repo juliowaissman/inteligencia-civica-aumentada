@@ -1,0 +1,79 @@
+# Configuración de los IICA parciales (aprobada en la Fase 0, ver docs/fase0_propuesta_indicadores.md).
+
+internacional:
+  comparacion: [america_latina, ocde]   # unión de ambos grupos
+  anio_maximo: 2026
+  cobertura_minima: 0.7                 # el año de cada indicador debe cubrir ≥70% de los países
+  indicadores:
+    # 1 Capacidades cívicas y humanas
+    - wb_internet
+    - wb_terciaria
+    - vdem_delib
+    # 2 Inteligencia colectiva
+    - vdem_cspart
+    - gh_colaboracion_externa
+    # 3 Integración ética de la IA y gobierno digital
+    - girai_total
+    - dsp_privacidad_ley
+    - egov_osi
+    # 4 Instituciones habilitadoras y cocreación
+    - vdem_partip
+    - wjp_gob_abierto
+    - egov_epi
+    # 5 Valor público democrático
+    - wgi_voz
+    - wgi_corrupcion
+    - vdem_egal
+    # 6 Continuidad y retroalimentación
+    - gii_total
+    - gh_desarrolladores
+  contexto: [ms_difusion_ia, aei_uso_per_capita, oxf_total, itu_programar]
+
+nacional:
+  comparacion: [america_latina, ocde]   # define los límites fijos de normalización
+  desde: 2012
+  bienales: [onu_egov]                 # se arrastra el último valor un año
+  anio_maximo: 2026
+  indicadores:
+    - wb_internet
+    - wb_terciaria
+    - vdem_delib
+    - vdem_cspart
+    - gh_colaboracion_externa
+    - dsp_privacidad_ley
+    - egov_osi
+    - vdem_partip
+    - wjp_gob_abierto
+    - egov_epi
+    - wgi_voz
+    - wgi_corrupcion
+    - vdem_egal
+    - gh_desarrolladores
+
+estatal:
+  anio_maximo: 2026
+  cobertura_minima: 1.0                 # las 32 entidades
+  indicadores:
+    # 1
+    - endutih_internet
+    - endutih_hogares_computadora
+    - anuies_matricula_superior
+    # 2
+    - osc_activas
+    # 3
+    - endutih_internet_gobierno
+    - cnge_tramites_medios_electronicos
+    - cnge_tramites_transaccionales
+    # 4
+    - mga_indice
+    - cnge_espacios_deliberacion_cogestion
+    - cnge_solicitudes_info_recibidas
+    # 5
+    - participacion_presidencia
+    - encig_prevalencia_corrupcion
+    - encig_confianza_gob_estatal
+    # 6
+    - sni_investigadores
+    - denue_5415
+    - impi_solicitudes_patente
+  contexto: [idd_mex, imco_general, envipe_confianza_jueces]

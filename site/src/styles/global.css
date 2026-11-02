@@ -1,0 +1,105 @@
+/* Paleta inspirada en el Manual de Identidad del IEE Chihuahua (2022).
+   Sitio académico independiente: no usa el logotipo institucional. */
+:root {
+  --azul: #001d7e;
+  --magenta: #b8007c;
+  --cian: #0099d9;
+  --verde: #008e45;
+  --rojo: #bd0811;
+  --amarillo: #fcec00;
+  --negro: #211915;
+
+  /* Una color por dimensión del IICA */
+  --d1: var(--azul);
+  --d2: var(--cian);
+  --d3: var(--magenta);
+  --d4: var(--verde);
+  --d5: var(--rojo);
+  --d6: #b8a600; /* amarillo oscurecido para que sea legible sobre blanco */
+
+  --fondo: #ffffff;
+  --fondo-suave: #f3f5fb;
+  --texto: #211915;
+  --texto-suave: #4a4f63;
+  --borde: #d8dcea;
+  --primario: var(--azul);
+  --enlace: #0b4fb3;
+  --acento: var(--magenta);
+  --sombra: 0 1px 3px rgb(0 0 0 / 0.08), 0 6px 20px rgb(0 29 126 / 0.06);
+  --radio: 14px;
+  --ancho: 1100px;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --fondo: #0b1026;
+    --fondo-suave: #141b3a;
+    --texto: #eef1fa;
+    --texto-suave: #b7bdd6;
+    --borde: #2a3463;
+    --primario: #7fa8ff;
+    --enlace: #8cc8ff;
+    --acento: #ff6fc8;
+    --d1: #7fa8ff;
+    --d6: var(--amarillo);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --fondo: #0b1026;
+  --fondo-suave: #141b3a;
+  --texto: #eef1fa;
+  --texto-suave: #b7bdd6;
+  --borde: #2a3463;
+  --primario: #7fa8ff;
+  --enlace: #8cc8ff;
+  --acento: #ff6fc8;
+  --d1: #7fa8ff;
+  --d6: var(--amarillo);
+  color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+}
+a { color: var(--enlace); text-underline-offset: 2px; }
+a:hover { color: var(--acento); }
+:focus-visible { outline: 3px solid var(--cian); outline-offset: 2px; border-radius: 4px; }
+h1, h2, h3 { line-height: 1.2; color: var(--primario); }
+h1 { font-size: clamp(1.9rem, 4vw, 2.8rem); font-weight: 800; margin: 0.2em 0 0.4em; }
+h2 { font-size: clamp(1.4rem, 2.6vw, 1.85rem); font-weight: 700; margin-top: 2.2em; }
+h3 { font-size: 1.2rem; font-weight: 700; margin-top: 1.6em; }
+img, svg { max-width: 100%; height: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 0.95rem; }
+th, td { border-bottom: 1px solid var(--borde); padding: 0.5em 0.6em; text-align: left; vertical-align: top; }
+th { background: var(--fondo-suave); font-weight: 700; }
+.tabla { overflow-x: auto; margin: 1.2em 0; }
+
+.contenedor { max-width: var(--ancho); margin: 0 auto; padding: 0 16px; }
+.prosa { max-width: 760px; }
+.franja { height: 6px; background: linear-gradient(90deg,
+  var(--azul) 0 16.6%, var(--cian) 0 33.3%, var(--magenta) 0 50%,
+  var(--verde) 0 66.6%, var(--rojo) 0 83.3%, var(--amarillo) 0); }
+.tarjeta { background: var(--fondo-suave); border: 1px solid var(--borde);
+  border-radius: var(--radio); padding: 1.2rem 1.4rem; box-shadow: var(--sombra); }
+.rejilla { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.nota { font-size: 0.9rem; color: var(--texto-suave); }
+.aviso { border-left: 4px solid var(--acento); background: var(--fondo-suave);
+  padding: 0.8rem 1rem; border-radius: 0 var(--radio) var(--radio) 0; }
+.sin-dato { color: var(--texto-suave); font-style: italic; }
+.chip { display: inline-block; padding: 0.1em 0.6em; border-radius: 999px; font-size: 0.85rem;
+  font-weight: 600; color: #fff; }
+.boton { display: inline-block; background: var(--primario); color: var(--fondo); padding: 0.6em 1.1em;
+  border-radius: 999px; font-weight: 700; text-decoration: none; }
+.boton:hover { background: var(--acento); color: #fff; }
+.cita { font-size: 0.8em; vertical-align: super; text-decoration: none; }
+.grafico { margin: 1rem 0 1.6rem; overflow-x: auto; }
+.grafico figcaption { font-size: 0.88rem; color: var(--texto-suave); margin-top: 0.4rem; }

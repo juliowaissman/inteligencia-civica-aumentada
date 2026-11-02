@@ -1,0 +1,15 @@
+{
+  "fuente": "anuies",
+  "nombre": "Anuario Estadístico de la Educación Superior (matrícula por entidad y campo amplio de formación)",
+  "url": "https://anuario.anuies.mx/",
+  "licencia": "© ANUIES, todos los derechos reservados (no declara licencia abierta)",
+  "fecha_acceso": "2026-11-02",
+  "sha256": {
+    "matricula_entidad_campo_2020-2021.json": "3906c6d1b7ba43abcae9f2b0c567d4630ff1eaa9fc6159bf1b2b7469fe3bbaac",
+    "matricula_entidad_campo_2021-2022.json": "cdcef3c7717f61f45e4d3a712f44ea8fa034faa9570ea276bb7d7e8372af5a29",
+    "matricula_entidad_campo_2022-2023.json": "7b166ec1f74adc666af612f630a3cb9b10b74cfbe1cbdafb94f6e50897518e05",
+    "matricula_entidad_campo_2023-2024.json": "6a06286635b5f919655e6fb10c83d69f1c9ea8639439332f532bcb659dc1b0ed",
+    "matricula_entidad_campo_2024-2025.json": "8811e1f08f46fed47be3dd737b33b03cbb3c7070bd696ac5793428724df8897c",
+    "matricula_entidad_campo_2025-2026.json": "b7e8df28d45c819bb0f65f1a5b6bc22a16a2fb6e28f1175783c10ab88a1137e9"
+  }
+}

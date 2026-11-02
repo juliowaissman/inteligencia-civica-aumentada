@@ -1,0 +1,10 @@
+{
+  "fuente": "conapo_poblacion",
+  "nombre": "Proyecciones de la Población de México y de las Entidades Federativas 2020-2070 (Conciliación Demográfica 1950-2019)",
+  "url": "https://www.datos.gob.mx/dataset/proyecciones-de-poblacion",
+  "licencia": "CC BY 4.0",
+  "fecha_acceso": "2026-11-02",
+  "sha256": {
+    "05_indicadores_demograficos_proyecciones.csv": "e0407d1640f38232023cf97656a0cb7be46049b1cb2344198c7e4aaec7cae6cd"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "fuente": "gii",
+  "nombre": "Global Innovation Index 2026",
+  "url": "https://www.wipo.int/web-publications/global-innovation-index-2026/en/gii-2026-results.html",
+  "licencia": "CC BY 4.0 (declarada para la publicación GII; no hay una licencia aparte para los archivos de datos)",
+  "fecha_acceso": "2026-11-02",
+  "sha256": {
+    "gii-2026-results.html": "c518d9f81fc418c3eda269c1bf4c8b98139ddb0205a94cface8131201ad63ff2",
+    "gii_insumos_productos.csv": "de8725b32119184381cf770336d0fe7a8e386bb638764c466008b27a82bfd6dc",
+    "gii_puntaje_vs_pib.csv": "1646eb7c7473a1174ab1a739880972d5c89f1b432172e16f9eebc53f925d43ac"
+  }
+}

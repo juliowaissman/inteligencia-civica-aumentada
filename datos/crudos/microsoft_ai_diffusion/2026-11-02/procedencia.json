@@ -1,0 +1,11 @@
+{
+  "fuente": "microsoft_ai_diffusion",
+  "nombre": "Global AI Diffusion (Q2 2026)",
+  "url": "https://github.com/microsoft/ai-diffusion-report",
+  "licencia": "MIT (repositorio microsoft/ai-diffusion-report)",
+  "fecha_acceso": "2026-11-02",
+  "sha256": {
+    "AI_Diffusion_Q22026_Update.csv": "4a076d6aded6d8c9e60ddfff8a28476a72bb94e5293ae8feaa40c6bda06bd92a",
+    "geonames_countryInfo.txt": "79f8f59ea01cbb40438bf1856dd6c2ff201f03f8fc72d0530b2646aaf603ef04"
+  }
+}

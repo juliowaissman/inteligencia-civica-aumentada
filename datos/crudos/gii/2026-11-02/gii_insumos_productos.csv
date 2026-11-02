@@ -1,0 +1,140 @@
+ISO3,NAME,INPUT,OUTPUT,FIT,RES,RES_RANK,EFFICIENCY,CATEGORY INPUTS,CATEGORY OUTPUTS,LABEL,COUNTRY LABEL
+ALB,Albania,40.79,15.71,26.20,-10.49,131,Inefficient,High Inputs,Low Outputs,"Inefficient - High Inputs, Low Outputs",Albania
+DZA,Algeria,30.66,10.39,16.74,-6.36,118,Not labeled,Low Inputs,Low Outputs,Not Labelled,
+AGO,Angola,19.37,6.62,6.20,0.42,70,Not labeled,Low Inputs,Low Outputs,Not Labelled,
+ARG,Argentina,34.13,23.44,19.99,3.45,43,Not labeled,Low Inputs,Low Outputs,Not Labelled,
+ARM,Armenia,35.14,28.09,20.93,7.16,19,Efficient,Low Inputs,High Outputs,"Efficient - Low Inputs, High Outputs",Armenia
+AUS,Australia,60.63,38.63,44.73,-6.10,117,Not labeled,High Inputs,High Outputs,Not Labelled,
+AUT,Austria,58.39,42.08,42.63,-0.55,79,Not labeled,High Inputs,High Outputs,Not Labelled,
+AZE,Azerbaijan,38.56,12.95,24.13,-11.18,134,Inefficient,Low Inputs,Low Outputs,"Inefficient - Low Inputs, Low Outputs",Azerbaijan
+BHR,Bahrain,42.47,19.06,27.77,-8.72,127,Inefficient,High Inputs,Low Outputs,"Inefficient - High Inputs, Low Outputs",Bahrain
+BGD,Bangladesh,27.07,15.86,13.39,2.46,50,Not labeled,Low Inputs,Low Outputs,Not Labelled,
+BRB,Barbados,33.51,14.83,19.41,-4.58,109,Not labeled,Low Inputs,Low Outputs,Not Labelled,
+BLR,Belarus,30.86,18.15,16.93,1.22,58,Not labeled,Low Inputs,Low Outputs,Not Labelled,
+BEL,Belgium,57.18,39.73,41.51,-1.78,90,Not labeled,High Inputs,High Outputs,Not Labelled,
+BEN,Benin,28.57,9.62,14.79,-5.17,114,Not labeled,Low Inputs,Low Outputs,Not Labelled,
+BTN,Bhutan,44.40,13.44,29.57,-16.13,138,Inefficient,High Inputs,Low Outputs,"Inefficient - High Inputs, Low Outputs",Bhutan
+BOL,Bolivia (Plurinational State of),26.30,13.16,12.67,0.49,66,Not labeled,Low Inputs,Low Outputs,Not Labelled,
+BIH,Bosnia and Herzegovina,33.61,18.59,19.50,-0.91,81,Not labeled,Low Inputs,Low Outputs,Not Labelled,
+BWA,Botswana,38.85,15.29,24.40,-9.11,129,Inefficient,Low Inputs,Low Outputs,"Inefficient - Low Inputs, Low Outputs",Botswana
+BRA,Brazil,38.46,28.49,24.03,4.46,34,Not labeled,Low Inputs,High Outputs,Not Labelled,
+BRN,Brunei Darussalam,40.50,5.49,25.94,-20.45,139,Inefficient,High Inputs,Low Outputs,"Inefficient - High Inputs, Low Outputs",Brunei Darussalam
+BGR,Bulgaria,43.56,37.06,28.80,8.27,12,Efficient,High Inputs,High Outputs,"Efficient - High Inputs, High Outputs",Bulgaria
+BFA,Burkina Faso,22.19,10.06,8.84,1.22,57,Not labeled,Low Inputs,Low Outputs,Not Labelled,
+BDI,Burundi,21.53,8.62,8.22,0.40,71,Not labeled,Low Inputs,Low Outputs,Not Labelled,
+CPV,Cabo Verde,31.52,13.22,17.55,-4.33,106,Not labeled,Low Inputs,Low Outputs,Not Labelled,
+KHM,Cambodia,32.73,14.93,18.68,-3.75,102,Not labeled,Low Inputs,Low Outputs,Not Labelled,
+CMR,Cameroon,27.97,9.76,14.24,-4.48,107,Not labeled,Low Inputs,Low Outputs,Not Labelled,
+CAN,Canada,60.45,41.80,44.56,-2.76,99,Not labeled,High Inputs,High Outputs,Not Labelled,
+TCD,Chad,14.92,4.05,2.05,2.00,54,Not labeled,Low Inputs,Low Outputs,Not Labelled,
+CHL,Chile,45.31,22.35,30.43,-8.08,126,Inefficient,High Inputs,Low Outputs,"Inefficient - High Inputs, Low Outputs",Chile
+CHN,China,57.47,56.53,41.78,14.75,1,Efficient,High Inputs,High Outputs,"Efficient - High Inputs, High Outputs",China
+COL,Colombia,36.82,20.42,22.50,-2.08,93,Not labeled,Low Inputs,Low Outputs,Not Labelled,
+CRI,Costa Rica,39.42,20.20,24.92,-4.73,112,Not labeled,Low Inputs,Low Outputs,Not Labelled,
+CIV,Côte d'Ivoire,28.61,13.04,14.84,-1.80,92,Not labeled,Low Inputs,Low Outputs,Not Labelled,
+HRV,Croatia,43.97,29.83,29.18,0.65,63,Not labeled,High Inputs,High Outputs,Not Labelled,
+CYP,Cyprus,48.94,41.75,33.82,7.93,17,Efficient,High Inputs,High Outputs,"Efficient - High Inputs, High Outputs",Cyprus
+CZE,Czech Republic,48.45,37.05,33.35,3.70,39,Not labeled,High Inputs,High Outputs,Not Labelled,
+COD,Democratic Republic of the Congo,18.02,7.09,4.94,2.15,53,Not labeled,Low Inputs,Low Outputs,Not Labelled,
+DNK,Denmark,65.39,49.94,49.17,0.77,62,Not labeled,High Inputs,High Outputs,Not Labelled,
+DOM,Dominican Republic,32.92,12.91,18.86,-5.95,116,Not labeled,Low Inputs,Low Outputs,Not Labelled,
+ECU,Ecuador,29.52,13.06,15.68,-2.62,96,Not labeled,Low Inputs,Low Outputs,Not Labelled,
+EGY,Egypt,31.95,20.33,17.95,2.38,52,Not labeled,Low Inputs,Low Outputs,Not Labelled,
+SLV,El Salvador,29.18,16.38,15.37,1.02,60,Not labeled,Low Inputs,Low Outputs,Not Labelled,
+EST,Estonia,56.36,44.48,40.74,3.75,38,Not labeled,High Inputs,High Outputs,Not Labelled,
+ETH,Ethiopia,19.71,11.69,6.53,5.17,30,Not labeled,Low Inputs,Low Outputs,Not Labelled,
+FIN,Finland,65.74,50.03,49.50,0.53,65,Not labeled,High Inputs,High Outputs,Not Labelled,
+FRA,France,58.43,49.53,42.68,6.85,21,Not labeled,High Inputs,High Outputs,Not Labelled,
+GEO,Georgia,41.64,22.84,27.00,-4.16,105,Not labeled,High Inputs,Low Outputs,Not Labelled,
+DEU,Germany,60.52,53.00,44.63,8.37,11,Efficient,High Inputs,High Outputs,"Efficient - High Inputs, High Outputs",Germany
+GHA,Ghana,29.28,15.98,15.45,0.53,64,Not labeled,Low Inputs,Low Outputs,Not Labelled,
+GRC,Greece,45.43,31.02,30.54,0.48,67,Not labeled,High Inputs,High Outputs,Not Labelled,
+GTM,Guatemala,26.45,11.45,12.82,-1.37,85,Not labeled,Low Inputs,Low Outputs,Not Labelled,
+HND,Honduras,26.84,11.51,13.18,-1.67,89,Not labeled,Low Inputs,Low Outputs,Not Labelled,
+HKG,"Hong Kong, China",64.92,41.41,48.74,-7.32,123,Inefficient,High Inputs,High Outputs,"Inefficient - High Inputs, High Outputs","Hong Kong, China"
+HUN,Hungary,45.71,35.75,30.79,4.95,31,Not labeled,High Inputs,High Outputs,Not Labelled,
+ISL,Iceland,57.74,34.87,42.03,-7.16,121,Inefficient,High Inputs,High Outputs,"Inefficient - High Inputs, High Outputs",Iceland
+IND,India,42.44,37.85,27.75,10.10,6,Efficient,High Inputs,High Outputs,"Efficient - High Inputs, High Outputs",India
+IDN,Indonesia,39.95,25.36,25.42,-0.06,73,Not labeled,High Inputs,High Outputs,Not Labelled,
+IRN,Iran (Islamic Republic of),29.20,25.97,15.38,10.58,4,Efficient,Low Inputs,High Outputs,"Efficient - Low Inputs, High Outputs",Iran (Islamic Republic of)
+IRL,Ireland,58.33,41.77,42.58,-0.82,80,Not labeled,High Inputs,High Outputs,Not Labelled,
+ISR,Israel,57.47,46.96,41.77,5.19,29,Not labeled,High Inputs,High Outputs,Not Labelled,
+ITA,Italy,48.69,43.66,33.59,10.07,7,Efficient,High Inputs,High Outputs,"Efficient - High Inputs, High Outputs",Italy
+JAM,Jamaica,32.37,17.39,18.34,-0.95,82,Not labeled,Low Inputs,Low Outputs,Not Labelled,
+JPN,Japan,61.19,47.10,45.25,1.85,55,Not labeled,High Inputs,High Outputs,Not Labelled,
+JOR,Jordan,39.39,23.66,24.90,-1.24,83,Not labeled,Low Inputs,Low Outputs,Not Labelled,
+KAZ,Kazakhstan,36.97,21.19,22.64,-1.45,86,Not labeled,Low Inputs,Low Outputs,Not Labelled,
+KEN,Kenya,27.98,18.07,14.24,3.83,36,Not labeled,Low Inputs,Low Outputs,Not Labelled,
+KWT,Kuwait,39.53,22.34,25.03,-2.69,98,Not labeled,Low Inputs,Low Outputs,Not Labelled,
+KGZ,Kyrgyzstan,29.16,19.12,15.35,3.77,37,Not labeled,Low Inputs,Low Outputs,Not Labelled,
+LAO,Lao People's Democratic Republic,32.71,9.73,18.66,-8.93,128,Inefficient,Low Inputs,Low Outputs,"Inefficient - Low Inputs, Low Outputs",Lao People's Democratic Republic
+LVA,Latvia,45.82,30.69,30.90,-0.20,75,Not labeled,High Inputs,High Outputs,Not Labelled,
+LBN,Lebanon,32.42,18.83,18.39,0.44,69,Not labeled,Low Inputs,Low Outputs,Not Labelled,
+LSO,Lesotho,26.50,6.44,12.87,-6.42,119,Inefficient,Low Inputs,Low Outputs,"Inefficient - Low Inputs, Low Outputs",Lesotho
+LTU,Lithuania,52.22,34.20,36.88,-2.67,97,Not labeled,High Inputs,High Outputs,Not Labelled,
+LUX,Luxembourg,56.70,36.42,41.06,-4.63,111,Not labeled,High Inputs,High Outputs,Not Labelled,
+MDG,Madagascar,21.83,18.47,8.50,9.98,8,Efficient,Low Inputs,Low Outputs,"Efficient - Low Inputs, Low Outputs",Madagascar
+MWI,Malawi,24.18,10.26,10.70,-0.43,77,Not labeled,Low Inputs,Low Outputs,Not Labelled,
+MYS,Malaysia,51.42,32.25,36.13,-3.88,103,Not labeled,High Inputs,High Outputs,Not Labelled,
+MLI,Mali,22.98,7.36,9.57,-2.21,94,Not labeled,Low Inputs,Low Outputs,Not Labelled,
+MLT,Malta,49.93,37.71,34.74,2.98,47,Not labeled,High Inputs,High Outputs,Not Labelled,
+MRT,Mauritania,25.17,7.05,11.62,-4.58,108,Not labeled,Low Inputs,Low Outputs,Not Labelled,
+MUS,Mauritius,41.65,26.63,27.01,-0.38,76,Not labeled,High Inputs,High Outputs,Not Labelled,
+MEX,Mexico,34.33,26.81,20.17,6.64,22,Not labeled,Low Inputs,High Outputs,Not Labelled,
+MNG,Mongolia,32.15,26.10,18.14,7.96,16,Efficient,Low Inputs,High Outputs,"Efficient - Low Inputs, High Outputs",Mongolia
+MNE,Montenegro,34.45,23.05,20.29,2.76,48,Not labeled,Low Inputs,Low Outputs,Not Labelled,
+MAR,Morocco,35.42,30.16,21.19,8.97,9,Efficient,Low Inputs,High Outputs,"Efficient - Low Inputs, High Outputs",Morocco
+MOZ,Mozambique,21.18,11.10,7.89,3.21,44,Not labeled,Low Inputs,Low Outputs,Not Labelled,
+MMR,Myanmar,21.44,13.35,8.14,5.21,28,Not labeled,Low Inputs,Low Outputs,Not Labelled,
+NAM,Namibia,35.61,9.28,21.37,-12.09,136,Inefficient,Low Inputs,Low Outputs,"Inefficient - Low Inputs, Low Outputs",Namibia
+NPL,Nepal,30.12,14.46,16.25,-1.79,91,Not labeled,Low Inputs,Low Outputs,Not Labelled,
+NLD,Netherlands (Kingdom of the),62.38,54.42,46.36,8.06,14,Efficient,High Inputs,High Outputs,"Efficient - High Inputs, High Outputs",Netherlands (Kingdom of the)
+NZL,New Zealand,59.13,33.71,43.33,-9.62,130,Inefficient,High Inputs,High Outputs,"Inefficient - High Inputs, High Outputs",New Zealand
+NIC,Nicaragua,27.31,8.72,13.62,-4.90,113,Not labeled,Low Inputs,Low Outputs,Not Labelled,
+NER,Niger,16.53,7.74,3.55,4.18,35,Not labeled,Low Inputs,Low Outputs,Not Labelled,
+NGA,Nigeria,22.93,15.20,9.53,5.67,25,Not labeled,Low Inputs,Low Outputs,Not Labelled,
+MKD,North Macedonia,38.32,24.05,23.90,0.15,72,Not labeled,Low Inputs,Low Outputs,Not Labelled,
+NOR,Norway,60.33,36.65,44.45,-7.80,124,Inefficient,High Inputs,High Outputs,"Inefficient - High Inputs, High Outputs",Norway
+OMN,Oman,42.78,17.28,28.07,-10.78,132,Inefficient,High Inputs,Low Outputs,"Inefficient - High Inputs, Low Outputs",Oman
+PAK,Pakistan,26.19,21.19,12.57,8.62,10,Efficient,Low Inputs,Low Outputs,"Efficient - Low Inputs, Low Outputs",Pakistan
+PAN,Panama,33.07,15.74,19.00,-3.25,100,Not labeled,Low Inputs,Low Outputs,Not Labelled,
+PRY,Paraguay,28.70,13.58,14.92,-1.34,84,Not labeled,Low Inputs,Low Outputs,Not Labelled,
+PER,Peru,37.10,18.74,22.76,-4.02,104,Not labeled,Low Inputs,Low Outputs,Not Labelled,
+PHL,Philippines,38.15,29.39,23.74,5.65,26,Not labeled,Low Inputs,High Outputs,Not Labelled,
+POL,Poland,45.13,33.79,30.26,3.53,42,Not labeled,High Inputs,High Outputs,Not Labelled,
+PRT,Portugal,51.60,37.38,36.30,1.08,59,Not labeled,High Inputs,High Outputs,Not Labelled,
+QAT,Qatar,49.76,23.41,34.58,-11.17,133,Inefficient,High Inputs,Low Outputs,"Inefficient - High Inputs, Low Outputs",Qatar
+KOR,Republic of Korea,66.54,56.25,50.25,6.00,23,Not labeled,High Inputs,High Outputs,Not Labelled,
+MDA,Republic of Moldova,32.05,28.48,18.04,10.43,5,Efficient,Low Inputs,High Outputs,"Efficient - Low Inputs, High Outputs",Republic of Moldova
+ROU,Romania,41.08,29.50,26.48,3.03,46,Not labeled,High Inputs,High Outputs,Not Labelled,
+RUS,Russian Federation,37.18,26.39,22.83,3.56,41,Not labeled,Low Inputs,High Outputs,Not Labelled,
+RWA,Rwanda,34.37,12.20,20.21,-8.01,125,Inefficient,Low Inputs,Low Outputs,"Inefficient - Low Inputs, Low Outputs",Rwanda
+SAU,Saudi Arabia,51.15,24.63,35.88,-11.25,135,Inefficient,High Inputs,Low Outputs,"Inefficient - High Inputs, Low Outputs",Saudi Arabia
+SEN,Senegal,34.16,14.65,20.01,-5.37,115,Not labeled,Low Inputs,Low Outputs,Not Labelled,
+SRB,Serbia,40.01,25.03,25.48,-0.44,78,Not labeled,High Inputs,Low Outputs,Not Labelled,
+SGP,Singapore,70.01,52.02,53.49,-1.48,87,Not labeled,High Inputs,High Outputs,Not Labelled,
+SVK,Slovakia,42.19,30.70,27.52,3.18,45,Not labeled,High Inputs,High Outputs,Not Labelled,
+SVN,Slovenia,48.73,33.53,33.61,-0.09,74,Not labeled,High Inputs,High Outputs,Not Labelled,
+ZAF,South Africa,37.64,24.14,23.27,0.87,61,Not labeled,Low Inputs,Low Outputs,Not Labelled,
+ESP,Spain,50.70,40.13,35.46,4.67,33,Not labeled,High Inputs,High Outputs,Not Labelled,
+LKA,Sri Lanka,29.44,18.01,15.61,2.39,51,Not labeled,Low Inputs,Low Outputs,Not Labelled,
+SWE,Sweden,68.72,57.74,52.28,5.46,27,Not labeled,High Inputs,High Outputs,Not Labelled,
+CHE,Switzerland,69.33,63.96,52.86,11.11,3,Efficient,High Inputs,High Outputs,"Efficient - High Inputs, High Outputs",Switzerland
+TJK,Tajikistan,27.95,12.69,14.22,-1.53,88,Not labeled,Low Inputs,Low Outputs,Not Labelled,
+THA,Thailand,43.16,32.06,28.42,3.64,40,Not labeled,High Inputs,High Outputs,Not Labelled,
+TGO,Togo,24.70,12.71,11.18,1.53,56,Not labeled,Low Inputs,Low Outputs,Not Labelled,
+TTO,Trinidad and Tobago,31.81,10.65,17.83,-7.17,122,Inefficient,Low Inputs,Low Outputs,"Inefficient - Low Inputs, Low Outputs",Trinidad and Tobago
+TUN,Tunisia,32.36,26.31,18.34,7.98,15,Efficient,Low Inputs,High Outputs,"Efficient - Low Inputs, High Outputs",Tunisia
+TUR,Türkiye,42.01,33.06,27.34,5.72,24,Not labeled,High Inputs,High Outputs,Not Labelled,
+UGA,Uganda,23.87,12.90,10.40,2.50,49,Not labeled,Low Inputs,Low Outputs,Not Labelled,
+UKR,Ukraine,35.00,25.73,20.80,4.93,32,Not labeled,Low Inputs,High Outputs,Not Labelled,
+ARE,United Arab Emirates,60.87,31.87,44.95,-13.09,137,Inefficient,High Inputs,High Outputs,"Inefficient - High Inputs, High Outputs",United Arab Emirates
+GBR,United Kingdom,61.75,57.37,45.78,11.59,2,Efficient,High Inputs,High Outputs,"Efficient - High Inputs, High Outputs",United Kingdom
+TZA,United Republic of Tanzania,26.98,11.05,13.31,-2.26,95,Not labeled,Low Inputs,Low Outputs,Not Labelled,
+USA,United States of America,66.35,58.14,50.07,8.07,13,Efficient,High Inputs,High Outputs,"Efficient - High Inputs, High Outputs",United States of America
+URY,Uruguay,41.00,19.89,26.40,-6.51,120,Inefficient,High Inputs,Low Outputs,"Inefficient - High Inputs, Low Outputs",Uruguay
+UZB,Uzbekistan,38.26,19.23,23.84,-4.62,110,Not labeled,Low Inputs,Low Outputs,Not Labelled,
+VEN,Venezuela (Bolivarian Republic of),23.15,10.19,9.73,0.45,68,Not labeled,Low Inputs,Low Outputs,Not Labelled,
+VNM,Viet Nam,41.29,34.18,26.67,7.51,18,Efficient,High Inputs,High Outputs,"Efficient - High Inputs, High Outputs",Viet Nam
+ZMB,Zambia,28.22,10.80,14.47,-3.67,101,Not labeled,Low Inputs,Low Outputs,Not Labelled,
+ZWE,Zimbabwe,19.20,13.01,6.05,6.96,20,Efficient,Low Inputs,Low Outputs,"Efficient - Low Inputs, Low Outputs",Zimbabwe

@@ -1,0 +1,46 @@
+id: envipe
+nombre: Encuesta Nacional de Victimización y Percepción sobre Seguridad Pública (ENVIPE)
+editor: Instituto Nacional de Estadística y Geografía (INEGI)
+url: https://www.inegi.org.mx/programas/envipe/2025/
+licencia: Términos de Libre Uso de la Información del INEGI
+redistribuible: true
+cita: inegi_envipe_2025
+niveles: [nacional, estatal]
+descarga: automatica
+estado: verificada
+motivo: ""
+indicadores:
+  - id: envipe_confianza_policia_estatal
+    nombre: Confianza en la policía estatal (% con mucha o algo de confianza)
+    dimension: 5
+    capa: resultado
+    sentido: 1
+    unidad: "% de la población de 18 años y más que identifica a la autoridad"
+    nota: >-
+      Tabulado básico "VI. Desempeño institucional" (estimaciones), cuadro "Población de 18 años y
+      más que identifica a las autoridades de seguridad pública por entidad federativa y tipo de
+      autoridad según nivel de confianza en la misma" (6.4 en 2020–2022, 6.5 en 2023, 6.20 en
+      2024–2025), fila "Policía Estatal". Valor = "Mucha confianza – Relativos" + "Algo de
+      confianza – Relativos" publicados por el INEGI. La base es quien identifica a la autoridad,
+      no toda la población. Representativa por entidad. Ediciones 2020–2025 (levantamiento
+      marzo–abril del año de la edición). Control 2025: Estado de México 48.2 %, igual a la cifra
+      difundida en prensa con base en la ENVIPE 2025.
+  - id: envipe_confianza_mp_fiscalia_estatal
+    nombre: Confianza en el Ministerio Público y fiscalías estatales (% con mucha o algo de confianza)
+    dimension: 5
+    capa: resultado
+    sentido: 1
+    unidad: "% de la población de 18 años y más que identifica a la autoridad"
+    nota: >-
+      Mismo cuadro, fila "Ministerio Público (MP) y Fiscalías Estatales" (en ediciones anteriores
+      puede decir "Procuradurías Estatales"). Control del método con el mismo cuadro 2025: la fila
+      FGR da 13.24 + 51.30 = 64.5 %, igual a lo que publica el INEGI en "Estadísticas a propósito
+      del Día Nacional del Ministerio Público" 2025; Estado de México 44.0 %, igual a la prensa.
+  - id: envipe_confianza_jueces
+    nombre: Confianza en jueces (% con mucha o algo de confianza)
+    dimension: 5
+    capa: resultado
+    sentido: 1
+    unidad: "% de la población de 18 años y más que identifica a la autoridad"
+    nota: >-
+      Mismo cuadro, fila "Jueces". No distingue jueces locales y federales.

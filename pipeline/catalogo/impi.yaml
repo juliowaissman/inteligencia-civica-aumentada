@@ -1,0 +1,34 @@
+id: impi
+nombre: IMPI en cifras, solicitudes de invenciones de mexicanos por entidad federativa (1993-2025)
+editor: Instituto Mexicano de la Propiedad Industrial (IMPI)
+url: https://www.gob.mx/impi/documentos/instituto-mexicano-de-la-propiedad-industrial-en-cifras-impi-en-cifras
+licencia: Sin licencia declarada (publicado en gob.mx; aplican los términos generales de gob.mx)
+redistribuible: false
+cita: impi_cifras_2026
+niveles: [nacional, estatal]
+descarga: automatica
+estado: verificada
+motivo: >-
+  El archivo es una hoja de Google enlazada desde la página de IMPI en cifras; si el enlace cambia,
+  buscar en esa página el capítulo "Invenciones" y actualizar el id en impi.py. Sin licencia explícita
+  en el archivo; se marca como no redistribuible por precaución (los datos de la APF suelen publicarse
+  bajo los Términos de Libre Uso, conviene confirmarlo).
+indicadores:
+  - id: impi_solicitudes_patente
+    nombre: Solicitudes de patente de mexicanos por entidad federativa del solicitante
+    dimension: 6
+    capa: resultado
+    sentido: 1
+    transformacion: por_100k
+    unidad: solicitudes (conteo absoluto)
+    nota: >-
+      Hoja "Inv 3", columna Patentes de cada año (1993-2025; se omiten los trimestres preliminares de
+      2026). Nacional = renglón "Total", que incluye a mexicanos que radican en el extranjero.
+      Control: Jalisco 242 y Ciudad de México 240 en 2024, como en los boletines del IMPI.
+  - id: impi_solicitudes_invenciones
+    nombre: Solicitudes de invenciones de mexicanos (patentes, diseños industriales, modelos de utilidad y trazados de CI)
+    dimension: 6
+    capa: resultado
+    sentido: 1
+    unidad: solicitudes (conteo absoluto)
+    nota: Columna Total de cada año en la hoja "Inv 3".

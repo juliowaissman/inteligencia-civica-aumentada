@@ -1,0 +1,10 @@
+{
+  "fuente": "gdb",
+  "nombre": "Global Data Barometer, 2.ª edición",
+  "url": "https://globaldatabarometer.org/open-data/",
+  "licencia": "CC BY 4.0",
+  "fecha_acceso": "2026-11-02",
+  "sha256": {
+    "gdb-2024-full-data.csv": "3f624334a5b16f311234f8d895b5e479bfcd392f356dbb33e97b178e2da65e55"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "fuente": "cnge",
+  "nombre": "Censo Nacional de Gobiernos Estatales (CNGE), módulo 1 Administración Pública de la entidad federativa",
+  "url": "https://www.inegi.org.mx/programas/cnge/2025/",
+  "licencia": "Términos de Libre Uso de la Información del INEGI",
+  "fecha_acceso": "2026-11-02",
+  "sha256": {
+    "cnge2025_est_org_rec.xlsx": "247e0ebd4b7c65fb13e85459c17f47128f598b70127a12020557b43cab949069",
+    "conjunto_de_datos_particip_ciudadana_cnge2025_csv.zip": "f2c3c678dddc063e6068c8b94388b4415ddfc8e5b70d9a7ccdb3ddb4c7ad6a5c",
+    "conjunto_de_datos_tramite_servicio_cnge2025_csv.zip": "6a84fee88080f627c2c48b1040f2f7bf65c7123ebc008afa130b5d44188e9427",
+    "conjunto_de_datos_trans_accinfopub_protdatpers_cnge2025_csv.zip": "8197ac9988f6cbbada0c32ccf786cdc3bfeeaa25a0683aa4c93e120cd0480f86",
+    "particip_ciudadana_cnge2023_csv.zip": "0ae536733c08593ea78d1f002525ccf589c05c197e579a62beb3bfc1d3131d13",
+    "particip_ciudadana_cnge2024_csv.zip": "1f371c3a6d4747c7d8287ee4daeea0011ac001ee0d8e0233217c25e2a94c0292",
+    "trans_accinfopub_protdatpers_cnge2023_csv.zip": "1515307098410971415e03fb3acb2309e08a8c334dc3d1b9729e8fb9ad7595b2",
+    "trans_accinfopub_protdatpers_cnge2024_csv.zip": "e7d47653937c8db5608f125596e06af81f85df9d682c4f886d9c0548c89ecfb9"
+  }
+}

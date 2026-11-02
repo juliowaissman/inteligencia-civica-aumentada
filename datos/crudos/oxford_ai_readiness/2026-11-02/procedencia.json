@@ -1,0 +1,11 @@
+{
+  "fuente": "oxford_ai_readiness",
+  "nombre": "Government AI Readiness Index 2025",
+  "url": "https://oxfordinsights.com/ai-readiness/government-ai-readiness-index-2025/",
+  "licencia": "Sin licencia declarada para los datos (pie de página: © 2026 Oxford Insights. All rights reserved)",
+  "fecha_acceso": "2026-11-02",
+  "sha256": {
+    "geonames_countryInfo.txt": "79f8f59ea01cbb40438bf1856dd6c2ff201f03f8fc72d0530b2646aaf603ef04",
+    "government-ai-readiness-index-2025.html": "83cc3fb0a807740ec0cb60299b4d4a73726d9adb219dcd5c59eeb360dc876609"
+  }
+}

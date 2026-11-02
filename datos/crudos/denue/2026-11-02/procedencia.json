@@ -1,0 +1,13 @@
+{
+  "fuente": "denue",
+  "nombre": "Directorio Estadístico Nacional de Unidades Económicas (DENUE), sectores 51 y 54",
+  "url": "https://www.inegi.org.mx/app/descarga/?ti=6",
+  "licencia": "Términos de Libre Uso de la Información del INEGI",
+  "fecha_acceso": "2026-11-02",
+  "sha256": {
+    "denue_00_51_0525_csv.zip": "53aab6cfa5365954839118eaf5f16ca811ea267eba3ceaa8379d13317fea27e9",
+    "denue_00_51_csv.zip": "3ff73da9f2136713669f3fe24df259b8bbc67f478c1b80cd427016aa1169d04a",
+    "denue_00_54_0525_csv.zip": "126f4395a833296fa72a053f204d85c8df15b9bed7d316a241e1de08dc693370",
+    "denue_00_54_csv.zip": "bd4eb1dee2e36efa5a095e3e26eda90a4b484e9f221f226f1f6b7346f7b38bd3"
+  }
+}

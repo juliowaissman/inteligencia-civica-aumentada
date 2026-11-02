@@ -1,0 +1,42 @@
+id: itu
+nombre: Personas con habilidades TIC por tipo de habilidad (ODS 4.4.1)
+editor: Unión Internacional de Telecomunicaciones (UIT), vía la Base de Datos Global de Indicadores ODS (UN DESA)
+url: https://datahub.itu.int/
+licencia: >-
+  ITU DataHub, Disclaimer and Terms of Use: copia, redistribución y adaptación solo con fines no comerciales
+  y con cita; la base ODS de UN DESA no declara una licencia propia
+redistribuible: false
+cita: itu_ictskills
+niveles: [internacional]
+descarga: automatica
+estado: verificada
+motivo: >-
+  datahub.itu.int y su API responden 403 a clientes automáticos, por eso se usa la serie SE_ADT_ACTS de la
+  API ODS de la ONU (unstats.un.org/sdgapi), que publica los datos de la UIT como custodia del 4.4.1, filtrada
+  a ambos sexos, todas las edades y tres tipos de habilidad (básica, estándar, avanzada). Los datos de cada
+  país vienen de su encuesta nacional (México: INEGI, ENDUTIH) y el rango de edad "ALLAGE" no es igual en
+  todos los países (p. ej. 16–74 en Europa; en México la ENDUTIH cubre a la población de 6 años y más,
+  según la nota de la serie), así que la comparación internacional es aproximada. Se descartan los desgloses
+  urbano/rural (Location distinta de ALLAREA). Cobertura dispersa: unos 100 países en total y menos con datos
+  recientes; México tiene 2019–2024. Las notas de la serie dicen que para México la habilidad "fórmulas en
+  hoja de cálculo" se aproxima con "crear hojas de cálculo" y "programar" con "crear o usar bases de datos y
+  programar en lenguaje especializado": no son idénticas a las de otros países. Los códigos M49 se pasan a ISO3 con GeoNames.
+indicadores:
+  - id: itu_copiar_pegar
+    nombre: Personas que usaron copiar y pegar en un documento (habilidad TIC básica)
+    dimension: 1
+    capa: instalada
+    sentido: 1
+    unidad: "% de la población"
+  - id: itu_formula_hoja
+    nombre: Personas que usaron fórmulas aritméticas en una hoja de cálculo (habilidad TIC estándar)
+    dimension: 1
+    capa: instalada
+    sentido: 1
+    unidad: "% de la población"
+  - id: itu_programar
+    nombre: Personas que escribieron un programa en un lenguaje especializado (habilidad TIC avanzada)
+    dimension: 1
+    capa: instalada
+    sentido: 1
+    unidad: "% de la población"

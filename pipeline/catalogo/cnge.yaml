@@ -1,0 +1,131 @@
+id: cnge
+nombre: Censo Nacional de Gobiernos Estatales (CNGE), módulo 1 Administración Pública de la entidad federativa
+editor: Instituto Nacional de Estadística y Geografía (INEGI)
+url: https://www.inegi.org.mx/programas/cnge/2025/
+licencia: Términos de Libre Uso de la Información del INEGI
+redistribuible: true
+cita: inegi_cnge_2025
+niveles: [nacional, estatal]
+descarga: automatica
+estado: verificada
+motivo: ""
+indicadores:
+  - id: cnge_apertura_participacion
+    nombre: La Administración Pública estatal abrió espacios de participación ciudadana (1 = sí, 0 = no)
+    dimension: 4
+    capa: instalada
+    sentido: 1
+    unidad: binaria
+    nota: >-
+      Pregunta VI.1. Datos abiertos, tabla m1s6p1, variable rnsnni1 (1 = Sí -> 1; 2 = No -> 0; 9, 96–98
+      -> faltante). Clave de entidad: cve_ent (2025), enticve1 (2024), cve_entidad (2023). Ediciones
+      2023–2025; cada edición se refiere al año anterior (CNGE 2025 = año 2024). Censo: no tiene
+      error muestral, pero es autorreporte de la administración estatal.
+  - id: cnge_espacios_participacion
+    nombre: Espacios de participación ciudadana abiertos por la Administración Pública estatal (número)
+    dimension: 4
+    capa: instalada
+    sentido: 1
+    unidad: espacios
+    nota: >-
+      Pregunta VI.2. Tabla m1s6p2. Cada registro es un espacio x tema (variable de tema temadmin_g
+      en 2025, temadmin_f en 2024, temadmin_a en 2023), así que el mismo espacio aparece varias
+      veces. Aquí se cuenta cada espacio una vez: número de valores distintos de nombre1 (nombre del
+      espacio, en mayúsculas y sin espacios repetidos) por entidad (cve_ent en 2025; enticve1 en
+      2023–2024). Se excluyen registros con nombre1 = "NO APLICA". Si rnsnni1 = 2 el valor es 0.
+      El nivel nacional es la suma de las 32 entidades. Limitación: dos espacios distintos con el
+      mismo nombre genérico (p. ej. "MESA DE TRABAJO") cuentan como uno. Es un conteo autorreportado
+      muy volátil entre ediciones (Chihuahua 59, 342 y 184 en 2023–2025), así que conviene usarlo
+      con cautela o en rangos.
+  - id: cnge_espacios_deliberacion_cogestion
+    nombre: Espacios de participación con nivel de incidencia de deliberación o cogestión (número)
+    dimension: 4
+    capa: activacion
+    sentido: 1
+    transformacion: por_100k
+    unidad: espacios
+    nota: >-
+      Tabla m1s6p2. Espacios distintos (mismo criterio que cnge_espacios_participacion) con al
+      menos un registro marcado "1" en deliberación o cogestión: nivein4 (Deliberación) o nivein5
+      (Cogestión) en 2025; nincid3 (Deliberación) o nincid4 (Cogestión) en 2023–2024 (en esas
+      ediciones no existe la categoría "Información"). Nivel nacional = suma de las entidades.
+  - id: cnge_registros_espacio_tema
+    nombre: Registros de espacios de participación por tema (espacio x tema, número)
+    dimension: 4
+    capa: instalada
+    sentido: 1
+    unidad: registros
+    nota: >-
+      Tabla m1s6p2, número de filas por entidad sin "NO APLICA" (sin quitar duplicados). Se incluye
+      solo como referencia para mostrar el efecto de quitar duplicados; para el índice conviene usar
+      cnge_espacios_participacion.
+  - id: cnge_solicitudes_info_recibidas
+    nombre: Solicitudes de acceso a la información recibidas por la Administración Pública estatal (número)
+    dimension: 4
+    capa: activacion
+    sentido: 1
+    transformacion: por_100k
+    unidad: solicitudes
+    nota: >-
+      Sección IV, transparencia. Suma de las solicitudes de acceso a la información por medio de
+      recepción: mracpr1–mracpr13 de la tabla m1s4p8 (2025); mracce1–mracce13 de m1s4p8 (2024) y de
+      m1s4p7 (2023). No incluye solicitudes de protección de datos personales. NSS/NA cuentan como
+      faltantes. Control: coincide en las 32 entidades con el cuadro 7 de los tabulados básicos de
+      cada edición (2025: nacional 343 993, Chihuahua 7 836, Sonora 9 370). El nivel nacional es la
+      suma de las entidades; en el tabulado 2024 la fila nacional dice 416 064, 48 menos que la suma
+      de sus propias 32 filas estatales (416 112), una inconsistencia interna del INEGI. Depende del
+      tamaño de la entidad; para comparar, normaliza por población con una fuente citada.
+  - id: cnge_solicitudes_info_respondidas
+    nombre: Solicitudes de acceso a la información respondidas por la Administración Pública estatal (número)
+    dimension: 4
+    capa: instalada
+    sentido: 1
+    unidad: solicitudes
+    nota: >-
+      Variable plares1 ("Solicitudes de acceso a la información respondidas – Total") de la tabla
+      m1s4p12 (2025 y 2024) y m1s4p11 (2023). Control: coincide en las 32 entidades con el cuadro 11
+      de los tabulados (2025: nacional 335 544, Chihuahua 7 796, Sonora 9 218). Puede superar a las
+      recibidas del año porque incluye respuestas a solicitudes de años anteriores (en 2023,
+      nacional 393 822 respondidas contra 360 506 recibidas).
+  - id: cnge_tramites_ofrecidos
+    nombre: Tipos de trámite o servicio del catálogo CNGE que ofrece la Administración Pública estatal (de 24)
+    dimension: 3
+    capa: instalada
+    sentido: 1
+    unidad: tipos de trámite (0–24)
+    nota: >-
+      Sección II, tabla m1s2p1 (CNGE 2025). Número de tipos tramitse_r (24 tipos del catálogo) con
+      rnsnni1 = 1 (sí se ofrece). Solo edición 2025.
+  - id: cnge_tramites_medios_electronicos
+    nombre: Tipos de trámite o servicio que se pueden presentar por medios electrónicos (de 24)
+    dimension: 3
+    capa: instalada
+    sentido: 1
+    unidad: tipos de trámite (0–24)
+    nota: >-
+      Tabla m1s2p1 (CNGE 2025): tipos con rnsnni1 = 1 y medpre2 = 1 ("Medio de presentación –
+      Medios electrónicos"). Mide oferta en línea, no uso.
+  - id: cnge_tramites_transaccionales
+    nombre: Tipos de trámite o servicio con servicio web transaccional (de 24)
+    dimension: 3
+    capa: instalada
+    sentido: 1
+    unidad: tipos de trámite (0–24)
+    nota: >-
+      Tabla m1s2p1 (CNGE 2025): tipos con rnsnni1 = 1 y sewebt3 = 1 ("Tipo de servicio web –
+      Transaccional"), es decir, el trámite puede completarse en línea.
+  - id: cnge_computadoras
+    nombre: Computadoras de las instituciones de la Administración Pública estatal (número)
+    dimension: 3
+    capa: instalada
+    sentido: 1
+    unidad: computadoras
+    nota: >-
+      Tabulado básico CNGE 2025 "Estructura organizacional y recursos", hoja 10 ("Equipo
+      informático ... por nivel de gobierno y entidad federativa según tipo"), filas "Estatal",
+      columna "Computadoras – Total" (equivale a eqinfo1 de la tabla m1s1p5 de datos abiertos). Se
+      usa el tabulado porque en datos abiertos 35 instituciones de la Ciudad de México tienen
+      eqinfo1 = NSS (suma 36 284 contra 81 229 del tabulado); las otras 31 entidades coinciden.
+      Nivel nacional = suma de las 32 entidades (1 180 098); no es la fila "Estados Unidos
+      Mexicanos" del tabulado, que incluye a la Administración Pública Federal. Depende del tamaño
+      del gobierno; normaliza antes de comparar.

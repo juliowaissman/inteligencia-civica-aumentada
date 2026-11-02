@@ -1,0 +1,15 @@
+{
+  "fuente": "envipe",
+  "nombre": "Encuesta Nacional de Victimización y Percepción sobre Seguridad Pública (ENVIPE)",
+  "url": "https://www.inegi.org.mx/programas/envipe/2025/",
+  "licencia": "Términos de Libre Uso de la Información del INEGI",
+  "fecha_acceso": "2026-11-02",
+  "sha256": {
+    "VI_desempeno_institucional_2020_est.xlsx": "99079cc42e5cb7620381bb60964f3cc4fcd3b94538ed9db9de9d3aa8f5181867",
+    "VI_desempeno_institucional_2021_est.xlsx": "089b6c66037ab69046eaf20ee714b43dc6a1b8b14d1c4c00474a6a3114d48bae",
+    "VI_desempeno_institucional_2022_est.xlsx": "eb4232d4d26228628b79d40626982530998ab2dfa0b4dfb82923c33247345d1b",
+    "VI_desempeno_institucional_2023_est.xlsx": "d4384febcfcc7cad61bfc89265721882884ed16f942ac4f00defa6f573b15afb",
+    "VI_desempeno_institucional_2024_est.xlsx": "5083ff754e4f0005b51acea973ace72df38a7eebe86bc29d9cb1182d6e8fe0af",
+    "VI_desempeno_institucional_2025_est.xlsx": "77d857b57cba3f323b5c15f2b19068493a7e4a50983efc4d4e18156040f94e2f"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "fuente": "endutih",
+  "nombre": "Encuesta Nacional sobre Disponibilidad y Uso de Tecnologías de la Información en los Hogares (ENDUTIH)",
+  "url": "https://www.inegi.org.mx/programas/endutih/2025/",
+  "licencia": "Términos de Libre Uso de la Información del INEGI",
+  "fecha_acceso": "2026-11-02",
+  "sha256": {
+    "2020_h2ed110.xlsx": "8383a09b54cf20d6d23dfa8f058f02a66f8aa2097328f304b1ad1689b2fda00b",
+    "2020_u2ed244.xlsx": "671bb474ddd64fd2030455ee228429bb5a0d7d4462578998de88feff18dde181",
+    "2020_uedo550.xlsx": "0c24ce905806972ed5854a9ca01936f700d43499a2e107a6ce1416c11f6b7bb8",
+    "2021_h2ed110.xlsx": "03b19563048c0531937c78ceefe3ff5670d8e63b010ad5d01769dbc5b037c077",
+    "2021_u2ed244.xlsx": "8218b7b4046fcda2eca32f71dbe7fb8212ff7f4b10dd4f474df2c3563bb0810a",
+    "2021_uedo550.xlsx": "f40330676177013a0172b67c3a48948e3382ddc0a6c777b35c74423a4f48ab3d",
+    "2022_h2ed110.xlsx": "0d1a712dbefa83f611b22cc928aa67294b1ec8e9d78ce42f38f4dee402c0ce84",
+    "2022_u2ed244.xlsx": "91c9431c3768c5a4c833cb132854de38e1e27ae5644ae4262d7655d79dc3e3c6",
+    "2022_uedo550.xlsx": "b59f0701e37f1f64ae05bdba5265cc90bcea6dbab47b09c2ee9eed02d5a7edfe",
+    "2023_h2ed110.xlsx": "b1c3f454db55650a19a07fc4fd0ae3638032c80001b5770d066eb28e2236f867",
+    "2023_u2ed244.xlsx": "9d7d7752c81a0793a5d995f13681530054ec08b0c9aa7da7c3db75383b1f175a",
+    "2023_uedo550.xlsx": "2758fd1e3a4b42256bc01ca9307478f1b93c5f98dee8fc49998be85c48a163e1",
+    "2024_h2ed110.xlsx": "5c68752bcb5e5584596d0ecd42d368e55a0ec2be0b41c7660d3154ac704a7122",
+    "2024_u2ed244.xlsx": "9182a28a8edeb84cdd028fa943a1bfe40a9ae671f4810ee2853177889c20ef1d",
+    "2024_uedo550.xlsx": "a7f820de5920c9fb6eb412b85966f216a7e7c2a51aea2ad20dfbeea1fe5a8b68",
+    "2025_h2ed110.xlsx": "d98338a293507a2d76fa876b9c75a84aa828b2032c1441a58759efcf8214c425",
+    "2025_u2ed244.xlsx": "96e4631e38e23edf30fe12151f09b8e2d9eda86aeb55ba47af693e69507c9e2b",
+    "2025_uedo550.xlsx": "22be0b303c1ffbf62d0f4075e1b4c770bdd82319917db48a243fe17267ab56cf"
+  }
+}

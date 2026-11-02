@@ -1,0 +1,49 @@
+id: onu_egov
+nombre: United Nations E-Government Survey (EGDI y subíndices), 2003–2024
+editor: Naciones Unidas, Departamento de Asuntos Económicos y Sociales (UN DESA)
+url: https://publicadministration.un.org/egovkb/en-us/data-center
+licencia: "Términos de uso del sitio de la ONU (https://www.un.org/en/about-us/terms-of-use): descarga y copia para uso personal y no comercial, sin derecho a revender ni redistribuir"
+redistribuible: false
+cita: undesa_egov2024
+niveles: [internacional]
+descarga: automatica
+estado: verificada
+motivo: >-
+  Descarga por postback ASP.NET del botón "Download Data" del Data Center (un CSV por
+  edición con los 193 Estados miembros). Control: México 2024 EGDI = 0.78499 (publicado
+  0.7850), lugar 65. Los nombres de país se convierten a ISO3 con un diccionario explícito
+  en el módulo; las ediciones no son estrictamente comparables entre sí por cambios de
+  metodología.
+indicadores:
+  - id: egov_egdi
+    nombre: Índice de Desarrollo del Gobierno Electrónico (EGDI)
+    dimension: 3
+    capa: instalada
+    sentido: 1
+    unidad: índice 0–1
+    nota: Promedio de OSI, TII y HCI. Se ubica en la dimensión 3 por su componente de gobierno digital.
+  - id: egov_epi
+    nombre: Índice de E-Participación (EPI)
+    dimension: 4
+    capa: activacion
+    sentido: 1
+    unidad: índice 0–1
+    nota: E-información, e-consulta y e-toma de decisiones en portales nacionales.
+  - id: egov_osi
+    nombre: Índice de Servicios en Línea (OSI)
+    dimension: 3
+    capa: instalada
+    sentido: 1
+    unidad: índice 0–1
+  - id: egov_hci
+    nombre: Índice de Capital Humano (HCI, componente del EGDI)
+    dimension: 1
+    capa: instalada
+    sentido: 1
+    unidad: índice 0–1
+  - id: egov_tii
+    nombre: Índice de Infraestructura de Telecomunicaciones (TII)
+    dimension: 3
+    capa: instalada
+    sentido: 1
+    unidad: índice 0–1

@@ -1,0 +1,25 @@
+id: microsoft_ai_diffusion
+nombre: Global AI Diffusion (Q2 2026)
+editor: Microsoft AI Economy Institute (AI for Good Lab)
+url: https://github.com/microsoft/ai-diffusion-report
+licencia: MIT (repositorio microsoft/ai-diffusion-report)
+redistribuible: true
+cita: microsoft_aidiffusion2026
+niveles: [internacional]
+descarga: automatica
+estado: verificada
+motivo: >-
+  CSV data/AI_Diffusion_Q22026_Update.csv con 147 economías y cuatro periodos (H1 2025, H2 2025,
+  Q1 2026 y Q2 2026). Los periodos son semestres o trimestres, no años, así que solo se usa el más
+  reciente (Q2 2026). Los periodos anteriores no se cargan porque se revisan en cada publicación y
+  no corresponden a años calendario. Es una estimación basada en telemetría agregada de Microsoft,
+  ajustada por cuota de mercado de dispositivos, penetración de internet y población. Los nombres de
+  país se pasan a ISO3 con GeoNames y siete alias explícitos. Microsoft pide citar a Misra et al.
+  (2025), arXiv:2511.02781, y enlazar el conjunto de datos.
+indicadores:
+  - id: ms_difusion_ia
+    nombre: Difusión de la IA (personas de 15–64 años que usaron IA generativa en el periodo)
+    dimension: 3
+    capa: activacion
+    sentido: 1
+    unidad: "% de la población en edad de trabajar"

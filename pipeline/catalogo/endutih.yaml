@@ -1,0 +1,56 @@
+id: endutih
+nombre: Encuesta Nacional sobre Disponibilidad y Uso de Tecnologías de la Información en los Hogares (ENDUTIH)
+editor: Instituto Nacional de Estadística y Geografía (INEGI)
+url: https://www.inegi.org.mx/programas/endutih/2025/
+licencia: Términos de Libre Uso de la Información del INEGI
+redistribuible: true
+cita: inegi_endutih_2025
+niveles: [nacional, estatal]
+descarga: automatica
+estado: verificada
+motivo: ""
+indicadores:
+  - id: endutih_internet
+    nombre: Personas usuarias de internet (% de la población de 6 años y más)
+    dimension: 1
+    capa: instalada
+    sentido: 1
+    unidad: "%"
+    nota: >-
+      Tabulado INEGI <año>_uedo550 ("Personas usuarias de tecnologías de la información, por
+      entidad federativa"), columna "Personas usuarias de internet – Por ciento". Ediciones
+      2020–2025 (cifras de septiembre; en 2020, octubre). Estimación publicada por el INEGI con
+      factor de expansión ya aplicado. Control: nacional 2024 = 83.12 % y 2023 = 81.18 %, iguales a la
+      serie (83.1 y 81.2) de la presentación de resultados ENDUTIH 2024 del INEGI
+      (contenidos/programas/endutih/2024/doc/presentacion_endutih2024.pdf). En 2020 el tabulado
+      indica cifras de octubre; en 2021–2025, de septiembre.
+  - id: endutih_hogares_computadora
+    nombre: Hogares que disponen de computadora (%)
+    dimension: 1
+    capa: instalada
+    sentido: 1
+    unidad: "% de hogares"
+    nota: >-
+      Tabulado INEGI <año>_h2ed110 ("Hogares con equipamiento de tecnología de información y
+      comunicaciones, por entidad federativa, según tipo de tecnología"), columna
+      "Computadora – Por ciento".
+  - id: endutih_hogares_internet
+    nombre: Hogares que disponen de internet (%)
+    dimension: 1
+    capa: instalada
+    sentido: 1
+    unidad: "% de hogares"
+    nota: >-
+      Tabulado INEGI <año>_h2ed110, columna "Internet – Por ciento".
+  - id: endutih_internet_gobierno
+    nombre: Personas usuarias de internet que lo usan para interactuar con el gobierno (%)
+    dimension: 3
+    capa: activacion
+    sentido: 1
+    unidad: "% de personas usuarias de internet"
+    nota: >-
+      Tabulado INEGI <año>_u2ed244 ("Personas usuarias de internet, por entidad federativa, según
+      principales usos"), columna "Para interactuar con el gobierno – Por ciento". La base es la
+      población usuaria de internet de 6 años y más (no la población total). Pregunta de opción
+      múltiple. El nivel salta en 2021 (42 %) y baja después; conviene no leer la serie como
+      tendencia sin revisar el cuestionario de cada edición.

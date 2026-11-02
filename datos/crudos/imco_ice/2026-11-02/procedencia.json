@@ -1,0 +1,10 @@
+{
+  "fuente": "imco_ice",
+  "nombre": "Índice de Competitividad Estatal (ICE), base de datos edición 2022 (serie 2003-2022)",
+  "url": "https://indices.imco.org.mx/competitividad-estatal",
+  "licencia": "© IMCO A.C., derechos reservados (no declara licencia abierta)",
+  "fecha_acceso": "2026-11-02",
+  "sha256": {
+    "ICE_2022_base_de_datos.xlsx": "c03788005b3c6925441dd1d6b472f76889c8a646831c240d14d09f378a6d3dfe"
+  }
+}

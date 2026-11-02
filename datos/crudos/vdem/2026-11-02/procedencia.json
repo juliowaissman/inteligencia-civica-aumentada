@@ -1,0 +1,10 @@
+{
+  "fuente": "vdem",
+  "nombre": "V-Dem Country-Year Dataset v16 (componentes participativo, deliberativo, sociedad civil e igualitario)",
+  "url": "https://www.v-dem.net/data/the-v-dem-dataset/",
+  "licencia": "CC BY-SA 4.0",
+  "fecha_acceso": "2026-11-02",
+  "sha256": {
+    "vdem.RData": "39b412d39a061c18f20c98e4ad4d6355b05a0441df31be4ee9aec420dc3d95ea"
+  }
+}

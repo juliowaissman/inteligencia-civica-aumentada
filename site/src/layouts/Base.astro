@@ -1,0 +1,95 @@
+---
+import "../styles/global.css";
+interface Props { titulo: string; descripcion?: string }
+const { titulo, descripcion = "Inteligencia Cívica Aumentada: concepto, modelo e índices parciales con datos abiertos." } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const menu = [
+  ["propuesta/", "La propuesta"],
+  ["internacional/", "Internacional"],
+  ["nacional/", "Nacional"],
+  ["estatal/", "Estatal"],
+  ["metodologia/", "Metodología"],
+  ["datos/", "Datos y código"],
+  ["referencias/", "Referencias"],
+];
+const actual = Astro.url.pathname;
+---
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{titulo} · Inteligencia Cívica Aumentada</title>
+  <meta name="description" content={descripcion} />
+  <link rel="icon" href={`${base}favicon.svg`} type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <script is:inline>
+    try { const t = localStorage.getItem("tema"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+</head>
+<body>
+  <a href="#contenido" class="saltar">Saltar al contenido</a>
+  <div class="franja" aria-hidden="true"></div>
+  <header class="cabecera">
+    <div class="contenedor fila">
+      <a class="marca" href={base}>
+        <span class="marca-icono" aria-hidden="true">ICA</span>
+        <span>Inteligencia Cívica Aumentada</span>
+      </a>
+      <button class="tema" type="button" aria-label="Cambiar tema claro u oscuro" id="tema">◐</button>
+      <nav aria-label="Principal">
+        <ul>
+          {menu.map(([href, txt]) => (
+            <li><a href={`${base}${href}`} aria-current={actual.endsWith(href) ? "page" : undefined}>{txt}</a></li>
+          ))}
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="contenido" class="contenedor">
+    <slot />
+  </main>
+  <footer class="pie">
+    <div class="contenedor">
+      <p>
+        Sitio académico independiente sobre la ponencia de Ricardo Zenteno Fernández
+        (XXXVII Congreso Internacional de Estudios Electorales, SOMEE 2026) y los índices parciales
+        desarrollados con <strong>la colaboración de la Maestría en Ciencia de Datos de la Universidad de Sonora</strong>.
+      </p>
+      <p class="nota">
+        <a href={`${base}creditos/`}>Créditos</a> ·
+        <a href="https://github.com/juliowaissman/inteligencia-civica-aumentada">Código y datos en GitHub</a> ·
+        No es un sitio oficial del Instituto Estatal Electoral de Chihuahua.
+      </p>
+    </div>
+  </footer>
+  <script is:inline>
+    document.getElementById("tema").addEventListener("click", () => {
+      const r = document.documentElement;
+      const oscuro = r.dataset.theme ? r.dataset.theme === "dark"
+        : matchMedia("(prefers-color-scheme: dark)").matches;
+      r.dataset.theme = oscuro ? "light" : "dark";
+      try { localStorage.setItem("tema", r.dataset.theme); } catch (e) {}
+    });
+  </script>
+  <style>
+    .saltar { position: absolute; left: -999px; }
+    .saltar:focus { left: 16px; top: 8px; background: var(--fondo); padding: 0.4em 0.8em; z-index: 10; }
+    .cabecera { border-bottom: 1px solid var(--borde); background: var(--fondo); position: sticky; top: 0; z-index: 5; }
+    .fila { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem 1rem; padding-top: 0.7rem; padding-bottom: 0.7rem; }
+    .marca { display: flex; align-items: center; gap: 0.6rem; font-weight: 800; color: var(--primario); text-decoration: none; margin-right: auto; }
+    .marca-icono { display: grid; place-items: center; width: 2.2rem; height: 2.2rem; border-radius: 10px; font-size: 0.75rem;
+      background: linear-gradient(135deg, var(--azul), var(--magenta)); color: #fff; letter-spacing: 0.04em; }
+    .tema { order: 2; background: none; border: 1px solid var(--borde); color: var(--texto); border-radius: 999px; width: 2.2rem; height: 2.2rem; cursor: pointer; }
+    nav { order: 3; width: 100%; }
+    nav ul { list-style: none; display: flex; flex-wrap: wrap; gap: 0.2rem 1rem; margin: 0; padding: 0; }
+    nav a { color: var(--texto); text-decoration: none; font-weight: 600; font-size: 0.95rem; padding: 0.2em 0; border-bottom: 2px solid transparent; }
+    nav a[aria-current="page"], nav a:hover { border-bottom-color: var(--acento); color: var(--primario); }
+    @media (min-width: 980px) { nav { width: auto; order: 1; } .tema { order: 3; } }
+    main { padding-top: 1.5rem; padding-bottom: 3rem; }
+    .pie { border-top: 1px solid var(--borde); background: var(--fondo-suave); padding: 1.5rem 0; font-size: 0.95rem; }
+  </style>
+</body>
+</html>

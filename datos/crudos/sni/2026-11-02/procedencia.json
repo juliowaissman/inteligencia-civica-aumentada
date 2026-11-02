@@ -1,0 +1,10 @@
+{
+  "fuente": "sni",
+  "nombre": "Sistema Nacional de Investigadoras e Investigadores (SNII), padrón vigente S191, 2.º semestre de 2025",
+  "url": "https://www.datos.gob.mx/dataset/sistema_nacional_investigadoras_investigadores_snii_s191",
+  "licencia": "CC BY 4.0",
+  "fecha_acceso": "2026-11-02",
+  "sha256": {
+    "s191_snii_2s_2025.csv": "5463c078b8d6f30360de307d90d1ecb8b5c056f9c850156addf83c1b663298c6"
+  }
+}

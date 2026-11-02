@@ -1,0 +1,21 @@
+{
+  "fuente": "onu_egov",
+  "nombre": "United Nations E-Government Survey (EGDI y subíndices), 2003–2024",
+  "url": "https://publicadministration.un.org/egovkb/en-us/data-center",
+  "licencia": "Términos de uso del sitio de la ONU (https://www.un.org/en/about-us/terms-of-use): descarga y copia para uso personal y no comercial, sin derecho a revender ni redistribuir",
+  "fecha_acceso": "2026-11-02",
+  "sha256": {
+    "EGOV_DATA_2003.csv": "78438cc63b162194fcebcb7af338e73d75728eb12366eff95f0d97359e8d8850",
+    "EGOV_DATA_2004.csv": "7810b71a8e93fee0acb101252e790a99e655acffdb8e7532e2829770e5cb75ee",
+    "EGOV_DATA_2005.csv": "2b44a9665383ffc51279dbcd34e9189f21613467d78627440f26138f7208230e",
+    "EGOV_DATA_2008.csv": "532e43d9dfe9961010d8fa4afd059d72d9a2958b823a46493440bde3af506e8e",
+    "EGOV_DATA_2010.csv": "34b8fcd5c74e7c90198acf1c718aba16b63b31d58307e435a7235c9320b65aa2",
+    "EGOV_DATA_2012.csv": "d506ba4f317430eccc9b7b380bcb1a2d0944c2103682fcd7cda7a10b8b7cdb80",
+    "EGOV_DATA_2014.csv": "5fe03917047d7280f070f1e6c5a39631a1a23197a10a319d176cb1a8cca9f6b1",
+    "EGOV_DATA_2016.csv": "3c2cb7f78d46a570f6e9d9d3877c89f9fc2d62c6358f3b37d537527326ff839c",
+    "EGOV_DATA_2018.csv": "784baba36912a7286ad6e0eb435d330831fc322c6aae7ec21beb43b0d766ea1a",
+    "EGOV_DATA_2020.csv": "0cbe150f218788fca83fc7a3d5e269ba52b9fc982a11361aa86c97658c6c8c3a",
+    "EGOV_DATA_2022.csv": "159cf2dcd38b3ce2cb7aa447425e81468bf095610953bd4aa9462376bcc5a935",
+    "EGOV_DATA_2024.csv": "7ef0ff65d9e4623c6fa9a2e4b9cf7a926b8ee227cfb611a04e39cefa3e9be3b5"
+  }
+}

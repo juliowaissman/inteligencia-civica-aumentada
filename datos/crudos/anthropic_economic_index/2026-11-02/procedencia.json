@@ -1,0 +1,10 @@
+{
+  "fuente": "anthropic_economic_index",
+  "nombre": "Anthropic Economic Index (uso de Claude por país)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex",
+  "licencia": "CC BY (data_documentation.md de la publicación 2026-06-26); la ficha del repositorio en Hugging Face declara MIT",
+  "fecha_acceso": "2026-11-02",
+  "sha256": {
+    "aei_claude_ai_2026-06-26.csv": "f974b358bce0e5a8417510c61da4342234cd0de9d9d0b62acf4c6dbcf8ec7b68"
+  }
+}

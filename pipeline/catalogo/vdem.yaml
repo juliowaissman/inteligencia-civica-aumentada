@@ -1,0 +1,50 @@
+id: vdem
+nombre: V-Dem Country-Year Dataset v16 (componentes participativo, deliberativo, sociedad civil e igualitario)
+editor: Varieties of Democracy (V-Dem) Institute, Universidad de Gotemburgo
+url: https://www.v-dem.net/data/the-v-dem-dataset/
+licencia: CC BY-SA 4.0
+redistribuible: true
+cita: vdem_v16
+niveles: [internacional]
+descarga: automatica
+estado: verificada
+motivo: >-
+  El CSV del sitio de V-Dem se entrega tras un formulario (correo, aceptación de la
+  política de privacidad y campo anti-bots). La descarga automática usa vdem.RData del
+  paquete oficial de R vdemdata v16.0, publicado por el V-Dem Institute en GitHub
+  (commit f4dd269, "v16 release"), que contiene el Country-Year completo v16. Leerlo
+  requiere pyreadr (no está entre las dependencias; ejecutar con `uv run --with pyreadr`).
+  Alternativa manual: ver instrucciones.
+instrucciones: >-
+  (Solo si no se agrega pyreadr.) 1) Abrir
+  https://www.v-dem.net/data/the-v-dem-dataset/country-year-v-dem-core-v16/ ; 2) en
+  "Download", elegir formato CSV, aceptar la política de privacidad (correo y género son
+  opcionales) y pulsar Download; 3) guardar el .zip tal cual (nombre que empiece con
+  V-Dem-CY-Core) en datos/crudos/vdem/AAAA-MM-DD/ ; procesar lo detecta automáticamente.
+indicadores:
+  - id: vdem_partip
+    nombre: Índice del componente participativo (v2x_partip)
+    dimension: 4
+    capa: instalada
+    sentido: 1
+    unidad: índice 0–1
+    nota: Participación activa de la ciudadanía en procesos políticos, electorales y no electorales.
+  - id: vdem_delib
+    nombre: Índice del componente deliberativo (v2xdl_delib)
+    dimension: 1
+    capa: activacion
+    sentido: 1
+    unidad: índice 0–1
+  - id: vdem_cspart
+    nombre: Índice de participación de la sociedad civil (v2x_cspart)
+    dimension: 2
+    capa: activacion
+    sentido: 1
+    unidad: índice 0–1
+  - id: vdem_egal
+    nombre: Índice del componente igualitario (v2x_egal)
+    dimension: 5
+    capa: resultado
+    sentido: 1
+    unidad: índice 0–1
+    nota: Igualdad en protección de derechos y en distribución de recursos (inclusión).

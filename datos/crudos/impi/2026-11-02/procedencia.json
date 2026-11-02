@@ -1,0 +1,10 @@
+{
+  "fuente": "impi",
+  "nombre": "IMPI en cifras, solicitudes de invenciones de mexicanos por entidad federativa (1993-2025)",
+  "url": "https://www.gob.mx/impi/documentos/instituto-mexicano-de-la-propiedad-industrial-en-cifras-impi-en-cifras",
+  "licencia": "Sin licencia declarada (publicado en gob.mx; aplican los términos generales de gob.mx)",
+  "fecha_acceso": "2026-11-02",
+  "sha256": {
+    "impi_en_cifras_invenciones.xlsx": "1612a8d38f58f39670c396913a383a92e3e4d45417a860b0a92bf580d7de256f"
+  }
+}

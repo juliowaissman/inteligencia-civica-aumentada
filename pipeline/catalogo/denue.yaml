@@ -1,0 +1,31 @@
+id: denue
+nombre: Directorio Estadístico Nacional de Unidades Económicas (DENUE), sectores 51 y 54
+editor: Instituto Nacional de Estadística y Geografía (INEGI)
+url: https://www.inegi.org.mx/app/descarga/?ti=6
+licencia: Términos de Libre Uso de la Información del INEGI
+redistribuible: true
+cita: inegi_denue_2026
+niveles: [nacional, estatal]
+descarga: automatica
+estado: verificada
+indicadores:
+  - id: denue_5415
+    nombre: Establecimientos en la rama SCIAN 5415 (servicios de diseño de sistemas de cómputo y servicios relacionados)
+    dimension: 6
+    capa: instalada
+    sentido: 1
+    transformacion: por_100k
+    unidad: establecimientos (conteo absoluto)
+    nota: >-
+      Conteo de registros del DENUE con codigo_act que empieza en 5415, por cve_ent. Cortes de mayo de
+      2025 y mayo de 2026 (el archivo vigente; su año se lee de los metadatos). El DENUE cubre
+      establecimientos activos con domicilio fijo; no capta trabajo independiente sin establecimiento.
+  - id: denue_5182
+    nombre: Establecimientos en la rama SCIAN 5182 (procesamiento electrónico de información, hospedaje y otros servicios relacionados)
+    dimension: 6
+    capa: instalada
+    sentido: 1
+    unidad: establecimientos (conteo absoluto)
+    nota: >-
+      Mismo tratamiento que denue_5415, con el archivo del sector 51 (codigo_act 5182*). Rama muy
+      pequeña: varias entidades no tienen ningún registro y se reportan con 0.

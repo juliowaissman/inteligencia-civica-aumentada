@@ -1,0 +1,49 @@
+id: latinobarometro
+nombre: Latinobarómetro (opinión pública, 18 países de América Latina, 1995–2026)
+editor: Corporación Latinobarómetro
+url: https://www.latinobarometro.org/
+licencia: Sin licencia declarada (uso sujeto a las condiciones del sitio)
+redistribuible: false
+cita: latinobarometro2026
+niveles: [internacional]
+descarga: manual
+estado: candidata
+motivo: >-
+  Solo se revisó el acceso. El sitio es una aplicación web sin enlaces directos a los
+  microdatos (la página carga su contenido con JavaScript); históricamente la descarga
+  de bases pide registro en "Documentación y Datos" (no se pudo confirmar por script) y no
+  se encontró licencia de redistribución. No hay ruta automatizada y
+  compatible con la licencia, así que no se escribió módulo.
+instrucciones: >-
+  1) Entrar a https://www.latinobarometro.org/ > Documentación y Datos. 2) Registrarse si
+  se pide y aceptar las condiciones de uso (guardar copia del texto). 3) Descargar las
+  bases anuales (formato .dta o .sav) de las oleadas deseadas, al menos las más recientes
+  y una serie desde 2002. 4) Guardarlas sin renombrar en
+  datos/crudos/latinobarometro/AAAA-MM-DD/. 5) Alternativa sin microdatos: en "Plataforma
+  de análisis online" exportar las tablas por país de las preguntas indicadas abajo.
+  Variables recomendadas (el código cambia por oleada; buscar por texto en el
+  cuestionario): (a) apoyo a la democracia, "La democracia es preferible a cualquier otra
+  forma de gobierno" (% que la elige); (b) confianza en las elecciones / en el organismo
+  electoral ("Confianza en el Instituto/Tribunal Electoral", % mucha + algo) y elecciones
+  limpias vs. fraudulentas; (c) participación: firmar peticiones, asistir a
+  manifestaciones autorizadas, trabajar por un partido o candidato, contactar a
+  autoridades. Calcular porcentajes con el factor de expansión (wt) de cada base.
+indicadores:
+  - id: lb_apoyo_democracia
+    nombre: Apoyo a la democracia (% que prefiere la democracia)
+    dimension: 5
+    capa: resultado
+    sentido: 1
+    unidad: "%"
+  - id: lb_confianza_electoral
+    nombre: Confianza en el organismo electoral (% mucha o algo)
+    dimension: 5
+    capa: resultado
+    sentido: 1
+    unidad: "%"
+  - id: lb_participacion
+    nombre: Participación política no electoral (% que firmó peticiones o asistió a manifestaciones)
+    dimension: 2
+    capa: activacion
+    sentido: 1
+    unidad: "%"

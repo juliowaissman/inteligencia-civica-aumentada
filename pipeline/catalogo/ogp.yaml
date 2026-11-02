@@ -1,0 +1,40 @@
+id: ogp
+nombre: Open Government Partnership, bases de compromisos y de proceso de los miembros nacionales
+editor: Open Government Partnership (OGP), Independent Reporting Mechanism (IRM)
+url: https://www.opengovpartnership.org/data-dashboard/
+licencia: Sin licencia confirmada
+redistribuible: false
+cita: ogp_datos
+niveles: [internacional]
+descarga: manual
+estado: candidata
+motivo: >-
+  opengovpartnership.org responde 403 (Cloudflare) a toda petición automatizada y
+  data.opengovpartnership.org no resuelve. Según el sitio, OGP publica una National
+  Commitment Database (compromisos nacionales desde 2011), una base de proceso y una
+  Open Government database como Google Sheets/Excel/CSV, pero no se pudieron leer los
+  enlaces. Además solo cubre países miembros (~75), así que el número de planes y
+  compromisos no es comparable con no miembros: usarlo solo como indicador de
+  activación entre miembros.
+instrucciones: >-
+  1) En un navegador abrir https://www.opengovpartnership.org/open-data/ (o
+  https://www.opengovpartnership.org/data-dashboard/). 2) Descargar en CSV la "National
+  Commitment Database" y la base de proceso ("Process database"), más el documento de
+  definiciones de indicadores. 3) Anotar la licencia o términos de uso que aparezcan en
+  la página. 4) Guardar los archivos sin renombrar en datos/crudos/ogp/AAAA-MM-DD/.
+  5) Comprobar que México aparece (miembro fundador, 2011) y avisar para escribir
+  src/iica/fuentes/ogp.py con: número de planes de acción y número de compromisos por
+  país y año (dimensión 4, capa activacion), con códigos ISO3.
+indicadores:
+  - id: ogp_compromisos
+    nombre: Número de compromisos de gobierno abierto en planes de acción nacionales
+    dimension: 4
+    capa: activacion
+    sentido: 1
+    unidad: conteo
+  - id: ogp_planes
+    nombre: Número de planes de acción nacionales presentados
+    dimension: 4
+    capa: activacion
+    sentido: 1
+    unidad: conteo

@@ -1,0 +1,10 @@
+{
+  "fuente": "dsp",
+  "nombre": "Digital Society Project Dataset v8",
+  "url": "https://digitalsocietyproject.org/data/",
+  "licencia": "All rights reserved (Copyright © 2026 Digital Society Project); descarga gratuita con cita",
+  "fecha_acceso": "2026-11-02",
+  "sha256": {
+    "DigitalSocietyProject-v8-CSV.zip": "65eab701d94e2ffd4c9637dcd3465cf73e8494f1e9c676785c84675aaef6b8ac"
+  }
+}

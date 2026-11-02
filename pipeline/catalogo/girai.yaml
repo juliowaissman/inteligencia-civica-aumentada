@@ -1,0 +1,55 @@
+id: girai
+nombre: Global Index on Responsible AI (GIRAI), 2.ª edición 2026
+editor: Global Center on AI Governance
+url: https://www.global-index.ai/
+licencia: CC BY 4.0
+redistribuible: true
+cita: girai2026
+niveles: [internacional]
+descarga: automatica
+estado: verificada
+motivo: >-
+  135 países y jurisdicciones. La descarga del conjunto completo ("Download Data") exige llenar un
+  formulario (POST /api/data-download), por lo que no se automatiza. Los puntajes por país (global,
+  cinco dimensiones, tres pilares e indicadores) vienen incrustados como JSON en la página pública
+  del índice; se descarga esa página y se leen tal cual. Si el sitio cambia de formato, procesar()
+  falla en lugar de inventar valores. Opcional: obtener el archivo oficial por el formulario y
+  cotejar. La licencia CC BY 4.0 es la que el sitio declara junto al formulario de descarga.
+indicadores:
+  - id: girai_total
+    nombre: Puntaje GIRAI (global)
+    dimension: 3
+    capa: instalada
+    sentido: 1
+    unidad: puntaje 0–100
+    nota: Campo "girai" (ya incluye la penalización por sistemas de IA de riesgo inaceptable).
+  - id: girai_inclusion
+    nombre: GIRAI – Inclusión y diversidad
+    dimension: 3
+    capa: instalada
+    sentido: 1
+    unidad: puntaje 0–100
+  - id: girai_etica
+    nombre: GIRAI – Ética y sostenibilidad
+    dimension: 3
+    capa: instalada
+    sentido: 1
+    unidad: puntaje 0–100
+  - id: girai_trabajo
+    nombre: GIRAI – Trabajo y habilidades
+    dimension: 3
+    capa: instalada
+    sentido: 1
+    unidad: puntaje 0–100
+  - id: girai_confianza
+    nombre: GIRAI – Confianza y seguridad
+    dimension: 3
+    capa: instalada
+    sentido: 1
+    unidad: puntaje 0–100
+  - id: girai_sector_publico
+    nombre: GIRAI – Uso de IA en servicios públicos
+    dimension: 3
+    capa: activacion
+    sentido: 1
+    unidad: puntaje 0–100

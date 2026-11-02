@@ -1,0 +1,11 @@
+{
+  "fuente": "idd_mex",
+  "nombre": "Índice de Desarrollo Democrático de México (IDD-Mex), ediciones 2010-2024",
+  "url": "https://idd-mex.org/",
+  "licencia": "Sin licencia abierta: prohíbe la reproducción total o parcial sin citar la fuente o sin autorización de los titulares",
+  "fecha_acceso": "2026-11-02",
+  "sha256": {
+    "rankings-2024.html": "9bc122ac5d6b175d28655708d3671916339dac01fbbd15f4813e1fe1b4fed7af",
+    "series_idd_mex_2010_2020.xlsx": "0afd1d729d335f3bda204b878bef647f79501340a352cdc8a36e6d49398c152d"
+  }
+}

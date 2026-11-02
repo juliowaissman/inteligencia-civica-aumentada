@@ -1,0 +1,50 @@
+id: lapop
+nombre: AmericasBarometer (LAPOP Lab / Center for Global Democracy, Vanderbilt)
+editor: LAPOP Lab, Center for Global Democracy (CGD), Universidad Vanderbilt
+url: https://www.vanderbilt.edu/lapop/free-access.php
+licencia: "Acuerdo de uso de CGD/LAPOP: archivos gratuitos, pero prohibido compartir los archivos de datos (incluso con revistas)"
+redistribuible: false
+cita: lapop_americasbarometer
+niveles: [internacional]
+descarga: manual
+estado: candidata
+motivo: >-
+  Solo se revisó el acceso. Los microdatos son gratuitos pero se descargan por país y
+  ronda desde datasets.americasbarometer.org bajo un acuerdo de uso que prohíbe
+  redistribuir los archivos; el Data Playground (https://www.vanderbilt.edu/cgd/data-playground/)
+  exporta agregados de forma interactiva. No hay ruta automatizada y compatible con la
+  licencia, así que no se escribió módulo. Los agregados calculados por nosotros sí
+  podrían publicarse citando la fuente, pero no los archivos crudos.
+instrucciones: >-
+  1) Abrir https://www.vanderbilt.edu/cgd/data-access/ (o
+  http://datasets.americasbarometer.org/database/) y aceptar el acuerdo de uso. 2)
+  Descargar los archivos .dta por país y ronda (México y los países de comparación;
+  rondas 2004–2023 o la más reciente). 3) Guardarlos sin renombrar en
+  datos/crudos/lapop/AAAA-MM-DD/ (no versionarlos en git ni publicarlos). 4) Alternativa:
+  en el Data Playground elegir la variable, todos los países y la ronda, y exportar el
+  CSV agregado; guardar también una captura con fecha. Variables recomendadas: ING4
+  (apoyo a la democracia: "La democracia puede tener problemas, pero es mejor que
+  cualquier otra forma de gobierno", % 5–7 en escala 1–7); B47A (confianza en las
+  elecciones, % 5–7); participación: CP8 (asistencia a reuniones de comité o junta de
+  mejoras de la comunidad), CP13 (reuniones de partido o movimiento político), PROT3
+  (participación en manifestación o protesta) y VB2 (votó en la última elección
+  presidencial). Usar el peso `weight1500`/`wt` y el diseño muestral.
+indicadores:
+  - id: lapop_ing4
+    nombre: Apoyo a la democracia (ING4, % de acuerdo 5–7)
+    dimension: 5
+    capa: resultado
+    sentido: 1
+    unidad: "%"
+  - id: lapop_b47a
+    nombre: Confianza en las elecciones (B47A, % 5–7)
+    dimension: 5
+    capa: resultado
+    sentido: 1
+    unidad: "%"
+  - id: lapop_cp8
+    nombre: Participación en reuniones de mejora comunitaria (CP8, % al menos una vez al año)
+    dimension: 2
+    capa: activacion
+    sentido: 1
+    unidad: "%"

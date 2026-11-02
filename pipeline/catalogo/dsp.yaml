@@ -1,0 +1,50 @@
+id: dsp
+nombre: Digital Society Project Dataset v8
+editor: Digital Society Project (V-Dem Institute y colaboradores)
+url: https://digitalsocietyproject.org/data/
+licencia: "All rights reserved (Copyright © 2026 Digital Society Project); descarga gratuita con cita"
+redistribuible: false
+cita: dsp_v8
+niveles: [internacional]
+descarga: automatica
+estado: verificada
+motivo: >-
+  CSV país-año 2000–2025 de 179 países (DSP_CY_v8.csv dentro del zip). Se usan las estimaciones
+  puntuales del modelo de medición bayesiano (escala latente, sin sufijo _osp/_ord). En todas las
+  variables elegidas un valor mayor corresponde a la respuesta más favorable según el libro de
+  códigos v8. Se excluyen PSG (Gaza), SML (Somalilandia) y ZZB (Zanzíbar), códigos propios de V-Dem
+  sin equivalente ISO3. La licencia no permite redistribuir: los crudos no deben publicarse en el sitio.
+indicadores:
+  - id: dsp_ciberseguridad_gob
+    nombre: Capacidad de ciberseguridad del gobierno (v2smgovcapsec)
+    dimension: 3
+    capa: instalada
+    sentido: 1
+    unidad: estimación del modelo de medición (escala latente)
+  - id: dsp_capacidad_regulacion
+    nombre: Capacidad del gobierno para regular contenido en línea (v2smregcap)
+    dimension: 3
+    capa: instalada
+    sentido: 1
+    unidad: estimación del modelo de medición (escala latente)
+    nota: Mide capacidad, no la orientación (censura o no) de la regulación.
+  - id: dsp_privacidad_ley
+    nombre: Contenido de la protección legal de la privacidad (v2smprivcon)
+    dimension: 3
+    capa: instalada
+    sentido: 1
+    unidad: estimación del modelo de medición (escala latente)
+    nota: Mayor = el marco legal limita más el acceso del gobierno a datos personales en internet.
+  - id: dsp_medios_perspectivas
+    nombre: Pluralidad de perspectivas en medios en línea (v2smonper)
+    dimension: 1
+    capa: instalada
+    sentido: 1
+    unidad: estimación del modelo de medición (escala latente)
+  - id: dsp_polarizacion
+    nombre: Baja polarización de la sociedad (v2smpolsoc)
+    dimension: 1
+    capa: resultado
+    sentido: 1
+    unidad: estimación del modelo de medición (escala latente)
+    nota: En el DSP 0 = polarización seria y 4 = sin polarización; mayor es mejor.

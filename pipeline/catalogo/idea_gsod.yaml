@@ -1,0 +1,44 @@
+id: idea_gsod
+nombre: Global State of Democracy Indices v10 (categoría Participación), 1975–2025
+editor: International Institute for Democracy and Electoral Assistance (International IDEA)
+url: https://www.idea.int/democracytracker/gsod-indices
+licencia: CC BY-NC-SA 4.0
+redistribuible: false
+cita: idea_gsod_v10
+niveles: [internacional]
+descarga: automatica
+estado: verificada
+motivo: >-
+  CSV oficial v10 (2026) descargado directamente. La licencia CC BY-NC-SA 4.0 se declara
+  en el codebook v10; la página de datos no declara otra. Permite redistribuir con fines
+  no comerciales, atribución y misma licencia; se marca redistribuible=false por criterio
+  conservador (la regla del proyecto solo acepta CC0/CC BY/CC BY-SA), decidir al publicar.
+  Ojo: Compromiso cívico se construye con indicadores de V-Dem (y BTI), por lo que se
+  traslapa con vdem_cspart.
+indicadores:
+  - id: gsod_participacion
+    nombre: Participación (atributo 4 del GSoD)
+    dimension: 5
+    capa: activacion
+    sentido: 1
+    unidad: índice 0–1
+  - id: gsod_sociedad_civil
+    nombre: Sociedad civil (subatributo 4.1)
+    dimension: 2
+    capa: instalada
+    sentido: 1
+    unidad: índice 0–1
+  - id: gsod_compromiso_civico
+    nombre: Compromiso cívico (subatributo 4.2, civic engagement)
+    dimension: 2
+    capa: activacion
+    sentido: 1
+    unidad: índice 0–1
+    nota: Asociaciones políticas y no políticas, sindicatos y movilización por la democracia (V-Dem) y tradición de sociedad civil (BTI).
+  - id: gsod_particip_electoral
+    nombre: Participación electoral (subatributo 4.3, población en edad de votar que votó en la última elección nacional)
+    dimension: 5
+    capa: activacion
+    sentido: 1
+    unidad: proporción 0–1
+    nota: Vale 0 cuando el régimen electoral está interrumpido (v2x_elecreg de V-Dem). Se repite el valor de la última elección en años sin elección.

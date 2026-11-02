@@ -1,0 +1,39 @@
+id: gii
+nombre: Global Innovation Index 2026
+editor: Organización Mundial de la Propiedad Intelectual (OMPI/WIPO)
+url: https://www.wipo.int/web-publications/global-innovation-index-2026/en/gii-2026-results.html
+licencia: CC BY 4.0 (declarada para la publicación GII; no hay una licencia aparte para los archivos de datos)
+redistribuible: true
+cita: wipo_gii2026
+niveles: [internacional]
+descarga: automatica
+estado: verificada
+motivo: >-
+  El GII Data Explorer permite bajar datos de forma interactiva, pero no tiene un enlace directo
+  automatizable, y el repositorio TIND de la OMPI (xlsx de ediciones anteriores) bloquea clientes
+  automáticos. Se usan los CSV de las gráficas Datawrapper incrustadas en el capítulo de resultados
+  del informe oficial 2026 (fuente que declaran: Global Innovation Index Database, WIPO, 2026):
+  7LeG9 (GII frente a PIB per cápita: ISO3 y GII score) y kb0qX (insumos frente a productos: ISO3,
+  INPUT y OUTPUT). Son 139 economías. Se baja siempre la última versión publicada de cada gráfica.
+  El texto del informe ubica a México en el lugar 65, lo que coincide con la gráfica de rangos (pue05).
+  Solo se carga la edición 2026; la serie histórica sigue pendiente (requiere el Data Explorer o el
+  xlsx de TIND, ambos manuales).
+indicadores:
+  - id: gii_total
+    nombre: Global Innovation Index (puntaje)
+    dimension: 6
+    capa: resultado
+    sentido: 1
+    unidad: puntaje 0–100
+  - id: gii_insumos
+    nombre: GII – subíndice de insumos de innovación
+    dimension: 6
+    capa: instalada
+    sentido: 1
+    unidad: puntaje 0–100
+  - id: gii_productos
+    nombre: GII – subíndice de productos de innovación
+    dimension: 6
+    capa: resultado
+    sentido: 1
+    unidad: puntaje 0–100

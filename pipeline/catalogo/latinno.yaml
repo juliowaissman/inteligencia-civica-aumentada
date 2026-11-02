@@ -1,0 +1,33 @@
+id: latinno
+nombre: LATINNO Dataset on Democratic Innovations in Latin America (v1.0.0, 1990–2020)
+editor: Thamy Pogrebinschi, Wissenschaftszentrum Berlin für Sozialforschung (WZB); archivado en GESIS
+url: https://doi.org/10.7802/2278
+licencia: Sin licencia confirmada (metadatos de terceros indican CC BY 4.0; el registro de DataCite no declara licencia)
+redistribuible: false
+cita: pogrebinschi_latinno2021
+niveles: [internacional]
+descarga: manual
+estado: candidata
+motivo: >-
+  No se pudo descargar: el DOI resuelve a search.gesis.org, que bloquea el acceso
+  automatizado (Cloudflare 403), y el repositorio GESIS SowiDataNet|datorium es una
+  aplicación Vaadin sin enlaces directos. latinno.net no respondió. Cubre ~3,700
+  innovaciones en 18 países de América Latina (México incluido). No hay módulo de
+  procesamiento hasta conocer la estructura real del archivo.
+instrucciones: >-
+  1) Abrir https://doi.org/10.7802/2278 en un navegador (redirige al registro en GESIS).
+  2) Confirmar en la ficha la licencia y la categoría de acceso; si pide cuenta GESIS,
+  crearla y aceptar las condiciones. 3) Descargar el archivo de datos (preferir CSV o
+  XLSX; si solo hay .dta/.sav también sirve) y el codebook. 4) Guardarlos sin renombrar en
+  datos/crudos/latinno/AAAA-MM-DD/ junto con una nota de la licencia mostrada. 5) Avisar
+  para escribir src/iica/fuentes/latinno.py: el indicador propuesto es el número de
+  innovaciones por país (conteo de registros por país; opcionalmente por año de inicio),
+  con dimensión 4, capa activacion, sentido 1, unidad = ISO3.
+indicadores:
+  - id: latinno_innovaciones
+    nombre: Número de innovaciones democráticas registradas por país
+    dimension: 4
+    capa: activacion
+    sentido: 1
+    unidad: conteo
+    nota: Solo 18 países de América Latina; conviene normalizar por población de una fuente citada.

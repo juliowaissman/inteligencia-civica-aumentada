@@ -1,0 +1,12 @@
+{
+  "fuente": "encuci",
+  "nombre": "Encuesta Nacional de Cultura Cívica (ENCUCI) 2020",
+  "url": "https://www.inegi.org.mx/programas/encuci/2020/",
+  "licencia": "Términos de Libre Uso de la Información del INEGI",
+  "fecha_acceso": "2026-11-02",
+  "sha256": {
+    "III_Relaciones_con_individuos_asociaciones_y_poder_publico.xlsx": "fb88ace711e82c039c4b000fa6c02fb0ae8c4abced93a46753fc2af7fdd3a883",
+    "IV_Participacion.xlsx": "2fbddd823b833781b3ddc2c6a14955fcb0e13d628dc732aa3cb3ba004ad5c6db",
+    "I_Intereses_y_conocimiento_sobre_asuntos_publicos_y_democracia.xlsx": "3cd4741ddfca5606cca6da685779ca9fe486b3d21bf5d03d21fc1f6cacfd4f7a"
+  }
+}

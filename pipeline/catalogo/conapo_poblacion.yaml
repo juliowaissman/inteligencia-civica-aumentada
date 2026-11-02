@@ -1,0 +1,24 @@
+id: conapo_poblacion
+nombre: Proyecciones de la Población de México y de las Entidades Federativas 2020-2070 (Conciliación Demográfica 1950-2019)
+editor: Consejo Nacional de Población (CONAPO)
+url: https://www.datos.gob.mx/dataset/proyecciones-de-poblacion
+licencia: CC BY 4.0
+redistribuible: true
+cita: conapo_proyecciones_2023
+niveles: [nacional, estatal]
+descarga: automatica
+estado: verificada
+indicadores:
+  - id: poblacion_total
+    nombre: Población total a mitad de año
+    dimension: 1
+    capa: instalada
+    sentido: 1
+    unidad: personas
+    nota: >-
+      NO es un indicador del IICA. Se usa solo como denominador para calcular tasas por habitante
+      de otras fuentes. Columna POB_MIT_ANIO del archivo 05_indicadores_demograficos_proyecciones.csv;
+      1950-2019 es conciliación demográfica y 2020-2070 son proyecciones; el nacional
+      empieza en 1950 y las entidades en 1970. La suma de las 32 entidades coincide exactamente con el
+      nacional en todos los años. La dimensión y la capa son
+      marcadores de posición.

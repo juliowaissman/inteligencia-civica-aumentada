@@ -1,0 +1,14 @@
+---
+// Cita a una referencia de referencias.bib (convertido a src/data/referencias.json por el pipeline).
+// Si la clave no existe, el build falla: así ninguna afirmación queda sin fuente.
+import refs from "../data/referencias.json";
+interface Props { clave: string; pag?: string }
+const { clave, pag } = Astro.props;
+const claves = clave.split(",").map((c) => c.trim());
+for (const c of claves) {
+  if (!(c in refs)) throw new Error(`Cita: la clave "${c}" no existe en referencias.bib`);
+}
+const base = import.meta.env.BASE_URL;
+const etiqueta = claves.map((c) => (refs as Record<string, any>)[c].corta).join("; ");
+---
+<span class="cita-texto">(<a href={`${base}referencias/#${claves[0]}`} title={claves.map((c) => (refs as Record<string, any>)[c].titulo).join(" | ")}>{etiqueta}</a>{pag ? `, ${pag}` : ""})</span>

@@ -1,0 +1,98 @@
+fuente,indicador,nombre,dimension,capa,estado_fuente,niveles,anios,n_paises,n_entidades,mexico,entidades_completas
+anthropic_economic_index,aei_uso_per_capita,Anthropic AI Usage Index (uso de Claude por persona en edad de trabajar),3,activacion,verificada,internacional,2026–2026,121,0,sí,no
+anthropic_economic_index,aei_uso_pct,Participación del país en el uso mundial de Claude.ai,3,activacion,verificada,internacional,2026–2026,121,0,sí,no
+anuies,anuies_matricula_superior,"Matrícula total de educación superior (TSU, licenciatura, normal y posgrado; todas las modalidades)",1,instalada,verificada,"estatal,nacional",2020–2025,0,32,sí,sí
+anuies,anuies_matricula_tic,"Matrícula de educación superior en el campo amplio ""Tecnologías de la información y la comunicación""",6,instalada,verificada,"estatal,nacional",2020–2025,0,32,sí,sí
+banco_mundial,wb_internet,Personas que usan internet (% de la población),1,instalada,verificada,internacional,2000–2025,238,0,sí,no
+banco_mundial,wb_terciaria,Matrícula en educación terciaria (% bruto),1,instalada,verificada,internacional,2000–2025,236,0,sí,no
+banco_mundial,wgi_voz,Voz y rendición de cuentas (WGI),5,instalada,verificada,internacional,2000–2025,207,0,sí,no
+banco_mundial,wgi_efectividad,Efectividad gubernamental (WGI),4,instalada,verificada,internacional,2000–2025,205,0,sí,no
+banco_mundial,wgi_corrupcion,Control de la corrupción (WGI),5,instalada,verificada,internacional,2000–2025,207,0,sí,no
+cnge,cnge_apertura_participacion,"La Administración Pública estatal abrió espacios de participación ciudadana (1 = sí, 0 = no)",4,instalada,verificada,estatal,2023–2025,0,32,sin información,sí
+cnge,cnge_espacios_participacion,Espacios de participación ciudadana abiertos por la Administración Pública estatal (número),4,instalada,verificada,"estatal,nacional",2023–2025,0,32,sí,sí
+cnge,cnge_espacios_deliberacion_cogestion,Espacios de participación con nivel de incidencia de deliberación o cogestión (número),4,activacion,verificada,"estatal,nacional",2023–2025,0,32,sí,sí
+cnge,cnge_registros_espacio_tema,"Registros de espacios de participación por tema (espacio x tema, número)",4,instalada,verificada,"estatal,nacional",2023–2025,0,32,sí,sí
+cnge,cnge_solicitudes_info_recibidas,Solicitudes de acceso a la información recibidas por la Administración Pública estatal (número),4,activacion,verificada,"estatal,nacional",2023–2025,0,32,sí,sí
+cnge,cnge_solicitudes_info_respondidas,Solicitudes de acceso a la información respondidas por la Administración Pública estatal (número),4,instalada,verificada,"estatal,nacional",2023–2025,0,32,sí,sí
+cnge,cnge_tramites_ofrecidos,Tipos de trámite o servicio del catálogo CNGE que ofrece la Administración Pública estatal (de 24),3,instalada,verificada,estatal,2025–2025,0,32,sin información,sí
+cnge,cnge_tramites_medios_electronicos,Tipos de trámite o servicio que se pueden presentar por medios electrónicos (de 24),3,instalada,verificada,estatal,2025–2025,0,32,sin información,sí
+cnge,cnge_tramites_transaccionales,Tipos de trámite o servicio con servicio web transaccional (de 24),3,instalada,verificada,estatal,2025–2025,0,32,sin información,sí
+cnge,cnge_computadoras,Computadoras de las instituciones de la Administración Pública estatal (número),3,instalada,verificada,"estatal,nacional",2025–2025,0,32,sí,sí
+conapo_poblacion,poblacion_total,Población total a mitad de año,1,instalada,verificada,"estatal,nacional",1950–2070,0,32,sí,sí
+denue,denue_5415,Establecimientos en la rama SCIAN 5415 (servicios de diseño de sistemas de cómputo y servicios relacionados),6,instalada,verificada,"estatal,nacional",2025–2026,0,32,sí,sí
+denue,denue_5182,"Establecimientos en la rama SCIAN 5182 (procesamiento electrónico de información, hospedaje y otros servicios relacionados)",6,instalada,verificada,"estatal,nacional",2025–2026,0,32,sí,sí
+dsp,dsp_ciberseguridad_gob,Capacidad de ciberseguridad del gobierno (v2smgovcapsec),3,instalada,verificada,internacional,2000–2025,176,0,sí,no
+dsp,dsp_capacidad_regulacion,Capacidad del gobierno para regular contenido en línea (v2smregcap),3,instalada,verificada,internacional,2000–2025,176,0,sí,no
+dsp,dsp_privacidad_ley,Contenido de la protección legal de la privacidad (v2smprivcon),3,instalada,verificada,internacional,2000–2025,175,0,sí,no
+dsp,dsp_medios_perspectivas,Pluralidad de perspectivas en medios en línea (v2smonper),1,instalada,verificada,internacional,2000–2025,176,0,sí,no
+dsp,dsp_polarizacion,Baja polarización de la sociedad (v2smpolsoc),1,resultado,verificada,internacional,2000–2025,176,0,sí,no
+encig,encig_prevalencia_corrupcion,Tasa de prevalencia de corrupción en trámites (víctimas por cada 100 000 habitantes),5,resultado,verificada,"estatal,nacional",2021–2025,0,32,sí,sí
+encig,encig_confianza_gob_estatal,Población que confía mucho o algo en el gobierno estatal (%),5,resultado,verificada,"estatal,nacional",2017–2025,0,32,sí,sí
+encig,encig_satisfaccion_servicios,Satisfacción con servicios públicos básicos y bajo demanda (% de opiniones satisfechas),5,resultado,verificada,"estatal,nacional",2023–2025,0,32,sí,sí
+endutih,endutih_internet,Personas usuarias de internet (% de la población de 6 años y más),1,instalada,verificada,"estatal,nacional",2020–2025,0,32,sí,sí
+endutih,endutih_hogares_computadora,Hogares que disponen de computadora (%),1,instalada,verificada,"estatal,nacional",2020–2025,0,32,sí,sí
+endutih,endutih_hogares_internet,Hogares que disponen de internet (%),1,instalada,verificada,"estatal,nacional",2020–2025,0,32,sí,sí
+endutih,endutih_internet_gobierno,Personas usuarias de internet que lo usan para interactuar con el gobierno (%),3,activacion,verificada,"estatal,nacional",2020–2025,0,32,sí,sí
+envipe,envipe_confianza_policia_estatal,Confianza en la policía estatal (% con mucha o algo de confianza),5,resultado,verificada,"estatal,nacional",2020–2025,0,32,sí,sí
+envipe,envipe_confianza_mp_fiscalia_estatal,Confianza en el Ministerio Público y fiscalías estatales (% con mucha o algo de confianza),5,resultado,verificada,"estatal,nacional",2020–2025,0,32,sí,sí
+envipe,envipe_confianza_jueces,Confianza en jueces (% con mucha o algo de confianza),5,resultado,verificada,"estatal,nacional",2020–2025,0,32,sí,sí
+gdb,gdb_total,Puntaje nacional del Global Data Barometer,4,instalada,verificada,internacional,2024–2024,43,0,sí,no
+gdb,gdb_gobernanza,"GDB – clúster Governance Foundation (protección, gestión e intercambio de datos)",4,instalada,verificada,internacional,2024–2024,43,0,sí,no
+gdb,gdb_competencias,GDB – clúster Critical Competencies (alfabetización y reutilización de datos),3,instalada,verificada,internacional,2024–2024,43,0,sí,no
+gdb,gdb_acceso_equitativo,GDB – clúster Equitable Access (idioma y accesibilidad de los datos),4,instalada,verificada,internacional,2024–2024,43,0,sí,no
+gii,gii_total,Global Innovation Index (puntaje),6,resultado,verificada,internacional,2026–2026,139,0,sí,no
+gii,gii_insumos,GII – subíndice de insumos de innovación,6,instalada,verificada,internacional,2026–2026,139,0,sí,no
+gii,gii_productos,GII – subíndice de productos de innovación,6,resultado,verificada,internacional,2026–2026,139,0,sí,no
+girai,girai_total,Puntaje GIRAI (global),3,instalada,verificada,internacional,2026–2026,135,0,sí,no
+girai,girai_inclusion,GIRAI – Inclusión y diversidad,3,instalada,verificada,internacional,2026–2026,135,0,sí,no
+girai,girai_etica,GIRAI – Ética y sostenibilidad,3,instalada,verificada,internacional,2026–2026,135,0,sí,no
+girai,girai_trabajo,GIRAI – Trabajo y habilidades,3,instalada,verificada,internacional,2026–2026,135,0,sí,no
+girai,girai_confianza,GIRAI – Confianza y seguridad,3,instalada,verificada,internacional,2026–2026,135,0,sí,no
+girai,girai_sector_publico,GIRAI – Uso de IA en servicios públicos,3,activacion,verificada,internacional,2026–2026,135,0,sí,no
+github_innovation,gh_desarrolladores,Cuentas de desarrolladores en GitHub (al cierre del 4.º trimestre),6,activacion,verificada,internacional,2020–2025,228,0,sí,no
+github_innovation,gh_colaboracion_externa,Colaboración con otras economías en GitHub (suma anual),2,activacion,verificada,internacional,2020–2025,214,0,sí,no
+idd_mex,idd_mex,Índice de Desarrollo Democrático de México (puntaje general),5,resultado,verificada,"estatal,nacional",2010–2024,0,32,sí,sí
+idea_gsod,gsod_participacion,Participación (atributo 4 del GSoD),5,activacion,verificada,internacional,1975–2025,174,0,sí,no
+idea_gsod,gsod_sociedad_civil,Sociedad civil (subatributo 4.1),2,instalada,verificada,internacional,1975–2025,174,0,sí,no
+idea_gsod,gsod_compromiso_civico,"Compromiso cívico (subatributo 4.2, civic engagement)",2,activacion,verificada,internacional,1975–2025,174,0,sí,no
+idea_gsod,gsod_particip_electoral,"Participación electoral (subatributo 4.3, población en edad de votar que votó en la última elección nacional)",5,activacion,verificada,internacional,1975–2025,172,0,sí,no
+imco_ice,imco_politico,Subíndice Sistema político estable y funcional (ICE 2022),5,resultado,verificada,estatal,2003–2022,0,32,sin información,sí
+imco_ice,imco_gobierno,Subíndice Gobiernos eficientes y eficaces (ICE 2022),5,resultado,verificada,estatal,2003–2022,0,32,sin información,sí
+imco_ice,imco_economia,Subíndice Economía estable (ICE 2022),6,resultado,verificada,estatal,2003–2022,0,32,sin información,sí
+imco_ice,imco_innovacion,Subíndice Innovación y sofisticación en los sectores económicos (ICE 2022),6,resultado,verificada,estatal,2003–2022,0,32,sin información,sí
+imco_ice,imco_general,"Índice de Competitividad Estatal, puntaje general (ICE 2022)",6,resultado,verificada,estatal,2003–2022,0,32,sin información,sí
+impi,impi_solicitudes_patente,Solicitudes de patente de mexicanos por entidad federativa del solicitante,6,resultado,verificada,"estatal,nacional",1993–2025,0,32,sí,sí
+impi,impi_solicitudes_invenciones,"Solicitudes de invenciones de mexicanos (patentes, diseños industriales, modelos de utilidad y trazados de CI)",6,resultado,verificada,"estatal,nacional",1993–2025,0,32,sí,sí
+ine_participacion,participacion_presidencia,"Participación ciudadana, elección de Presidencia (votos totales / lista nominal)",5,activacion,verificada,"estatal,nacional",2018–2024,0,32,sí,sí
+ine_participacion,participacion_diputaciones,"Participación ciudadana, elección de Diputaciones federales (votos totales / lista nominal)",5,activacion,verificada,"estatal,nacional",2018–2024,0,32,sí,sí
+itu,itu_copiar_pegar,Personas que usaron copiar y pegar en un documento (habilidad TIC básica),1,instalada,verificada,internacional,2011–2025,97,0,sí,no
+itu,itu_formula_hoja,Personas que usaron fórmulas aritméticas en una hoja de cálculo (habilidad TIC estándar),1,instalada,verificada,internacional,2011–2025,99,0,sí,no
+itu,itu_programar,Personas que escribieron un programa en un lenguaje especializado (habilidad TIC avanzada),1,instalada,verificada,internacional,2011–2025,101,0,sí,no
+mga,mga_indice,Índice de Gobierno Abierto (MGA),4,instalada,verificada,"estatal,nacional",2017–2021,0,32,sí,sí
+mga,mga_transparencia,Subíndice de Transparencia (MGA),4,instalada,verificada,"estatal,nacional",2017–2021,0,32,sí,sí
+mga,mga_participacion,Subíndice de Participación (MGA),4,instalada,verificada,"estatal,nacional",2017–2021,0,32,sí,sí
+microsoft_ai_diffusion,ms_difusion_ia,Difusión de la IA (personas de 15–64 años que usaron IA generativa en el periodo),3,activacion,verificada,internacional,2026–2026,147,0,sí,no
+onu_egov,egov_egdi,Índice de Desarrollo del Gobierno Electrónico (EGDI),3,instalada,verificada,internacional,2003–2024,193,0,sí,no
+onu_egov,egov_epi,Índice de E-Participación (EPI),4,activacion,verificada,internacional,2003–2024,193,0,sí,no
+onu_egov,egov_osi,Índice de Servicios en Línea (OSI),3,instalada,verificada,internacional,2003–2024,193,0,sí,no
+onu_egov,egov_hci,"Índice de Capital Humano (HCI, componente del EGDI)",1,instalada,verificada,internacional,2003–2024,193,0,sí,no
+onu_egov,egov_tii,Índice de Infraestructura de Telecomunicaciones (TII),3,instalada,verificada,internacional,2003–2024,193,0,sí,no
+osc,osc_activas,OSC con CLUNI en estatus ACTIVA,2,instalada,verificada,"estatal,nacional",2024–2025,0,32,sí,sí
+osc,osc_activas_y_condicionadas,OSC con CLUNI en estatus ACTIVA o ACTIVA CONDICIONADA,2,instalada,verificada,"estatal,nacional",2024–2025,0,32,sí,sí
+oxford_ai_readiness,oxf_total,Government AI Readiness Index (total),3,instalada,verificada,internacional,2025–2025,195,0,sí,no
+oxford_ai_readiness,oxf_capacidad_politica,Oxford AI Readiness – Policy Capacity,3,instalada,verificada,internacional,2025–2025,195,0,sí,no
+oxford_ai_readiness,oxf_infraestructura,Oxford AI Readiness – AI Infrastructure,3,instalada,verificada,internacional,2025–2025,195,0,sí,no
+oxford_ai_readiness,oxf_gobernanza,Oxford AI Readiness – Governance,3,instalada,verificada,internacional,2025–2025,195,0,sí,no
+oxford_ai_readiness,oxf_adopcion_sector_publico,Oxford AI Readiness – Public Sector Adoption,3,activacion,verificada,internacional,2025–2025,195,0,sí,no
+oxford_ai_readiness,oxf_desarrollo_difusion,Oxford AI Readiness – Development & Diffusion,6,activacion,verificada,internacional,2025–2025,195,0,sí,no
+oxford_ai_readiness,oxf_resiliencia,Oxford AI Readiness – Resilience,3,instalada,verificada,internacional,2025–2025,195,0,sí,no
+sni,sni_investigadores,Personas investigadoras con reconocimiento vigente en el SNII,6,instalada,verificada,"estatal,nacional",2025–2025,0,32,sí,sí
+vdem,vdem_partip,Índice del componente participativo (v2x_partip),4,instalada,verificada,internacional,1789–2025,197,0,sí,no
+vdem,vdem_delib,Índice del componente deliberativo (v2xdl_delib),1,activacion,verificada,internacional,1900–2025,183,0,sí,no
+vdem,vdem_cspart,Índice de participación de la sociedad civil (v2x_cspart),2,activacion,verificada,internacional,1789–2025,200,0,sí,no
+vdem,vdem_egal,Índice del componente igualitario (v2x_egal),5,resultado,verificada,internacional,1900–2025,183,0,sí,no
+wjp,wjp_gob_abierto,Factor 3: Gobierno abierto,4,instalada,verificada,internacional,2013–2026,143,0,sí,no
+wjp,wjp_leyes_datos,3.1 Leyes y datos de gobierno publicitados,4,instalada,verificada,internacional,2013–2026,143,0,sí,no
+wjp,wjp_derecho_info,3.2 Derecho a la información,4,instalada,verificada,internacional,2013–2026,143,0,sí,no
+wjp,wjp_participacion,3.3 Participación cívica,4,activacion,verificada,internacional,2013–2026,143,0,sí,no
+wjp,wjp_quejas,3.4 Mecanismos de queja,6,activacion,verificada,internacional,2013–2026,143,0,sí,no

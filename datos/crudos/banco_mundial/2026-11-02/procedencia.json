@@ -1,0 +1,16 @@
+{
+  "fuente": "banco_mundial",
+  "nombre": "World Development Indicators y Worldwide Governance Indicators",
+  "url": "https://data.worldbank.org/",
+  "licencia": "CC BY 4.0",
+  "fecha_acceso": "2026-11-02",
+  "sha256": {
+    "paises.json": "c9acf3932785191a649cbc04c3056af4cf64a236e5c3b49d49be25ddb0440bce",
+    "poblacion.json": "63ba77c67c7918820c479889e5176bd4a12fe2d53a1e6626aaea37493d6aab2c",
+    "wb_internet.json": "b0ec62b86af620933a0f9c38131f7513ca00c860e09ccf429e722cedf3d1ee9a",
+    "wb_terciaria.json": "12b4bfb538dd471406b3316e916af5902032213fd3d7d386d3f93d345e17f084",
+    "wgi_corrupcion.json": "9fbba1bf9f9f105761782b2b7d1dd1d25629cbcc3cc5a14322e94b031b8122ba",
+    "wgi_efectividad.json": "57eabfcbad7e9cd94e229d1b50e1a8244d622275db29618f287937eb1a965c65",
+    "wgi_voz.json": "00057cdc071c2c34d35d97bcbbc268f80dcf451fc688e8442b29b68aac4a4882"
+  }
+}

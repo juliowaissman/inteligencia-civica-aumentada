@@ -1,0 +1,43 @@
+id: gdb
+nombre: Global Data Barometer, 2.ª edición
+editor: Global Data Barometer (D4D.net e ILDA)
+url: https://globaldatabarometer.org/open-data/
+licencia: CC BY 4.0
+redistribuible: true
+cita: gdb2025
+niveles: [internacional]
+descarga: automatica
+estado: verificada
+motivo: >-
+  Archivo completo gdb-2024-full-data.csv (17.6 MB). La 2.ª edición cubre solo 43 países de África y
+  de América Latina y el Caribe (no hay OCDE fuera de LAC). La evidencia primaria va del 31-ago-2022
+  al 1-sep-2024, por eso se registra como 2024 (informe publicado en 2025). En esta edición ya NO se
+  calculan puntajes por pilar (gobernanza, capacidad, disponibilidad): el informe (anexo de ponderaciones)
+  dice que el puntaje nacional se calcula directo de los indicadores, y el CSV solo trae puntajes nacionales,
+  por clúster y por área de acción. Por eso se usan el puntaje nacional y los tres clústeres fundacionales
+  en lugar de los pilares.
+indicadores:
+  - id: gdb_total
+    nombre: Puntaje nacional del Global Data Barometer
+    dimension: 4
+    capa: instalada
+    sentido: 1
+    unidad: puntaje 0–100
+  - id: gdb_gobernanza
+    nombre: GDB – clúster Governance Foundation (protección, gestión e intercambio de datos)
+    dimension: 4
+    capa: instalada
+    sentido: 1
+    unidad: puntaje 0–100
+  - id: gdb_competencias
+    nombre: GDB – clúster Critical Competencies (alfabetización y reutilización de datos)
+    dimension: 3
+    capa: instalada
+    sentido: 1
+    unidad: puntaje 0–100
+  - id: gdb_acceso_equitativo
+    nombre: GDB – clúster Equitable Access (idioma y accesibilidad de los datos)
+    dimension: 4
+    capa: instalada
+    sentido: 1
+    unidad: puntaje 0–100

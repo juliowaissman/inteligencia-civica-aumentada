@@ -1,0 +1,50 @@
+id: wjp
+nombre: WJP Rule of Law Index, Factor 3 (Gobierno abierto) y subfactores, 2012–2026
+editor: World Justice Project
+url: https://worldjusticeproject.org/rule-of-law-index/
+licencia: Sin licencia declarada
+redistribuible: false
+cita: wjp_rolindex2026
+niveles: [internacional]
+descarga: automatica
+estado: verificada
+motivo: >-
+  Archivo oficial "2026_wjp_rule_of_law_index_HISTORICAL_DATA_FILE.xlsx" (hoja Historical
+  Data), descargado del sitio de WJP. WJP no publica una licencia de datos: su política
+  de copyright y términos de servicio no mencionan los datos del índice y los reportes
+  dicen "All rights reserved". Se marca no redistribuible hasta confirmar con WJP. WJP
+  advierte cautela al comparar puntajes entre ediciones; los subfactores de 2012-2013
+  tenían otra numeración (el archivo histórico ya los armoniza). Ediciones 2012-2013 y
+  2017-2018 asignadas a 2013 y 2018.
+indicadores:
+  - id: wjp_gob_abierto
+    nombre: "Factor 3: Gobierno abierto"
+    dimension: 4
+    capa: instalada
+    sentido: 1
+    unidad: puntaje 0–1
+  - id: wjp_leyes_datos
+    nombre: "3.1 Leyes y datos de gobierno publicitados"
+    dimension: 4
+    capa: instalada
+    sentido: 1
+    unidad: puntaje 0–1
+  - id: wjp_derecho_info
+    nombre: "3.2 Derecho a la información"
+    dimension: 4
+    capa: instalada
+    sentido: 1
+    unidad: puntaje 0–1
+  - id: wjp_participacion
+    nombre: "3.3 Participación cívica"
+    dimension: 4
+    capa: activacion
+    sentido: 1
+    unidad: puntaje 0–1
+  - id: wjp_quejas
+    nombre: "3.4 Mecanismos de queja"
+    dimension: 6
+    capa: activacion
+    sentido: 1
+    unidad: puntaje 0–1
+    nota: Mecanismos para presentar quejas ante el gobierno; canal de retroalimentación.

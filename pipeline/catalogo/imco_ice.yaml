@@ -1,0 +1,57 @@
+id: imco_ice
+nombre: Índice de Competitividad Estatal (ICE), base de datos edición 2022 (serie 2003-2022)
+editor: Instituto Mexicano para la Competitividad (IMCO)
+url: https://indices.imco.org.mx/competitividad-estatal
+licencia: "© IMCO A.C., derechos reservados (no declara licencia abierta)"
+redistribuible: false
+cita: imco_ice_2022
+niveles: [estatal]
+descarga: automatica
+estado: verificada
+motivo: >-
+  Se pidió la edición 2025, pero IMCO no publica base de datos para 2023-2026: solo PDF (libro,
+  anexo metodológico y boletas) con posiciones e indicadores, sin puntajes de subíndice en texto
+  (la gráfica del libro solo rotula los extremos). No se leen valores de gráficas. Para 2025 hay que
+  pedir la base a IMCO (ver instrucciones). Las ediciones 2022 y 2025 no son comparables: 2025 usa 6
+  subíndices con pesos por componentes principales; 2022 usa 10 subíndices (Político y Gobierno,
+  Economía e Innovación por separado). La base 2022 no trae valor nacional.
+instrucciones: >-
+  Para la edición 2025: escribir a IMCO (contacto que aparece en la base 2022: Ivania Mazari, o
+  contacto@imco.org.mx) pidiendo la base de datos de puntajes por subíndice del ICE 2025 y sus
+  términos de uso; guardar el archivo en datos/crudos/imco_ice/AAAA-MM-DD/ y adaptar procesar().
+indicadores:
+  - id: imco_politico
+    nombre: Subíndice Sistema político estable y funcional (ICE 2022)
+    dimension: 5
+    capa: resultado
+    sentido: 1
+    unidad: puntaje 0 a 100
+    nota: Columna "Político" de la hoja Puntajes; bloques ICE 2003 a ICE 2022 (año = etiqueta del bloque).
+  - id: imco_gobierno
+    nombre: Subíndice Gobiernos eficientes y eficaces (ICE 2022)
+    dimension: 5
+    capa: resultado
+    sentido: 1
+    unidad: puntaje 0 a 100
+    nota: Columna "Gobierno". En la edición 2025 Político y Gobierno se fusionaron en "Sistema político y gobiernos".
+  - id: imco_economia
+    nombre: Subíndice Economía estable (ICE 2022)
+    dimension: 6
+    capa: resultado
+    sentido: 1
+    unidad: puntaje 0 a 100
+    nota: Columna "Economía". En la edición 2025 se fusionó con Innovación en "Innovación y economía".
+  - id: imco_innovacion
+    nombre: Subíndice Innovación y sofisticación en los sectores económicos (ICE 2022)
+    dimension: 6
+    capa: resultado
+    sentido: 1
+    unidad: puntaje 0 a 100
+    nota: Columna "Innovación".
+  - id: imco_general
+    nombre: Índice de Competitividad Estatal, puntaje general (ICE 2022)
+    dimension: 6
+    capa: resultado
+    sentido: 1
+    unidad: puntaje 0 a 100
+    nota: Columna "GENERAL"; referencia, no se recomienda como indicador del IICA (mezcla dimensiones).

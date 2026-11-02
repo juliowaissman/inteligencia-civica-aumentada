@@ -1,0 +1,14 @@
+{
+  "fuente": "mga",
+  "nombre": "Métrica de Gobierno Abierto (ediciones 2017, 2019 y 2021), resultados por entidad federativa",
+  "url": "https://lnppmicrositio.shinyapps.io/metrica_gobierno_abierto_2021/",
+  "licencia": "CC BY-NC-SA 4.0 (declarada en el micrositio 2021; las ediciones 2017 y 2019 no declaran licencia)",
+  "fecha_acceso": "2026-11-02",
+  "sha256": {
+    "mga2017_comparador_entidades.xlsx": "058a0f68d838e239bb5650f34416a8d7f357de532ee7995073c84a364f62fa7b",
+    "mga2017_reporte.pdf": "7a95c687f7fcbc3b0c38fdb43e8dd48b79d2b8670c8a3491f57d8fbb93eb4dea",
+    "mga2019_resultados.xlsx": "295e25248b25e3e3faf2291d80f412d45cff0cd7d89d022fb3989786565cbbe2",
+    "mga2021_estado.csv": "196baa7436605a102d5ea6eb477e74b870a675619ffe20db9046c955a6510bd4",
+    "mga2021_reporte_final.pdf": "fec1bcf784de6342336cc373efd9522505559be1b7f41d5dc84455f0d07c2aa8"
+  }
+}

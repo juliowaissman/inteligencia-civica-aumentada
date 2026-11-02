@@ -1,0 +1,12 @@
+{
+  "fuente": "github_innovation",
+  "nombre": "GitHub Innovation Graph",
+  "url": "https://github.com/github/innovationgraph",
+  "licencia": "CC0 1.0",
+  "fecha_acceso": "2026-11-02",
+  "sha256": {
+    "developers.csv": "395af35bf695a783fedf8618e5e6ac84c10956193271251ef6db26054ecb953f",
+    "economy_collaborators.csv": "f970d08101f1491cb733bb575563a5a345bd977dd46d56db172a0e11c74b23c4",
+    "geonames_countryInfo.txt": "79f8f59ea01cbb40438bf1856dd6c2ff201f03f8fc72d0530b2646aaf603ef04"
+  }
+}

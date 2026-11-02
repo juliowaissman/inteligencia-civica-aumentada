@@ -1,0 +1,61 @@
+id: encuci
+nombre: Encuesta Nacional de Cultura Cívica (ENCUCI) 2020
+editor: Instituto Nacional de Estadística y Geografía (INEGI) e Instituto Nacional Electoral (INE)
+url: https://www.inegi.org.mx/programas/encuci/2020/
+licencia: Términos de Libre Uso de la Información del INEGI
+redistribuible: true
+cita: inegi_encuci_2020
+niveles: [nacional]
+descarga: automatica
+estado: descartada
+motivo: >-
+  Descartada para el índice estatal: la ENCUCI 2020 solo es representativa a nivel nacional, para 6
+  regiones y por dominio urbano/rural, no por entidad federativa. Chihuahua y Sonora quedan dentro
+  de la región 01 "Aridoamérica Occidental", junto con otras entidades, así que no hay un valor
+  propio de cada una. Las cifras nacionales sí sirven como contexto de cultura cívica (dimensión 1)
+  y se procesan con `uv run iica cobertura --fuente encuci` (las fuentes descartadas no entran en
+  las corridas por defecto). Edición 2025: al 2 de noviembre de 2026 el sitio del INEGI no tiene
+  página de la ENCUCI 2025 (programas/encuci/2025/ responde "Página no encontrada"). Un documento
+  del INE (Comisión de Capacitación Electoral y Educación Cívica, noviembre de 2024) describe su
+  diseño conjunto con el INEGI, pero no se encontraron resultados publicados.
+indicadores:
+  - id: encuci_interes_mucho
+    nombre: Población de 15 años y más con mucha preocupación o interés por los asuntos del país (%)
+    dimension: 1
+    capa: activacion
+    sentido: 1
+    unidad: "% de la población de 15 años y más"
+    nota: >-
+      Solo nacional. Tabulado I, cuadro 1.15, fila "Estados Unidos Mexicanos", columna "Mucho –
+      Relativos" (55.8 %). Región 01 Aridoamérica Occidental: 53.5 % (no se carga: no es una
+      entidad).
+  - id: encuci_asociacion_12m
+    nombre: Población de 15 años y más que participó en algún grupo o asociación en los últimos 12 meses (%)
+    dimension: 1
+    capa: activacion
+    sentido: 1
+    unidad: "% de la población de 15 años y más"
+    nota: >-
+      Solo nacional. Tabulado III, cuadro 3.9, fila "Estados Unidos Mexicanos", columna
+      "Condición de haber participado en un grupo o asociación en los últimos 12 meses – Sí –
+      Relativos". En esta columna Sí + No no suman 100 %: revisa las notas 1 y 2 del cuadro antes
+      de interpretarla.
+  - id: encuci_voluntariado_12m
+    nombre: Población de 15 años y más que realizó algún trabajo voluntario en los últimos 12 meses (%)
+    dimension: 1
+    capa: activacion
+    sentido: 1
+    unidad: "% de la población de 15 años y más"
+    nota: >-
+      Solo nacional. Tabulado IV, cuadro 4.1, fila "Estados Unidos Mexicanos", columna "Sí –
+      Relativos". Periodo agosto 2019 a septiembre 2020.
+  - id: encuci_accion_publica_12m
+    nombre: Población de 18 años y más que realizó alguna actividad relacionada con asuntos públicos en los últimos 12 meses (%)
+    dimension: 1
+    capa: activacion
+    sentido: 1
+    unidad: "% de la población de 18 años y más"
+    nota: >-
+      Solo nacional. Tabulado IV, cuadro 4.14, fila total "Estados Unidos Mexicanos", columna "En
+      los últimos 12 meses – Relativos" (firmar peticiones, reunirse con autoridades, protestas,
+      presión en redes, etc.).

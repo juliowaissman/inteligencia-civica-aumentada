@@ -1,0 +1,19 @@
+{
+  "fuente": "encig",
+  "nombre": "Encuesta Nacional de Calidad e Impacto Gubernamental (ENCIG)",
+  "url": "https://www.inegi.org.mx/programas/encig/2025/",
+  "licencia": "Términos de Libre Uso de la Información del INEGI",
+  "fecha_acceso": "2026-11-02",
+  "sha256": {
+    "II_evaluacion_servicios_bajo_demanda_encig2023_est.xlsx": "c341e5ee8efe3efe27ac6426fc54c8bfd6c7f4df66a70be9725b3f3c2fc11cda",
+    "II_evaluacion_servicios_bajo_demanda_encig2025_est.xlsx": "a38e735218bb26859346f968340a2ad0046e4c9661403d8c6cb9c7043850d2be",
+    "IV_corrupcion_encig2021_est.xlsx": "56e9cabf5aa2d30867cd6e907eab109ce5115fda4a0aa429c93b2aa20ed0a66e",
+    "IV_corrupcion_encig2023_est.xlsx": "4c6810dba90f740a5223895f0944b89604b1e327abfffcdbb2cec8baea7655dd",
+    "IV_corrupcion_encig2025_est.xlsx": "fb0ad6c2d28d2bbcebcf1286ca4b673715ab339abe0f2e3fbad2044c2e3a646e",
+    "VI_confianza_institucional_encig2017_est.xlsx": "4297adba6e5ba57551933ad26649318f0053b1a4bc5b1daad4b160d659732648",
+    "VI_confianza_institucional_encig_2019_est.xlsx": "63f2f1cd9ef16860d162f33df8f8ffd91104e98b9282aa149dc069063d276593",
+    "VI_confianza_institucional_encig_2021_est.xlsx": "73a7e3ab5be20a29752037452beb75ce397567ae4ec9fabbeffe73bef2742fa2",
+    "VI_confianza_institucional_encig_2023_est.xlsx": "35ccf7c7ca15ec95d3ee70432f56a9ddbaef6ea29017389a5845489fde840724",
+    "VI_confianza_institucional_encig_2025_est.xlsx": "f2637d10478d461af6bbd0d548b53fa4defc14d02c9f7dc5620699ec2a67b59a"
+  }
+}

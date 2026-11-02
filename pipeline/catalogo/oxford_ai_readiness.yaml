@@ -1,0 +1,59 @@
+id: oxford_ai_readiness
+nombre: Government AI Readiness Index 2025
+editor: Oxford Insights
+url: https://oxfordinsights.com/ai-readiness/government-ai-readiness-index-2025/
+licencia: "Sin licencia declarada para los datos (pie de página: © 2026 Oxford Insights. All rights reserved)"
+redistribuible: false
+cita: oxford_insights2025
+niveles: [internacional]
+descarga: automatica
+estado: verificada
+motivo: >-
+  195 gobiernos. Los PDF del informe y de "Index Data" se entregan tras un formulario de registro,
+  pero los puntajes por país (total, 6 pilares y 14 dimensiones) están incrustados como JSON en la
+  página pública del índice, de donde se leen tal cual; por eso no hace falta descarga manual.
+  Las ediciones 2019–2024 usan otra estructura (3 pilares) y no se mezclan con la de 2025.
+  Códigos ISO2 convertidos a ISO3 con GeoNames (CC BY 4.0).
+indicadores:
+  - id: oxf_total
+    nombre: Government AI Readiness Index (total)
+    dimension: 3
+    capa: instalada
+    sentido: 1
+    unidad: puntaje 0–100
+  - id: oxf_capacidad_politica
+    nombre: Oxford AI Readiness – Policy Capacity
+    dimension: 3
+    capa: instalada
+    sentido: 1
+    unidad: puntaje 0–100
+  - id: oxf_infraestructura
+    nombre: Oxford AI Readiness – AI Infrastructure
+    dimension: 3
+    capa: instalada
+    sentido: 1
+    unidad: puntaje 0–100
+  - id: oxf_gobernanza
+    nombre: Oxford AI Readiness – Governance
+    dimension: 3
+    capa: instalada
+    sentido: 1
+    unidad: puntaje 0–100
+  - id: oxf_adopcion_sector_publico
+    nombre: Oxford AI Readiness – Public Sector Adoption
+    dimension: 3
+    capa: activacion
+    sentido: 1
+    unidad: puntaje 0–100
+  - id: oxf_desarrollo_difusion
+    nombre: Oxford AI Readiness – Development & Diffusion
+    dimension: 6
+    capa: activacion
+    sentido: 1
+    unidad: puntaje 0–100
+  - id: oxf_resiliencia
+    nombre: Oxford AI Readiness – Resilience
+    dimension: 3
+    capa: instalada
+    sentido: 1
+    unidad: puntaje 0–100

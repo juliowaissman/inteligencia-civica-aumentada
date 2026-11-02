@@ -1,0 +1,32 @@
+id: anthropic_economic_index
+nombre: Anthropic Economic Index (uso de Claude por país)
+editor: Anthropic
+url: https://huggingface.co/datasets/Anthropic/EconomicIndex
+licencia: "CC BY (data_documentation.md de la publicación 2026-06-26); la ficha del repositorio en Hugging Face declara MIT"
+redistribuible: true
+cita: anthropic_aei_2026
+niveles: [internacional]
+descarga: automatica
+estado: verificada
+motivo: >-
+  Publicación release_2026_06_26 (la más reciente en Hugging Face al 2026-11-02), archivo
+  aei_claude_ai_2026-06-26.csv (~219 MB: no se versiona). Trae meses calendario de abril y mayo de 2026;
+  se usa solo mayo de 2026 (2026-05-01 a 2026-06-01). Solo se publica un país si supera el umbral mínimo
+  de conversaciones muestreadas: unos 120 países con índice per cápita. Mide uso de Claude.ai (planes
+  Free, Pro y Max), no adopción de IA en general, y depende de la cuota de mercado de Anthropic en cada
+  país. Ambas licencias (CC BY y MIT) permiten redistribuir con atribución.
+indicadores:
+  - id: aei_uso_per_capita
+    nombre: Anthropic AI Usage Index (uso de Claude por persona en edad de trabajar)
+    dimension: 3
+    capa: activacion
+    sentido: 1
+    unidad: índice (1 = uso proporcional a la población de 15–64 años)
+    nota: usage_per_capita_index; participación en el uso dividida entre la participación en la población de 15–64 años.
+  - id: aei_uso_pct
+    nombre: Participación del país en el uso mundial de Claude.ai
+    dimension: 3
+    capa: activacion
+    sentido: 1
+    unidad: "% del uso mundial"
+    nota: usage_pct; depende del tamaño del país, así que no sirve para comparar países sin normalizarlo.

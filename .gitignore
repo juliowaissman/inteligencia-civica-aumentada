@@ -6,3 +6,48 @@
 *.fls
 *.fdb_latexmk
 *.synctex.gz
+# --- Generado: política de datos (ver pipeline/CONTRIBUIR.md) ---
+# Crudos: solo se versionan fuentes con licencia que permite redistribuir y < 20 MB.
+datos/crudos/**
+!datos/crudos/*/
+!datos/crudos/*/*/
+!datos/crudos/*/*/procedencia.json
+# Procesados de fuentes sin licencia abierta no se versionan (el código los regenera).
+datos/procesados/anuies.csv
+!datos/crudos/banco_mundial/*/*
+!datos/crudos/cnge/*/*
+!datos/crudos/conapo_poblacion/*/*
+datos/procesados/dsp.csv
+!datos/crudos/encig/*/*
+!datos/crudos/encuci/*/*
+!datos/crudos/endutih/*/*
+!datos/crudos/gdb/*/*
+!datos/crudos/gii/*/*
+!datos/crudos/girai/*/*
+!datos/crudos/github_innovation/*/*
+datos/procesados/idd_mex.csv
+datos/procesados/idea_gsod.csv
+datos/procesados/imco_ice.csv
+datos/procesados/impi.csv
+datos/procesados/ine_participacion.csv
+datos/procesados/itu.csv
+datos/procesados/lapop.csv
+datos/procesados/latinno.csv
+datos/procesados/latinobarometro.csv
+datos/procesados/mga.csv
+!datos/crudos/microsoft_ai_diffusion/*/*
+datos/procesados/ogp.csv
+datos/procesados/onu_egov.csv
+datos/procesados/osc.csv
+datos/procesados/oxford_ai_readiness.csv
+!datos/crudos/sni/*/*
+datos/procesados/wjp.csv
+
+# Sitio
+site/node_modules/
+site/dist/
+site/.astro/
+# Python
+__pycache__/
+.venv/
+.pytest_cache/

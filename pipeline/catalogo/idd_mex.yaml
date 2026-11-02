@@ -1,0 +1,30 @@
+id: idd_mex
+nombre: Índice de Desarrollo Democrático de México (IDD-Mex), ediciones 2010-2024
+editor: Fundación Konrad Adenauer, Polilat, Confederación USEM, COPARMEX, El Colegio de México e INE
+url: https://idd-mex.org/
+licencia: "Sin licencia abierta: prohíbe la reproducción total o parcial sin citar la fuente o sin autorización de los titulares"
+redistribuible: false
+cita: iddmex_2024
+niveles: [nacional, estatal]
+descarga: automatica
+estado: verificada
+motivo: >-
+  idd-mex.org no responde (noviembre de 2026); se usan copias de web.archive.org. La edición 2024
+  (feb. 2025) es la más reciente y no tiene hoja de cálculo; sus valores estatales se leen de los
+  datos de la gráfica publicada en la página "Rankings 2024" (comprobados contra el PDF del informe:
+  Sonora 5.238, Chihuahua 3.173). No existe edición 2016.
+indicadores:
+  - id: idd_mex
+    nombre: Índice de Desarrollo Democrático de México (puntaje general)
+    dimension: 5
+    capa: resultado
+    sentido: 1
+    unidad: puntaje 0 a 10 (el informe lo expresa ×1000)
+    nota: >-
+      `anio` = año de la edición (cada edición mide datos del año anterior). Estatal: gráficas
+      containerIDD<AAAA> de la página Rankings 2024 (2010-2024; 2021-2024 redondeados a 2 decimales
+      en algunas ediciones). Nacional: renglón "Promedio" del xlsx de series 2010-2020 y 4.722 para
+      2024 (transcrito del informe, p. 16); 2021-2023 sin nacional. El procesamiento comprueba que
+      la página y el xlsx coinciden en 2010-2020 (salvo Baja California y Baja California Sur en 2014
+      y 2015, intercambiadas en la hoja resumen del xlsx; las hojas anuales coinciden con la página). El índice está reescalado por edición (el mejor
+      estado obtiene 10), por lo que es una medida relativa entre entidades.

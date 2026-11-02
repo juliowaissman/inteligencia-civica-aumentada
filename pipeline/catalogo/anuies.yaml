@@ -1,0 +1,35 @@
+id: anuies
+nombre: Anuario Estadístico de la Educación Superior (matrícula por entidad y campo amplio de formación)
+editor: Asociación Nacional de Universidades e Instituciones de Educación Superior (ANUIES)
+url: https://anuario.anuies.mx/
+licencia: "© ANUIES, todos los derechos reservados (no declara licencia abierta)"
+redistribuible: false
+cita: anuies_anuario_2025
+niveles: [nacional, estatal]
+descarga: automatica
+estado: verificada
+motivo: >-
+  Los datos de origen son los del cuestionario 911 de la SEP, que también se publica en datos.gob.mx
+  con licencia CC BY 4.0 (sin campo amplio en todos los ciclos); si se requiere redistribuir, usar esa
+  fuente como alternativa.
+indicadores:
+  - id: anuies_matricula_superior
+    nombre: Matrícula total de educación superior (TSU, licenciatura, normal y posgrado; todas las modalidades)
+    dimension: 1
+    capa: instalada
+    sentido: 1
+    transformacion: por_100k
+    unidad: estudiantes (conteo absoluto)
+    nota: >-
+      Ciclos 2020-2021 a 2025-2026; `anio` es el año de inicio del ciclo. Suma de MAT_TOTAL por entidad
+      sobre todos los campos amplios; el nacional es la suma de las 32 entidades. Para tasas usar
+      conapo_poblacion (p. ej. población de 18 a 22 años o total).
+  - id: anuies_matricula_tic
+    nombre: Matrícula de educación superior en el campo amplio "Tecnologías de la información y la comunicación"
+    dimension: 6
+    capa: instalada
+    sentido: 1
+    unidad: estudiantes (conteo absoluto)
+    nota: >-
+      Campo amplio 06 de la Clasificación Mexicana de Programas de Estudio (CINE-F 2013), todos los
+      niveles y modalidades. Se puede expresar como proporción de anuies_matricula_superior.

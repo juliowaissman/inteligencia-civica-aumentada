@@ -1,0 +1,38 @@
+id: github_innovation
+nombre: GitHub Innovation Graph
+editor: GitHub
+url: https://github.com/github/innovationgraph
+licencia: CC0 1.0
+redistribuible: true
+cita: github_innovationgraph
+niveles: [internacional]
+descarga: automatica
+estado: verificada
+motivo: >-
+  CSV trimestrales por economía desde 2020 (data/developers.csv y data/economy_collaborators.csv).
+  Solo se usan años completos (cuatro trimestres publicados); en la descarga del 2026-11-02 el
+  último año completo es 2025 (2026 llega al 2.º trimestre y se descarta). Los códigos ISO2 se
+  convierten a ISO3 con GeoNames countryInfo (CC BY 4.0); Kosovo queda como XKX. Se excluye
+  el agregado "EU". GitHub solo publica una economía si hay 100 o más desarrolladores activos.
+indicadores:
+  - id: gh_desarrolladores
+    nombre: Cuentas de desarrolladores en GitHub (al cierre del 4.º trimestre)
+    dimension: 6
+    capa: activacion
+    sentido: 1
+    transformacion: por_100k
+    unidad: número de cuentas (absoluto)
+    nota: >-
+      Conteo absoluto, no por habitante: la tasa se calculará después con una población de fuente
+      citada. Es un acervo acumulado que incluye cuentas inactivas; ubicación por IP (modo diario).
+  - id: gh_colaboracion_externa
+    nombre: Colaboración con otras economías en GitHub (suma anual)
+    dimension: 2
+    capa: activacion
+    sentido: 1
+    transformacion: por_100k
+    unidad: pushes + pull requests enviados a repositorios de otras economías (absoluto, suma de 4 trimestres)
+    nota: >-
+      Suma del campo weight de economy_collaborators.csv con source = país y destination distinto
+      del país y distinto del agregado EU. Solo incluye pares publicados (umbral de 100 desarrolladores);
+      GitHub advierte que es una cota inferior. Valor absoluto: conviene normalizarlo después.

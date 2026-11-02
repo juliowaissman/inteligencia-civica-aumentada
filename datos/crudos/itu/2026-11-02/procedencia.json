@@ -1,0 +1,11 @@
+{
+  "fuente": "itu",
+  "nombre": "Personas con habilidades TIC por tipo de habilidad (ODS 4.4.1)",
+  "url": "https://datahub.itu.int/",
+  "licencia": "ITU DataHub, Disclaimer and Terms of Use: copia, redistribución y adaptación solo con fines no comerciales y con cita; la base ODS de UN DESA no declara una licencia propia",
+  "fecha_acceso": "2026-11-02",
+  "sha256": {
+    "SE_ADT_ACTS.json": "80b23a10b898f05183d3e894e25597e696c10cf916e7edd735bdb4aff6bc5a7f",
+    "geonames_countryInfo.txt": "79f8f59ea01cbb40438bf1856dd6c2ff201f03f8fc72d0530b2646aaf603ef04"
+  }
+}

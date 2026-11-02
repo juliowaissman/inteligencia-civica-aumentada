@@ -1,0 +1,36 @@
+id: ine_participacion
+nombre: Participación ciudadana en elecciones federales 2018, 2021 y 2024 (Cómputos Distritales)
+editor: Instituto Nacional Electoral (INE)
+url: https://computos2024.ine.mx/
+licencia: Sin licencia declarada
+redistribuible: false
+cita: ine_computos_2024
+niveles: [nacional, estatal]
+descarga: automatica
+estado: verificada
+motivo: >-
+  Los sitios de cómputos del INE no declaran una licencia explícita para las bases de datos (el INE
+  publica datos abiertos en general, pero sin términos de uso en estos archivos). Se marca como no
+  redistribuible por precaución; los resultados agregados se pueden citar.
+indicadores:
+  - id: participacion_presidencia
+    nombre: Participación ciudadana, elección de Presidencia (votos totales / lista nominal)
+    dimension: 5
+    capa: activacion
+    sentido: 1
+    unidad: "%"
+    nota: >-
+      Años 2018 y 2024. Campo porcentajeParticipacionCiudadana de los JSON oficiales de los Cómputos
+      Distritales (nacional y uno por entidad). Nacional 2018: 63.4290; 2024: 61.0498. El valor estatal
+      del INE incluye el voto desde el extranjero asignado a la entidad y las casillas especiales.
+  - id: participacion_diputaciones
+    nombre: Participación ciudadana, elección de Diputaciones federales (votos totales / lista nominal)
+    dimension: 5
+    capa: activacion
+    sentido: 1
+    unidad: "%"
+    nota: >-
+      Años 2018, 2021 y 2024; es la única serie comparable en las tres elecciones (2021 fue elección
+      intermedia). Campo porcentajeParticipacionCiudadana (incluye votos de representación proporcional
+      de casillas especiales; el INE publica aparte el porcentaje solo de mayoría relativa).
+      Nacional 2021: 52.6647.

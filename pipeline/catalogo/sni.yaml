@@ -1,0 +1,24 @@
+id: sni
+nombre: Sistema Nacional de Investigadoras e Investigadores (SNII), padrón vigente S191, 2.º semestre de 2025
+editor: Secretaría de Ciencia, Humanidades, Tecnología e Innovación (SECIHTI)
+url: https://www.datos.gob.mx/dataset/sistema_nacional_investigadoras_investigadores_snii_s191
+licencia: CC BY 4.0
+redistribuible: true
+cita: secihti_snii_2025
+niveles: [nacional, estatal]
+descarga: automatica
+estado: verificada
+indicadores:
+  - id: sni_investigadores
+    nombre: Personas investigadoras con reconocimiento vigente en el SNII
+    dimension: 6
+    capa: instalada
+    sentido: 1
+    transformacion: por_100k
+    unidad: personas (conteo absoluto)
+    nota: >-
+      Conteo de registros (CVU únicos) por entidad_acreditacion_comision del padrón del 2.º semestre
+      de 2025 (incluye candidaturas, niveles 1–3 y eméritos). El total nacional incluye 2,550
+      registros "Sin Entidad de Acreditacion", por lo que la suma de las entidades es menor que el
+      nacional. Para tasas por habitante usar conapo_poblacion. Descarga vía la exportación del
+      datastore de datos.gob.mx (el archivo en repodatos.atdt.gob.mx devuelve 403 a clientes automatizados).

@@ -1,0 +1,50 @@
+id: encig
+nombre: Encuesta Nacional de Calidad e Impacto Gubernamental (ENCIG)
+editor: Instituto Nacional de Estadística y Geografía (INEGI)
+url: https://www.inegi.org.mx/programas/encig/2025/
+licencia: Términos de Libre Uso de la Información del INEGI
+redistribuible: true
+cita: inegi_encig_2025
+niveles: [nacional, estatal]
+descarga: automatica
+estado: verificada
+motivo: ""
+indicadores:
+  - id: encig_prevalencia_corrupcion
+    nombre: Tasa de prevalencia de corrupción en trámites (víctimas por cada 100 000 habitantes)
+    dimension: 5
+    capa: resultado
+    sentido: -1
+    unidad: por 100 000 habitantes de 18 años y más
+    nota: >-
+      Representativa por entidad solo para áreas urbanas de 100 mil habitantes y más. Cuadro de
+      tabulados básicos "Población de 18 años y más que tuvo contacto con algún(a) servidor(a)
+      público(a) por entidad federativa de residencia y sexo según experiencia con algún acto de
+      corrupción" (4.11 en 2023 y 2025; 4.7 en 2021), columna "Tasa por cada 100 000 habitantes",
+      fila total de la entidad. Ediciones 2021, 2023 y 2025 (en 2017 y 2019 los tabulados básicos no
+      traen este cuadro por entidad). Control 2025: nacional 15 641.9, Chihuahua 18 419.9, Sonora
+      18 355.5, iguales a los resultados publicados (15 642; 18 420; 18 355).
+  - id: encig_confianza_gob_estatal
+    nombre: Población que confía mucho o algo en el gobierno estatal (%)
+    dimension: 5
+    capa: resultado
+    sentido: 1
+    unidad: "% de la población de 18 años y más"
+    nota: >-
+      Representativa por entidad solo para áreas urbanas de 100 mil habitantes y más. Cuadro 6.1
+      "Población de 18 años y más ... por entidad federativa, instituciones y sectores según nivel de
+      confianza en estos", fila "Gobiernos Estatales". Valor = "Mucha confianza – Relativos" +
+      "Algo de confianza – Relativos", ambos tal como los publica el INEGI (la suma es la única
+      operación). Ediciones 2017, 2019, 2021, 2023 y 2025.
+  - id: encig_satisfaccion_servicios
+    nombre: Satisfacción con servicios públicos básicos y bajo demanda (% de opiniones satisfechas)
+    dimension: 5
+    capa: resultado
+    sentido: 1
+    unidad: "% de opiniones emitidas"
+    nota: >-
+      Representativa por entidad solo para áreas urbanas de 100 mil habitantes y más. Cuadro 2.14
+      "Total de opiniones emitidas sobre servicios públicos básicos y bajo demanda ... por entidad
+      federativa según satisfacción con los mismos", columna "Opiniones de satisfacción –
+      Relativos". La unidad es la opinión (cada persona opina sobre varios servicios), no la
+      persona. Ediciones 2023 y 2025 (antes de 2023 el cuadro equivalente tiene otro diseño).

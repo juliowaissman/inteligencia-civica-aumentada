@@ -1,0 +1,10 @@
+{
+  "fuente": "idea_gsod",
+  "nombre": "Global State of Democracy Indices v10 (categoría Participación), 1975–2025",
+  "url": "https://www.idea.int/democracytracker/gsod-indices",
+  "licencia": "CC BY-NC-SA 4.0",
+  "fecha_acceso": "2026-11-02",
+  "sha256": {
+    "gsod_indices_v10.csv": "f3dd093861549fb438142c10a554dcee7036366ae6d569c01b5c9f3c473d2f35"
+  }
+}

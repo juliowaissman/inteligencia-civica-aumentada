@@ -1,0 +1,48 @@
+id: mga
+nombre: Métrica de Gobierno Abierto (ediciones 2017, 2019 y 2021), resultados por entidad federativa
+editor: Instituto Nacional de Transparencia, Acceso a la Información y Protección de Datos Personales (INAI) y Centro de Investigación y Docencia Económicas (CIDE)
+url: https://lnppmicrositio.shinyapps.io/metrica_gobierno_abierto_2021/
+licencia: CC BY-NC-SA 4.0 (declarada en el micrositio 2021; las ediciones 2017 y 2019 no declaran licencia)
+redistribuible: false
+cita: inai_cide_mga_2021
+niveles: [nacional, estatal]
+descarga: automatica
+estado: verificada
+motivo: >-
+  CC BY-NC-SA no se considera redistribuible según las reglas del proyecto (cláusula no comercial).
+  El INAI se extinguió en 2025; los archivos 2017 y 2019 se toman de copias de web.archive.org
+  (capturas del 13 de febrero de 2021) del micrositio del INAI, y el CSV 2021 del micrositio del
+  Laboratorio Nacional de Políticas Públicas (CIDE) en shinyapps.io, que no enlaza el archivo
+  directamente (está en la carpeta bases/ del sitio). Si shinyapps desaparece, conservar la copia
+  cruda y su sha256 (procedencia.json).
+indicadores:
+  - id: mga_indice
+    nombre: Índice de Gobierno Abierto (MGA)
+    dimension: 4
+    capa: instalada
+    sentido: 1
+    unidad: índice 0 a 1
+    nota: >-
+      2021: columna ga_indice del CSV por estado (control: Chihuahua 0.524, Sonora 0.515,
+      Guanajuato 0.657, Guerrero 0.350; nacional 0.48 transcrito del Reporte final 2021).
+      2019: hoja "Estado " del xlsx (promedios ponderados por número de sujetos obligados) y
+      hoja "Totales" para el nacional. 2017: promedio simple de la hoja BR por entidad; reproduce
+      el Anexo 5 del Reporte de Resultados 2017. Los métodos de agregación no son idénticos entre
+      ediciones: compárense con cautela.
+  - id: mga_transparencia
+    nombre: Subíndice de Transparencia (MGA)
+    dimension: 4
+    capa: instalada
+    sentido: 1
+    unidad: índice 0 a 1
+    nota: Columna t_indice (2019, 2021) o T (2017). Nacional 2021 = 0.61 (Reporte final).
+  - id: mga_participacion
+    nombre: Subíndice de Participación (MGA)
+    dimension: 4
+    capa: instalada
+    sentido: 1
+    unidad: índice 0 a 1
+    nota: >-
+      Columna p_indice (2019, 2021) o P (2017). Nacional 2021 = 0.35 según el Reporte final; el
+      promedio simple de los 1,365 sujetos obligados del CSV por sujeto obligado da 0.36. En 2019 el
+      xlsx advierte que el valor global de P se calculó de forma distinta en esa edición.
