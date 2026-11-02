@@ -117,3 +117,4 @@ main { overflow-wrap: break-word; }
 td, th { overflow-wrap: normal; }
 
 td.n, th.n { text-align: right; white-space: nowrap; }
+td.n .nota, th.n .nota { text-align: right; }
