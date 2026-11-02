@@ -84,7 +84,10 @@ th { background: var(--fondo-suave); font-weight: 700; }
 .tabla { overflow-x: auto; margin: 1.2em 0; }
 
 .contenedor { max-width: var(--ancho); margin: 0 auto; padding: 0 16px; }
-.prosa { max-width: 760px; }
+.prosa { max-width: none; }
+/* Texto corrido a todo el ancho del contenido (igual que las tablas), justificado y con guiones en español. */
+main p, main li, main blockquote { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+main td p, main td li, figcaption, caption, .nota, .tarjeta p, .tarjeta li { text-align: left; hyphens: manual; }
 .franja { height: 6px; background: linear-gradient(90deg,
   var(--azul) 0 16.6%, var(--cian) 0 33.3%, var(--magenta) 0 50%,
   var(--verde) 0 66.6%, var(--rojo) 0 83.3%, var(--amarillo) 0); }
