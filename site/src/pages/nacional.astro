@@ -39,11 +39,11 @@ const primerAnioDim = (d: string) => serie.find((r) => r.dims[d] !== null)?.anio
 
   <div class="tabla">
     <table>
-      <thead><tr><th>Año</th><th>IICA-N</th>{Object.keys(DIM_CORTO).map((d) => <th><span class="chip" style={`background:${DIM_COLOR[d]}`}>{d}</span></th>)}</tr></thead>
+      <thead><tr><th class="n">Año</th><th class="n">IICA-N</th>{Object.keys(DIM_CORTO).map((d) => <th class="n"><span class="chip" style={`background:${DIM_COLOR[d]}`}>{d}</span></th>)}</tr></thead>
       <tbody>
         {serie.map((r) => (
-          <tr><td>{r.anio}</td><td>{r.indice === null ? <span class="sin-dato">—</span> : <strong>{num(r.indice)}</strong>}</td>
-            {Object.keys(DIM_CORTO).map((d) => <td>{r.dims[d] === null ? <span class="sin-dato">—</span> : num(r.dims[d])}</td>)}</tr>
+          <tr><td class="n">{r.anio}</td><td class="n">{r.indice === null ? <span class="sin-dato">—</span> : <strong>{num(r.indice)}</strong>}</td>
+            {Object.keys(DIM_CORTO).map((d) => <td class="n">{r.dims[d] === null ? <span class="sin-dato">—</span> : num(r.dims[d])}</td>)}</tr>
         ))}
       </tbody>
     </table>
@@ -53,7 +53,7 @@ const primerAnioDim = (d: string) => serie.find((r) => r.dims[d] !== null)?.anio
   <h2>Indicadores de la serie</h2>
   <div class="tabla">
     <table>
-      <thead><tr><th>Dim.</th><th>Indicador</th><th>Fuente</th><th>{anios[0]}</th><th>{anios[anios.length - 1]}</th></tr></thead>
+      <thead><tr><th>Dim.</th><th>Indicador</th><th>Fuente</th><th class="n">{anios[0]}</th><th class="n">{anios[anios.length - 1]}</th></tr></thead>
       <tbody>
         {inds.map((i) => {
           const conDato = serie.filter((r) => r.valores[i.id] !== null);
@@ -62,8 +62,8 @@ const primerAnioDim = (d: string) => serie.find((r) => r.dims[d] !== null)?.anio
             <td><span class="chip" style={`background:${DIM_COLOR[String(i.dimension)]}`}>{i.dimension}</span></td>
             <td>{i.nombre}<div class="nota">{unidadMedida(i)}</div></td>
             <td>{i.editor} <Cita clave={i.cita} /></td>
-            <td>{a ? <>{valor(a.valores[i.id])} <span class="nota">({a.anio})</span></> : <span class="sin-dato">sin información</span>}</td>
-            <td>{b ? <>{valor(b.valores[i.id])} <span class="nota">({b.anio})</span></> : <span class="sin-dato">sin información</span>}</td>
+            <td class="n">{a ? <>{valor(a.valores[i.id])} <span class="nota">({a.anio})</span></> : <span class="sin-dato">sin información</span>}</td>
+            <td class="n">{b ? <>{valor(b.valores[i.id])} <span class="nota">({b.anio})</span></> : <span class="sin-dato">sin información</span>}</td>
           </tr>);
         })}
       </tbody>

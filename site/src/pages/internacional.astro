@@ -47,11 +47,11 @@ const paises = [...conIndice].sort((a, b) => a.nombre.localeCompare(b.nombre, "e
   </label>
   <div class="tabla">
     <table>
-      <thead><tr><th>Dimensión</th><th>México</th><th>Mediana América Latina</th><th>Mediana OCDE</th></tr></thead>
+      <thead><tr><th>Dimensión</th><th class="n">México</th><th class="n">Mediana América Latina</th><th class="n">Mediana OCDE</th></tr></thead>
       <tbody>
         {Object.entries(DIM_CORTO).map(([d, n]) => (
           <tr><td><span class="chip" style={`background:${DIM_COLOR[d]}`}>{d}</span> {n}</td>
-            <td><strong>{num(mx.dims[d])}</strong></td><td>{num(medAL[d])}</td><td>{num(medOCDE[d])}</td></tr>
+            <td class="n"><strong>{num(mx.dims[d])}</strong></td><td class="n">{num(medAL[d])}</td><td class="n">{num(medOCDE[d])}</td></tr>
         ))}
       </tbody>
     </table>
@@ -80,13 +80,13 @@ const paises = [...conIndice].sort((a, b) => a.nombre.localeCompare(b.nombre, "e
   </p>
   <div class="tabla">
     <table>
-      <thead><tr><th>Indicador</th><th>Fuente</th><th>Año</th><th>México</th><th>Mediana de comparación</th></tr></thead>
+      <thead><tr><th>Indicador</th><th>Fuente</th><th class="n">Año</th><th class="n">México</th><th class="n">Mediana de comparación</th></tr></thead>
       <tbody>
         {Object.entries(ctx).map(([id, c]) => {
           const vals = Object.values(c.valores).filter((v: any) => v !== null) as number[];
           return (
-            <tr><td>{c.nombre}</td><td>{c.editor} <Cita clave={c.cita} /></td><td>{c.anio}</td>
-              <td>{valor(c.valores.MEX ?? null)}</td><td>{vals.length ? valor(mediana(vals)) : "sin información"}</td></tr>
+            <tr><td>{c.nombre}</td><td>{c.editor} <Cita clave={c.cita} /></td><td class="n">{c.anio}</td>
+              <td class="n">{valor(c.valores.MEX ?? null)}</td><td class="n">{vals.length ? valor(mediana(vals)) : "sin información"}</td></tr>
           );
         })}
       </tbody>

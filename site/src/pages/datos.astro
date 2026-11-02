@@ -44,7 +44,7 @@ uv run iica exportar      # datos del sitio y figuras del artículo</code></pre>
   </p>
   <div class="tabla">
     <table>
-      <thead><tr><th style="min-width:15rem">Fuente</th><th>Niveles</th><th>Licencia</th><th>Estado</th><th>Indicadores</th></tr></thead>
+      <thead><tr><th style="min-width:15rem">Fuente</th><th>Niveles</th><th>Licencia</th><th>Estado</th><th class="n">Indicadores</th></tr></thead>
       <tbody>
         {orden.map((f) => (
           <tr>
@@ -52,7 +52,7 @@ uv run iica exportar      # datos del sitio y figuras del artículo</code></pre>
             <td>{f.niveles.join(", ")}</td>
             <td>{f.licencia}</td>
             <td>{ESTADO[f.estado]}{f.motivo ? <div class="nota">{f.motivo}</div> : null}</td>
-            <td>{f.indicadores.length}</td>
+            <td class="n">{f.indicadores.length}</td>
           </tr>
         ))}
       </tbody>

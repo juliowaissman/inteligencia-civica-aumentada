@@ -30,7 +30,7 @@ const matriz = (d: any) => Object.fromEntries(Object.keys(DIM_CORTO).map((dim) =
         <div class="tabla">
           <table>
             <caption>Cobertura del nivel {nombre.toLowerCase()}: número de indicadores («—» = ningún indicador)</caption>
-            <thead><tr><th>Dimensión</th>{capas.map((c) => <th>{CAPA[c]}</th>)}</tr></thead>
+            <thead><tr><th>Dimensión</th>{capas.map((c) => <th class="n">{CAPA[c]}</th>)}</tr></thead>
             <tbody>
               {Object.entries(DIM_CORTO).map(([dim, n]) => (
                 <tr><td><span class="chip" style={`background:${DIM_COLOR[dim]}`}>{dim}</span> {n}</td>
@@ -70,11 +70,11 @@ const matriz = (d: any) => Object.fromEntries(Object.keys(DIM_CORTO).map((dim) =
       <div class="tabla">
         <table>
           <caption>Coherencia, nivel {nombre.toLowerCase()}</caption>
-          <thead><tr><th>Indicador</th><th>Dim.</th><th>r con su dimensión</th><th>r con el índice</th><th>Alerta</th></tr></thead>
+          <thead><tr><th>Indicador</th><th class="n">Dim.</th><th class="n">r con su dimensión</th><th class="n">r con el índice</th><th>Alerta</th></tr></thead>
           <tbody>
             {(d.coherencia as any[]).map((c) => {
               const ind = (d.indicadores as any[]).find((i) => i.id === c.indicador);
-              return <tr><td>{ind?.nombre}</td><td>{c.dimension}</td><td>{num(c.r_dimension, 2)}</td><td>{num(c.r_indice, 2)}</td><td>{c.alerta ?? ""}</td></tr>;
+              return <tr><td>{ind?.nombre}</td><td class="n">{c.dimension}</td><td class="n">{num(c.r_dimension, 2)}</td><td class="n">{num(c.r_indice, 2)}</td><td>{c.alerta ?? ""}</td></tr>;
             })}
           </tbody>
         </table>

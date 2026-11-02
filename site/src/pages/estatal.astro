@@ -42,13 +42,13 @@ const debiles = datos.dimensiones_debiles as number[];
   </figure>
   <div class="tabla">
     <table>
-      <thead><tr><th>Dimensión</th><th>Chihuahua</th><th>Sonora</th><th>Mediana de las 32</th></tr></thead>
+      <thead><tr><th>Dimensión</th><th class="n">Chihuahua</th><th class="n">Sonora</th><th class="n">Mediana de las 32</th></tr></thead>
       <tbody>
         {Object.entries(DIM_CORTO).map(([d, n]) => {
           const vals = u.map((x) => x.dims[d]).filter((v) => v !== null).sort((a, b) => a - b);
           const med = (vals[15] + vals[16]) / 2;
           return (<tr><td><span class="chip" style={`background:${DIM_COLOR[d]}`}>{d}</span> {n}{debiles.includes(Number(d)) ? " *" : ""}</td>
-            <td>{num(chh.dims[d])}</td><td>{num(son.dims[d])}</td><td>{num(med)}</td></tr>);
+            <td class="n">{num(chh.dims[d])}</td><td class="n">{num(son.dims[d])}</td><td class="n">{num(med)}</td></tr>);
         })}
       </tbody>
     </table>
@@ -75,11 +75,11 @@ const debiles = datos.dimensiones_debiles as number[];
     <summary>Tabla completa por entidad</summary>
     <div class="tabla">
       <table>
-        <thead><tr><th>Lugar</th><th>Entidad</th><th>IICA-E</th><th>Intervalo</th>{Object.keys(DIM_CORTO).map((d) => <th>D{d}</th>)}</tr></thead>
+        <thead><tr><th class="n">Lugar</th><th>Entidad</th><th class="n">IICA-E</th><th class="n">Intervalo</th>{Object.keys(DIM_CORTO).map((d) => <th class="n">D{d}</th>)}</tr></thead>
         <tbody>
           {u.map((x) => (
-            <tr class={["08", "26"].includes(x.id) ? "resalta" : ""}><td>{x.rango}</td><td>{x.nombre}</td><td>{num(x.indice)}</td><td>{x.rango_p5}–{x.rango_p95}</td>
-              {Object.keys(DIM_CORTO).map((d) => <td>{num(x.dims[d], 0)}</td>)}</tr>
+            <tr class={["08", "26"].includes(x.id) ? "resalta" : ""}><td class="n">{x.rango}</td><td>{x.nombre}</td><td class="n">{num(x.indice)}</td><td class="n">{x.rango_p5}–{x.rango_p95}</td>
+              {Object.keys(DIM_CORTO).map((d) => <td class="n">{num(x.dims[d], 0)}</td>)}</tr>
           ))}
         </tbody>
       </table>
@@ -98,10 +98,10 @@ const debiles = datos.dimensiones_debiles as number[];
   <h2>Contexto</h2>
   <div class="tabla">
     <table>
-      <thead><tr><th>Indicador</th><th>Fuente</th><th>Año</th><th>Chihuahua</th><th>Sonora</th></tr></thead>
+      <thead><tr><th>Indicador</th><th>Fuente</th><th class="n">Año</th><th class="n">Chihuahua</th><th class="n">Sonora</th></tr></thead>
       <tbody>
         {Object.entries(ctx).map(([id, c]) => (
-          <tr><td>{c.nombre}</td><td>{c.editor} <Cita clave={c.cita} /></td><td>{c.anio}</td><td>{valor(c.valores["08"] ?? null)}</td><td>{valor(c.valores["26"] ?? null)}</td></tr>
+          <tr><td>{c.nombre}</td><td>{c.editor} <Cita clave={c.cita} /></td><td class="n">{c.anio}</td><td class="n">{valor(c.valores["08"] ?? null)}</td><td class="n">{valor(c.valores["26"] ?? null)}</td></tr>
         ))}
       </tbody>
     </table>
