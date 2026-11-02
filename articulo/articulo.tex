@@ -122,14 +122,14 @@ La selección de indicadores siguió cinco criterios:
   \item no combinar el total de una fuente con sus propios componentes, ni indicadores construidos con los mismos datos;
   \item preferir fuentes con licencia abierta;
   \item expresar los conteos absolutos como tasas por 100 mil habitantes, con la población del Banco Mundial \parencite{bancomundial_wdi} o de CONAPO \parencite{conapo_proyecciones_2023};
-  \item clasificar cada indicador por dimensión, por capa (capacidad instalada, activación o resultado) y por sentido (si más es mejor o peor).
+  \item clasificar cada indicador por dimensión, por capa (capacidad instalada, activación o resultado agregado del sistema) y por sentido (si más es mejor o peor).
 \end{enumerate}
 Los cuadros \ref{tab:ind-intl} y \ref{tab:ind-est} listan los \NIndIntl{} indicadores internacionales y los \NIndEst{} estatales, con su fuente, el año utilizado y los valores en su escala original. El IICA-N usa \NIndNac{} de los indicadores internacionales.
 
 \input{tablas/indicadores_internacional.tex}
 \input{tablas/indicadores_estatal.tex}
 
-El cuadro \ref{tab:cobertura} resume la cobertura por dimensión y capa. Ningún nivel tiene indicadores de resultados emergentes, y en el nivel estatal la dimensión de inteligencia colectiva descansa en un solo indicador.
+El cuadro \ref{tab:cobertura} resume la cobertura por dimensión y capa. Los indicadores clasificados como resultado miden resultados agregados del sistema democrático o de innovación, como la prevalencia de corrupción, la confianza o las patentes; ninguno mide resultados emergentes de procesos concretos de cocreación. En el nivel estatal la dimensión de inteligencia colectiva descansa en un solo indicador.
 
 \input{tablas/cobertura.tex}
 
@@ -233,7 +233,7 @@ Los intervalos de sensibilidad son amplios en la parte media de la tabla. Muchas
 \section{Alcances y limitaciones}
 %=====================================================================
 
-\paragraph{Qué se mide.} Los índices miden sobre todo capacidad instalada y, en algunos indicadores, activación (cuadro~\ref{tab:cobertura}). Ningún indicador captura resultados emergentes. Por diseño, la ICA es una propiedad emergente de las interacciones dentro de un ecosistema \parencite{zenteno_ica_2026}; estos índices describen las condiciones de ese ecosistema, no la propiedad.
+\paragraph{Qué se mide.} Los índices miden sobre todo capacidad instalada y, en algunos indicadores, activación (cuadro~\ref{tab:cobertura}). Algunos indicadores miden resultados agregados del sistema, pero ninguno captura resultados emergentes de procesos de cocreación. Por diseño, la ICA es una propiedad emergente de las interacciones dentro de un ecosistema \parencite{zenteno_ica_2026}; estos índices describen las condiciones de ese ecosistema, no la propiedad.
 
 \paragraph{Coherencia estadística.} En el IICA-I, el factor de Gobierno abierto del WJP \parencite{wjp_rolindex2026} y el indicador de Voz y rendición de cuentas de los WGI \parencite{bancomundial_wdi} tienen correlaciones con el índice de \CohWJP{} y \CohWGIvoz, en el umbral en que un indicador empieza a dominar (cuadro~\ref{tab:coh-intl}). En el IICA-E, \NSubrepEst{} indicadores quedan subrepresentados (cuadro~\ref{tab:coh-est}). Los de valor público son el caso más claro: la participación electoral, la prevalencia de corrupción y la confianza en el gobierno estatal tienen correlaciones con el índice de \CohPartPres, \CohCorrup{} y \CohConfianza. Esa dimensión mide algo distinto del resto, lo que justifica conservarla, pero también advierte que el índice agregado oculta tensiones entre dimensiones. Ningún indicador estatal supera el umbral de sesgo de tamaño: la correlación más alta con la población, en valor absoluto, es de \MaxRpobEst.
 

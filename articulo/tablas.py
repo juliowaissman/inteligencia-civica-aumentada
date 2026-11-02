@@ -23,7 +23,7 @@ AL = {"ARG", "BOL", "BRA", "CHL", "COL", "CRI", "CUB", "DOM", "ECU", "SLV", "GTM
 CORTO = {1: "Capacidades cívicas y humanas", 2: "Inteligencia colectiva",
          3: "Integración ética de la IA y gobierno digital", 4: "Instituciones habilitadoras y cocreación",
          5: "Valor público democrático", 6: "Continuidad y retroalimentación"}
-CAPAS = {"instalada": "Capacidad instalada", "activacion": "Activación", "resultado": "Resultado emergente"}
+CAPAS = {"instalada": "Capacidad instalada", "activacion": "Activación", "resultado": "Resultado agregado del sistema"}
 LETRAS = "ABCDEF"
 
 
@@ -112,8 +112,8 @@ for d in range(1, 7):
     celdas.append(str(n_nac) if n_nac else r"\textemdash")
     filas.append(rf"{d}. {CORTO[d]} & " + " & ".join(celdas) + r"\\")
 cob = [r"\begin{table}[htbp]\centering\footnotesize",
-       r"\caption{Cobertura: número de indicadores por dimensión, capa y nivel. Ningún nivel tiene indicadores de "
-       r"resultados emergentes; las celdas vacías no se imputan.}\label{tab:cobertura}",
+       r"\caption{Cobertura: número de indicadores por dimensión, capa y nivel. «Result.» son resultados agregados del sistema "
+       r"(p.\,ej., corrupción o patentes), no resultados emergentes de procesos de cocreación; las celdas vacías no se imputan.}\label{tab:cobertura}",
        r"\begin{tabular}{@{}p{5.2cm}cccccc c@{}}", r"\toprule",
        r" & \multicolumn{3}{c}{IICA-I} & \multicolumn{3}{c}{IICA-E} & IICA-N\\",
        r"\cmidrule(lr){2-4}\cmidrule(lr){5-7}",

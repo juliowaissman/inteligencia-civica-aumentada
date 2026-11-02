@@ -71,7 +71,7 @@ const paises = [...conIndice].sort((a, b) => a.nombre.localeCompare(b.nombre, "e
 
   <h2>Indicadores</h2>
   <TablaIndicadores indicadores={datos.indicadores} columnas={[{ titulo: "México", valores: mx.valores, norm: mx.norm }]}
-    caption="Valor original de México y, entre paréntesis, su valor normalizado (0–100) frente a los países de comparación." />
+    caption="Valor original de México y, debajo, su valor normalizado (0–100) frente a los países de comparación." />
 
   <h2>Contexto: adopción y preparación para la IA</h2>
   <p class="prosa">
@@ -98,7 +98,7 @@ const paises = [...conIndice].sort((a, b) => a.nombre.localeCompare(b.nombre, "e
     El IICA-I es un índice de <strong>contexto</strong>. Mide qué tanto el ecosistema de cada país ofrece las condiciones de las
     seis dimensiones; no mide si esas condiciones se activan en procesos concretos de cocreación. Además, en este nivel el
     indicador de gobierno abierto del WJP y el de voz y rendición de cuentas del Banco Mundial están muy correlacionados con el índice
-    (r &gt; 0,95), así que pesan mucho en el resultado <Cita clave="jrc_coin_2019" />. Ver <a href="../metodologia/">coherencia estadística</a>.
+    (r &gt; 0.95), así que pesan mucho en el resultado <Cita clave="jrc_coin_2019" />. Ver <a href="../metodologia/">coherencia estadística</a>.
   </p>
 </Base>
 

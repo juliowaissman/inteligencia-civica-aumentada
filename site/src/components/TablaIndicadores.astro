@@ -1,43 +1,70 @@
 ---
-// Tabla de indicadores de un nivel: dimensión, fuente con cita, año y valores de las unidades pedidas.
+// Tabla de indicadores de un nivel, agrupada por dimensión: indicador, fuente con cita, año y valores.
 import Cita from "./Cita.astro";
 import { DIM_COLOR, DIM_CORTO, CAPA, valor, num, unidadMedida } from "../lib/formato";
 interface Columna { titulo: string; valores: Record<string, number | null>; norm?: Record<string, number | null> }
 interface Props { indicadores: any[]; columnas: Columna[]; caption: string }
 const { indicadores, columnas, caption } = Astro.props;
-const orden = [...indicadores].sort((a, b) => a.dimension - b.dimension);
+const dims = [...new Set(indicadores.map((i) => String(i.dimension)))].sort();
+const totalCols = 3 + columnas.length;
+// Nombre corto del editor: sus siglas entre paréntesis (p. ej. "INAI–CIDE"),
+// o, si no tiene, el texto antes de la primera coma.
+const CORTOS: [string, string][] = [
+  ["Varieties of Democracy", "V-Dem"], ["Digital Society Project", "Digital Society Project"],
+  ["Naciones Unidas", "ONU"], ["Organización Mundial de la Propiedad Intelectual", "OMPI"],
+];
+const editorCorto = (e: string) => {
+  const fijo = CORTOS.find(([prefijo]) => e.startsWith(prefijo));
+  if (fijo) return fijo[1];
+  const siglas = [...e.matchAll(/\(([A-ZÁÉÍÓÚÑ][A-ZÁÉÍÓÚÑa-z-]{1,11})\)/g)].map((m) => m[1]).filter((x) => /^[A-ZÁÉÍÓÚÑ]{2}/.test(x));
+  return siglas.length ? siglas.join("–") : e.split(",")[0];
+};
 ---
 <div class="tabla">
-  <table>
-    <caption class="nota" style="text-align:left;caption-side:bottom;padding-top:.4rem">{caption}</caption>
+  <table class="indicadores">
+    <caption>{caption}</caption>
     <thead>
       <tr>
-        <th scope="col">Dimensión</th>
-        <th scope="col">Indicador</th>
-        <th scope="col">Fuente</th>
-        <th scope="col">Año</th>
-        {columnas.map((c) => <th scope="col">{c.titulo}<br /><span class="nota">valor (0–100)</span></th>)}
+        <th scope="col" class="c-ind">Indicador</th>
+        <th scope="col" class="c-fuente">Fuente</th>
+        <th scope="col" class="n">Año</th>
+        {columnas.map((c) => <th scope="col" class="n">{c.titulo}</th>)}
       </tr>
     </thead>
-    <tbody>
-      {orden.map((i) => (
-        <tr>
-          <td><span class="chip" style={`background:${DIM_COLOR[String(i.dimension)]}`}>{i.dimension}</span> {DIM_CORTO[String(i.dimension)]}</td>
-          <td>
-            {i.nombre}
-            <div class="nota">{unidadMedida(i)}{i.sentido === -1 ? " · menos es mejor" : ""} · {CAPA[i.capa]}{i.winsorizados ? ` · ${i.winsorizados} valor(es) atípico(s) acotado(s)` : ""}</div>
-          </td>
-          <td>{i.editor} <Cita clave={i.cita} /></td>
-          <td>{i.anio ?? "—"}</td>
-          {columnas.map((c) => (
-            <td>
-              {c.valores[i.id] === null || c.valores[i.id] === undefined
-                ? <span class="sin-dato">sin información</span>
-                : <>{valor(c.valores[i.id])}{c.norm ? <span class="nota"> ({num(c.norm[i.id] ?? null, 0)})</span> : null}</>}
-            </td>
-          ))}
+    {dims.map((d) => (
+      <tbody>
+        <tr class="grupo" style={`--c:${DIM_COLOR[d]}`}>
+          <th colspan={totalCols} scope="rowgroup"><span class="chip" style={`background:${DIM_COLOR[d]}`}>{d}</span> {DIM_CORTO[d]}</th>
         </tr>
-      ))}
-    </tbody>
+        {indicadores.filter((i) => String(i.dimension) === d).map((i) => (
+          <tr>
+            <td class="c-ind">
+              {i.nombre}
+              <div class="nota">{unidadMedida(i)}{i.sentido === -1 ? " · menos es mejor" : ""} · {CAPA[i.capa]}{i.winsorizados ? " · atípicos acotados" : ""}</div>
+            </td>
+            <td class="c-fuente"><span title={i.editor}>{editorCorto(i.editor)}</span> <Cita clave={i.cita} compacta /></td>
+            <td class="n">{i.anio ?? "—"}</td>
+            {columnas.map((c) => (
+              <td class="n">
+                {c.valores[i.id] === null || c.valores[i.id] === undefined
+                  ? <span class="sin-dato">sin información</span>
+                  : <>{valor(c.valores[i.id])}{c.norm && c.norm[i.id] !== null && c.norm[i.id] !== undefined
+                      ? <div class="nota">{num(c.norm[i.id], 0)} / 100</div> : null}</>}
+              </td>
+            ))}
+          </tr>
+        ))}
+      </tbody>
+    ))}
   </table>
 </div>
+
+<style>
+  .indicadores { min-width: 720px; }
+  .indicadores caption { caption-side: bottom; text-align: left; padding-top: 0.5rem; font-size: 0.88rem; color: var(--texto-suave); }
+  .c-ind { min-width: 16rem; }
+  .c-fuente { min-width: 9rem; max-width: 14rem; }
+  .n { white-space: nowrap; text-align: right; }
+  th.n { text-align: right; }
+  .grupo th { background: transparent; border-bottom: 2px solid var(--c); padding-top: 1.1rem; font-size: 1rem; color: var(--texto); }
+</style>

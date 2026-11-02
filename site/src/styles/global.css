@@ -108,4 +108,9 @@ th { background: var(--fondo-suave); font-weight: 700; }
 .selector { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; max-width: 100%; font-weight: 600; margin-bottom: 0.8rem; }
 .selector select { flex: 1 1 14rem; min-width: 0; max-width: 32rem; font: inherit; padding: 0.3rem 0.5rem; border-radius: 8px;
   border: 1px solid var(--borde); background: var(--fondo); color: var(--texto); }
-main { overflow-wrap: anywhere; }
+/* Solo se parte una palabra si no cabe sola en su renglón (URLs largas). */
+main { overflow-wrap: break-word; }
+.tabla table { min-width: 560px; }
+td, th { overflow-wrap: normal; }
+
+td.n, th.n { text-align: right; white-space: nowrap; }

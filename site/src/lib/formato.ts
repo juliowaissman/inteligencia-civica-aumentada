@@ -21,7 +21,7 @@ export const DIM_CORTO: Record<string, string> = {
 export const CAPA: Record<string, string> = {
   instalada: "Capacidad instalada",
   activacion: "Activación",
-  resultado: "Resultado emergente",
+  resultado: "Resultado agregado del sistema",
 };
 
 const nf = (d: number) => new Intl.NumberFormat("es-MX", { maximumFractionDigits: d, minimumFractionDigits: d });

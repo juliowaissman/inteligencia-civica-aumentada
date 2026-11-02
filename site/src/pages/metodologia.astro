@@ -21,7 +21,7 @@ const matriz = (d: any) => Object.fromEntries(Object.keys(DIM_CORTO).map((dim) =
     <h2>1. Qué se puede medir con datos abiertos</h2>
     <p class="prosa">
       El modelo MICA distingue la capacidad instalada de un ecosistema, su activación y los resultados que emergen <Cita clave="zenteno_ica_2026" />.
-      Los datos abiertos casi siempre miden <strong>capacidad instalada</strong>, algunas veces <strong>activación</strong> y nunca resultados emergentes.
+      Los datos abiertos casi siempre miden <strong>capacidad instalada</strong>, algunas veces <strong>activación</strong> o <strong>resultados agregados del sistema</strong>, como la corrupción, la confianza o las patentes. Nunca miden los resultados emergentes de procesos concretos de cocreación.
       Por eso hablamos de <strong>índices parciales de contexto</strong>. La tabla muestra cuántos indicadores cubren cada dimensión y capa.
     </p>
     {niveles.map(([nombre, d]) => {
@@ -29,12 +29,12 @@ const matriz = (d: any) => Object.fromEntries(Object.keys(DIM_CORTO).map((dim) =
       return (
         <div class="tabla">
           <table>
-            <caption>Cobertura del nivel {nombre.toLowerCase()} (número de indicadores)</caption>
+            <caption>Cobertura del nivel {nombre.toLowerCase()}: número de indicadores («—» = ningún indicador)</caption>
             <thead><tr><th>Dimensión</th>{capas.map((c) => <th>{CAPA[c]}</th>)}</tr></thead>
             <tbody>
               {Object.entries(DIM_CORTO).map(([dim, n]) => (
                 <tr><td><span class="chip" style={`background:${DIM_COLOR[dim]}`}>{dim}</span> {n}</td>
-                  {capas.map((c) => <td>{m[dim][c] ? m[dim][c] : <span class="sin-dato">sin información</span>}</td>)}</tr>
+                  {capas.map((c) => <td class="n">{m[dim][c] ? m[dim][c] : <span class="sin-dato">—</span>}</td>)}</tr>
               ))}
             </tbody>
           </table>
@@ -52,7 +52,7 @@ const matriz = (d: any) => Object.fromEntries(Object.keys(DIM_CORTO).map((dim) =
 
     <h2>3. Cálculo</h2>
     <ol class="prosa">
-      <li><strong>Valores atípicos.</strong> Si un indicador tiene asimetría mayor que 2 y curtosis mayor que 3,5, se acotan sus valores extremos, hasta 5, al siguiente valor <Cita clave="jrc_coin_2019" />.</li>
+      <li><strong>Valores atípicos.</strong> Si un indicador tiene asimetría mayor que 2 y curtosis mayor que 3.5, se acotan sus valores extremos, hasta 5, al siguiente valor <Cita clave="jrc_coin_2019" />.</li>
       <li><strong>Normalización min-max</strong> a una escala de 0 a 100. Cuando más es peor, como en la corrupción, la escala se invierte.</li>
       <li><strong>Dimensión:</strong> promedio simple de sus indicadores normalizados.</li>
       <li><strong>Índice:</strong> media geométrica de las seis dimensiones con pesos iguales. A diferencia del promedio, una dimensión muy débil no se compensa con otra fuerte <Cita clave="ocde_jrc_2008" />.
@@ -64,7 +64,7 @@ const matriz = (d: any) => Object.fromEntries(Object.keys(DIM_CORTO).map((dim) =
     <h2>4. Coherencia estadística</h2>
     <p class="prosa">
       Siguiendo al JRC-COIN <Cita clave="jrc_coin_2019" />, revisamos la correlación de cada indicador con su dimensión y con el índice.
-      Hay alerta cuando un indicador domina el índice (r &gt; 0,95) o casi no se relaciona con él (|r| &lt; 0,3).
+      Hay alerta cuando un indicador domina el índice (r &gt; 0.95) o casi no se relaciona con él (|r| &lt; 0.3).
     </p>
     {niveles.map(([nombre, d]) => (
       <div class="tabla">
