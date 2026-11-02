@@ -1,0 +1,725 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-noshorthands,es-tabla]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+
+\definecolor{acento}{HTML}{1F4E79}
+\definecolor{fondo}{HTML}{EAF1F8}
+\definecolor{aviso}{HTML}{8A5A00}
+\definecolor{fondoaviso}{HTML}{FFF6E0}
+
+\hypersetup{colorlinks=true,linkcolor=acento,urlcolor=acento,citecolor=acento}
+
+\titleformat{\section}{\Large\bfseries\color{acento}}{\thesection.}{0.6em}{}
+\titleformat{\subsection}{\large\bfseries\color{acento}}{\thesubsection}{0.6em}{}
+\titleformat{\subsubsection}{\normalsize\bfseries}{\thesubsubsection}{0.6em}{}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\color{acento}Inteligencia Cívica Aumentada}
+\fancyhead[R]{\small Informe de investigación}
+\fancyfoot[C]{\small\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\setlist{itemsep=2pt,topsep=4pt}
+\setlength{\parskip}{0.45em}
+\setlength{\parindent}{0pt}
+\renewcommand{\arraystretch}{1.25}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+% Cajas
+\newtcolorbox{original}[1][]{enhanced,breakable,colback=fondo,colframe=acento,
+  boxrule=0.6pt,arc=2pt,left=8pt,right=8pt,top=6pt,bottom=6pt,
+  fonttitle=\bfseries,title={Aporte original#1}}
+\newtcolorbox{advertencia}[1][]{enhanced,breakable,colback=fondoaviso,colframe=aviso,
+  boxrule=0.6pt,arc=2pt,left=8pt,right=8pt,top=6pt,bottom=6pt,
+  fonttitle=\bfseries,title={#1}}
+\newtcolorbox{resumen}{enhanced,breakable,colback=white,colframe=acento,
+  boxrule=1pt,arc=2pt,left=10pt,right=10pt,top=8pt,bottom=8pt}
+
+\newcommand{\ver}{\textsuperscript{\textcolor{ForestGreen}{\textbf{V}}}}
+\newcommand{\nover}{\textsuperscript{\textcolor{aviso}{\textbf{NV}}}}
+
+\title{\color{acento}\textbf{Inteligencia Cívica Aumentada}\\[0.3em]
+\large Originalidad del concepto, verificación de fuentes\\ y estado del arte para el Índice IICA}
+\author{Informe de investigación documental sobre la ponencia de\\
+Ricardo Zenteno Fernández\\ (XXXVII Congreso Internacional de Estudios Electorales, SOMEE 2026)}
+\date{2 de noviembre de 2026}
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+
+\begin{resumen}
+\textbf{Cómo se hizo este informe.} Se hicieron tres rondas de investigación con verificación adversarial. En cada afirmación votaron tres verificadores independientes, y bastaban dos votos en contra para descartarla. Después, tres verificaciones dirigidas cubrieron los huecos. En total se consultaron unas 80 fuentes y se sometieron a votación 75 afirmaciones; 71 se confirmaron y 4 se refutaron.
+
+\textbf{Notación.} \ver{} indica que el dato se confirmó en una fuente primaria o institucional. \nover{} indica que solo se encontró en fuentes secundarias o que la fuente no se pudo abrir.
+\end{resumen}
+
+\tableofcontents
+\newpage
+
+%=====================================================================
+\section{Conclusión}
+%=====================================================================
+
+\begin{itemize}
+  \item \textbf{Nadie había usado el término exacto.} Se buscaron «Inteligencia Cívica Aumentada», «augmented civic intelligence», «AI-augmented civic intelligence» y «civic intelligence augmentation» en artículos, tesis, blogs y programas de congresos anteriores a noviembre de 2026. Ninguna búsqueda dio resultado. Esto confirma lo que el propio artículo afirma en sus conclusiones. No prueba que el término no exista en la literatura gris, pero sí que no está consolidado.
+  \item \textbf{Las citas son correctas.} Las 16 obras centrales que cita el artículo existen, y lo que el artículo les atribuye coincide en lo sustancial con lo que dicen. Solo hay que hacer correcciones bibliográficas menores (sección~\ref{sec:verificacion}).
+  \item \textbf{Cada componente ya existía y algunos ya se habían combinado.} El antecedente más cercano es la línea de De Liddo, Anastasiou y Buckingham Shum (CI4DD, 2026), junto con la Parte~1 del \emph{Handbook} de Pournaras et al. (2026). Le siguen el trabajo conjunto de Schuler y De Liddo desde 2017 (CI4CG), el marco de Nechesov y Ruponen (2024), que ya une inteligencia cívica, IA y un «índice de compromiso cívico», y la \emph{Generative Collective Intelligence} de Kehler et al. (2025).
+  \item \textbf{Lo original del trabajo es su arquitectura}, más que un constructo sin precedentes. Une la tradición normativa de Schuler con la aumentación de Engelbart mediante IA. La define como propiedad emergente de un ecosistema en el que las instituciones habilitadoras son un componente interno. Distingue entre capacidad instalada y activación. Usa el valor público como criterio de validación. Y la ilustra con una tríada institucional poco común en la literatura: un órgano administrativo electoral, uno jurisdiccional y uno académico.
+  \item \textbf{El IICA cubre un hueco real en la medición.} Ningún índice revisado mide a la vez capacidades cívicas, inteligencia colectiva e IA ética dentro de un mismo proceso democrático. Tampoco lo hace a escala de institución o comunidad, y ninguno separa capacidad instalada, activación y resultados emergentes. Los más cercanos son el DigiPartIndex y su modelo de madurez (Serdült et al., 2023), el GIRAI (2026) y las directrices de evaluación deliberativa de la OCDE (2021). Para el IICA hay una ruta metodológica clara (sección~\ref{sec:iica}).
+\end{itemize}
+
+%=====================================================================
+\section{Verificación de las obras citadas}\label{sec:verificacion}
+%=====================================================================
+
+La tabla~\ref{tab:citas} compara cada obra citada con lo que el artículo le atribuye. Las correcciones sugeridas van en la última columna.
+
+{\small
+\begin{longtable}{P{3.0cm}P{5.4cm}P{5.8cm}}
+\caption{Verificación de las citas del artículo.}\label{tab:citas}\\
+\toprule
+\textbf{Cita} & \textbf{Datos verificados} & \textbf{¿Es fiel lo que se atribuye? Observaciones}\\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Cita} & \textbf{Datos verificados} & \textbf{¿Es fiel lo que se atribuye? Observaciones}\\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+Engelbart (1962) \ver &
+SRI Summary Report AFOSR-3223, octubre de 1962. &
+Sí. Engelbart dice: «By augmenting human intellect we mean increasing the \emph{capability} of a man to approach a complex problem situation, to gain comprehension [...] and to derive solutions». Dice «capability», no «effectiveness». En su marco, la aumentación es el resultado y el sistema H-LAM/T es el medio.\\
+Schuler (2001) \ver &
+\emph{Information, Communication \& Society} 4(2): 157--181. &
+Datos correctos. El sitio del autor la define como «a type of intelligence that focuses on the betterment of society as a whole». El DOI no se verificó \nover.\\
+Schuler (2014) \ver &
+\emph{E-Learning and Digital Media} 11(5), doi:10.2304/elea.2014.11.5.518. &
+Sí. Define la inteligencia cívica como «the capacity of collectivities [...] to equitably and effectively address important shared problems». \textbf{Corrección:} según Crossref, las páginas son \textbf{518--529}, no 518--534. El preprint del autor dice en su encabezado que se publicaría en el \emph{International Journal of Progressive Education}; conviene comprobarlo en la ficha del editor.\\
+Pournaras (2019) \ver &
+Preprint arXiv:1907.00498. Versión publicada: \emph{J. Parallel and Distributed Computing} 145 (2020): 160--175, doi:10.1016/j.jpdc.2020.06.015. &
+Es plausible: el título habla de «blockchain consensus for augmented democracy in smart cities». Lo que el autor entiende exactamente por «augmented democracy» \textbf{no se pudo validar}, porque dos afirmaciones sobre el contenido se refutaron por 1--2. \textbf{Sugerencia:} citar la versión de 2020.\\
+Gudiño-Rosero, Grandi e Hidalgo (2024) \ver &
+\emph{Phil. Trans. R. Soc. A} 382(2285): 20240100, doi:10.1098/rsta.2024.0100 (arXiv:2405.03452). &
+Sí. El resumen dice: «fine-tuned to augment data on citizen's preferences». Usan seis LLM ajustados con datos de la elección brasileña de 2022 (67 propuestas). En la predicción individual llegan hasta 76,7\,\% de acierto. Al nivel agregado, con una muestra del 5\,\%, el R$^2$ pasa de $\approx$30\,\% a $\approx$75\,\%. Sugerencia: aclarar que son «gemelos digitales» que predicen preferencias y no deliberan. Es la misma «Augmented Democracy» que Hidalgo presentó en TED2018.\\
+Cui y Yasseri (2024) \ver &
+\emph{Patterns} 5(11): 101074, doi:10.1016/j.patter.2024.101074. &
+Sí. Es una revisión general sobre la inteligencia colectiva humano-IA, modelada como red multicapa. No trata la democracia, así que la distinción que hace el artículo está justificada.\\
+Kehler et al. (2025) \ver &
+arXiv:2505.19167 (v2, junio de 2025). &
+Sí: lleva la IA «to the group/social level» con un doble papel, como agente y como infraestructura. Tiene una sección sobre participación cívica con un «Collective Reasoning Agent». \textbf{Corrección:} el título completo es «Amplifying Human Creativity and Problem Solving with AI Through Generative Collective Intelligence».\\
+Nechesov y Ruponen (2024) \ver &
+\emph{Technologies} 12(12): 271, doi:10.3390/technologies12120271. &
+Sí. Además, el artículo propone un \textbf{«civic engagement index»}. El texto de ICA no lo menciona y conviene discutirlo como precedente del IICA (sección~\ref{sec:iica}).\\
+Huang et al. (2024) \ver &
+arXiv:2406.07814; publicado en ACM FAccT 2024: 1395--1417, doi:10.1145/3630106.3658979. &
+Sí. Usaron Polis con 1.002 participantes, que propusieron 1.127 enunciados y emitieron 38.252 votos. \textbf{Sugerencia:} citar la versión publicada en FAccT.\\
+Tang, Weyl et al. (2024) \ver &
+\emph{Plurality}, plurality.net. &
+Sí. El capítulo 5-4, «Augmented Deliberation», presenta vTaiwan y Polis, y la «escucha amplia» con IA generativa (Talk to the City).\\
+OCDE (2025) \ver &
+\emph{Governing with Artificial Intelligence}, doi:10.1787/795de142-en (septiembre de 2025). &
+Sí. El capítulo «AI in civic participation and open government» cubre el acceso a la información, el análisis de consultas y la deliberación masiva multilingüe (por ejemplo, Polis y la Stanford Online Deliberation Platform).\\
+Tessler et al. (2024) \ver &
+\emph{Science} 386(6719): eadq2852. &
+Sí. Es un mediador basado en LLM, probado con más de 5.000 participantes en el Reino Unido.\\
+Palomo Hernández (2025) \ver &
+\emph{Proc. AIES} 8(2): 1951--1960, doi:10.1609/aies.v8i2.36687. &
+Sí (verificado solo con el resumen). Critica que la Habermas Machine «overemphasises the desirability of agreement» y «relegates humans to a secondary role».\\
+UNESCO (2021) \ver &
+Recomendación sobre la Ética de la IA, adoptada el 23 de noviembre de 2021. &
+Sí. Párrafo 36: «an AI system can never replace ultimate human responsibility and accountability». El párrafo 35 amplía la supervisión humana a la «inclusive public oversight».\\
+De Liddo, Anastasiou y Buckingham Shum (2026) \ver &
+arXiv:2603.16260. Capítulo 10 del \emph{Handbook of Democracy in the Era of AI}, en prensa. &
+Sí. Es el antecedente más cercano (sección~\ref{sec:antecedentes}).\\
+Noveck (2015) \ver &
+\emph{Smart Citizens, Smarter State}, Harvard UP. &
+Sí. Es coherente con su testimonio ante el Congreso de EE.\,UU. (2021), en el que vincula aprendizaje automático, inteligencia colectiva e instituciones.\\
+\end{longtable}
+}
+
+Las obras de teoría de sistemas y de gestión pública (Ackoff, Bertalanffy, Boulding, Checkland, Corning, Holland, Lévy, Moore, Senge, Van Dijk, Wilson) son clásicas y no se verificaron una por una.
+
+%=====================================================================
+\section{Antecedentes y conceptos que se solapan con ICA}\label{sec:antecedentes}
+%=====================================================================
+
+La tabla~\ref{tab:solapes} ordena los antecedentes de mayor a menor cercanía y dice, para cada uno, en qué se distingue de ICA.
+
+{\small
+\begin{longtable}{P{0.4cm}P{4.0cm}P{4.8cm}P{4.9cm}}
+\caption{Antecedentes ordenados por cercanía a ICA.}\label{tab:solapes}\\
+\toprule
+\# & \textbf{Antecedente} & \textbf{Qué comparte con ICA} & \textbf{En qué se distingue ICA}\\
+\midrule
+\endfirsthead
+\toprule
+\# & \textbf{Antecedente} & \textbf{Qué comparte con ICA} & \textbf{En qué se distingue ICA}\\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+1 & \textbf{CI4DD}: De Liddo, Anastasiou y Buckingham Shum (2026) &
+Sistemas humano-computadora «designed to augment collective intelligence» para la democracia. La IA asiste al juicio humano y no lo sustituye. &
+CI4DD se centra en la deliberación y el codiseño. ICA abarca un ciclo completo (comprender, deliberar, decidir, cocrear, actuar y aprender) y pone las instituciones dentro del sistema.\\
+2 & \textbf{Handbook} de Pournaras, Majumdar, Hausladen y Helbing (2026), Parte~1, «AI-Assisted Collective Intelligence for Democracy» &
+Usar la IA para «foster, coordinate and empower» la inteligencia colectiva en las decisiones democráticas. &
+Los capítulos tratan herramientas concretas (voto, elección social computacional, recursos comunes). No proponen un constructo cívico unificado ni un índice.\\
+3 & \textbf{CI4CG}: Schuler, De Liddo, Smith y De Cindio (\emph{AI \& Society}, 2017/2018), y el taller de C\&T 2017 &
+La inteligencia colectiva para el bien común. El taller trató el «enhancement of civic intelligence» con apoyo de sistemas computacionales. &
+Es anterior a la IA generativa. No tiene un modelo sistémico ni una propuesta de medición. Esta colaboración muestra que la línea de Schuler y la de De Liddo ya están conectadas.\\
+4 & \textbf{Nechesov y Ruponen} (2024), marco CIG &
+Une de forma explícita «civic intelligence», IA y blockchain. Asigna los capitales de conocimiento, sistema y relacional a herramientas técnicas, entre ellas un \emph{civic engagement index}. &
+Su enfoque es la gobernanza de plataforma y la tokenización. Su índice mide la calidad de la participación en una plataforma; no es un índice compuesto de capacidades de un ecosistema.\\
+5 & \textbf{Generative Collective Intelligence}: Kehler et al. (2025) &
+La IA como agente y como infraestructura al nivel grupal. Facilita la deliberación de miles de ciudadanos. &
+Habla de inteligencia «colectiva», no «cívica», y no usa el marco normativo de Schuler ni incluye instituciones.\\
+6 & \textbf{Augmented Democracy}: Hidalgo (TED2018), y Gudiño-Rosero et al. (2024) &
+Usa la palabra «aumentada» para la democracia, con agentes de IA. &
+Es individual y agregativa: gemelos digitales que predicen o votan. No hay ecosistema ni deliberación.\\
+7 & \textbf{Plurality} y vTaiwan/Polis; \textbf{Smarter Crowdsourcing} y Policy Synth (GovLab, 2024) &
+«Augmented deliberation» y escucha amplia con IA. Canaliza el saber experto con IA. &
+Se presentan como inteligencia colectiva o tecnología colaborativa. Son prácticas y plataformas, no un constructo sistémico.\\
+8 & \textbf{Landemore}, «Can AI bring deliberative democracy to the masses?» &
+Habla de una «AI-augmented online platform» para la deliberación masiva. &
+Lo que se aumenta es la deliberación, no la «inteligencia cívica». El término \emph{civic} no aparece en el texto.\\
+9 & \textbf{CrowdLaw} (Noveck/GovLab) &
+Tecnología e inteligencia colectiva en todo el ciclo legislativo. &
+Se limita al ámbito legislativo.\\
+10 & \textbf{Habermas Machine} (Tessler et al., 2024) &
+Mediación deliberativa con IA. &
+Es una herramienta y un experimento. Además, tiene un sesgo hacia el consenso (Palomo Hernández, 2025).\\
+11 & \textbf{Civic AI} (Nesta, Dark Matter Labs y Lucidminds, 2020) &
+Comparte el nombre «cívico + IA». &
+Trata de IA para la acción climática y la gestión de bienes comunes, no de deliberación democrática. No compite con ICA.\\
+\end{longtable}
+}
+
+Hay dos datos recientes que fortalecen la posición de ICA:
+\begin{itemize}
+  \item En su \emph{position paper} de 2024 para el simposio de UTS («Educating for Civic Intelligence»), Schuler casi no menciona la IA; aparece una sola vez, como antecedente histórico. Es decir, el propio creador del concepto no ha desarrollado una versión «aumentada por IA» de la inteligencia cívica. Ese es el espacio que ICA ocupa.
+  \item Schuler distingue de forma explícita la inteligencia cívica de la colectiva, porque la primera «is directed towards the common good». También critica que se «coseche» la inteligencia de muchos en beneficio de unos pocos. ICA puede reivindicar esta base normativa frente a los marcos de inteligencia colectiva aumentada.
+\end{itemize}
+
+\begin{advertencia}[Términos cercanos aparecidos en 2026 que conviene revisar]
+La búsqueda encontró tres resultados recientes que no se abrieron:
+\begin{itemize}
+  \item el «Civic Intelligence Loop», en \emph{Before the Vote: Agenda Sovereignty and AI-Mediated Democracy} (Zenodo, octubre de 2026);
+  \item la tesis de Gudiño-Rosero, \emph{Large Language Models and Augmented Democracy} (arXiv:2610.04412, octubre de 2026);
+  \item la plataforma comercial XciTi, que se presenta como «plataforma de inteligencia cívica impulsada por IA».
+\end{itemize}
+Conviene revisarlos antes de la presentación.
+\end{advertencia}
+
+%=====================================================================
+\section{Aportes originales del trabajo}\label{sec:aportes}
+%=====================================================================
+
+Con lo anterior, se puede precisar qué aporta el artículo que no aparece en la literatura revisada. Estos son los elementos que conviene destacar en la presentación y en una futura versión para revista.
+
+\begin{original}[\ 1: un constructo cívico, no solo colectivo]
+ICA une dos tradiciones que hasta ahora corrían por separado:
+\begin{itemize}
+  \item la \textbf{inteligencia cívica} de Schuler, orientada al bien común y a la equidad;
+  \item la \textbf{aumentación} de Engelbart, que hoy se lleva a cabo con IA.
+\end{itemize}
+Los marcos de \emph{AI-enhanced} o \emph{generative collective intelligence} pueden operar en empresas o en ciencia, sin un fin democrático. ICA, en cambio, lleva su finalidad cívica dentro de la definición. Y el propio Schuler no ha desarrollado una versión de su concepto aumentada por IA.
+\end{original}
+
+\begin{original}[\ 2: propiedad emergente con condiciones normativas]
+La definición tiene seis precisiones (propiedad emergente, ecosistema institucional y social, aumentación y no delegación, IA como apoyo, condiciones concretas de interacción, valor público). Con ellas, la «emergencia» se convierte en algo que se puede falsar: la propiedad depende de condiciones de diseño que se pueden observar.
+
+Además, el artículo cambia la pregunta, de «¿cómo incorporar IA a la democracia?» a «¿cómo diseñar ecosistemas que aumenten responsablemente sus capacidades cívicas?». Pone la democracia, y no la tecnología, como propósito rector. Ningún antecedente revisado hace este movimiento de forma explícita.
+\end{original}
+
+\begin{original}[\ 3: las instituciones habilitadoras dentro del modelo (MICA)]
+En CI4DD, en Cui y Yasseri y en la tecnología cívica tradicional, las instituciones son receptoras o contexto. En el MICA son un \textbf{componente interno} del ecosistema: diseñan las reglas de interacción y responden por las garantías y la rendición de cuentas.
+
+El modelo añade dos ideas que no se encontraron en otra parte:
+\begin{enumerate}
+  \item la distinción entre \textbf{capacidad instalada} y \textbf{activación}. Por ejemplo, READi es la capacidad territorial permanente y el Hackathón es el mecanismo que la activa;
+  \item el \textbf{valor público democrático} (Moore) como criterio de validación del resultado, y no solo como objetivo.
+\end{enumerate}
+\end{original}
+
+\begin{original}[\ 4: una tríada institucional electoral poco común en la literatura]
+El caso de Chihuahua une tres órganos que cumplen funciones distintas de la democracia:
+\begin{itemize}
+  \item un organismo público local electoral (IEE Chihuahua), con la función administrativa y de educación cívica;
+  \item un tribunal (Sala Regional Guadalajara del TEPJF), con la función jurisdiccional;
+  \item una universidad (Tec de Monterrey), con la función académica y tecnológica.
+\end{itemize}
+Los antecedentes revisados (vTaiwan, CrowdLaw, la Habermas Machine, CI4DD) tratan con parlamentos, gobiernos nacionales o laboratorios. No se encontró ningún caso documentado en el que un \textbf{órgano electoral} cumpla el papel habilitador de la inteligencia colectiva con IA junto con un tribunal. Es una contribución empírica regional valiosa.
+\end{original}
+
+\begin{original}[\ 5: dispositivos de diseño concretos]
+El caso aporta mecanismos que se pueden replicar y que la literatura sobre hackatones casi nunca reporta:
+\begin{itemize}
+  \item fichas técnicas que funcionan como \emph{objetos de frontera} entre disciplinas;
+  \item una rúbrica que penaliza el uso ornamental de la IA;
+  \item límites explícitos a la IA en cada eje temático, por ejemplo un PREP sin decisiones automatizadas vinculantes;
+  \item incubación posterior.
+\end{itemize}
+Nolte et al. (2020) encontraron que solo cerca del 5\,\% de los proyectos de hackatón siguen activos cinco meses después. Por eso la incubación es una condición diferenciadora que vale la pena medir.
+\end{original}
+
+\begin{original}[\ 6: un índice de capacidades a escala institucional (IICA)]
+No existe ningún índice compuesto que mida la inteligencia cívica, y menos una aumentada por IA, a escala de comunidad o institución. Las cinco capacidades de Schuler nunca se han convertido en una métrica: él mismo deja la medición como tarea pendiente. El índice de Nechesov y Ruponen mide la participación en una plataforma. El IICA ocupa ese hueco, que se analiza en la sección~\ref{sec:iica}.
+\end{original}
+
+%=====================================================================
+\section{El Índice de Inteligencia Cívica Aumentada (IICA): estado del arte y ruta de diseño}\label{sec:iica}
+%=====================================================================
+
+\subsection{Índices y marcos existentes que se solapan con el IICA}
+
+La tabla~\ref{tab:indices} resume los marcos de medición revisados. Para cada uno indica a qué dimensión del IICA podría aportar y qué le falta.
+
+{\small
+\begin{longtable}{P{3.1cm}P{4.3cm}P{2.8cm}P{3.9cm}}
+\caption{Marcos de medición relacionados con el IICA.}\label{tab:indices}\\
+\toprule
+\textbf{Marco} & \textbf{Qué mide y cómo} & \textbf{Aporta a la dimensión} & \textbf{Qué le falta para el IICA}\\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Marco} & \textbf{Qué mide y cómo} & \textbf{Aporta a la dimensión} & \textbf{Qué le falta para el IICA}\\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\multicolumn{4}{l}{\textit{Inteligencia cívica y colectiva}}\\
+Capacidades de Schuler (2014) \ver &
+Cinco categorías: conocimiento; actitudes y aspiraciones; capital organizacional; capital relacional y social; recursos financieros y materiales. Es un marco conceptual, sin escala. &
+1 (capacidades), 2 (IC) &
+Indicadores operativos, IA, y la distinción entre activación y resultados.\\
+Factor \emph{c} (Woolley et al., 2010; Riedl et al., 2021) \ver &
+Factor general del desempeño de grupos pequeños en una batería de tareas. El metaanálisis reúne 22 estudios, 5.279 personas y 1.356 grupos; la correlación media entre tareas es 0,27. Pesa más el proceso de colaboración que la habilidad individual. &
+2 (IC), como indicador de laboratorio &
+Mide tareas abstractas, sin dimensión cívica. El constructo está en disputa (Bates y Gupta, 2017).\\
+Nesta, \emph{Future of Minds and Machines} (2020) \ver &
+Tipología de la interacción entre IA e inteligencia colectiva: la IA sobre datos de personas, turnos, tiempo real, IA de fondo, y la inteligencia colectiva que mejora la IA. Pide criterios de agencia humana. &
+3 (IA ética) &
+No tiene puntajes, escala ni unidad de análisis.\\
+Nechesov y Ruponen (2024) \ver &
+\emph{Civic engagement index} sobre la calidad de la participación en una plataforma con IA y blockchain. &
+2, 4 &
+Métrica de plataforma, con resultados simulados según sus autores.\\
+\multicolumn{4}{l}{\textit{Democracia, deliberación y participación}}\\
+V-Dem v15 \ver &
+Componentes participativo y deliberativo (0--1, país-año). Lo codifican expertos y se agrega con análisis factorial bayesiano. &
+Contexto nacional &
+No baja de escala nacional; no incluye inteligencia colectiva ni IA.\\
+EIU Democracy Index \ver &
+60 indicadores en cinco categorías (0--10) que se promedian. Las categorías de participación y cultura política usan encuestas. &
+Contexto, 1 &
+Escala nacional y poca transparencia.\\
+OCDE (2020), \emph{Good Practice Principles} \ver &
+11 principios: propósito, rendición de cuentas, transparencia, representatividad, inclusión, información, deliberación grupal, tiempo, integridad, privacidad y evaluación. &
+4, transversales &
+Son principios, no métricas.\\
+OCDE (2021), \emph{Evaluation Guidelines} \ver &
+Tres criterios: integridad del diseño, experiencia deliberativa y vías de impacto. Usa encuestas, observación y entrevistas. Recomienda evaluación independiente. &
+4, 5, 6; base para separar activación y resultados &
+Evalúa procesos, no ecosistemas, y no incluye IA.\\
+Smith (2009), bienes democráticos \ver &
+Inclusión, control popular, juicio considerado, transparencia, eficiencia y transferibilidad. &
+5, transversales &
+Marco cualitativo.\\
+Spada y Paulson (2023), en el \emph{Routledge Handbook of CI for Democracy} \ver &
+Cómo medir el efecto de procesos de inteligencia colectiva participativos y deliberativos. Señala la tensión entre escala y calidad. &
+2, 5 &
+No es un índice.\\
+Participedia y LATINNO \ver &
+Bases de casos. LATINNO cubre 18 países de América Latina (1990--2020), con 43 variables sobre los medios y los fines de la innovación democrática. &
+4 (activación); fuente de casos comparables &
+No asignan puntajes.\\
+\multicolumn{4}{l}{\textit{Gobierno digital e IA}}\\
+ONU: EGDI, EPI y LOSI (2024) \ver &
+El EPI mide tres escalones (información, consulta y decisión electrónicas). El LOSI evalúa el portal de la ciudad más poblada de cada país con 95 indicadores binarios en seis subíndices, uno de ellos de participación. &
+4; el LOSI es el antecedente local más cercano &
+Mide la oferta en portales (capacidad instalada), no la activación ni los resultados.\\
+OCDE: DGI \nover{} y OURdata \ver &
+El DGI tiene seis dimensiones (Digital by Design, Data-Driven, Government as a Platform, Open by Default, User-Driven, Proactiveness). OURdata tiene tres pilares: disponibilidad, accesibilidad y apoyo a la reutilización. &
+4 &
+Es nacional y se basa en autoinforme.\\
+Oxford Insights, \emph{Government AI Readiness} 2025 \ver &
+69 indicadores, 14 dimensiones y seis pilares (Policy Capacity, Governance, AI Infrastructure, Public Sector Adoption, Development and Diffusion, Resilience); 195 países. &
+3 &
+Mide el país frente a la IA en general, no los procesos participativos.\\
+GIRAI (2026) \ver &
+38 indicadores. Cruza cinco dimensiones con tres pilares (política 60\,\%, sociedad civil 10\,\%, condiciones habilitantes 30\,\%). Aplica una penalización multiplicativa (URAI) por usos inaceptables de la IA. Tuvo una auditoría estadística del JRC. &
+3; \textbf{modelo metodológico} &
+Es nacional y no incluye inteligencia colectiva.\\
+UNESCO, RAM \ver &
+Diagnóstico de país con métodos mixtos y preguntas estructuradas. &
+3 (parte cualitativa) &
+No es un índice con puntaje único.\\
+Stanford AI Index \ver &
+Informe de datos, no un índice compuesto. &
+Contexto &
+---\\
+\multicolumn{4}{l}{\textit{Capital social, salud cívica, hackatones y tecnología cívica}}\\
+Civic Health Index (NCoC) \ver &
+Usa encuestas del Censo de EE.\,UU. Mide servicio, acción política, participación en grupos, conexión social, información y confianza. Se reporta por estado o ciudad y sin puntaje único. &
+1, 2 &
+No incluye IA ni inteligencia colectiva.\\
+SOCAT, Banco Mundial (2002) \ver &
+Perfil comunitario, encuesta de hogares y perfil organizacional. Distingue capital social estructural y cognitivo. &
+1, 2; modelo multinivel &
+No incluye IA ni valor público.\\
+Nolte, Chounta y Herbsleb (2020) \ver &
+Continuidad de 592 proyectos de hackatón medida con actividad en GitHub. Solo cerca del 5\,\% sigue activo a los cinco meses. La continuidad a largo plazo se asocia con la diversidad de habilidades y la intención de crecer. &
+6 (continuidad) &
+Mide continuidad técnica, no valor público.\\
+mySociety, Rumbul (2015) \ver &
+Quién usa la tecnología cívica, en cuatro países: los usuarios tienden a ser mayores y con más escolaridad. &
+5 (inclusión) &
+No mide resultados de política.\\
+DigiPartIndex y modelo de madurez de e-participación (Serdült et al., 2023) \ver &
+Tres dimensiones con el mismo peso (formación de opinión, co-creación y decisión), siete indicadores en escala de 1 a 5 y un índice de 0 a 100. Usa doble codificación. &
+4, 6; \textbf{el antecedente más cercano en forma} &
+Es nacional y no incluye IA ni inteligencia colectiva.\\
+\end{longtable}
+}
+
+\subsection{El hueco que solo el IICA cubre}
+
+Ningún marco revisado reúne estas cinco características:
+\begin{enumerate}
+  \item Mide \textbf{capacidades cívicas, inteligencia colectiva e IA ética dentro de un mismo proceso democrático}. Los índices de IA no miden participación, y los de participación no miden IA.
+  \item Trabaja a escala de \textbf{institución, programa o comunidad}. Casi todos son de país-año; solo el LOSI, el Civic Health Index y el SOCAT bajan de escala.
+  \item Separa de forma explícita \textbf{capacidad instalada, activación y resultados emergentes}. Las directrices de la OCDE (2021) y el GIRAI lo hacen solo en parte.
+  \item Incluye la \textbf{continuidad posterior} al evento como dimensión: incubación, maduración y alianzas.
+  \item Usa criterios normativos transversales (agencia humana, pluralidad, inclusión, transparencia y rendición de cuentas) que \textbf{no se pueden compensar} con capacidad tecnológica.
+\end{enumerate}
+
+\subsection{Ruta metodológica para construirlo}
+
+\subsubsection*{a) Seguir el Manual OCDE/JRC}
+El estándar es el \emph{Handbook on Constructing Composite Indicators} (Nardo et al., OCDE/JRC, 2008). Propone una secuencia de diez pasos:
+\begin{enumerate}
+  \item marco teórico;
+  \item selección de datos;
+  \item imputación;
+  \item análisis multivariado;
+  \item normalización;
+  \item ponderación y agregación;
+  \item incertidumbre y sensibilidad;
+  \item regreso a los datos;
+  \item vínculos con otros indicadores;
+  \item visualización.
+\end{enumerate}
+Pide documentación en cada paso. Los indicadores se eligen por «what is desirable to measure and not which indicators are available».
+
+La guía del JRC-COIN (2019) da varias reglas prácticas:
+\begin{itemize}
+  \item dedicar hasta dos tercios del tiempo al marco conceptual;
+  \item usar de 5 a 7 indicadores por dimensión, con un mínimo de 3;
+  \item normalizar con el método Min-Max (0--100);
+  \item revisar la coherencia antes que la sensibilidad.
+\end{itemize}
+
+Sobre la coherencia, la guía señala estas alertas:
+\begin{itemize}
+  \item si un indicador correlaciona con el índice por encima de 0,95, domina el índice;
+  \item si la correlación está entre $-0{,}3$ y $0{,}3$, el indicador está subrepresentado;
+  \item si correlaciona con la población por encima de 0,6, hay sesgo de tamaño. En el IICA, el tamaño o el presupuesto de la institución podrían causar este sesgo.
+\end{itemize}
+
+Con seis dimensiones, conviene \textbf{asignar los pesos a nivel de dimensión} o igualar el número de indicadores en cada una. Si se dan pesos iguales a cada variable, las dimensiones que tengan más indicadores pesarán más.
+
+\subsubsection*{b) Decidir la compensabilidad: la decisión normativa clave}
+En la agregación aritmética, un puntaje alto en integración de IA compensa uno bajo en agencia humana o inclusión. Eso contradice la tesis central del artículo: la IA no debe sustituir la agencia humana. Hay dos opciones verificadas:
+\begin{itemize}
+  \item \textbf{Penalización multiplicativa}, como hace el GIRAI: $\text{GIRAI} = \text{GIRAI}_{\text{raw}} \times \text{penalización}$, con factores entre 1,00 y 0,90 según los usos inaceptables de la IA. En el IICA, la penalización se aplicaría a los fallos en los criterios transversales.
+  \item \textbf{Agregación multicriterio no compensatoria}, de tipo Condorcet. El Manual la sugiere cuando las dimensiones son igual de legítimas.
+\end{itemize}
+Otra opción es presentar un \textbf{tablero sin puntaje único}, como el Civic Health Index. Así se evita el riesgo, que el propio artículo advierte, de «reducir una propiedad compleja a una calificación simplificada».
+
+\subsubsection*{c) Validación de contenido y confiabilidad}
+\begin{itemize}
+  \item \textbf{Delphi y CVI.} Un Delphi modificado de tres rondas con unos 10 expertos, que conserva los ítems con más de 75\,\% de acuerdo. Después se calcula el índice de validez de contenido. Umbrales usuales: I-CVI $\geq 0{,}78$ con 6 a 10 expertos; S-CVI/Ave $\geq 0{,}90$; S-CVI/UA $\geq 0{,}80$ (ejemplo de procedimiento: Sajjad et al., 2018).
+  \item \textbf{Escalas de autorreporte}, como las de competencias cívicas. Alfa de Cronbach entre 0,70 y 0,95; por encima de 0,90 puede haber redundancia (Tavakol y Dennick, 2011).
+  \item \textbf{Rúbricas calificadas por varios evaluadores}, como las de los seis comités del Hackathón. Usar el ICC con los umbrales de Koo y Li (2016): $<0{,}5$ pobre, de 0,5 a 0,75 moderado, de 0,75 a 0,90 bueno, y $>0{,}90$ excelente. El nivel se juzga por el intervalo de confianza al 95\,\%. Otra opción es el alfa de Krippendorff, con $\geq 0{,}800$ como norma y 0,667 como mínimo para conclusiones tentativas \nover.
+  \item \textbf{Robustez.} Hacer un análisis de sensibilidad con combinaciones de normalización, pesos y agregación, como en la auditoría del GIRAI, que probó 48 combinaciones. En esa auditoría, la media geométrica con pesos iguales fue la que más movió los rankings.
+\end{itemize}
+
+\subsubsection*{d) Medir la agencia humana y la supervisión de la IA (dimensión 3)}
+\begin{itemize}
+  \item \textbf{Sterz et al. (FAccT 2024).} Proponen cuatro condiciones para que la supervisión humana sea efectiva:
+  \begin{itemize}
+    \item poder causal sobre el sistema;
+    \item acceso epistémico adecuado;
+    \item autocontrol;
+    \item intenciones adecuadas al rol.
+  \end{itemize}
+  \item \textbf{Langer, Lazar y Baum (2025).} Advierten que una lista de verificación puede suponer que la supervisión funciona sin demostrarlo. Recomiendan combinarla con pruebas empíricas.
+  \item \textbf{AI Act de la UE, art.~14.} Quien supervisa debe poder:
+  \begin{itemize}
+    \item entender las capacidades y los límites del sistema;
+    \item estar alerta al sesgo de automatización;
+    \item interpretar bien los resultados;
+    \item no usar el sistema o anular sus resultados;
+    \item detenerlo.
+  \end{itemize}
+  \item \textbf{AI Act de la UE, art.~27.} Exige a los organismos públicos una evaluación de impacto en derechos fundamentales: procesos en que se usará el sistema, personas afectadas, riesgos, supervisión y medidas de corrección.
+  \item \textbf{NIST AI RMF 1.0 (2023).} Tiene cuatro funciones (Govern, Map, Measure, Manage) y siete características de confiabilidad, que se pueden convertir en indicadores.
+  \item \textbf{UNESCO (2021), §35--36.} La responsabilidad final es siempre humana, y la supervisión debe ser también «inclusive public oversight».
+\end{itemize}
+Para el IICA esto se traduce en \textbf{dos niveles de indicadores}:
+\begin{itemize}
+  \item de \emph{existencia}: reglas, límites y lista de verificación (capacidad instalada);
+  \item de \emph{efectividad}: decisiones humanas que de hecho corrigieron a la IA, y trazabilidad (activación y resultados).
+\end{itemize}
+
+\subsubsection*{e) Medir la emergencia}
+Tres herramientas pueden combinarse:
+\begin{itemize}
+  \item \textbf{Análisis de redes} de las colaboraciones antes, durante y después del Hackathón: densidad, intermediación y vínculos puente entre disciplinas e instituciones (Provan, Fish y Sydow, 2007). No se encontró ningún estudio revisado por pares que aplique análisis de redes a hackatones cívicos, así que sería otro aporte original.
+  \item \textbf{Diseño longitudinal}: medir la continuidad de los proyectos al mes, a los cinco meses y al año, comparable con el 5\,\% de Nolte et al. (2020).
+  \item \textbf{Escala de madurez} para la capacidad instalada, adaptando el modelo de Serdült et al. (2023) y las etapas comunes de los modelos de gobierno electrónico (Layne y Lee, 2001; Almuftah et al., 2016).
+\end{itemize}
+
+\subsection{Propuesta de matriz para el IICA}
+
+La tabla~\ref{tab:matriz} es una \textbf{propuesta de este informe} y no un dato verificado. Cruza las seis dimensiones del artículo con las tres capas temporales, siguiendo la lógica del GIRAI, que cruza dimensiones con pilares. Los indicadores que se sugieren salen de los marcos revisados.
+
+{\small
+\begin{longtable}{P{2.5cm}P{3.9cm}P{3.9cm}P{3.9cm}}
+\caption{Matriz propuesta del IICA: dimensiones por capas, con indicadores de ejemplo y su fuente.}\label{tab:matriz}\\
+\toprule
+\textbf{Dimensión} & \textbf{Capacidad instalada} & \textbf{Activación (proceso)} & \textbf{Resultados emergentes}\\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Dimensión} & \textbf{Capacidad instalada} & \textbf{Activación (proceso)} & \textbf{Resultados emergentes}\\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+1. Capacidades cívicas y humanas &
+Programas de alfabetización cívica y digital; redes juveniles permanentes como READi (Schuler: conocimiento, actitudes). &
+Ganancia de conocimiento percibida; igualdad para hablar (OCDE, 2021). &
+Cambios antes y después en competencias cívicas, con una escala validada por $\alpha$.\\
+2. Inteligencia colectiva &
+Diversidad de perfiles en la base de convocatoria; capital relacional (Schuler; SOCAT). &
+Diversidad disciplinaria de los equipos; equidad de turnos (Woolley; Riedl). &
+Densidad y vínculos puente de la red después del evento; aprendizaje compartido.\\
+3. Integración ética de la IA &
+Reglas y límites de uso de la IA en las fichas; lista de verificación basada en el art.~14 y el NIST. &
+Uso estratégico y no ornamental de la IA (rúbrica); trazabilidad. &
+Correcciones humanas documentadas; ningún uso inaceptable de la IA (penalización tipo URAI).\\
+4. Instituciones habilitadoras y cocreación &
+Número y diversidad de instituciones aliadas; fichas técnicas; capacitaciones (escalones del LOSI y el EPI). &
+Intensidad de la mentoría; integridad del diseño (OCDE, 2021). &
+Prototipos funcionales; respuesta institucional a las propuestas.\\
+5. Valor público democrático &
+Mandato y objetivos de valor público declarados (Moore). &
+Inclusión efectiva: territorio, género, perfil (Rumbul, 2015; Smith, 2009). &
+Implementación o adopción; confianza; derechos protegidos.\\
+6. Continuidad y retroalimentación &
+Existencia de incubación y seguimiento (Affia-Jomants et al.). &
+Proyectos incubados; alianzas formadas. &
+Proyectos activos al mes, a los 5 meses y a los 12 meses (Nolte et al., 2020); aprendizaje institucional para la siguiente edición.\\
+\midrule
+\multicolumn{4}{p{15.2cm}}{\textit{Criterios transversales que no se pueden compensar:} agencia humana, pluralidad, inclusión, transparencia y rendición de cuentas. Se aplican como penalización multiplicativa o como umbral mínimo.}\\
+\end{longtable}
+}
+
+\subsection{Plan de trabajo sugerido}
+\begin{enumerate}
+  \item \textbf{Marco conceptual}, con hasta dos tercios del esfuerzo: mapear la matriz anterior con los marcos de la tabla~\ref{tab:indices} y hacer talleres con el IEE, el TEPJF y el Tec.
+  \item \textbf{Banco inicial de ítems}, de 5 a 7 por celda relevante, y un Delphi de tres rondas con validez de contenido (CVI).
+  \item \textbf{Piloto retrospectivo} con la cuarta edición del Hackathón (54 proyectos, 6 comités, 32 equipos). Ya existen datos de rúbricas, así que se puede calcular la confiabilidad entre evaluadores.
+  \item \textbf{Piloto prospectivo} con la quinta edición: medición antes y después de las competencias, red de colaboración y seguimiento a 1, 5 y 12 meses.
+  \item \textbf{Análisis de coherencia y de sensibilidad}, y decidir si el resultado se presenta como índice o como tablero.
+  \item \textbf{Comparación} con otros organismos electorales locales u otros procesos registrados en LATINNO.
+\end{enumerate}
+
+%=====================================================================
+\section{Recomendaciones para el artículo}
+%=====================================================================
+\begin{enumerate}
+  \item \textbf{Correcciones bibliográficas.} Cambiar las páginas de Schuler (2014) a 518--529. Citar Pournaras en su versión de \emph{JPDC} (2020). Completar el título de Kehler et al. Citar Huang et al. en su versión de FAccT 2024. Añadir el DOI de la OCDE (2025).
+  \item \textbf{Antecedentes que conviene añadir y de los que hay que distinguirse:}
+  \begin{itemize}
+    \item el editorial CI4CG (\emph{AI \& Society}, 2017/2018) y el taller de C\&T 2017;
+    \item la Parte~1 del \emph{Handbook} de Pournaras et al. (2026);
+    \item la \emph{Augmented Democracy} de Hidalgo (2018). El artículo ya cita a Gudiño-Rosero et al., pero no la distingue de forma explícita: son gemelos digitales individuales frente a un ecosistema;
+    \item Nesta (2020), \emph{Future of Minds and Machines}.
+  \end{itemize}
+  \item \textbf{Matizar la separación entre Schuler y De Liddo}, porque colaboran desde 2017. Presentar ICA como la continuación de esa convergencia en la era de la IA generativa. El dato de que Schuler (2024) casi no trata la IA refuerza este argumento.
+  \item \textbf{Formular la novedad como síntesis con arquitectura propia}, apoyada en los seis aportes de la sección~\ref{sec:aportes}, y no como un constructo sin precedentes. Es una posición más defendible ante los evaluadores.
+  \item \textbf{Fortalecer la sección del IICA.} Citar el Manual OCDE/JRC. Mencionar el \emph{civic engagement index} de Nechesov y Ruponen como precedente y distinguirse de él. Discutir la compensabilidad. Usar las directrices de la OCDE (2021) y el modelo de madurez de Serdült et al. (2023) como referentes de forma.
+  \item \textbf{Usar el dato de Nolte et al. (2020)}, según el cual solo cerca del 5\,\% de los proyectos sigue activo a los cinco meses. Muestra por qué la incubación del Tec es una condición diferenciadora del caso.
+\end{enumerate}
+
+%=====================================================================
+\section{Advertencias}
+%=====================================================================
+\begin{itemize}
+  \item \textbf{Uso previo del término.} No haber encontrado ningún uso anterior no prueba que no exista. No se tuvo acceso directo a Google Scholar ni a repositorios de tesis.
+  \item \textbf{Pournaras (2019/2020).} No se validó qué entiende el autor por «augmented democracy».
+  \item \textbf{Fuentes leídas solo en parte.} De Palomo Hernández (2025) y de Nechesov y Ruponen (2024) se leyó solo el resumen. El capítulo de De Liddo et al. se conoce en parte a través del resumen que hacen los editores del \emph{Handbook}, que sigue en prensa.
+  \item \textbf{Revista de Schuler (2014).} Su preprint menciona otra revista. Se siguió el registro de Crossref.
+  \item \textbf{Datos sin fuente primaria.} El DGI de la OCDE y los umbrales de Krippendorff no se verificaron en fuente primaria \nover.
+  \item \textbf{Afirmaciones refutadas, que no deben usarse sin revisar el original:} la estructura del \emph{Public Value Scorecard} de Moore, y que el RAM de la UNESCO tenga «seis dimensiones».
+  \item \textbf{Preprints sin revisión por pares:} GIRAI (2026), Kehler et al. (2025) y Bjarnason et al. (2024).
+  \item \textbf{Interpretaciones de este informe.} Las correspondencias entre los marcos revisados y las dimensiones del IICA, y la matriz de la tabla~\ref{tab:matriz}, son propuestas de este informe y no afirmaciones de las fuentes.
+\end{itemize}
+
+%=====================================================================
+\section{Preguntas abiertas}
+%=====================================================================
+\begin{itemize}
+  \item ¿Usan expresiones cercanas a ICA otros capítulos del \emph{Handbook} (2026), el «Civic Intelligence Loop» (Zenodo, 2026) o la tesis de Gudiño-Rosero (2026)?
+  \item ¿Cómo se pueden convertir las cinco capacidades de Schuler en indicadores sin perder su carácter normativo?
+  \item ¿Qué tan fiable es la autoevaluación institucional frente a la evaluación externa en un organismo electoral?
+  \item ¿Qué precedentes existen de análisis de redes en procesos de cocreación cívica a escala subnacional?
+\end{itemize}
+
+%=====================================================================
+\section*{Referencias}
+\addcontentsline{toc}{section}{Referencias}
+%=====================================================================
+\begingroup
+\small
+\setlength{\parindent}{-1.5em}
+\setlength{\leftskip}{1.5em}
+\setlength{\parskip}{0.3em}
+
+Affia-Jomants, A.-P., Gama, K., Herbsleb, J. D. y Nolte, A. (2025). How to organize an in-person, online or hybrid hackathon -- A revised planning kit. arXiv:2008.08025. \url{https://arxiv.org/abs/2008.08025}
+
+Almuftah, H., Weerakkody, V. y Sivarajah, U. (2016). Comparing and contrasting e-government maturity models: A qualitative-meta synthesis. \url{https://bura.brunel.ac.uk/handle/2438/13415}
+
+Bates, T. C. y Gupta, S. (2017). Smart groups of smart people: Evidence for IQ as the origin of collective intelligence in the performance of human groups. \emph{Intelligence}.
+
+Berditchevskaia, A. y Baeck, P. (2020). \emph{The Future of Minds and Machines: How AI can enhance collective intelligence}. Nesta. \url{https://www.nesta.org.uk/report/future-minds-and-machines/}
+
+Bjarnason, R., Gambrell, D. y Lanthier-Welch, J. (2024). Using Artificial Intelligence to Accelerate Collective Intelligence: Policy Synth and Smarter Crowdsourcing. arXiv:2407.13960.
+
+Boucher, S., Hallin, C. A. y Paulson, L. (eds.) (2023). \emph{The Routledge Handbook of Collective Intelligence for Democracy and Governance}. Routledge. \url{https://library.oapen.org/handle/20.500.12657/63621}
+
+Concilio, G., De Liddo, A., Schuler, D. y Smith, G. (2017). Workshop on the maintenance and enhancement of civic intelligence. \emph{C\&T 2017}, ACM. \url{https://doi.org/10.1145/3083671.3083711}
+
+Coppedge, M. et al. (2025). \emph{V-Dem Codebook v15}. Varieties of Democracy Project. \url{https://www.v-dem.net/documents/55/codebook.pdf}
+
+Cui, H. y Yasseri, T. (2024). AI-enhanced collective intelligence. \emph{Patterns} 5(11): 101074. \url{https://doi.org/10.1016/j.patter.2024.101074}
+
+De Liddo, A., Anastasiou, L. y Buckingham Shum, S. (2026). Human/AI Collective Intelligence for Deliberative Democracy: A Human-Centred Design Approach. arXiv:2603.16260. \url{https://arxiv.org/abs/2603.16260}
+
+Economist Intelligence Unit (2018). \emph{Democracy Index 2018} (apéndice metodológico).
+
+Engelbart, D. C. (1962). \emph{Augmenting Human Intellect: A Conceptual Framework}. SRI Summary Report AFOSR-3223. \url{https://dougengelbart.org/content/view/138}
+
+European Union (2024). Reglamento (UE) 2024/1689 (AI Act), arts. 14 y 27. \url{https://artificialintelligenceact.eu/article/14/}
+
+Fung, A. y Warren, M. E. (2011). The Participedia Project: An Introduction. \emph{International Public Management Journal} 14(3): 341--362. \url{https://doi.org/10.1080/10967494.2011.618309}
+
+Grootaert, C. y van Bastelaer, T. (eds.) (2002). \emph{Understanding and Measuring Social Capital: A Multidisciplinary Tool for Practitioners} (SOCAT). Banco Mundial.
+
+Gudiño-Rosero, J. F., Grandi, U. e Hidalgo, C. A. (2024). Large language models (LLMs) as agents for augmented democracy. \emph{Phil. Trans. R. Soc. A} 382(2285): 20240100. \url{https://doi.org/10.1098/rsta.2024.0100}
+
+Hidalgo, C. A. (2018). Augmented Democracy. TED2018. \url{https://peopledemocracy.com}
+
+Huang, S., Siddarth, D., Lovitt, L., Liao, T. I., Durmus, E., Tamkin, A. y Ganguli, D. (2024). Collective Constitutional AI: Aligning a Language Model with Public Input. \emph{FAccT 2024}: 1395--1417. \url{https://doi.org/10.1145/3630106.3658979}
+
+Kehler, T. P., Page, S. E., Pentland, A., Reeves, M. y Seely Brown, J. (2025). Amplifying Human Creativity and Problem Solving with AI Through Generative Collective Intelligence. arXiv:2505.19167.
+
+Koo, T. K. y Li, M. Y. (2016). A Guideline of Selecting and Reporting Intraclass Correlation Coefficients for Reliability Research. \emph{J. Chiropractic Medicine} 15(2): 155--163. \url{https://doi.org/10.1016/j.jcm.2016.02.012}
+
+Landemore, H. (s.f., c. 2021--22). Can AI bring deliberative democracy to the masses? NYU Law Workshop. \url{https://www.law.nyu.edu/sites/default/files/Helen\%20Landemore\%20Can\%20AI\%20bring\%20deliberative\%20democracy\%20to\%20the\%20masses.pdf}
+
+Langer, M., Lazar, V. y Baum, K. (2025). On the quest for effectiveness in human oversight. arXiv:2504.03300.
+
+Layne, K. y Lee, J. (2001). Developing fully functional E-government: A four stage model. \emph{Government Information Quarterly} 18(2): 122--136.
+
+Moore, M. H. (2013). \emph{Recognizing Public Value}. Harvard University Press.
+
+Nardo, M., Saisana, M., Saltelli, A., Tarantola, S., Hoffman, A. y Giovannini, E. (2008). \emph{Handbook on Constructing Composite Indicators: Methodology and User Guide}. OCDE/JRC. \url{https://knowledge4policy.ec.europa.eu/sites/default/files/jrc47008_handbook_final.pdf}
+
+Nechesov, A. y Ruponen, J. (2024). Empowering Government Efficiency Through Civic Intelligence: Merging Artificial Intelligence and Blockchain for Smart Citizen Proposals. \emph{Technologies} 12(12): 271. \url{https://doi.org/10.3390/technologies12120271}
+
+Nesta, Dark Matter Labs y Lucidminds (2020). \emph{Civic AI}. \url{https://www.nesta.org.uk/toolkit/civicai/}
+
+NIST (2023). \emph{AI Risk Management Framework (AI RMF 1.0)}, NIST AI 100-1. \url{https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf}
+
+Nolte, A., Chounta, I.-A. y Herbsleb, J. D. (2020). What Happens to All These Hackathon Projects? \emph{Proc. ACM HCI} 4(CSCW2): 145. \url{https://doi.org/10.1145/3415216}
+
+Noveck, B. S. (2021). Testimonio ante el Select Committee on the Modernization of Congress, 25 de marzo de 2021. \url{https://docs.house.gov/meetings/MH/MH00/20210325/111404/HMTG-117-MH00-Wstate-NoveckB-20210325.pdf}
+
+OCDE (2020). \emph{Good Practice Principles for Deliberative Processes for Public Decision Making}. París: OECD Publishing.
+
+OCDE (2021). \emph{Evaluation Guidelines for Representative Deliberative Processes}. \url{https://doi.org/10.1787/10ccbfcb-en}
+
+OCDE (2025). \emph{Governing with Artificial Intelligence: The State of Play and Way Forward in Core Government Functions}. \url{https://doi.org/10.1787/795de142-en}
+
+Oxford Insights (2026). \emph{Government AI Readiness Index 2025}. \url{https://oxfordinsights.com/ai-readiness/government-ai-readiness-index-2025/}
+
+Palomo Hernández, N. (2025). Towards Automating Deliberation? The Idea of Deliberative Democracy Embedded in Google's Habermas Machine. \emph{Proc. AIES} 8(2): 1951--1960. \url{https://doi.org/10.1609/aies.v8i2.36687}
+
+Pogrebinschi, T. (2021). \emph{Codebook for the LATINNO dataset}. WZB Discussion Paper SP V 2021-101.
+
+Pournaras, E. (2020). Proof of Witness Presence: Blockchain Consensus for Augmented Democracy in Smart Cities. \emph{J. Parallel and Distributed Computing} 145: 160--175. \url{https://doi.org/10.1016/j.jpdc.2020.06.015} (preprint arXiv:1907.00498, 2019).
+
+Pournaras, E., Majumdar, S., Hausladen, C. y Helbing, D. (eds.) (2026). \emph{Handbook of Democracy in the Era of Artificial Intelligence} (en prensa). Introducción: arXiv:2606.13026.
+
+Provan, K. G., Fish, A. y Sydow, J. (2007). Interorganizational Networks at the Network Level. \emph{Journal of Management} 33(3): 479--516. \url{https://doi.org/10.1177/0149206307302554}
+
+Riedl, C., Kim, Y. J., Gupta, P., Malone, T. W. y Woolley, A. W. (2021). Quantifying collective intelligence in human groups. \emph{PNAS} 118(21): e2005737118. \url{https://doi.org/10.1073/pnas.2005737118}
+
+Rumbul, R. (2015). \emph{Who Benefits From Civic Technology?} mySociety. \url{https://www.mysociety.org/2015/10/28/who-benefits-from-civic-technology/}
+
+Sajjad, M., Khan, R. A. y Yasmeen, R. (2018). Measuring assessment standards in undergraduate medical programs: Development and validation of AIM tool. \emph{Pak J Med Sci} 34(1): 164--169. \url{https://doi.org/10.12669/pjms.341.14354}
+
+Schuler, D. (2001). Cultivating Society's Civic Intelligence: Patterns for a New «World Brain». \emph{Information, Communication \& Society} 4(2): 157--181.
+
+Schuler, D. (2014). Pieces of Civic Intelligence: Towards a Capacities Framework. \emph{E-Learning and Digital Media} 11(5): 518--529. \url{https://doi.org/10.2304/elea.2014.11.5.518}
+
+Schuler, D. (2024). Educating for Civic Intelligence (The Collective Intelligence We Need). Position paper, \emph{First International Symposium on Educating for Collective Intelligence}, UTS. \url{https://cic.uts.edu.au/wp-content/uploads/2024/06/Schuler_CI.edu2024.pdf}
+
+Schuler, D., De Liddo, A., Smith, J. y De Cindio, F. (2018). Collective intelligence for the common good. \emph{AI \& Society} 33(1). \url{https://doi.org/10.1007/s00146-017-0776-6}
+
+Serdült, U., Hofmann, S., Kovacs, D., Sugimoto, T. y Watanabe, Y. (2023). E-Participation Maturity Model Development based on the Cases of Germany, Japan and Switzerland. \emph{EGOV-CeDEM-ePart 2023}, CEUR-WS 3449. \url{https://ceur-ws.org/Vol-3449/paper19.pdf}
+
+Smith, G. (2009). \emph{Democratic Innovations: Designing Institutions for Citizen Participation}. Cambridge University Press.
+
+Sterz, S. et al. (2024). On the Quest for Effectiveness in Human Oversight: Interdisciplinary Perspectives. \emph{ACM FAccT 2024}. \url{https://doi.org/10.1145/3630106.3659051}
+
+Tang, A., Weyl, E. G. y Plurality Community (2024). \emph{Plurality: The Future of Collaborative Technology and Democracy}. \url{https://www.plurality.net/}
+
+Tavakol, M. y Dennick, R. (2011). Making sense of Cronbach's alpha. \emph{International Journal of Medical Education} 2: 53--55.
+
+Tessler, M. H., Bakker, M. A. et al. (2024). AI can help humans find common ground in democratic deliberation. \emph{Science} 386(6719): eadq2852.
+
+UN DESA (2024). \emph{E-Government Survey 2024}, Technical Appendix.
+
+UNESCO (2021). \emph{Recommendation on the Ethics of Artificial Intelligence}. \url{https://www.unesco.org/en/legal-affairs/recommendation-ethics-artificial-intelligence}
+
+Woolley, A. W., Chabris, C. F., Pentland, A., Hashmi, N. y Malone, T. W. (2010). Evidence for a collective intelligence factor in the performance of human groups. \emph{Science} 330(6004): 686--688. \url{https://doi.org/10.1126/science.1193147}
+
+Zenteno Fernández, R. (2026). Inteligencia Cívica Aumentada: el nuevo paradigma de la democracia en la era de la inteligencia artificial. Ponencia, XXXVII Congreso Internacional de Estudios Electorales (SOMEE), Hermosillo.
+
+\endgroup
+
+\end{document}
